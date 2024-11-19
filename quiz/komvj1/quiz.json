@@ -529,5 +529,215 @@
             "Zatvoreno pitanje"
         ],
         "correct": "0"
+    },
+    {
+        "question": "Koje su razine komunikacije?",
+        "answers": [
+            "Intrapersonalna, interpersonalna, grupna, javna i masovna", 
+            "Formalna, neformalna, interna, eksterna", 
+            "Verbalna, neverbalna, pisanjem i čitanjem", 
+            "Teorijska, praktična, javna i osobna" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što su jezične barijere?",
+        "answers": [
+            "Različiti jezici, dijalekti, stručni žargon ili sleng", 
+            "Nerazumijevanje govora tijela", 
+            "Problemi u masovnoj komunikaciji", 
+            "Emocionalne prepreke u komunikaciji" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje značenje imaju riječi 'svemirsko tijelo', 'zvijezda' i 'poznata osoba'?",
+        "answers": [
+            "Sinonimi", 
+            "Višeznačne riječi", 
+            "Metafore", 
+            "Antoniomi" 
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je vrsta pitanja: 'Kada biste mogli slušati jednu pjesmu do kraja života, koja bi to bila?'",
+        "answers": [
+            "Zatvoreno pitanje", 
+            "Otvoreno pitanje", 
+            "Retoričko pitanje", 
+            "Sugestivno pitanje" 
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je vrsta pitanja: 'Ne misliš li da je tvoje ponašanje krajnje neprikladno?'",
+        "answers": [
+            "Zatvoreno pitanje", 
+            "Otvoreno pitanje", 
+            "Retoričko pitanje", 
+            "Sugestivno pitanje" 
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koja je vrsta pitanja: 'Tko živi na ovoj adresi?'",
+        "answers": [
+            "Zatvoreno pitanje", 
+            "Otvoreno pitanje", 
+            "Retoričko pitanje", 
+            "Sugestivno pitanje" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je vrsta pitanja: 'Podrazumijeva li jednakost uvijek pravednost?'",
+        "answers": [
+            "Zatvoreno pitanje", 
+            "Otvoreno pitanje", 
+            "Retoričko pitanje", 
+            "Sugestivno pitanje" 
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koje načelo u konverzaciji se krši ako se 'skreće' s teme?",
+        "answers": [
+            "Načelo jasnoće", 
+            "Načelo relevantnosti", 
+            "Načelo pristojnosti", 
+            "Načelo ekonomičnosti" 
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Kako preoblikovati poruku 'Uvijek ostaviš neurednu kuhinju iza sobom!' u trodijelnu ja-poruku?",
+        "answers": [
+            "Kada ostaviš kuhinju neurednom, osjećam se frustrirano jer volim uredan prostor za rad.", 
+            "Molim te da sljedeći put ostaviš kuhinju urednom.", 
+            "Ne ostavljaj kuhinju neurednom jer mi to smeta.", 
+            "Uvijek ostaviš kuhinju urednom kada te zamolim." 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji su 3 nepoželjna obrasca neverbalne komunikacije?",
+        "answers": [
+            "Izbjegavanje kontakta očima, prekrižene ruke, nervozno tapkanje", 
+            "Smiješak, klimanje glavom, uspostavljanje kontakta očima", 
+            "Nedostatak gestikulacije, sporo govorenje, tišina", 
+            "Upravljanje rukama, postavljanje pitanja, uspravan stav" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su 3 vrste lošeg slušanja?",
+        "answers": [
+            "Selektivno slušanje, površno slušanje, prekidanje govornika", 
+            "Aktivno slušanje, empatijsko slušanje, reflektivno slušanje", 
+            "Zanemarivanje slušanja, ignoriranje govora tijela, loše pitanje", 
+            "Fokusirano slušanje, brzo pamćenje, pasivno slušanje" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je primjer jezične barijere u komunikaciji?",
+        "answers": [
+            "Različiti jezici", 
+            "Razumijevanje metafora", 
+            "Korištenje slenga", 
+            "Svi navedeni odgovori su točni" 
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Kako se definira otvoreno pitanje?",
+        "answers": [
+            "Pitanje koje traži kratak, precizan odgovor", 
+            "Pitanje koje potiče dugi, detaljan odgovor", 
+            "Pitanje koje koristi sugestiju za odgovor", 
+            "Pitanje koje nema nikakvog očekivanog odgovora" 
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je glavni cilj zatvorenog pitanja?",
+        "answers": [
+            "Dobiti jasan i precizan odgovor", 
+            "Poticati raspravu", 
+            "Izazvati emocionalnu reakciju", 
+            "Predstaviti filozofsko razmatranje" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što karakterizira sugestivno pitanje?",
+        "answers": [
+            "Pitanje koje je neutralno i ne utječe na odgovor", 
+            "Pitanje koje vodi ispitanika prema određenom odgovoru", 
+            "Pitanje koje postavlja filozofsko razmatranje", 
+            "Pitanje koje ne traži odgovor" 
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koje načelo se najčešće krši kod lošeg slušanja?",
+        "answers": [
+            "Načelo pažnje", 
+            "Načelo relevantnosti", 
+            "Načelo kontinuiteta", 
+            "Načelo jasnoće" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su tri elementa trodijelne ja-poruke?",
+        "answers": [
+            "Situacija, osjećaj, posljedica", 
+            "Situacija, kritika, rješenje", 
+            "Problematika, osjećaj, pitanje", 
+            "Osjećaj, prijedlog, ishod" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji su znakovi lošeg neverbalnog komuniciranja?",
+        "answers": [
+            "Nedostatak kontakta očima, neprikladna gestikulacija, prekrižene ruke", 
+            "Otvoren stav, jasnoća u izrazu lica, mirnoća tijela", 
+            "Stalan kontakt očima, stalno klimanje glavom, neprikladni osmjesi", 
+            "Mirni pokreti tijela, usmjerenost na govornika, jasnoća govora" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje ponašanje je karakteristično za selektivno slušanje?",
+        "answers": [
+            "Fokus na ono što je relevantno za slušatelja", 
+            "Ignoriranje svega osim onoga što je zanimljivo slušatelju", 
+            "Slušanje s punom pažnjom i razumijevanjem", 
+            "Slušanje samo fizičkih zvukova govora" 
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Kako bi definirali površno slušanje?",
+        "answers": [
+            "Slušanje bez stvarne pažnje i razumijevanja", 
+            "Slušanje s fokusom na sugovornikove emocije", 
+            "Slušanje s detaljnom analizom sadržaja", 
+            "Slušanje s naglaskom na logičke kontradikcije" 
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Zašto je prekidanje govornika loš oblik slušanja?",
+        "answers": [
+            "Omogućuje sugovorniku da promijeni smjer razgovora", 
+            "Pokazuje nepoštivanje sugovornika i narušava tijek komunikacije", 
+            "Skraćuje vrijeme razgovora", 
+            "Dovodi do bržeg zaključka razgovora" 
+        ],
+        "correct": "1"
     }
 ]

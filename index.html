@@ -30,7 +30,15 @@
       <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
         <h2 class="text-lg font-semibold dark:text-white">Kom.Vj.Kol.1</h2>
         <p class="text-gray-600 dark:text-gray-400">Pitanja: 20 | 5 - 15 min</p>
-        <p class="text-gray-600 dark:text-gray-400 text-xs">20 nasumičnih pitanja iz baze od 53</p>
+        <script>
+          fetch('../quiz/komvj1/quiz.json')
+            .then(response => response.json())
+            .then(data => {
+              const questionCount = data.length;
+              document.getElementById('komvj-question-count').innerText = `ⓘ 20 nasumičnih pitanja iz baze od ${questionCount}`;
+            });
+        </script>
+        <p id="komvj-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
         <a href="/quiz/komvj1" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
           Pokreni →
         </a>
@@ -40,7 +48,15 @@
       <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
         <h2 class="text-lg font-semibold dark:text-white">IGIP.Kol.1</h2>
         <p class="text-gray-600 dark:text-gray-400">Pitanja: 20 | 5 - 15 min</p>
-        <p class="text-gray-600 dark:text-gray-400 text-xs">20 nasumičnih pitanja iz baze od 45</p>
+        <script>
+          fetch('../quiz/igip1/quiz.json')
+            .then(response => response.json())
+            .then(data => {
+              const questionCount = data.length;
+              document.getElementById('igip-question-count').innerText = `ⓘ 20 nasumičnih pitanja iz baze od ${questionCount}`;
+            });
+        </script>
+        <p id="igip-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
         <a href="/quiz/igip1" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
           Pokreni →
         </a>
