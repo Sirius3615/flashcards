@@ -70,7 +70,7 @@
         const response = await fetch('./quiz.json');
         let flashcardsData = await response.json();
         // Shuffle questions
-        flashcardsData = flashcardsData.sort(() => Math.random() - 0.5);
+        flashcardsData = flashcardsData.sort(() => Math.random() - 0.5).slice(0, 20);
         startQuiz(flashcardsData);
       } catch (error) {
         console.error('Error loading flashcards:', error);
