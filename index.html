@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 top-0">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <a href="/" class="text-xl font-bold text-black dark:text-white">Quiz</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto mt-20 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Quiz Cards -->
+       <!-- KOM VJ 1.kol -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
+        <h2 class="text-lg font-semibold dark:text-white">Kom.Vj.Kol.1</h2>
+        <p class="text-gray-600 dark:text-gray-400">Pitanja: 53 | 10 - 30 min</p> 
+        <a href="/quiz/komvj1" class="block mt-4 text-blue-600 dark:text-blue-400 hover:underline">
+          Pokreni →
+        </a>
+      </div>
+      <!-- IGIP 1.kol -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
+        <h2 class="text-lg font-semibold dark:text-white">IGIP.Kol.1</h2>
+        <p class="text-gray-600 dark:text-gray-400">Pitanja: 45 | 10 - 30 min</p> 
+        <a href="/quiz/igip1" class="block mt-4 text-blue-600 dark:text-blue-400 hover:underline">
+          Pokreni →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

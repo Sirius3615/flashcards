@@ -1,0 +1,533 @@
+
+[
+    {
+        "question": "Od koje riječi dolazi pojam 'komunikacija'?",
+        "answers": [
+            "Communicare",
+            "Commodare",
+            "Commendare",
+            "Communis"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što uključuje komunikacijski proces?",
+        "answers": [
+            "Pošiljatelj, poruka, kanal, primatelj",
+            "Govornik, slušatelj, misao, analiza",
+            "Pitanje, odgovor, komentar, zaključak",
+            "Ideja, kritika, kontekst, analiza"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je denotativno značenje riječi?",
+        "answers": [
+            "Doslovno značenje riječi",
+            "Emocionalno značenje riječi",
+            "Metaforičko značenje riječi",
+            "Konotativno značenje riječi"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje je osnovno pravilo načela kvantitete?",
+        "answers": [
+            "Poruka mora biti informativna",
+            "Poruka mora biti relevantna",
+            "Poruka mora biti istinita",
+            "Poruka mora biti jasna"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što podrazumijeva intrapersonalna komunikacija?",
+        "answers": [
+            "Komunikaciju unutar pojedinca",
+            "Razmjenu informacija među grupama",
+            "Masovnu komunikaciju putem medija",
+            "Tehnološku komunikaciju"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je postotak komunikacije neverbalan?",
+        "answers": [
+            "7%",
+            "38%",
+            "55%",
+            "70%"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što su fizičke prepreke u komunikaciji?",
+        "answers": [
+            "Buka, udaljenost, nepovoljni uvjeti",
+            "Različite vrijednosti i stavovi",
+            "Nejasan govor",
+            "Nepovezane misli"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je uloga Wernickeovog područja u govoru?",
+        "answers": [
+            "Planiranje poruke",
+            "Analiza zvučnih signala i značenja riječi",
+            "Artikulacija govora",
+            "Regulacija glasa"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što znači selektivno slušanje?",
+        "answers": [
+            "Procesiranje samo određenih dijelova informacija",
+            "Potpuno ignoriranje sugovornika",
+            "Paralelno slušanje i razgovaranje",
+            "Postavljanje sugestivnih pitanja"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji su stadiji razvoja tima?",
+        "answers": [
+            "Formiranje, prilagodba, normiranje, izvedba, završetak",
+            "Planiranje, analiza, implementacija, testiranje",
+            "Stvaranje, vođenje, evaluacija, zatvaranje",
+            "Početak, proces, rezultat"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što označuje pojam 'asertivna komunikacija'?",
+        "answers": [
+            "Jasno izražavanje želja bez povrede drugih",
+            "Izbjegavanje konflikta pod svaku cijenu",
+            "Dominantno izražavanje stavova",
+            "Upotrebu ti-poruka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što predstavlja načelo piramide?",
+        "answers": [
+            "Organizaciju misli hijerarhijski",
+            "Korištenje metafora u govoru",
+            "Postavljanje pitanja u prezentaciji",
+            "Izradu vizualnih pomagala"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je najbolji način za korištenje slajdova u prezentaciji?",
+        "answers": [
+            "Dodavanje samo ključnih informacija",
+            "Pisanje cijelog govora na slajdove",
+            "Korištenje što više fontova",
+            "Izbjegavanje slika i dijagrama"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji postotak informacije ostaje zapamćen nakon 3 dana ako se koristi samo verbalna metoda?",
+        "answers": [
+            "85%",
+            "66%",
+            "50%",
+            "10%"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Što su ja-poruke?",
+        "answers": [
+            "Izražavaju vlastite osjećaje i stavove",
+            "Kritiziraju drugu osobu",
+            "Izbjegavaju odgovornost",
+            "Prenose neutralne informacije"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je svrha 'pite dijagrama'?",
+        "answers": [
+            "Prikaz distribucija",
+            "Pokazivanje trendova kroz vrijeme",
+            "Usporedba podataka",
+            "Prikaz tabličnih vrijednosti"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su glavne karakteristike verbalne komunikacije?",
+        "answers": [
+            "Jasnoća, gramatička točnost i preciznost",
+            "Emocionalna interpretacija",
+            "Govor tijela i izrazi lica",
+            "Ton glasa i brzina govora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što podrazumijeva načelo modalnosti?",
+        "answers": [
+            "Korištenje jasnog i nedvosmislenog izražavanja",
+            "Korištenje različitih jezika",
+            "Pružanje detaljnih informacija",
+            "Izbjegavanje tema izvan konteksta"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su uloge vođe tima?",
+        "answers": [
+            "Usmjeravanje tima, koordinacija i poticanje dijaloga",
+            "Kontrola svih zadataka",
+            "Delegiranje svih odluka timu",
+            "Izrada svih planova"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je neverbalna komunikacija?",
+        "answers": [
+            "Komunikacija putem govora tijela, izraza lica i pokreta",
+            "Razgovor bez korištenja riječi",
+            "Pisana komunikacija",
+            "Prenošenje poruka putem elektroničkih uređaja"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su vrste prepreka u slušanju?",
+        "answers": [
+            "Vanjske i unutarnje",
+            "Fizičke i psihološke",
+            "Tehničke i logičke",
+            "Kompleksne i jednostavne"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što su paraverbalni aspekti komunikacije?",
+        "answers": [
+            "Ton, ritam i brzina govora",
+            "Sadržaj poruke",
+            "Geste i pokreti",
+            "Korištenje metafora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je glavna funkcija tehničke razine u prezentaciji?",
+        "answers": [
+            "Poboljšanje razumijevanja i pamćenja putem vizualnih pomagala",
+            "Korištenje inovativnih metoda izražavanja",
+            "Prikazivanje dugih tekstova",
+            "Izbjegavanje interakcije s publikom"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su osnovna načela timskog rada?",
+        "answers": [
+            "Jasni ciljevi, učinkovito vodstvo i kompetentni članovi",
+            "Individualni rad članova tima",
+            "Potpuna neovisnost članova",
+            "Nedostatak strukture i pravila"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako se najbolje koristi humor u prezentacijama?",
+        "answers": [
+            "Umjereno i prilagođeno kulturološkim normama",
+            "Korištenjem sarkazma",
+            "Dodavanjem šala tijekom svake točke",
+            "Izbjegavanjem ozbiljnih tema"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je preporučeni broj članova za tim?",
+        "answers": [
+            "Od 3 do 7 članova",
+            "Od 10 do 20 članova",
+            "Od 15 do 25 članova",
+            "Samo jedan član tima"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što su sugestivna pitanja?",
+        "answers": [
+            "Pitanja koja vode odgovor prema određenoj ideji",
+            "Pitanja otvorenog tipa",
+            "Pitanja o činjeničnim informacijama",
+            "Pitanja o osobnim mišljenjima"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su ključne točke za uspješnu prezentaciju?",
+        "answers": [
+            "Prilagodba publici, jasnoća i logička struktura",
+            "Dugi i detaljni slajdovi",
+            "Korištenje tehničkog žargona",
+            "Izbjegavanje vizualnih pomagala"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su faze razvoja tima?",
+        "answers": [
+            "Formiranje, intenziviranje, normiranje, izvođenje, završetak",
+            "Planiranje, implementacija, analiza",
+            "Stvaranje, prilagodba, analiza",
+            "Početak, sredina, kraj"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je glavna funkcija aktivnog slušanja?",
+        "answers": [
+            "Razumijevanje, procjena i odgovor na poruku",
+            "Ignoriranje emocionalnih aspekata",
+            "Ometanje govornika",
+            "Razmišljanje o vlastitom odgovoru"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je glavni cilj empatijskog slušanja?",
+        "answers": [
+            "Razumjeti osjećaje i stavove druge osobe",
+            "Prikupiti informacije",
+            "Ubrzati razgovor",
+            "Procijeniti govorničke sposobnosti"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što znači konotativno značenje riječi?",
+        "answers": [
+            "Emocionalno ili simbolično značenje riječi",
+            "Doslovno značenje riječi",
+            "Tehničko značenje riječi",
+            "Neutralno značenje riječi"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su načela uspješne komunikacije?",
+        "answers": [
+            "Jasnoća, relevantnost, količina i kvaliteta informacija",
+            "Korištenje složenog jezika",
+            "Izbjegavanje povratne informacije",
+            "Ignoriranje neverbalnih znakova"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što podrazumijeva efektivna komunikacija?",
+        "answers": [
+            "Razumijevanje i postizanje ciljeva komunikacije",
+            "Uspostavljanje dominacije nad sugovornikom",
+            "Prenošenje što više informacija",
+            "Korištenje tehničkih termina"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je uloga Brocinog područja u govoru?",
+        "answers": [
+            "Kodiranje gramatičkih, leksičkih i fonoloških elemenata govora",
+            "Primanje zvučnih signala",
+            "Planiranje poruke",
+            "Artikulacija vokala"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što su otvorena pitanja?",
+        "answers": [
+            "Pitanja koja omogućuju detaljne odgovore",
+            "Pitanja koja ograničavaju broj odgovora",
+            "Pitanja koja zahtijevaju da/ne odgovor",
+            "Pitanja koja vode prema određenom zaključku"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je glavna svrha vizualnih pomagala u prezentacijama?",
+        "answers": [
+            "Poboljšanje razumijevanja i pamćenja",
+            "Zamjena govora",
+            "Kompletna struktura sadržaja",
+            "Prikazivanje dugih tekstova"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što podrazumijeva normiranje u razvoju tima?",
+        "answers": [
+            "Usvajanje uloga i stvaranje prijateljske atmosfere",
+            "Upoznavanje članova tima",
+            "Rješavanje konflikata",
+            "Završavanje timskog zadatka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je najbolji način korištenja dijagrama u prezentacijama?",
+        "answers": [
+            "Prikazivanje samo ključnih podataka",
+            "Korištenje što više boja",
+            "Dodavanje što više elemenata na slajd",
+            "Korištenje samo tekstualnih opisa"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što su bezlične poruke?",
+        "answers": [
+            "Poruke koje izbjegavaju osobnu odgovornost",
+            "Izrazi osobnih osjećaja",
+            "Kritike usmjerene na sugovornika",
+            "Poruke koje potiču suradnju"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji su negativni učinci konflikata u timu?",
+        "answers": [
+            "Pojava ljutnje, agresivnosti i smanjena kooperacija",
+            "Iznošenje različitih mišljenja",
+            "Povećanje timske kreativnosti",
+            "Brže donošenje odluka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što znači ti-poruka?",
+        "answers": [
+            "Poruka koja sadrži kritiku i napad na sugovornika",
+            "Neutralna izjava o situaciji",
+            "Izražavanje osobnih osjećaja",
+            "Poziv na suradnju"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji su glavni aspekti prezentacijske vještine?",
+        "answers": [
+            "Verbalna, glasovna, neverbalna, tehnička i dijalektička razina",
+            "Vizualna, tehnička i auditivna razina",
+            "Pisanje govora i izrada slajdova",
+            "Organizacija tima i sadržaja"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji stil komunikacije je najpoželjniji u timu?",
+        "answers": [
+            "Asertivan",
+            "Pasivan",
+            "Agresivan",
+            "Defenzivan"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što podrazumijeva pojam fluentnosti u govoru?",
+        "answers": [
+            "Prirodni tempo govora bez zastajkivanja i poštapalica",
+            "Korištenje tehničkog jezika",
+            "Sporo izgovaranje svih riječi",
+            "Ponovno započinjanje rečenica"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je glavna svrha retoričkih pitanja?",
+        "answers": [
+            "Sugestija ili manipulacija bez traženja odgovora",
+            "Dobivanje dodatnih informacija",
+            "Provjera razumijevanja publike",
+            "Uključivanje publike u raspravu"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Postoji li prava ljubav?'",
+        "answers": [
+            "Esencijalno pitanje",
+            "Hipotetsko pitanje",
+            "Otvoreno pitanje",
+            "Zatvoreno pitanje"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Što bi se dogodilo kad bi svi studenti imali izvrstan prosjek?'",
+        "answers": [
+            "Sugestivno pitanje",
+            "Hipotetsko pitanje",
+            "Činjenično pitanje",
+            "Proširujuće pitanje"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Koliko studenata studira na FESB-u?'",
+        "answers": [
+            "Zatvoreno pitanje",
+            "Otvoreno pitanje",
+            "Pojašnjavajuće pitanje",
+            "Proširujuće pitanje"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Možete li mi detaljnije pojasniti korištenu metodologiju u Vašem istraživanju?'",
+        "answers": [
+            "Činjenično pitanje",
+            "Pojašnjavajuće pitanje",
+            "Proširujuće pitanje",
+            "Sugestivno pitanje"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Zar ne mislite da bi svi studenti trebali izaći na izbore?'",
+        "answers": [
+            "Otvoreno pitanje",
+            "Sugestivno pitanje",
+            "Hipotetsko pitanje",
+            "Esencijalno pitanje"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Koliko je znanstvenika uključeno u to istraživanje?'",
+        "answers": [
+            "Činjenično pitanje",
+            "Pojašnjavajuće pitanje",
+            "Hipotetsko pitanje",
+            "Zatvoreno pitanje"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kojoj vrsti pripada pitanje: 'Možete li mi više reći o samom procesu prikupljanja informacija?'",
+        "answers": [
+            "Proširujuće pitanje",
+            "Pojašnjavajuće pitanje",
+            "Sugestivno pitanje",
+            "Zatvoreno pitanje"
+        ],
+        "correct": "0"
+    }
+]

@@ -1,0 +1,452 @@
+[
+    {
+        "question": "Koji je najvažniji format crteža i kako nastaju manji formati?",
+        "answers": [
+            "Najvažniji format je A4, manji formati nastaju uvećavanjem dulje stranice.",
+            "Najvažniji format je A0, manji formati nastaju prepolavljanjem dulje stranice većeg formata.",
+            "Najvažniji format je A3, manji formati nastaju smanjenjem omjera stranica.",
+            "Najvažniji format je A6, manji formati nastaju dodavanjem kraće stranice."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Gdje se postavlja zaglavlje na tehničkom crtežu?",
+        "answers": [
+            "U gornji lijevi kut crteža.",
+            "U središnji dio crteža.",
+            "U donji desni kut crteža.",
+            "Na poleđinu crteža."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koje vrste crta se koriste na tehničkim crtežima?",
+        "answers": [
+            "Puna crta, isprekidana crta, crta-točka-crta, cik-cak crta, crta-dvotočka-crta.",
+            "Puna crta, crta-trokut, isprekidana crta, crta-četverokut.",
+            "Valovita crta, isprekidana crta, crta-zarez-crta, isprekidana valovita crta.",
+            "Puna crta, dijagonalna crta, isprekidana crta, crta-slovka."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su svojstva ortogonalne projekcije?",
+        "answers": [
+            "Kutevi objekta se mijenjaju prilikom projekcije.",
+            "Projekcija koristi zrake koje su paralelne s ravninom crtanja.",
+            "Prikazuju se samo vidljivi dijelovi objekta.",
+            "Kombinira izometrijsku i dimetrijsku projekciju."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što predstavlja strujna shema?",
+        "answers": [
+            "Pregledni prikaz složenih sustava.",
+            "Prikaz međusobnih veza elemenata u sustavu.",
+            "Prikaz djelovanja uređaja pomoću simboličkih prikaza.",
+            "Pojednostavljeni prikaz strujnog kruga."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je osnovna značajka vektorskih grafičkih sustava?",
+        "answers": [
+            "Prikaz slike kao mreže piksela.",
+            "Prikaz crta povezanih u točke putem naredbi.",
+            "Mogućnost skaliranja slike bez gubitka kvalitete.",
+            "Sekvencijalna putanja zraka."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja su svojstva tehničkog pisma prema normi ISO 3098?",
+        "answers": [
+            "Visina velikih slova odgovara širini crte.",
+            "Tehničko pismo koristi standardizirane znakove visine H.",
+            "Visina malih slova jednaka je razmaku između crta.",
+            "Nazivna visina slova ovisi o vrsti pisma."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što je pregledna shema?",
+        "answers": [
+            "Pojednostavljeni prikaz sustava ili uređaja pomoću simbola.",
+            "Detaljan prikaz strujnih elemenata i njihovih međusobnih veza.",
+            "Tablica s podacima o komponentama uređaja.",
+            "Grafički prikaz funkcionalnih veza između sustava."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji su osnovni dijelovi vektorskog grafičkog sustava?",
+        "answers": [
+            "Prikazni procesor, privremena memorija, vektorski generator, prikazni uređaj.",
+            "Grafička kartica, RAM, procesor, zaslon.",
+            "Matrica piksela, bitovna matrica, zaslon, grafički generator.",
+            "Prikazni procesor, generator signala, matrica piksela, bitovna matrica."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su pravila za crtanje pomoćnih mjernih crta?",
+        "answers": [
+            "Ne smiju prelaziti mjernicu.",
+            "Moraju biti koso postavljene za bolje razumijevanje.",
+            "Moraju prelaziti mjernicu za 1-3 mm.",
+            "Crtaju se unutar granica crteža."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koje su prednosti rasterskih grafičkih sustava?",
+        "answers": [
+            "Detaljan prikaz složenih slika s kontinuiranim tonovima.",
+            "Manja memorijska potrošnja.",
+            "Mogućnost skaliranja bez gubitka kvalitete.",
+            "Prikaz slika kao crta povezanih u točke."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je rasterizacija?",
+        "answers": [
+            "Proces pretvaranja raster slika u vektore.",
+            "Proces pretvaranja vektorskih slika u raster.",
+            "Proces smanjenja veličine datoteke.",
+            "Proces prikaza slika na mreži piksela."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je namjena dimenzioniranja na tehničkom crtežu?",
+        "answers": [
+            "Estetski prikaz objekta.",
+            "Označavanje točnih mjera objekta.",
+            "Prikaz osnovnih proporcija objekta.",
+            "Olakšavanje razumijevanja skice."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koje su vrste aksonometrijskih projekcija?",
+        "answers": [
+            "Izometrijska, dimetrijska, trimetrijska.",
+            "Izometrijska, perspektivna, kosoprostorna.",
+            "Ortogonalna, izometrijska, dimetrijska.",
+            "Prostorna, kosoprostorna, izometrijska."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što prikazuje nadomjesna shema?",
+        "answers": [
+            "Pojednostavljeni prikaz strujnog kruga za analizu.",
+            "Detaljan prikaz djelovanja uređaja.",
+            "Prikaz fizičkog rasporeda komponenata.",
+            "Prikaz funkcionalnih veza između sustava."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su tri vrste tehničkog pisma?",
+        "answers": [
+            "Usko, normalno, široko.",
+            "Tanko, srednje, debelo.",
+            "Pisano, štampano, digitalno.",
+            "Male, srednje, velike visine."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je sadržaj sastavnice na tehničkom crtežu?",
+        "answers": [
+            "Osnovni podaci o crtežu, kao što su naziv i broj crteža.",
+            "Tablica s podacima o dijelovima crteža koji nisu navedeni u zaglavlju.",
+            "Prikaz međusobnih veza elemenata na crtežu.",
+            "Popis korištenih standarda za izradu crteža."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koje su vrste linija korištene za zaklonjene rubove na crtežu?",
+        "answers": [
+            "Pune linije.",
+            "Isprekidane linije.",
+            "Cik-cak linije.",
+            "Crta-točka-crta linije."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je glavna razlika između vektorskih i rasterskih grafičkih sustava?",
+        "answers": [
+            "Vektorski sustavi koriste piksela za prikaz slika, a rasterski koriste crte.",
+            "Vektorski sustavi koriste crte između točaka, a rasterski prikazuju slike kao mrežu piksela.",
+            "Rasterski sustavi su bolji za tehničko crtanje, a vektorski za detaljne slike.",
+            "Vektorski sustavi koriste sekvencijalnu putanju zraka, a rasterski proizvoljnu."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što je prikazna lista u vektorskoj grafici?",
+        "answers": [
+            "Popis prikazanih objekata u slici.",
+            "Niz grafičkih naredbi koje se ciklički ponavljaju.",
+            "Tablica podataka o dimenzijama objekta.",
+            "Sekvencijalni zapis svih elemenata slike."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koje mjerilo se koristi za povećanje na tehničkom crtežu?",
+        "answers": [
+            "1:2",
+            "2:1",
+            "1:5",
+            "5:1"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja su pravila za crtanje strelica u kotama?",
+        "answers": [
+            "Smještaju se uvijek izvan crteža.",
+            "Mogu biti unutar ili izvan pomoćnih crta, ovisno o prostoru.",
+            "Uvijek se crtaju izvan pomoćnih crta.",
+            "Moraju biti izvučene do kraja mjernice."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što se kotira, a što se ne kotira na tehničkom crtežu?",
+        "answers": [
+            "Kotiraju se sve standardne mjere, a ostale se ignoriraju.",
+            "Kotiraju se svi dijelovi crteža, uključujući standardne elemente.",
+            "Kotiraju se sve mjere potrebne za izradu, dok se standardni dijelovi ne kotiraju.",
+            "Ne kotiraju se mjere potrebne za izradu, već samo proporcije."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja su osnovna pravila za primjenu mjerila na tehničkom crtežu?",
+        "answers": [
+            "Sve dimenzije moraju biti u različitim mjerilima.",
+            "Jedno mjerilo se koristi za sve veličine osim ako je crtež složen.",
+            "Sve dimenzije moraju biti uvećane za jasniji prikaz.",
+            "Različita mjerila se koriste na svakom crtežu."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je namjena prostoručnih linija na crtežima?",
+        "answers": [
+            "Prikazuju prijelome i prekide.",
+            "Označavaju zaklonjene rubove.",
+            "Prikazuju vidljive bridove.",
+            "Označavaju središnjice objekta."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje su vrste projekcija na tehničkim crtežima?",
+        "answers": [
+            "Perspektivna, ortogonalna, prostorna.",
+            "Izometrijska, dimetrijska, trimetrijska.",
+            "Ortogonalna, aksonometrijska, perspektivna.",
+            "Kosa, ortogonalna, prostorna."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koje su prednosti vektorskih grafičkih sustava?",
+        "answers": [
+            "Detalan prikaz složenih slika.",
+            "Skalabilnost bez gubitka kvalitete.",
+            "Jednostavna primjena za rasterizaciju.",
+            "Smanjena potrošnja memorije pri velikim slikama."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što predstavlja bitovna matrica u rasterskoj grafici?",
+        "answers": [
+            "Niz točaka koje čine crteže u vektorskom sustavu.",
+            "Mrežu piksela koja predstavlja sliku.",
+            "Sekvencijalni zapis svih elemenata slike.",
+            "Prikaz grafičkih naredbi u rasterskom formatu."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koje osi imaju različite nagibe u trimetrijskoj projekciji?",
+        "answers": [
+            "Sve tri osi imaju različite nagibe.",
+            "Dvije osi su pod 120°, a treća pod 90°.",
+            "Dvije osi imaju isti nagib, a treća je pod pravim kutom.",
+            "Sve tri osi su paralelne s ravninom."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je osnovna razlika između izometrijske i dimetrijske projekcije?",
+        "answers": [
+            "Izometrijska projekcija ima osi pod istim kutovima, a dimetrijska ne.",
+            "Izometrijska projekcija prikazuje samo vidljive dijelove, dok dimetrijska prikazuje cijeli objekt.",
+            "Dimetrijska projekcija ima sve osi pod pravim kutovima, dok izometrijska nema.",
+            "Izometrijska projekcija uključuje prikratu na svim osima, dok dimetrijska ne."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su pravila za unos kotnih brojeva na crtež?",
+        "answers": [
+            "Moraju biti tehničkim pismom i čitljivi odozgo.",
+            "Moraju biti čitljivi odozdo ili s desne strane.",
+            "Kotni brojevi su uvijek u središtu crteža.",
+            "Kotni brojevi su napisani slobodnim stilom."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja su područja primjene računarske grafike?",
+        "answers": [
+            "Korisnička sučelja, CAD, simulacije, umjetnost, GIS.",
+            "Računalni vid, obrada slike, interaktivni dizajn.",
+            "Modeliranje, tehničko crtanje, interaktivne igre.",
+            "Digitalna fotografija, dizajn interijera, izrada mapa."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja su pravila rasporeda kota na tehničkom crtežu?",
+        "answers": [
+            "Svaka kota se unosi više puta za bolju preglednost.",
+            "Kote se smještaju u najneprimjetniji dio crteža.",
+            "Svaka kota se unosi samo jednom u najuočljivijem položaju.",
+            "Kotiranje se provodi prema subjektivnoj procjeni crtača."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja su svojstva ortogonalne projekcije?",
+        "answers": [
+            "Kutovi se smanjuju ovisno o smjeru gledanja.",
+            "Prikazuje samo one dijelove objekta koji su vidljivi iz odabranog smjera.",
+            "Sve dimenzije objekta se uvećavaju u projekciji.",
+            "Koristi se samo u američkoj verziji rasporeda pogleda."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je funkcija mjerne crte u kotiranju?",
+        "answers": [
+            "Prenosi mjere izvan crteža.",
+            "Pokazuje točnu dužinu objekta na crtežu.",
+            "Označava dijelove crteža koji nisu vidljivi.",
+            "Spaja pomoćne crte s osnovnim linijama."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je omjer stranica formata reda A?",
+        "answers": [
+            "1:1",
+            "1:√2",
+            "2:1",
+            "1:3"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je osnovna površina formata A0?",
+        "answers": [
+            "1 m²",
+            "0.5 m²",
+            "2 m²",
+            "1.5 m²"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako se smještaju pozicijski brojevi na tehničkom crtežu?",
+        "answers": [
+            "Dvostruko većim fontom od kotnih brojeva, povezani tankim crtama s dijelovima crteža.",
+            "Jednako velikim fontom kao kotni brojevi, bez dodatnih oznaka.",
+            "Uvijek iznad zaglavlja, u posebnoj tablici.",
+            "Nasumično na crtežu, bez strogo definiranih pravila."
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je prostorni prikaz u tehničkom crtanju?",
+        "answers": [
+            "Dvostruka projekcija objekta s vidljivim i zaklonjenim dijelovima.",
+            "Aksonometrijska projekcija objekta na dvodimenzionalnoj ravnini.",
+            "Projekcija s elementima ortogonalne i perspektivne metode.",
+            "Grafički prikaz objekta u stvarnim dimenzijama."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji su primjeri standardnih mjerila za smanjenje?",
+        "answers": [
+            "2:1, 5:1",
+            "1:2, 1:5",
+            "10:1, 1:10",
+            "1:1, 1:0.5"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je razlika između vektorske i rasterske grafike u pogledu skaliranja?",
+        "answers": [
+            "Vektorska grafika gubi kvalitetu pri skaliranju, dok rasterska ne.",
+            "Rasterska grafika je pogodnija za tehničko crtanje zbog skalabilnosti.",
+            "Vektorska grafika se može skalirati bez gubitka kvalitete, dok rasterska gubi kvalitetu.",
+            "Nema razlike u skaliranju između vektorske i rasterske grafike."
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što je kosa projekcija?",
+        "answers": [
+            "Projekcija gdje su dvije osi pod kutom od 120°, a treća pod 90°.",
+            "Projekcija gdje su dvije osi pod pravim kutom, a treća pod 30°, 45° ili 60°.",
+            "Projekcija s paralelnim linijama koje se presijecaju pod jednakim kutovima.",
+            "Projekcija koja koristi zrake paralelne s ravninom crtanja."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što se ne kotira na tehničkom crtežu?",
+        "answers": [
+            "Mjere potrebne za izradu.",
+            "Standardni dijelovi koji se nabavljaju.",
+            "Sve dimenzije objekta.",
+            "Samo proporcije objekta."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja su pravila crtanja cik-cak linija?",
+        "answers": [
+            "Koriste se za označavanje zaklonjenih rubova.",
+            "Prikazuju prijelome i prekide na crtežu.",
+            "Koriste se za vidljive bridove i okvire.",
+            "Prikazuju središnjice objekta."
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je glavna namjena instalacijskog crteža?",
+        "answers": [
+            "Prikazuje razvod električnih ili cijevnih vodova.",
+            "Prikazuje način sastavljanja uređaja.",
+            "Prikazuje funkcionalnu cjelinu sklopova.",
+            "Prilaže se uz pismenu ponudu."
+        ],
+        "correct": "0"
+    }
+]
