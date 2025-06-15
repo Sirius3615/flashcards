@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - DIGEL 2.dio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+   #flashcards {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        position: relative; /* Ensure it maintains proper stacking context */
+        z-index: 10; /* Keep it above the hidden menu */
+    }
+
+    #flashcards.hidden {
+    opacity: 0;
+    }
+
+    #menu {
+        display: none; /* Default: hidden */
+        position: absolute;
+        top: 100%; /* Position the menu below the navbar */
+        left: 0;
+        width: 100%; /* Full width of the screen */
+        background-color: white; /* Match navbar background color */
+        z-index: 20; /* Ensure it appears on top */
+    }
+
+    #menu li {
+        border-bottom: 1px solid #e5e7eb; /* Add a subtle border between items */
+    }
+
+    #menu li:last-child {
+        border-bottom: none; /* Remove the border for the last item */
+    }
+
+    /* Show menu when visible */
+    #menu.show {
+        display: block;
+    }
+
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 top-0">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <a href="/" class="text-xl font-bold text-black dark:text-white">Quiz</a>    
+      <a href="#" class="dark:text-white">DIGEL 2.dio</a>   
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto mt-20 px-4">
+    <div id="flashcards" class="grid">
+      <!-- Flashcards will be dynamically inserted here -->
+    </div>
+    <div id="progress" class="text-center dark:text-white mt-4"></div>
+  </div>
+
+  <script>
+    async function loadFlashcards() {
+      try {
+        const response = await fetch('./quiz.json');
+        let flashcardsData = await response.json();
+        // Shuffle questions
+        flashcardsData = flashcardsData.sort(() => Math.random() - 0.5).slice(0, 30);
+        startQuiz(flashcardsData);
+      } catch (error) {
+        console.error('Error loading flashcards:', error);
+      }
+    }
+
+    let currentIndex = 0;
+    let score = 0;
+
+    function startQuiz(flashcards) {
+      // Load score from cookies
+      const savedScore = getCookie('score');
+      score = savedScore ? parseInt(savedScore, 10) : 0;
+      currentIndex = 0; // Ensure currentIndex is reset
+
+      showCard(flashcards[currentIndex], flashcards);
+    }
+
+    function showCard(card, flashcards) {
+        const flashcardsContainer = document.getElementById('flashcards');
+        const progressContainer = document.getElementById('progress');
+        flashcardsContainer.innerHTML = ''; // Očisti prethodni sadržaj
+
+        // Ažuriranje napretka
+        progressContainer.textContent = `Pitanje ${currentIndex + 1} od ${flashcards.length} | Bodovi: ${score}`;
+        
+        const flashcardDiv = document.createElement('div');
+        flashcardDiv.className = 'bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4';
+
+        let contentHTML = `<h3 class="text-lg dark:text-white font-semibold">${card.question}</h3>`;
+        if (card.image) {
+            contentHTML += `<img src="${card.image}" alt="Question Image" class="w-full object-cover rounded-md mb-4">`;
+        }
+
+        const isMultipleChoice = card.answers && card.answers.length > 0;
+
+        if (isMultipleChoice) {
+            const shuffledAnswers = card.answers.map((answer, index) => ({
+                text: answer,
+                isCorrect: index == card.correct
+            })).sort(() => Math.random() - 0.5);
+
+            contentHTML += `<ul class="mt-2">
+                ${shuffledAnswers.map((answer) => `
+                    <li class="mt-1">
+                        <button 
+                            class="w-full text-left dark:text-white px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring"
+                            data-correct="${answer.isCorrect}"
+                        >
+                            ${answer.text}
+                        </button>
+                    </li>`).join('')}
+            </ul>`;
+        } else { // Text input question
+            contentHTML += `
+                <div class="mt-2">
+                    <input type="text" id="text-answer-input" class="w-full px-3 py-2 border rounded-md dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:outline-none focus:ring" placeholder="Unesite odgovor">
+                    <div id="correct-answer-display" class="mt-2"></div>
+                </div>
+            `;
+        }
+
+        contentHTML += `
+            <div class="flex justify-end">
+                <button id="action-btn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md"></button>
+            </div>
+        `;
+        flashcardDiv.innerHTML = contentHTML;
+        flashcardsContainer.appendChild(flashcardDiv);
+
+        const actionBtn = document.getElementById('action-btn');
+
+        if (isMultipleChoice) {
+            actionBtn.textContent = 'Nastavi';
+            actionBtn.classList.add('hidden'); 
+            actionBtn.onclick = () => moveToNextCard(flashcards);
+
+            const answerButtons = flashcardDiv.querySelectorAll('button[data-correct]');
+            answerButtons.forEach((btn) => {
+                btn.addEventListener('click', (e) => handleMultipleChoiceAnswer(e, flashcards, card, answerButtons, actionBtn));
+            });
+        } else { // Text input question
+            actionBtn.textContent = 'Provjeri';
+            actionBtn.classList.remove('hidden'); 
+            const textInput = document.getElementById('text-answer-input');
+            actionBtn.onclick = () => handleTextAnswerCheck(flashcards, card, actionBtn, textInput);
+            
+            textInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); 
+                    if (actionBtn.textContent === 'Provjeri') { // Only trigger "Provjeri" on Enter
+                        actionBtn.click(); 
+                    }
+                }
+            });
+        }
+    }
+
+    function handleMultipleChoiceAnswer(event, flashcards, card, answerButtons, actionBtn) {
+        const selectedButton = event.target;
+        const isCorrect = selectedButton.getAttribute('data-correct') === 'true';
+
+        answerButtons.forEach(btn => {
+            btn.disabled = true; 
+            if (btn.getAttribute('data-correct') === 'true') {
+                btn.classList.add('border-2', 'border-green-500');
+            }
+        });
+
+        selectedButton.classList.add(isCorrect ? 'bg-green-100' : 'bg-red-100', isCorrect ? 'dark:bg-green-700' : 'dark:bg-red-700');
+        selectedButton.classList.add(isCorrect ? 'text-green-700' : 'text-red-700', isCorrect ? 'dark:text-green-200' : 'dark:text-red-200');
+
+        if (isCorrect) {
+            score++;
+            // Progress will be updated in the next showCard call
+            setTimeout(() => {
+                moveToNextCard(flashcards);
+            }, 1500);
+        } else {
+            actionBtn.classList.remove('hidden'); // Show "Nastavi" button
+        }
+    }
+
+    function handleTextAnswerCheck(flashcards, card, actionBtn, textInput) {
+        const userAnswer = textInput.value.trim().toLowerCase();
+        const correctAnswer = card.correct.toString().trim().toLowerCase();
+        const correctAnswerDisplay = document.getElementById('correct-answer-display');
+
+        textInput.disabled = true;
+        correctAnswerDisplay.innerHTML = ''; 
+
+        if (userAnswer === correctAnswer) {
+            score++;
+            textInput.classList.add('border-green-500', 'border-2');
+        } else {
+            correctAnswerDisplay.innerHTML = `<div class="p-2 mt-2 bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-200 rounded-md">Točan odgovor: ${card.correct}</div>`;
+            textInput.classList.add('border-red-500', 'border-2');
+        }
+        // Progress will be updated in the next showCard call
+
+        actionBtn.textContent = 'Sljedeće';
+        actionBtn.onclick = () => moveToNextCard(flashcards);
+    }
+
+    function moveToNextCard(flashcards) {
+        currentIndex++;
+        if (currentIndex < flashcards.length) {
+            showCard(flashcards[currentIndex], flashcards);
+        } else {
+            showCompletionMessage(flashcards);
+        }
+    }
+
+    function showCompletionMessage(flashcards) {
+        const flashcardsContainer = document.getElementById('flashcards');
+        const totalQuestions = flashcards.length; // Ensure the total is derived from the actual array
+        const percentage = ((score / totalQuestions) * 100).toFixed(2); // Calculate the percentage
+
+        flashcardsContainer.innerHTML = `
+            <div class="text-center">
+            <h2 class="text-2xl font-bold, dark:text-white">Kraj Kviza!</h2>
+            <p class="mt-4 dark:text-white">Vaš rezultat: ${score} / ${totalQuestions}</p>
+            <p class="mt-2 dark:text-white">Postotak: ${percentage}%</p>
+            <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md" onclick="restartQuiz()">Ponovno pokreni</button>
+            </div>
+        `;
+        }
+
+    function restartQuiz() {
+      // Reset cookies and reload the page
+      setCookie('score', 0, 1); // Reset score in cookie
+      currentIndex = 0; // Reset current index
+      score = 0; // Reset score variable
+      location.reload();
+    }
+
+    // Cookie utilities
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = `${name}=${value};${expires};path=/`;
+    }
+
+    function getCookie(name) {
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const cookies = decodedCookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const c = cookies[i].trim();
+        if (c.indexOf(name + "=") === 0) {
+          return c.substring(name.length + 1);
+        }
+      }
+      return "";
+    }
+
+      // Initialize app
+    loadFlashcards();
+  </script>
+</body>
+</html>

@@ -1274,5 +1274,878 @@
         "question": "Jednadžba definira: min (I_OHM / I_IH0; I_OLM / I_ILO)",
         "answers": [],
         "correct": "faktor izlaznog grananja"
+    },
+    {
+        "question": "Koji je heksadecimalni ekvivalent za dekadski broj 255?",
+        "answers": [
+            "FF",
+            "FE",
+            "EF",
+            "EE"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je osnovna jedinica za pohranu podataka u digitalnim sustavima?",
+        "answers": [],
+        "correct": "bit"
+    },
+    {
+        "question": "Koji logički sklop ima izlaz 1 samo kada su svi ulazi 1?",
+        "answers": [
+            "I",
+            "ILI",
+            "NI",
+            "NILI"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je od navedenog primjer sekvencijalne logike?",
+        "answers": [
+            "Multiplekser",
+            "Dekoder",
+            "Bistabil",
+            "Zbrajalo"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji se kod najčešće koristi za prikazivanje znakova u računalima?",
+        "answers": [
+            "BCD",
+            "ASCII",
+            "Grayev kod",
+            "EBCDIC"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koliko različitih vrijednosti može predstavljati 8 bita?",
+        "answers": [
+            "8",
+            "16",
+            "128",
+            "256"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koja od sljedećih tehnologija logičkih vrata ima najmanju potrošnju energije u stacionarnom stanju?",
+        "answers": [
+            "TTL",
+            "ECL",
+            "CMOS",
+            "NMOS"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što je glavna prednost korištenja Vietcheva dijagrama?",
+        "answers": [
+            "Lakše crtanje logičkih shema",
+            "Minimizacija Booleovih funkcija",
+            "Brže izvođenje aritmetičkih operacija",
+            "Pretvorba između brojevnih sustava"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je oktalni ekvivalent binarnog broja 110101?",
+        "answers": [
+            "55",
+            "65",
+            "75",
+            "45"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "De Morganov teorem se koristi za:",
+        "answers": [
+            "Pojednostavljenje algebarskih izraza",
+            "Pretvorbu između I i ILI operacija",
+            "Implementaciju negacije",
+            "Sve od navedenog"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koja je funkcija multipleksera?",
+        "answers": [
+            "Odabir jednog od više ulaza i prosljeđivanje na jedan izlaz",
+            "Slanje jednog ulaza na jedan od više izlaza",
+            "Izvođenje aritmetičkih operacija",
+            "Pohrana podataka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je nedostatak neposrednih kodova?",
+        "answers": [
+            "Veliki broj potrebnih simbola",
+            "Sporo kodiranje",
+            "Teško dekodiranje",
+            "Nemogućnost ispravljanja grešaka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je zalihost u kodu?",
+        "answers": [
+            "Dodatni bitovi koji se koriste za ispravljanje grešaka",
+            "Nekorištene kodne riječi",
+            "Sposobnost koda da predstavlja negativne brojeve",
+            "Broj znamenki u kodnoj riječi"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je svrha polusumatora?",
+        "answers": [
+            "Zbrajanje dva bita",
+            "Zbrajanje dva bita s prijenosom",
+            "Oduzimanje dva bita",
+            "Množenje dva bita"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je nedostatak asinkronih brojača?",
+        "answers": [
+            "Spori su",
+            "Kompleksni su",
+            "Skloni su greškama zbog kašnjenja propagacije",
+            "Troše puno energije"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je uloga enkodera prioriteta?",
+        "answers": [
+            "Pretvara aktivni ulaz najvećeg prioriteta u binarni kod",
+            "Pretvara binarni kod u aktivni izlaz",
+            "Odabire jedan od više ulaza",
+            "Pohranjuje prioritet"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je glavna razlika između ROM i RAM memorije?",
+        "answers": [
+            "ROM je brži od RAM-a",
+            "RAM je nepostojan, a ROM je postojan",
+            "ROM može pohraniti više podataka od RAM-a",
+            "RAM se koristi samo za čitanje"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je binarni ekvivalent heksadecimalnog broja A5?",
+        "answers": [
+            "10100101",
+            "10101010",
+            "11000101",
+            "10011101"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "U kontekstu logičkih sklopova, što je 'fan-out'?",
+        "answers": [
+            "Broj ulaza koje jedan izlaz može pogoniti",
+            "Broj izlaza jednog sklopa",
+            "Vrijeme potrebno da se izlaz promijeni nakon promjene ulaza",
+            "Potrošnja energije sklopa"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je karakteristika Excess-3 koda?",
+        "answers": [
+            "Samokomplementirajući je",
+            "Težinski je kod",
+            "Koristi se za ispravljanje grešaka",
+            "Nije ponderirani kod"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što predstavlja MSB u binarnom broju?",
+        "answers": [
+            "Najmanje značajan bit",
+            "Bit predznaka",
+            "Najznačajniji bit",
+            "Bit parnosti"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja od navedenih Booleovih funkcija predstavlja operaciju isključivog ILI (XOR)?",
+        "answers": [
+            "F = A + B",
+            "F = A * B",
+            "F = A'B + AB'",
+            "F = (A+B)'"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koliko adresnih linija je potrebno za adresiranje 1K memorije?",
+        "answers": [
+            "8",
+            "10",
+            "12",
+            "16"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja vrsta izlaza se često koristi za spajanje više izlaza na istu sabirnicu?",
+        "answers": [
+            "Totem-pole",
+            "Otvoreni kolektor",
+            "Tristate",
+            "CMOS"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji je dekadski ekvivalent binarnog broja 11011 u drugom komplementu (5 bita)?",
+        "answers": [
+            "-5",
+            "-6",
+            "-7",
+            "27"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je osnovna gradivna jedinica sekvencijalnih sklopova?",
+        "answers": [
+            "Logička vrata",
+            "Bistabil",
+            "Multiplekser",
+            "Demultiplekser"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je prednost korištenja negativne logike?",
+        "answers": [
+            "Manja potrošnja energije",
+            "Veća brzina rada",
+            "Jednostavnija implementacija s određenim tipovima trošila",
+            "Veća otpornost na šum"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što je pretek (overflow) u aritmetici?",
+        "answers": [
+            "Greška koja nastaje kada rezultat operacije premaši kapacitet prikaza",
+            "Prijenos s najznačajnijeg bita",
+            "Greška u parnosti",
+            "Neiskorištena znamenka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kolika je kodna udaljenost između kodnih riječi 11001 i 10101?",
+        "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je funkcija demultipleksera?",
+        "answers": [
+            "Odabir jednog od više ulaza i prosljeđivanje na jedan izlaz",
+            "Slanje jednog ulaza na jedan od više izlaza",
+            "Izvođenje aritmetičkih operacija",
+            "Pohrana podataka"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što je minterm?",
+        "answers": [
+            "Disjunkcija svih varijabli funkcije",
+            "Konjunkcija svih varijabli funkcije",
+            "Produkt suma",
+            "Suma produkata"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je od navedenih kodova ciklički kod?",
+        "answers": [
+            "BCD kod",
+            "Binarni kod",
+            "Grayev kod",
+            "ASCII kod"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je svrha bita parnosti?",
+        "answers": [
+            "Povećanje brzine prijenosa",
+            "Otkrivanje grešaka",
+            "Smanjenje broja bitova",
+            "Kodiranje negativnih brojeva"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "U Booleovoj algebri, koji je neutralni element za operaciju ILI (disjunkciju)?",
+        "answers": [
+            "0",
+            "1",
+            "Sam izraz",
+            "Negacija izraza"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koliko je različitih Booleovih funkcija s tri varijable moguće definirati?",
+        "answers": [
+            "8",
+            "16",
+            "128",
+            "256"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koja je razina napona za logičku '1' u standardnoj TTL logici?",
+        "answers": [
+            "0V - 0.8V",
+            "2.4V - 5V",
+            "0.8V - 2.0V",
+            "-5V - 0V"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što je maksterm?",
+        "answers": [
+            "Disjunkcija svih varijabli funkcije",
+            "Konjunkcija svih varijabli funkcije",
+            "Produkt suma",
+            "Suma produkata"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako se naziva postupak pretvorbe analognog signala u digitalni?",
+        "answers": [
+            "Modulacija",
+            "Demodulacija",
+            "Digitalizacija",
+            "Kvantizacija"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je glavna karakteristika PAL (Programmable Array Logic) strukture?",
+        "answers": [
+            "Programabilna I matrica, fiksna ILI matrica",
+            "Fiksna I matrica, programabilna ILI matrica",
+            "Obje matrice su programabilne",
+            "Obje matrice su fiksne"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je binarni ekvivalent oktalnog broja 72?",
+        "answers": [
+            "111010",
+            "110010",
+            "111001",
+            "101110"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja Booleova jednakost opisuje distributivnost?",
+        "answers": [
+            "A(B+C) = AB + AC",
+            "A + (B+C) = (A+B) + C",
+            "A + A' = 1",
+            "A + AB = A"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je osnovni nedostatak FPLA (Field-Programmable Logic Array) strukture?",
+        "answers": [
+            "Mala brzina",
+            "Velika potrošnja",
+            "Kompleksnost i veća cijena zbog dvije programabilne matrice",
+            "Ograničen broj ulaza"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što je _vrijeme zadržavanja_ (hold time) kod bistabila?",
+        "answers": [
+            "Maksimalno vrijeme trajanja taktnog impulsa",
+            "Minimalno vrijeme prije aktivnog ruba takta kada podaci moraju biti stabilni",
+            "Maksimalno vrijeme tijekom kojeg se ulaz može mijenjati nakon takta",
+            "Minimalno vrijeme tijekom kojeg ulazni podaci moraju ostati stabilni nakon aktivnog ruba takta",
+            "Vrijeme potrebno za promjenu izlaza nakon dolaska takta"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koja logička operacija odgovara serijskom spoju prekidača?",
+        "answers": [],
+        "correct": "I (AND)"
+    },
+    {
+        "question": "Kako se naziva stanje logičkog sklopa kada izlaz nije ni logička 0 ni logička 1?",
+        "answers": [],
+        "correct": "Stanje visoke impedancije (Tristate)"
+    },
+    {
+        "question": "Koja je vrijednost dekadskog broja 17 u binarnom obliku?",
+        "answers": [],
+        "correct": "10001"
+    },
+    {
+        "question": "Koji teorem povezuje disjunkciju i konjunkciju preko negacije?",
+        "answers": [],
+        "correct": "De Morganov teorem"
+    },
+    {
+        "question": "Koji je drugi naziv za logički sklop NE (NOT)?",
+        "answers": [],
+        "correct": "Invertor"
+    },
+    {
+        "question": "Koliko bitova ima jedan bajt?",
+        "answers": [],
+        "correct": "8"
+    },
+    {
+        "question": "Koji je kod pogodan za inkrementalne enkodere zbog svojstva da se susjedne riječi razlikuju u samo jednom bitu?",
+        "answers": [],
+        "correct": "Grayev kod"
+    },
+    {
+        "question": "Koji je rezultat operacije 1 XOR 1?",
+        "answers": [],
+        "correct": "0"
+    },
+    {
+        "question": "Kako se naziva potpuni disjunktivni normalni oblik?",
+        "answers": [],
+        "correct": "PDNO"
+    },
+    {
+        "question": "Koji je algebarski izraz za apsorpciju (x + xy)?",
+        "answers": [],
+        "correct": "x"
+    },
+    {
+        "question": "Koja je tehnologija logičkih vrata naslijedila TTL kao dominantnu?",
+        "answers": [],
+        "correct": "CMOS"
+    },
+    {
+        "question": "Koliko ulaza ima dekoder 3-na-8?",
+        "answers": [],
+        "correct": "3"
+    },
+    {
+        "question": "Što je 'vrijeme postavljanja' (setup time) kod bistabila?",
+        "answers": [],
+        "correct": "Minimalno vrijeme tijekom kojeg ulazni podaci moraju biti stabilni prije aktivnog ruba takta."
+    },
+    {
+        "question": "Kolika je maksimalna vrijednost koja se može prikazati 4-bitnim prirodnim binarnim brojem?",
+        "answers": [],
+        "correct": "15"
+    },
+    {
+        "question": "Koja logička operacija odgovara paralelnom spoju prekidača?",
+        "answers": [],
+        "correct": "ILI (OR)"
+    },
+    {
+        "question": "Koji je heksadecimalni simbol za dekadski broj 12?",
+        "answers": [],
+        "correct": "C"
+    },
+    {
+        "question": "Što je _race condition_ (stanje utrke) u digitalnoj logici?",
+        "answers": [
+            "Stanje kada se svi ulazi promijene istovremeno",
+            "Poremećaj u napajanju koji uzrokuje kvar logičkog sklopa",
+            "Neželjeno stanje gdje izlaz ovisi o redoslijedu ili vremenu događanja koji nisu predviđeni",
+            "Namjerno uvedena kašnjenja radi sinkronizacije signala",
+            "Stanje kada su svi izlazi logički 1 bez obzira na ulaz"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je vrijednost binarnog broja 101.11 u dekadskom sustavu?",
+        "answers": [],
+        "correct": "5.75"
+    },
+    {
+        "question": "Koji je komplement broja 1010 u prvom komplementu?",
+        "answers": [],
+        "correct": "0101"
+    },
+    {
+        "question": "Koji logički sklop se može koristiti kao univerzalni sklop (sam može implementirati bilo koju Booleovu funkciju)?",
+        "answers": [],
+        "correct": "NI ili NILI"
+    },
+    {
+        "question": "Što je _jedinična udaljenost_ (unit distance) kod kodova?",
+        "answers": [
+            "Udaljenost između dvije kodne riječi izražena u bitovima",
+            "Svojstvo kodova gdje se sve kodne riječi razlikuju po najmanje jednom bitu",
+            "Svojstvo da se susjedne kodne riječi razlikuju u samo jednom bitu",
+            "Najmanji mogući broj kodnih riječi u jednom kodnom prostoru",
+            "Udaljenost između najmanje i najveće vrijednosti kodne riječi"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koliko je bajtova u jednom kilobajtu (KB)?",
+        "answers": [],
+        "correct": "1024"
+    },
+    {
+        "question": "Koja je glavna funkcija registra?",
+        "answers": [],
+        "correct": "Privremeno pohranjivanje grupe bitova."
+    },
+    {
+        "question": "Koja je svrha 'clock' signala u sekvencijalnoj logici?",
+        "answers": [],
+        "correct": "Sinkronizacija promjena stanja u sklopu."
+    },
+    {
+        "question": "Koji je oktalni ekvivalent za heksadecimalni broj 1A?",
+        "answers": [],
+        "correct": "32"
+    },
+    {
+        "question": "Što je 'mjehur' (bubble) na ulazu ili izlazu logičkog simbola?",
+        "answers": [],
+        "correct": "negacija"
+    },
+    {
+        "question": "Kako se naziva memorija koja gubi svoj sadržaj kada se isključi napajanje?",
+        "answers": [],
+        "correct": "Nepostojana"
+    },
+    {
+        "question": "Koja je razlika između kombinacijske i sekvencijalne logike?",
+        "answers": [
+            "Kombinacijska logika ima memoriju, a sekvencijalna nema",
+            "Izlaz sekvencijalne logike ovisi samo o trenutnim ulazima",
+            "Izlaz kombinacijske logike ovisi samo o trenutnim ulazima, dok izlaz sekvencijalne ovisi i o prethodnim stanjima",
+            "Sekvencijalna logika je brža od kombinacijske"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji je BCD ekvivalent za dekadski broj 49?",
+        "answers": [
+            "0100 1001",
+            "110001",
+            "01001001",
+            "100100"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je princip rada EPROM memorije?",
+        "answers": [
+            "Podaci se upisuju električnim putem, a brišu ultraljubičastim svjetlom",
+            "Podaci se upisuju i brišu električnim putem",
+            "Podaci se upisuju mehanički, a brišu toplinom",
+            "Podaci se mogu samo jednom upisati"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji od sljedećih izraza je primjer potpunog disjunktivnog normalnog oblika (PDNO)?",
+        "answers": [
+            "A + BC",
+            "A'BC + AB'C + ABC'",
+            "(A+B)(A'+C)",
+            "AB + C'"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što je 'glitch' u digitalnim krugovima?",
+        "answers": [
+            "Namjerni signal za resetiranje",
+            "Kratkotrajni, neželjeni impuls na izlazu",
+            "Stabilno logičko stanje",
+            "Signal takta"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je funkcija punog zbrajala (full adder)?",
+        "answers": [
+            "Zbraja dva bita",
+            "Zbraja dva bita i prijenos s prethodne pozicije",
+            "Zbraja dva 4-bitna broja",
+            "Generira signal takta"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je heksadecimalni ekvivalent binarnog broja 11110011?",
+        "answers": [
+            "E3",
+            "F3",
+            "D3",
+            "C3"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "U Booleovoj algebri, čemu je jednak izraz A + 1?",
+        "answers": [
+            "A",
+            "0",
+            "1",
+            "A'"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je osnovna prednost GAL (Generic Array Logic) u odnosu na PAL?",
+        "answers": [
+            "Manja potrošnja",
+            "Veća brzina",
+            "Mogućnost reprogramiranja i fleksibilne izlazne makro-ćelije",
+            "Niža cijena"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koliko 4-na-1 multipleksera je potrebno za implementaciju 16-na-1 multipleksera?",
+        "answers": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je glavna mana Ripple (asinkronog) brojača?",
+        "answers": [
+            "Kompleksna struktura",
+            "Velika potrošnja",
+            "Kašnjenje propagacije se akumulira",
+            "Ograničen broj stanja"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je vrijednost izraza (A + B)' prema De Morganovom teoremu?",
+        "answers": [
+            "A' + B'",
+            "A' * B'",
+            "A * B",
+            "A'B + AB'"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je binarni ekvivalent dekadskog broja 6.25?",
+        "answers": [
+            "110.01",
+            "101.10",
+            "110.10",
+            "101.01"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što je 'latencija' memorije?",
+        "answers": [
+            "Kapacitet pohrane",
+            "Vrijeme potrebno za pristup podacima",
+            "Brzina prijenosa podataka",
+            "Potrošnja energije"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji je od sljedećih kodova neponderirani (non-weighted) kod?",
+        "answers": [
+            "8421 BCD",
+            "2421 BCD",
+            "Excess-3",
+            "5421 BCD"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "U kojem brojevnom sustavu je izraz 123 + 45 = 201 točan?",
+        "answers": [
+            "Dekadski (10)",
+            "Oktalni (8)",
+            "Heksadecimalni (16)",
+            "Binarni (2)"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je funkcija Schmittovog okidača (Schmitt trigger)?",
+        "answers": [
+            "Generiranje signala takta",
+            "Pretvaranje signala s polaganim bridovima u signale s oštrim bridovima (histereza)",
+            "Zbrajanje dva signala",
+            "Pohrana jednog bita informacije"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koliko najmanje bitova je potrebno za kodiranje 50 različitih stanja?",
+        "answers": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja od sljedećih tvrdnji vrijedi za idempotentnost u Booleovoj algebri?",
+        "answers": [
+            "A + A = A",
+            "A + A' = 1",
+            "A + 0 = A",
+            "A + 1 = 1"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je osnovni element za pohranu u DRAM memoriji?",
+        "answers": [
+            "Bistabil",
+            "Tranzistor",
+            "Kondenzator",
+            "Otpornik"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja je svrha 'chip select' (CS) ili 'chip enable' (CE) ulaza na memorijskom čipu?",
+        "answers": [
+            "Za odabir adrese unutar čipa",
+            "Za odabir između operacije čitanja i pisanja",
+            "Za aktiviranje ili deaktiviranje čipa",
+            "Za resetiranje sadržaja čipa"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji je dekadski ekvivalent binarnog broja 1000 u prikazu s predznakom (sign-magnitude)?",
+        "answers": [],
+        "correct": "-0"
+    },
+    {
+        "question": "Koja je vrijednost heksadecimalnog broja F u dekadskom sustavu?",
+        "answers": [],
+        "correct": "15"
+    },
+    {
+        "question": "Koji je komplement broja 1011 u drugom komplementu?",
+        "answers": [],
+        "correct": "0101"
+    },
+    {
+        "question": "Što je 'propagacijsko kašnjenje' (propagation delay) logičkog sklopa?",
+        "answers": [
+            "Vrijeme potrebno da takni signal dosegne ulaz sklopa",
+            "Vrijeme koje prođe od promjene na izlazu do stabilizacije ulaza",
+            "Vrijeme koje prođe od promjene na ulazu do odgovarajuće promjene na izlazu",
+            "Ukupno vrijeme izvođenja logičke funkcije",
+            "Vrijeme potrebno za resetiranje logičkog sklopa"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji je brojčani sustav s bazom 2?",
+        "answers": [],
+        "correct": "Binarni"
+    },
+    {
+        "question": "Koja je svrha pull-up otpornika?",
+        "answers": [
+            "Smanjuje struju kroz izlaz kada je logička razina visoka",
+            "Povećava frekvenciju signala na ulazu",
+            "Osigurava da je signal na visokoj logičkoj razini kada nije pogonjen na nisku razinu",
+            "Sprječava ulazni signal da dosegne logičku nulu",
+            "Mijenja analogni signal u digitalni oblik"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koliko selekcijskih (adresnih) ulaza ima demultiplekser 1-na-16?",
+        "answers": [],
+        "correct": "4"
+    },
+    {
+        "question": "Koja je glavna prednost sinkronih brojača u odnosu na asinkrone?",
+        "answers": [
+            "Manje troše energije jer rade na višim frekvencijama",
+            "Omogućuju jednostavniji prikaz na sedmerosegmentnim pokazivačima",
+            "Svi bistabili mijenjaju stanje istovremeno s taktom, čime se izbjegava akumulacija kašnjenja",
+            "Lakše se implementiraju pomoću T-bistabila",
+            "Imaju veći broj stanja za isto brojno stanje"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji je oktalni ekvivalent dekadskog broja 10?",
+        "answers": [],
+        "correct": "12"
+    },
+    {
+        "question": "Što je 'histereza' u kontekstu Schmittovog okidača?",
+        "answers": [
+            "Kašnjenje izlaza u odnosu na ulazni signal",
+            "Mogućnost pohrane prethodnog logičkog stanja",
+            "Postojanje dva različita praga okidanja, jedan za rastući i jedan za padajući brid signala",
+            "Sposobnost sklopa da invertira ulazni signal ovisno o frekvenciji",
+            "Stabilizacija napajanja pomoću kondenzatora"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koliko različitih kombinacija se može dobiti s 3 bita?",
+        "answers": [],
+        "correct": "8"
+    },
+    {
+        "question": "Koja je uloga međuspremnika (buffera) u digitalnoj logici?",
+        "answers": [
+            "Smanjuje napon signala kako bi spriječio prenapone",
+            "Invertira logičku razinu ulaznog signala",
+            "Pohranjuje privremeno podatke dok se ne obrade",
+            "Pojačava struju signala kako bi mogao pogoniti više ulaza (povećava fan-out)",
+            "Generira taktne impulse za sinkronizaciju sklopa"
+        ],
+        "correct": "3"
     }
 ]

@@ -42,6 +42,24 @@
         <a href="/quiz/digel1dio" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
           Pokreni →
         </a>
+
+      </div>
+       <!-- DIGEL 2.kol -->
+       <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
+        <h2 class="text-lg font-semibold dark:text-white">DIGEL 2.dio</h2>
+        <p class="text-gray-600 dark:text-gray-400">Pitanja: 30 | 20 - 30 min</p>
+        <script>
+          fetch('../quiz/digel2dio/quiz.json')
+            .then(response => response.json())
+            .then(data => {
+              const questionCount = data.length;
+              document.getElementById('digel2-question-count').innerText = `ⓘ 30 nasumičnih pitanja iz baze od ${questionCount}`;
+            });
+        </script>
+        <p id="digel2-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
+        <a href="/quiz/digel2dio" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
+          Pokreni →
+        </a>
       </div>
 
        <!-- KOM VJ 1.kol -->
