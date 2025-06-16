@@ -1831,7 +1831,7 @@
     {
         "question": "Koja je svrha 'clock' signala u sekvencijalnoj logici?",
         "answers": [],
-        "correct": "Sinkronizacija promjena stanja u sklopu."
+        "correct": "Sinkronizacija"
     },
     {
         "question": "Koji je oktalni ekvivalent za heksadecimalni broj 1A?",
