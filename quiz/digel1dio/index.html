@@ -79,7 +79,8 @@
         let flashcardsData = await response.json();
         // Shuffle all questions from the entire file
         flashcardsData = shuffleArray(flashcardsData);
-        // Removed .slice() to use all questions
+        // Slice to get the first 30 questions after shuffling
+        flashcardsData = flashcardsData.slice(0, 30);
         startQuiz(flashcardsData);
       } catch (error) {
         console.error('Error loading flashcards:', error);
