@@ -1143,7 +1143,7 @@
     {
         "question": "Koji teorem algebre logike kaže da je negirana disjunkcija dvaju ili više varijabli jednaka konjunkciji negiranih varijabli?",
         "answers": [],
-        "correct": "De Morganov teorem"
+        "correct": "De Morganov"
     },
     {
         "question": "Koje funkcije varijabli se realiziraju na pojedinim informacijskim izlazima DEMUX-a kada ga koristimo u svojstvu dekodera?",
@@ -1719,7 +1719,7 @@
     {
         "question": "Koji teorem povezuje disjunkciju i konjunkciju preko negacije?",
         "answers": [],
-        "correct": "De Morganov teorem"
+        "correct": "De Morganov"
     },
     {
         "question": "Koji je drugi naziv za logički sklop NE (NOT)?",
