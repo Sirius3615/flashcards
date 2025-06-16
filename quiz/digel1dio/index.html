@@ -65,12 +65,21 @@
   </div>
 
   <script>
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+        return array;
+    }
+
     async function loadFlashcards() {
       try {
         const response = await fetch('./quiz.json');
         let flashcardsData = await response.json();
-        // Shuffle questions
-        flashcardsData = flashcardsData.sort(() => Math.random() - 0.5).slice(0, 30);
+        // Shuffle all questions from the entire file
+        flashcardsData = shuffleArray(flashcardsData);
+        // Removed .slice() to use all questions
         startQuiz(flashcardsData);
       } catch (error) {
         console.error('Error loading flashcards:', error);
