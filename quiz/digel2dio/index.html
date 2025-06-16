@@ -214,7 +214,7 @@
 
         if (userAnswer === correctAnswer) {
             score++;
-            textInput.classList.add('border-green-500', 'border-2');
+            textInput.classList.add('border-green-500', 'border-2', 'bg-green-100', 'dark:bg-green-700');
         } else {
             correctAnswerDisplay.innerHTML = `<div class="p-2 mt-2 bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-200 rounded-md">Točan odgovor: ${card.correct}</div>`;
             textInput.classList.add('border-red-500', 'border-2');
