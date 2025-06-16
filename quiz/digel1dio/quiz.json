@@ -949,7 +949,7 @@
     {
         "question": "Zadan je sustav sa: C=1500 bit/s, B = 200Hz, T=2s, K=1. Izračunaj informacijski volumen.",
         "answers": [],
-        "correct": "V = 3000 bit"
+        "correct": "3000"
     },
     {
         "question": "Da bismo dokazali potpunost skupa, njime moramo moći izraziti:",
