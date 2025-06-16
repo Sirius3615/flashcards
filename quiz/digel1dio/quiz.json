@@ -1709,7 +1709,7 @@
     {
         "question": "Kako se naziva stanje logičkog sklopa kada izlaz nije ni logička 0 ni logička 1?",
         "answers": [],
-        "correct": "Stanje visoke impedancije (Tristate)"
+        "correct": "Stanje visoke impedancije"
     },
     {
         "question": "Koja je vrijednost dekadskog broja 17 u binarnom obliku?",
