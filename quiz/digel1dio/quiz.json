@@ -679,11 +679,6 @@
         "correct": "0"
     },
     {
-        "question": "Dvostruko zaokruživanje 1 u Veitchovom dijagramu kod minimizacije PONO-a ima značenje:",
-        "answers": [],
-        "correct": "Višestruko grupiranje"
-    },
-    {
         "question": "Inverz ima značenje:",
         "answers": [
             "negativnog broja",
