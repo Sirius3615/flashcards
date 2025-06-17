@@ -1263,7 +1263,7 @@
     {
         "question": "Koja vrsta izlaza jedina ne generira aktivnu logičku 0 i 1?",
         "answers": [],
-        "correct": "izlazi s otvorenim kolektorom"
+        "correct": "Stanje visoke impedancije"
     },
     {
         "question": "Jednadžba definira: min (I_OHM / I_IH0; I_OLM / I_ILO)",
