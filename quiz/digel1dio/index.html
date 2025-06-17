@@ -89,11 +89,13 @@
 
     let currentIndex = 0;
     let score = 0;
+    let negativeScore = 0;
 
     function startQuiz(flashcards) {
       // Load score from cookies
       const savedScore = getCookie('score');
       score = savedScore ? parseInt(savedScore, 10) : 0;
+      negativeScore = 0; // Reset negative score
       currentIndex = 0; // Ensure currentIndex is reset
 
       showCard(flashcards[currentIndex], flashcards);
@@ -194,12 +196,17 @@
         selectedButton.classList.add(isCorrect ? 'text-green-700' : 'text-red-700', isCorrect ? 'dark:text-green-200' : 'dark:text-red-200');
 
         if (isCorrect) {
-            score++;
+            score += 2;
             // Progress will be updated in the next showCard call
             setTimeout(() => {
                 moveToNextCard(flashcards);
             }, 1500);
         } else {
+            score -= 1;
+            negativeScore += 1;
+            if (score < 0) {
+                score = 0;
+            }
             actionBtn.classList.remove('hidden'); // Show "Nastavi" button
         }
     }
@@ -213,11 +220,12 @@
         correctAnswerDisplay.innerHTML = ''; 
 
         if (userAnswer === correctAnswer) {
-            score++;
+            score += 2;
             textInput.classList.add('border-green-500', 'border-2', 'bg-green-100', 'dark:bg-green-700');
         } else {
             correctAnswerDisplay.innerHTML = `<div class="p-2 mt-2 bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-200 rounded-md">Točan odgovor: ${card.correct}</div>`;
             textInput.classList.add('border-red-500', 'border-2');
+            // No points deducted for incorrect text answers
         }
         // Progress will be updated in the next showCard call
 
@@ -237,13 +245,14 @@
     function showCompletionMessage(flashcards) {
         const flashcardsContainer = document.getElementById('flashcards');
         const totalQuestions = flashcards.length; // Ensure the total is derived from the actual array
-        const percentage = ((score / totalQuestions) * 100).toFixed(2); // Calculate the percentage
+        const percentage = totalQuestions > 0 ? ((score / (totalQuestions * 2)) * 100).toFixed(2) : 0; // Max possible score is totalQuestions * 2
 
         flashcardsContainer.innerHTML = `
             <div class="text-center">
             <h2 class="text-2xl font-bold, dark:text-white">Kraj Kviza!</h2>
-            <p class="mt-4 dark:text-white">Vaš rezultat: ${score} / ${totalQuestions}</p>
+            <p class="mt-4 dark:text-white">Vaš rezultat: ${score} / ${totalQuestions * 2}</p>
             <p class="mt-2 dark:text-white">Postotak: ${percentage}%</p>
+            <p class="mt-2 dark:text-white">Izgubljeni bodovi: ${negativeScore}</p>
             <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md" onclick="restartQuiz()">Ponovno pokreni</button>
             </div>
         `;
@@ -254,6 +263,7 @@
       setCookie('score', 0, 1); // Reset score in cookie
       currentIndex = 0; // Reset current index
       score = 0; // Reset score variable
+      negativeScore = 0; // Reset negative score variable
       location.reload();
     }
 
