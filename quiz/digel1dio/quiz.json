@@ -123,7 +123,7 @@
             "EX-NI",
             "NI"
         ],
-        "correct": "0"
+        "correct": "4"
     },
     {
         "question": "Osnovna karakteristika Grayevog koda je:",
@@ -2147,5 +2147,22 @@
             "Generira taktne impulse za sinkronizaciju sklopa"
         ],
         "correct": "3"
+    },
+    {
+        "question": "Što predstavlja ova tablica?",
+        "image":"images/harvard-metoda.png",
+        "answers": [],
+        "correct": "Harvardsku metodu"
+    },
+    {
+        "question": "Koja memorija koristi bistabilne sklopove za pohranu podataka?",
+        "answers": [],
+        "correct": "SRAM"
+    },
+    {
+        "question": "Koja komponenta u ROM memoriji se može brisati koristeći UV svjetlo?",
+        "answers": [],
+        "correct": "EPROM"
     }
+
 ]
