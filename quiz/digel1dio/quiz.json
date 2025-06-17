@@ -126,11 +126,6 @@
         "correct": "4"
     },
     {
-        "question": "Osnovna karakteristika Grayevog koda je:",
-        "answers": [],
-        "correct": "Susjedne kodne riječi se kodiraju tako da se razlikuju samo u jednom bitu."
-    },
-    {
         "question": "Što je MDNO i koji pojmovi se javljaju u njegovoj definiciji?",
         "answers": [
             "MDNO je disjunkcija svih elementarnih članova, pri čemu je elementarni član konjunkcija svih varijabli, negiranih ili nije, a nužni elementarni član je onaj čije izostavljanje ne utječe na vrijednost funkcije.",
@@ -844,7 +839,7 @@
     {
         "question": "Osnovna karakteristika Grayevog koda je:",
         "answers": [],
-        "correct": "susjednost"
+        "correct": "susjednost kodnih riječi"
     },
     {
         "question": "Kod minimizacije, kao kriterij koristimo minimalan...",
@@ -907,7 +902,7 @@
             "Logička 0 je neutralni element i za konjunkciju i za disjunkciju.",
             "Ništa od navedenog."
         ],
-        "correct": "0"
+        "correct": "1"
     },
     {
         "question": "Koliko je moguće definirati različitih Booleovih funkcija dviju varijabli?",
