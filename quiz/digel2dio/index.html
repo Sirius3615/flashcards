@@ -241,8 +241,9 @@
         }
 
         contentHTML += `
-            <div class="flex justify-end">
-                <button id="action-btn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md"></button>
+            <div class="flex justify-between mt-4">
+                <button id="finish-btn" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md transition duration-200">Završi kviz</button>
+                <button id="action-btn" class="px-4 py-2 bg-blue-600 text-white rounded-md"></button>
             </div>
         `;
         flashcardDiv.innerHTML = contentHTML;
@@ -274,6 +275,9 @@
                 }
             });
         }
+
+        const finishBtn = document.getElementById('finish-btn');
+        finishBtn.addEventListener('click', () => confirmFinish(flashcards));
     }
 
     function handleMultipleChoiceAnswer(event, flashcards, card, answerButtons, actionBtn) {
@@ -353,20 +357,16 @@
         `;
         }
 
-    function restartQuiz() {
-      // Reset cookies and reload the page
-      setCookie('score', 0, 1); // Reset score in cookie
-      currentIndex = 0; // Reset current index
-      score = 0; // Reset score variable
-      negativeScore = 0; // Reset negative score variable
-      location.reload();
-    }
+    function confirmFinish(flashcards) {
+        const totalQuestions = flashcards.length;
+        const answeredQuestions = currentIndex;
+        const unansweredQuestions = totalQuestions - answeredQuestions;
+        const maxPossibleScore = totalQuestions * 2;
 
-    // Cookie utilities
-    function setCookie(name, value, days) {
-      const d = new Date();
-      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + d.toUTCString();
+        if (confirm(`Sigurno želite završiti kviz?\n\nOdgovorili ste na ${answeredQuestions} od ${totalQuestions} pitanja.\n${unansweredQuestions} pitanja će biti označena kao netočna.`)) {
+            showCompletionMessage(flashcards);
+        }
+    }
       document.cookie = `${name}=${value};${expires};path=/`;
     }
 

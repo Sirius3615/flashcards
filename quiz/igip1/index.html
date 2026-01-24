@@ -214,8 +214,9 @@
                 </button>
                 </li>`).join('')}
             </ul>
-            <div class="flex justify-end">
-            <button id="next-btn" class="mt-4 hidden px-4 py-2 bg-blue-600 text-white rounded-md">Nastavi</button>
+            <div class="flex justify-between mt-4">
+            <button id="finish-btn" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md transition duration-200">Završi kviz</button>
+            <button id="next-btn" class="hidden px-4 py-2 bg-blue-600 text-white rounded-md">Nastavi</button>
             </div>
             
         `;
@@ -237,6 +238,9 @@
             showCompletionMessage(flashcards);
             }
         });
+
+        const finishBtn = document.getElementById('finish-btn');
+        finishBtn.addEventListener('click', () => confirmFinish(flashcards));
         }
 
         function handleAnswer(event, flashcards, card) {
@@ -287,6 +291,16 @@
             </div>
         `;
         }
+
+    function confirmFinish(flashcards) {
+        const totalQuestions = flashcards.length;
+        const answeredQuestions = currentIndex;
+        const unansweredQuestions = totalQuestions - answeredQuestions;
+
+        if (confirm(`Sigurno želite završiti kviz?\n\nOdgovorili ste na ${answeredQuestions} od ${totalQuestions} pitanja.\n${unansweredQuestions} pitanja će biti označena kao netočna.`)) {
+            showCompletionMessage(flashcards);
+        }
+    }
 
     function restartQuiz() {
       // Reset cookies and reload the page
