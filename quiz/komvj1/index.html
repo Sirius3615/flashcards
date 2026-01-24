@@ -77,6 +77,17 @@
       }
     }
 
+    function escapeHtml(text) {
+      if (!text) return text;
+      return text
+        .toString()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
     let currentIndex = 0;
     let score = 0;
 
@@ -107,7 +118,7 @@
         flashcard.className = 'bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4';
 
         flashcard.innerHTML = `
-            <h3 class="text-lg dark:text-white font-semibold">${card.question}</h3>
+            <h3 class="text-lg dark:text-white font-semibold">${escapeHtml(card.question)}</h3>
             ${card.image ? `<img src="${card.image}" alt="Question Image" class="w-full object-cover rounded-md mb-4">` : ''}
             <ul class="mt-2">
             ${shuffledAnswers.map((answer, i) => `
@@ -116,7 +127,7 @@
                     class="w-full text-left dark:text-white px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring"
                     data-correct="${answer.isCorrect}"
                 >
-                    ${answer.text}
+                    ${escapeHtml(answer.text)}
                 </button>
                 </li>`).join('')}
             </ul>

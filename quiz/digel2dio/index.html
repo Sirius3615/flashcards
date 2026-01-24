@@ -73,6 +73,17 @@
         return array;
     }
 
+    function escapeHtml(text) {
+      if (!text) return text;
+      return text
+        .toString()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
     async function loadFlashcards() {
       try {
         const response = await fetch('./quiz.json');
@@ -112,7 +123,7 @@
         const flashcardDiv = document.createElement('div');
         flashcardDiv.className = 'bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4';
 
-        let contentHTML = `<h3 class="text-lg dark:text-white font-semibold">${card.question}</h3>`;
+        let contentHTML = `<h3 class="text-lg dark:text-white font-semibold">${escapeHtml(card.question)}</h3>`;
         if (card.image) {
             contentHTML += `<img src="${card.image}" alt="Question Image" class="w-full object-cover rounded-md mb-4">`;
         }
@@ -132,7 +143,7 @@
                             class="w-full text-left dark:text-white px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring"
                             data-correct="${answer.isCorrect}"
                         >
-                            ${answer.text}
+                            ${escapeHtml(answer.text)}
                         </button>
                     </li>`).join('')}
             </ul>`;
@@ -223,7 +234,7 @@
             score += 2;
             textInput.classList.add('border-green-500', 'border-2', 'bg-green-100', 'dark:bg-green-700');
         } else {
-            correctAnswerDisplay.innerHTML = `<div class="p-2 mt-2 bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-200 rounded-md">Točan odgovor: ${card.correct}</div>`;
+            correctAnswerDisplay.innerHTML = `<div class="p-2 mt-2 bg-orange-100 dark:bg-orange-800 text-orange-700 dark:text-orange-200 rounded-md">Točan odgovor: ${escapeHtml(card.correct)}</div>`;
             textInput.classList.add('border-red-500', 'border-2');
             // No points deducted for incorrect text answers
         }
