@@ -84,19 +84,103 @@
         .replace(/'/g, "&#039;");
     }
 
-    async function loadFlashcards() {
+    async function loadFlashcards(isFull = false) {
       try {
         const response = await fetch('./quiz.json');
         let flashcardsData = await response.json();
         // Shuffle all questions from the entire file
+        // flashcardsData = shuffleArray(flashcardsData); // Don't shuffle for review mode
+        
+        if (isFull === 'review') {
+             showReviewMode(flashcardsData);
+             return;
+        }
+
         flashcardsData = shuffleArray(flashcardsData);
+
         // Slice to get the first 30 questions after shuffling
-        flashcardsData = flashcardsData.slice(0, 30);
+        if (!isFull) {
+             flashcardsData = flashcardsData.slice(0, 30);
+        }
         startQuiz(flashcardsData);
       } catch (error) {
         console.error('Error loading flashcards:', error);
       }
     }
+
+    function showStartScreen() {
+        const flashcardsContainer = document.getElementById('flashcards');
+        flashcardsContainer.innerHTML = `
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 text-center max-w-md mx-auto">
+                <h2 class="text-2xl font-bold mb-6 dark:text-white">Dobrodošli u Kviz!</h2>
+                <div class="space-y-4">
+                    <button onclick="loadFlashcards(false)" class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-200">
+                        Pokreni brzi kviz (30 pitanja)
+                    </button>
+                    <button onclick="loadFlashcards(true)" class="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition duration-200">
+                        Pokreni puni kviz (Sva pitanja)
+                    </button>
+                    <button onclick="loadFlashcards('review')" class="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition duration-200">
+                        Pregledaj sva pitanja i odgovore
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+
+    function showReviewMode(flashcards) {
+         const flashcardsContainer = document.getElementById('flashcards');
+         const progressContainer = document.getElementById('progress');
+         progressContainer.textContent = ''; // Clear progress text
+
+         let htmlContent = '<div class="space-y-6">';
+
+         flashcards.forEach((card, index) => {
+             htmlContent += `
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Pitanje ${index + 1}</p>
+                    <h3 class="text-lg dark:text-white font-semibold mb-4">${escapeHtml(card.question)}</h3>
+                    ${card.image ? `<img src="${card.image}" alt="Question Image" class="w-full object-cover rounded-md mb-4 max-h-64">` : ''}
+             `;
+             
+             if (card.answers && card.answers.length > 0) {
+                 htmlContent += '<ul class="space-y-2">';
+                 card.answers.forEach((answer, ansIndex) => {
+                     const isCorrect = ansIndex == card.correct;
+                     const bgClass = isCorrect ? 'bg-green-100 dark:bg-green-900 border-green-500' : 'bg-gray-50 dark:bg-gray-700 border-transparent';
+                     const textClass = isCorrect ? 'text-green-800 dark:text-green-100' : 'text-gray-800 dark:text-gray-200';
+                     const borderClass = isCorrect ? 'border-2' : 'border';
+                     
+                     htmlContent += `
+                        <li class="px-4 py-2 rounded-md ${bgClass} ${textClass} ${borderClass}">
+                            ${escapeHtml(answer)} ${isCorrect ? '✓' : ''}
+                        </li>
+                     `;
+                 });
+                 htmlContent += '</ul>';
+             } else {
+                 htmlContent += `
+                    <div class="p-3 bg-green-50 dark:bg-green-900 rounded-md border border-green-200 dark:border-green-700">
+                        <span class="font-semibold text-green-800 dark:text-green-100">Točan odgovor:</span> 
+                        <span class="text-green-900 dark:text-green-200">${escapeHtml(card.correct)}</span>
+                    </div>
+                 `;
+             }
+
+             htmlContent += '</div>';
+         });
+
+         htmlContent += `
+            <div class="text-center mt-8 mb-8">
+                <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-200">
+                    Natrag na početak
+                </button>
+            </div>
+         </div>`;
+
+         flashcardsContainer.innerHTML = htmlContent;
+    }
+
 
     let currentIndex = 0;
     let score = 0;
@@ -299,7 +383,7 @@
     }
 
       // Initialize app
-    loadFlashcards();
+    showStartScreen();
   </script>
 </body>
 </html>
