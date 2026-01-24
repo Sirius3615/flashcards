@@ -1,0 +1,568 @@
+[
+    {
+        "question": "Kako ispisati 'Hello World' u okvir za upozorenje (alert)?",
+        "answers": [
+            "alert('Hello World')",
+            "msgBox('Hello World')",
+            "alertBox('Hello World')",
+            "msg('Hello World')"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Rezultat izvršavanja PHP skripte je obično HTML kod.",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako dodati komentare koji imaju više od jedne linije u JavaScriptu?",
+        "answers": [
+            "/* Komentar */",
+            "// Komentar",
+            "",
+            "# Komentar"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "PHP ne podržava objektno orijentirano programiranje.",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Odaberi ispravan jQuery selektor za element 'hs':",
+        "answers": [
+            "$('hs')",
+            "#hs",
+            ".hs",
+            "jQuery('hs')"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Funkcije getelementbyid i getElementById su jedna te ista funkcija?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koje svojstvo objekta iz DOM modela koristimo za pristup sadržaju elementa?",
+        "answers": [
+            "innerHTML",
+            "textContent",
+            "value",
+            "nodeValue"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Gdje je ispravno staviti JavaScript?",
+        "answers": [
+            "U <head> i <body>",
+            "Samo u <head>",
+            "Samo u <body>",
+            "U vanjsku datoteku jedino"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što se dogodi ako stranica ima event kontroler 'onload'?",
+        "answers": [
+            "Učitavanjem stranice nešto se dogodi",
+            "Klikom miša nešto se dogodi",
+            "Gašenjem stranice nešto se dogodi",
+            "Ništa se ne dogodi"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Odaberi jQuery selektor koji odabire sve div elemente:",
+        "answers": [
+            "$('div')",
+            "#div",
+            ".div",
+            "jQuery.all('div')"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Može li JavaScript utjecati na CSS svojstva?",
+        "answers": [
+            "Može",
+            "Ne može",
+            "Samo u Chrome-u",
+            "Samo boje"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Može li se funkcionalnost Ajaxa izvesti i sinkrono?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Rezultat koda: var a=6; b=5; a==b; alert(a)",
+        "answers": [
+            "5",
+            "6",
+            "True",
+            "False"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Za što se koristi DOM?",
+        "answers": [
+            "Pristup i izmjena HTML elemenata",
+            "Samo za stiliziranje",
+            "Za baze podataka",
+            "Za PHP skripte"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "JS podržava rad sa događajima (events)?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Ispravna sintaksa za poziv vanjske skripte 'xxx.js'?",
+        "answers": [
+            "<script src='xxx.js'>",
+            "<script href='xxx.js'>",
+            "<link src='xxx.js'>",
+            "<js file='xxx.js'>"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "AJAX je skraćenica za:",
+        "answers": [
+            "Asynchronous JavaScript and XML",
+            "Advanced Java and XML",
+            "Asynchronous Java and HTML",
+            "Active JavaScript and XML"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Provjera jesu li tri varijable (A, B, C) jednakih vrijednosti?",
+        "answers": [
+            "(A==B) && (B==C)",
+            "A==B==C",
+            "A=B=C",
+            "(A==B) || (B==C)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja jQuery metoda se koristi za dohvaćanje HTML sadržaja?",
+        "answers": [
+            "html()",
+            "getHtml()",
+            "content()",
+            "val()"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "JS se može učitati kao vanjska skripta?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "PHP zahtjeva deklariranje tipova varijabli?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koliko je 13 % 5 u JS-u?",
+        "answers": [
+            "3",
+            "2",
+            "5",
+            "1"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "DOM se koristi isključivo kao model HTML dokumenta?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Može li se napraviti Ajax funkcionalnost bez XML-a?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Uvjetni izraz 'i nije jednako 5'?",
+        "answers": [
+            "if (i != 5)",
+            "if (i <> 5)",
+            "if (i =! 5)",
+            "if not i 5"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Ispravan početak for petlje?",
+        "answers": [
+            "for (i=0; i<=5; i++)",
+            "for (i<=5; i++)",
+            "for i=1 to 5",
+            "loop (i=0; i<=5)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "U PHP-u operator === označava:",
+        "answers": [
+            "Istu vrijednost i tip",
+            "Samo istu vrijednost",
+            "Dodjelu vrijednosti",
+            "Ništa od navedenog"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Rezultat koda: var a; b=5; a=++b; alert(a);",
+        "answers": [
+            "6",
+            "5",
+            "4",
+            "Undefined"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "PHP kod se nalazi unutar kojih oznaka?",
+        "answers": [
+            "<?php ... ?>",
+            "<script> ... </script>",
+            "<php> ... </php>",
+            "<?xml ... ?>"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Gdje se tradicionalno izvršava JavaScript kod?",
+        "answers": [
+            "U internet pregledniku (browseru)",
+            "Na serveru",
+            "U bazi podataka",
+            "U mrežnom routeru"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koliko naredbi za ponavljanje postoji u Javascript jeziku?",
+        "answers": [
+            "3 (for, while, do...while)",
+            "1 (for)",
+            "2 (for, while)",
+            "4 (for, while, do...while, foreach)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "U koji HTML element stavljamo JavaScript?",
+        "answers": [
+            "<script>",
+            "<js>",
+            "<javascript>",
+            "<code>"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Ispravna sintaksa za promjenu sadržaja elementa <p id='demo'>:",
+        "answers": [
+            "document.getElementById('demo').innerHTML = 'Hello';",
+            "document.getElement('demo').innerHTML = 'Hello';",
+            "#demo.innerHTML = 'Hello';",
+            "demo.content = 'Hello';"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Vanjska JavaScript datoteka mora sadržavati tag <script>?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako stvoriti funkciju u JavaScript-u?",
+        "answers": [
+            "function myFunction()",
+            "create myFunction()",
+            "def myFunction()",
+            "function:myFunction()"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako se poziva funkcija pod nazivom myFunction?",
+        "answers": [
+            "myFunction()",
+            "call myFunction()",
+            "run myFunction()",
+            "myFunction"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako napisati IF naredbu u JavaScriptu?",
+        "answers": [
+            "if (i == 5)",
+            "if i = 5 then",
+            "if i == 5",
+            "if (i = 5)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako počinje WHILE petlja?",
+        "answers": [
+            "while (i <= 10)",
+            "while i <= 10",
+            "do while i <= 10",
+            "loop while (i <= 10)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je ispravan način pisanja JavaScript niza?",
+        "answers": [
+            "var colors = ['red', 'green', 'blue']",
+            "var colors = (1:'red', 2:'green')",
+            "var colors = 'red', 'green', 'blue'",
+            "colors = {red, green, blue}"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako zaokružiti broj 7.25 na najbliži cijeli broj?",
+        "answers": [
+            "Math.round(7.25)",
+            "Math.rnd(7.25)",
+            "round(7.25)",
+            "Math.ceil(7.25)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako pronaći broj s najvećom vrijednošću x i y?",
+        "answers": [
+            "Math.max(x, y)",
+            "Math.ceil(x, y)",
+            "top(x, y)",
+            "ceil(x, y)"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Ispravna sintaksa za otvaranje novog prozora?",
+        "answers": [
+            "window.open('url')",
+            "new window('url')",
+            "open.window('url')",
+            "window.new('url')"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "JavaScript je isti kao i Java?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako otkriti naziv preglednika klijenta?",
+        "answers": [
+            "navigator.appName",
+            "browser.name",
+            "client.navName",
+            "window.browser"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Događaj kada korisnik klikne na HTML element?",
+        "answers": [
+            "onclick",
+            "onmouseclick",
+            "onchange",
+            "onhover"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kako se deklarira JavaScript varijabla?",
+        "answers": [
+            "var carName;",
+            "variable carName;",
+            "v carName;",
+            "declare carName;"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što vraća: Boolean(10 > 9)?",
+        "answers": [
+            "true",
+            "false",
+            "undefined",
+            "NaN"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Je li JavaScript osjetljiv na velika i mala slova?",
+        "answers": [
+            "Da",
+            "Ne"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Je li HTML programski jezik?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Trebamo li server za izvršavanje JS skripti?",
+        "answers": [
+            "Netočno",
+            "Točno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "JS varijablu ne trebamo deklarirati prije pridjeljivanja vrijednosti?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "U JS-u postoji switch-case naredba?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Markup jezici su:",
+        "answers": [
+            "HTML, CSS",
+            "Java, C++",
+            "PHP, SQL",
+            "JS, Python"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Serverski skriptni jezik je:",
+        "answers": [
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Rezultat koda: var x=5.7; var y=8.4; y+=x;",
+        "answers": [
+            "14.1",
+            "13.1",
+            "14",
+            "Error"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "HTML se može injektirati putem JS kao jedan string?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Za spajanje stringova u JS koristi se:",
+        "answers": [
+            "+",
+            "&",
+            ".",
+            "concat"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Osnovni pristup Ajax tehnologije je:",
+        "answers": [
+            "Asinkroni dohvat podataka",
+            "Sinkroni dohvat podataka",
+            "Dohvat samo XML-a",
+            "Samo slanje podataka"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "U PHP-u, kako dohvatiti unos forme (method='get')?",
+        "answers": [
+            "$_GET['ime']",
+            "$_POST['ime']",
+            "Request.QueryString('ime')",
+            "get('ime')"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "CSS omogućava:",
+        "answers": [
+            "Odvajanje sadržaja od prikaza",
+            "Interaktivnost stranice",
+            "Spremanje podataka",
+            "Komunikaciju sa serverom"
+        ],
+        "correct": "0"
+    }
+]
