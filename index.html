@@ -1,123 +1,592 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz - Home</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            850: '#1f2937', 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111827; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+    </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
-  <!-- Navbar -->
-  <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 top-0">
-    <div class="container mx-auto flex justify-between items-center px-4 py-3">
-      <a href="/" class="text-xl font-bold text-black dark:text-white">Quiz</a>
-      <a href="https://ivanb.eu/" class="dark:text-white text-sm">By Ivan.B</a>   
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col transition-colors duration-300">
 
-    </div>
-  </nav>
+    <!-- Navbar -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center cursor-pointer" onclick="showHome()">
+                    <svg class="h-8 w-8 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                    <span class="font-bold text-xl tracking-tight text-white">Quiz</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="showHome()" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Početna</button>
+                    <a href="https://ivanb.eu/" target="_blank" class="text-gray-400 hover:text-indigo-400 text-sm">By Ivan.B</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <!-- Main Content -->
-  <div class="container mx-auto mt-20 px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Quiz Cards -->
-       <!-- PZI 2.kol -->
-      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
-        <h2 class="text-lg font-semibold dark:text-white">PZI 2.dio</h2>
-        <p class="text-gray-600 dark:text-gray-400">Pitanja: 30 | 20 - 30 min</p>
-        <script>
-          fetch('../quiz/pzi2dio/quiz.json')
-            .then(response => response.json())
-            .then(data => {
-              const questionCount = data.length;
-              document.getElementById('pzi2-question-count').innerText = `ⓘ 30 nasumičnih pitanja iz baze od ${questionCount}`;
-            });
-        </script>
-        <p id="pzi2-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
-        <a href="/quiz/pzi2dio" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
-          Pokreni →
-        </a>
-      </div>
+    <!-- CONTENT VIEWS -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+
+        <!-- DOWNLOAD PROGRESS OVERLAY -->
+        <div id="global-loading" class="hidden fixed inset-0 bg-gray-900/90 z-[60] flex items-center justify-center flex-col">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-indigo-500 mb-4"></div>
+            <h3 class="text-xl font-semibold text-white">Učitavanje kviza...</h3>
+        </div>
+
+        <!-- VIEW: HOME -->
+        <div id="home-view" class="space-y-8 animate-fade-in">
+            
       
-        <!-- DIGEL 1.kol -->
-      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
-        <h2 class="text-lg font-semibold dark:text-white">DIGEL 1.dio</h2>
-        <p class="text-gray-600 dark:text-gray-400">Pitanja: 30 | 20 - 30 min</p>
-        <script>
-          fetch('../quiz/digel1dio/quiz.json')
-            .then(response => response.json())
-            .then(data => {
-              const questionCount = data.length;
-              document.getElementById('digel1-question-count').innerText = `ⓘ 30 nasumičnih pitanja iz baze od ${questionCount}`;
+
+            <!-- Quiz Grid -->
+            <section>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                    <!-- PZI 2.dio -->
+                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-white mb-1">PZI 2.dio</h3>
+                            <p class="text-gray-400 text-sm">Programiranje Za Internet - Drugi kolokvij</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-1 gap-2">
+                            <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random20', 'PZI 2.dio')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                                <span class="font-bold">20</span> Random Pitanja
+                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'all', 'PZI 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Sva pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'review', 'PZI 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Pregled
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIGEL 1.dio -->
+                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-white mb-1">DIGEL 1.dio</h3>
+                            <p class="text-gray-400 text-sm">Digitalna Elektronika - Prvi kolokvij</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-1 gap-2">
+                            <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random20', 'DIGEL 1.dio')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                                <span class="font-bold">20</span> Random Pitanja
+                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'all', 'DIGEL 1.dio')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Sva pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'review', 'DIGEL 1.dio')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Pregled
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIGEL 2.dio -->
+                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-white mb-1">DIGEL 2.dio</h3>
+                            <p class="text-gray-400 text-sm">Digitalna Elektronika - Drugi kolokvij</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-1 gap-2">
+                            <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random20', 'DIGEL 2.dio')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                                <span class="font-bold">20</span> Random Pitanja
+                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'all', 'DIGEL 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Sva pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'review', 'DIGEL 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Pregled
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IGIP 1 -->
+                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-white mb-1">IGIP 1</h3>
+                            <p class="text-gray-400 text-sm">Inženjerska grafika i projektiranje</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-1 gap-2">
+                            <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random20', 'IGIP 1')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                                <span class="font-bold">20</span> Random Pitanja
+                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'all', 'IGIP 1')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Sva pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'review', 'IGIP 1')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Pregled
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- KOM. VJ. KOL 1 -->
+                     <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-bold text-white mb-1">Kom.Vj.1</h3>
+                            <p class="text-gray-400 text-sm">Komunikacijske Vještine - Prvi kolokvij</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-1 gap-2">
+                            <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random20', 'Kom.Vj.1')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                                <span class="font-bold">20</span> Random Pitanja
+                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'all', 'Kom.Vj.1')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Sva pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'review', 'Kom.Vj.1')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                    Pregled
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- VIEW: ACTIVE QUIZ -->
+        <div id="quiz-view" class="hidden w-full max-w-3xl mx-auto">
+             <!-- Top Bar inside Quiz -->
+            <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg mb-6 shadow-md border border-gray-700">
+                <div class="flex flex-col">
+                    <span class="text-xs text-gray-400 uppercase tracking-wider text-indigo-400" id="quiz-title-display">KVIZ</span>
+                    <div class="flex items-end gap-1">
+                        <span id="q-current" class="text-xl font-bold text-white">1</span>
+                        <span class="text-gray-500 mb-1">/</span>
+                        <span id="q-total" class="text-gray-500 mb-1">20</span>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <div class="text-center">
+                        <span class="text-xs text-gray-400 uppercase tracking-wider block">Bodovi</span>
+                        <span id="q-score" class="font-mono text-xl font-bold text-green-400">0</span>
+                    </div>
+                    <div class="text-center pl-4 border-l border-gray-700">
+                         <span class="text-xs text-gray-400 uppercase tracking-wider block">Vrijeme</span>
+                        <span id="q-timer" class="font-mono text-xl text-indigo-300">00:00</span>
+                    </div>
+                    <div class="pl-4 border-l border-gray-700 flex items-center">
+                        <button onclick="if(confirm('Jeste li sigurni da želite završiti kviz?')) endQuiz()" class="text-red-400 hover:text-white hover:bg-red-600 px-3 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all border border-red-500/30 bg-red-500/10">
+                            Završi
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div id="q-card" class="bg-gray-800 rounded-xl shadow-2xl border border-gray-700 overflow-hidden mb-6">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl md:text-2xl font-bold text-white mb-8 leading-tight" id="q-text">
+                        ...
+                    </h2>
+
+                    <!-- Options -->
+                    <div id="q-options" class="grid grid-cols-1 gap-3">
+                        <!-- injected -->
+                    </div>
+                </div>
+                
+                <!-- Feedback -->
+                <div id="q-feedback" class="hidden bg-gray-900/80 px-6 py-4 border-t border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                    <span id="q-feedback-text" class="font-medium"></span>
+                    <button id="q-next-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-lg">
+                        Dalje
+                    </button>
+                </div>
+            </div>
+
+             <!-- Results (Hidden initially) -->
+            <div id="q-completion" class="hidden bg-gray-800 rounded-xl shadow-2xl border border-gray-700 p-8 text-center">
+                 <div class="w-20 h-20 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 ring-2 ring-green-900/50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <h2 class="text-3xl font-bold text-white mb-2">Kviz završen!</h2>
+                <div class="grid grid-cols-2 gap-4 max-w-md mx-auto my-8">
+                    <div class="bg-gray-700/50 p-4 rounded-lg">
+                        <div class="text-sm text-gray-400">Rezultat</div>
+                        <div class="text-2xl font-bold text-white"><span id="end-score">0</span> / <span id="end-total">0</span></div>
+                    </div>
+
+                    <div class="bg-gray-700/50 p-4 rounded-lg">
+                         <div class="text-sm text-gray-400">Postotak</div>
+                        <div class="text-2xl font-bold text-indigo-400" id="end-percent">0%</div>
+                    </div>
+                </div>
+
+                <div id="q-results-review" class="text-left space-y-4 mb-8">
+                    <!-- Review items injected here -->
+                </div>
+
+                <button onclick="showHome()" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                    Povratak na izbornik
+                </button>
+            </div>
+
+        </div>
+
+        <!-- VIEW: STUDY MODE -->
+        <div id="study-view" class="hidden w-full max-w-4xl mx-auto">
+             <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white" id="study-title">Pregled</h2>
+                    <p class="text-gray-400 text-sm">Pregledajte sva pitanja i točne odgovore</p>
+                </div>
+                
+                <div class="bg-gray-800 px-4 py-2 rounded-full text-sm text-gray-400">
+                    Ukupno: <span id="study-count" class="text-white font-bold">0</span>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="relative mb-8">
+                <input type="text" id="study-search" placeholder="Pretraži pitanja..." 
+                    class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg pl-12 pr-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all">
+                <svg class="absolute left-4 top-3.5 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+
+            <div id="study-container" class="space-y-4">
+                <!-- Cards injected here -->
+            </div>
+            
+             <div class="mt-8 text-center pb-8">
+                <button onclick="showHome()" class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">← Povratak na početnu</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timerInterval;
+        let secondsElapsed = 0;
+        let userAnswers = [];
+
+        // Fetch Logic
+        async function fetchQuestions(path) {
+            document.getElementById('global-loading').classList.remove('hidden');
+            try {
+                const res = await fetch(path);
+                const data = await res.json();
+                document.getElementById('global-loading').classList.add('hidden');
+                return data;
+            } catch (e) {
+                console.error("Failed to load", path, e);
+                document.getElementById('global-loading').classList.add('hidden');
+                alert("Greška pri učitavanju pitanja.");
+                return [];
+            }
+        }
+
+        // View Management
+        function showHome() {
+            stopTimer();
+            document.getElementById('home-view').classList.remove('hidden');
+            document.getElementById('quiz-view').classList.add('hidden');
+            document.getElementById('study-view').classList.add('hidden');
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        async function launchQuiz(path, mode, title) {
+            const data = await fetchQuestions(path);
+            if(data.length === 0) return;
+
+            if (mode === 'review') {
+                startReviewMode(data, title);
+            } else {
+                let pool = shuffleArray([...data]);
+                if (mode === 'random20') {
+                    pool = pool.slice(0, 20);
+                }
+                startQuizMode(pool, title);
+            }
+        }
+
+        // QUIZ LOGIC
+        function startQuizMode(questions, title) {
+            currentQuestions = questions;
+            document.getElementById('quiz-title-display').textContent = title;
+
+            // Init Quiz State
+            currentQuestionIndex = 0;
+            score = 0;
+            secondsElapsed = 0;
+            userAnswers = [];
+            
+            // UI Switch
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('study-view').classList.add('hidden');
+            document.getElementById('quiz-view').classList.remove('hidden');
+            document.getElementById('q-card').classList.remove('hidden');
+            document.getElementById('q-completion').classList.add('hidden');
+
+            renderQuestion();
+            startTimer();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            document.getElementById('q-timer').textContent = "00:00";
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                const m = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+                const s = (secondsElapsed % 60).toString().padStart(2, '0');
+                document.getElementById('q-timer').textContent = `${m}:${s}`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function renderQuestion() {
+            if (currentQuestionIndex >= currentQuestions.length) {
+                endQuiz();
+                return;
+            }
+
+            const q = currentQuestions[currentQuestionIndex];
+            const qEl = document.getElementById('q-text');
+            const optsEl = document.getElementById('q-options');
+            const feedback = document.getElementById('q-feedback');
+            
+            // Header stats
+            document.getElementById('q-current').textContent = currentQuestionIndex + 1;
+            document.getElementById('q-total').textContent = currentQuestions.length;
+            document.getElementById('q-score').textContent = score;
+
+            // Content
+            qEl.textContent = q.question;
+            optsEl.innerHTML = '';
+            feedback.classList.add('hidden');
+
+            // Options
+            const correctIndex = parseInt(q.correct);
+            const correctText = q.answers[correctIndex];
+            const shuffledOptions = shuffleArray([...q.answers]);
+
+            shuffledOptions.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-lg border border-gray-600 bg-gray-700 hover:bg-gray-600 hover:border-indigo-400 transition-all font-medium text-gray-200 shadow-sm";
+                btn.textContent = opt;
+                btn.onclick = () => handleAnswer(btn, opt, correctText);
+                optsEl.appendChild(btn);
             });
-        </script>
-        <p id="digel1-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
-        <a href="/quiz/digel1dio" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
-          Pokreni →
-        </a>
+        }
 
-      </div>
-       <!-- DIGEL 2.kol -->
-       <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
-        <h2 class="text-lg font-semibold dark:text-white">DIGEL 2.dio</h2>
-        <p class="text-gray-600 dark:text-gray-400">Pitanja: 30 | 20 - 30 min</p>
-        <script>
-          fetch('../quiz/digel2dio/quiz.json')
-            .then(response => response.json())
-            .then(data => {
-              const questionCount = data.length;
-              document.getElementById('digel2-question-count').innerText = `ⓘ 30 nasumičnih pitanja iz baze od ${questionCount}`;
+        function handleAnswer(btn, selected, correct) {
+            const optsEl = document.getElementById('q-options');
+            const allBtns = optsEl.querySelectorAll('button');
+            const isCorrect = (selected === correct);
+
+            userAnswers.push({
+                question: currentQuestions[currentQuestionIndex].question,
+                selected: selected,
+                correct: correct,
+                isCorrect: isCorrect
             });
-        </script>
-        <p id="digel2-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
-        <a href="/quiz/digel2dio" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
-          Pokreni →
-        </a>
-      </div>
 
-       <!-- KOM VJ 1.kol
-      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
-        <h2 class="text-lg font-semibold dark:text-white">Kom.Vj.Kol.1</h2>
-        <p class="text-gray-600 dark:text-gray-400">Pitanja: 20 | 5 - 15 min</p>
-        <script>
-          fetch('../quiz/komvj1/quiz.json')
-            .then(response => response.json())
-            .then(data => {
-              const questionCount = data.length;
-              document.getElementById('komvj-question-count').innerText = `ⓘ 20 nasumičnih pitanja iz baze od ${questionCount}`;
+            allBtns.forEach(b => {
+                b.disabled = true;
+                b.classList.add('cursor-default', 'opacity-80');
+                if (b.textContent === correct) {
+                    b.classList.remove('border-gray-600', 'bg-gray-700');
+                    b.classList.add('bg-green-900/40', 'border-green-500', 'text-green-100', 'border-2');
+                }
             });
-        </script>
-        <p id="komvj-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
-        <a href="/quiz/komvj1" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
-          Pokreni →
-        </a>
 
-      </div>
-      IGIP 1.kol
-      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4">
-        <h2 class="text-lg font-semibold dark:text-white">IGIP.Kol.1</h2>
-        <p class="text-gray-600 dark:text-gray-400">Pitanja: 20 | 5 - 15 min</p>
-        <script>
-          fetch('../quiz/igip1/quiz.json')
-            .then(response => response.json())
-            .then(data => {
-              const questionCount = data.length;
-              document.getElementById('igip-question-count').innerText = `ⓘ 20 nasumičnih pitanja iz baze od ${questionCount}`;
+            if (isCorrect) {
+                score++;
+                btn.classList.remove('border-gray-600', 'bg-gray-700');
+                btn.classList.add('bg-green-900/40', 'border-green-500', 'text-green-100', 'border-2');
+                showFeedback(true);
+            } else {
+                btn.classList.remove('border-gray-600', 'bg-gray-700');
+                btn.classList.add('bg-red-900/40', 'border-red-500', 'text-red-100', 'border-2');
+                showFeedback(false);
+            }
+
+            document.getElementById('q-score').textContent = score;
+        }
+
+        function showFeedback(isCorrect) {
+            const fb = document.getElementById('q-feedback');
+            const txt = document.getElementById('q-feedback-text');
+            const next = document.getElementById('q-next-btn');
+
+            fb.classList.remove('hidden');
+            if(isCorrect) {
+                txt.textContent = "Točan odgovor!";
+                txt.className = "font-bold text-green-400";
+            } else {
+                txt.textContent = "Netočno!";
+                txt.className = "font-bold text-red-400";
+            }
+
+            next.onclick = () => {
+                currentQuestionIndex++;
+                renderQuestion();
+            };
+        }
+
+        function endQuiz() {
+            stopTimer();
+            document.getElementById('q-card').classList.add('hidden');
+            document.getElementById('q-completion').classList.remove('hidden');
+            
+            document.getElementById('end-score').textContent = score;
+            document.getElementById('end-total').textContent = currentQuestions.length;
+            
+            const percent = Math.round((score / currentQuestions.length) * 100);
+            document.getElementById('end-percent').textContent = percent + "%";
+
+            // Generate Review
+            const reviewContainer = document.getElementById('q-results-review');
+            reviewContainer.innerHTML = '';
+            
+            if (userAnswers.length > 0) {
+                 const titleEl = document.createElement('h3');
+                 titleEl.className = "text-xl font-bold text-white mb-4 text-center mt-8 border-t border-gray-700 pt-8";
+                 titleEl.textContent = "Pregled odgovora";
+                 reviewContainer.appendChild(titleEl);
+            }
+
+            userAnswers.forEach((ans, idx) => {
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-lg border ${ans.isCorrect ? 'border-green-800 bg-green-900/10' : 'border-red-800 bg-red-900/10'}`;
+                
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-mono text-gray-400">Pitanje ${idx + 1}</span>
+                         ${ans.isCorrect 
+                            ? '<span class="px-2 py-0.5 rounded text-xs font-bold bg-green-900/50 text-green-400 border border-green-700">TOČNO</span>'
+                            : '<span class="px-2 py-0.5 rounded text-xs font-bold bg-red-900/50 text-red-400 border border-red-700">NETOČNO</span>'
+                         }
+                    </div>
+                    <p class="text-white font-medium mb-3">${ans.question}</p>
+                    
+                    <div class="grid grid-cols-1 gap-2 text-sm">
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-500 mb-1">Vaš odgovor:</span>
+                            <span class="${ans.isCorrect ? 'text-green-400' : 'text-red-400'} font-medium">${ans.selected}</span>
+                        </div>
+                        ${!ans.isCorrect ? `
+                            <div class="flex flex-col mt-1 p-2 bg-gray-900/30 rounded border border-gray-700/50">
+                                <span class="text-xs text-gray-500 mb-1">Točan odgovor:</span>
+                                <span class="text-green-400 font-medium">${ans.correct}</span>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                reviewContainer.appendChild(card);
             });
-        </script>
-        <p id="igip-question-count" class="text-gray-600 dark:text-gray-400 text-xs"></p>
-        <a href="/quiz/igip1" class="block mt-4 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 dark:bg-blue-800 dark:hover:bg-blue-600">
-          Pokreni →
-        </a>
-      </div> -->
+        }
 
 
-    </div>
-  </div>
+        // STUDY MODE
+        function startReviewMode(data, title) {
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('quiz-view').classList.add('hidden');
+            document.getElementById('study-view').classList.remove('hidden');
+            
+            document.getElementById('study-title').textContent = title + " - Pregled";
+
+            // Enable Search
+            const searchInput = document.getElementById('study-search');
+            searchInput.value = ''; // Reset search
+            
+            function filterAndRender(searchTerm) {
+                 const filtered = data.filter(q => 
+                    q.question.toLowerCase().includes(searchTerm) ||
+                    q.answers.some(a => a.toLowerCase().includes(searchTerm))
+                );
+                renderStudyList(filtered);
+            }
+
+            // Initial render
+            filterAndRender('');
+
+            searchInput.oninput = (e) => {
+                filterAndRender(e.target.value.toLowerCase());
+            };
+        }
+
+        function renderStudyList(list) {
+            const container = document.getElementById('study-container');
+            document.getElementById('study-count').textContent = list.length;
+            container.innerHTML = '';
+
+            const frag = document.createDocumentFragment();
+
+            list.forEach(q => {
+                const correctIdx = parseInt(q.correct);
+                const correctAns = q.answers[correctIdx];
+
+                const card = document.createElement('div');
+                card.className = "bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors";
+                
+                card.innerHTML = `
+                    <div class="text-white font-medium text-lg mb-3">${q.question}</div>
+                    <div class="bg-green-900/20 border border-green-900/50 p-3 rounded text-green-400 text-sm font-medium flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        ${correctAns}
+                    </div>
+                `;
+                frag.appendChild(card);
+            });
+            
+            if(list.length === 0) {
+                 container.innerHTML = '<div class="text-center text-gray-500 py-8">Nema rezultata za pretragu.</div>';
+            } else {
+                container.appendChild(frag);
+            }
+        }
+
+        // Utils
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+    </script>
 </body>
 </html>

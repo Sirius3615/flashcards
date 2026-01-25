@@ -1,335 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz - IGIP.1</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-   #flashcards {
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-        position: relative; /* Ensure it maintains proper stacking context */
-        z-index: 10; /* Keep it above the hidden menu */
-    }
-
-    #flashcards.hidden {
-    opacity: 0;
-    }
-
-    #menu {
-        display: none; /* Default: hidden */
-        position: absolute;
-        top: 100%; /* Position the menu below the navbar */
-        left: 0;
-        width: 100%; /* Full width of the screen */
-        background-color: white; /* Match navbar background color */
-        z-index: 20; /* Ensure it appears on top */
-    }
-
-    #menu li {
-        border-bottom: 1px solid #e5e7eb; /* Add a subtle border between items */
-    }
-
-    #menu li:last-child {
-        border-bottom: none; /* Remove the border for the last item */
-    }
-
-    /* Show menu when visible */
-    #menu.show {
-        display: block;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - IGIP.1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+    </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900">
-  <!-- Navbar -->
-  <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 top-0">
-    <div class="container mx-auto flex justify-between items-center px-4 py-3">
-      <a href="/" class="text-xl font-bold text-black dark:text-white">Quiz</a>    
-      <a href="#" class="dark:text-white">IGIP.1</a>   
-    </div>
-  </nav>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
 
-  <!-- Main Content -->
-  <div class="container mx-auto mt-20 px-4">
-    <div id="flashcards" class="grid">
-      <!-- Flashcards will be dynamically inserted here -->
-    </div>
-    <div id="progress" class="text-center dark:text-white mt-4"></div>
-  </div>
+    <!-- Sticky Header -->
+    <header class="bg-gray-800 shadow-md sticky top-0 z-10 border-b border-gray-700">
+        <div class="max-w-3xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center mb-2">
+                <a href="../../index.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                    Natrag
+                </a>
+                <div class="flex items-center gap-4 text-sm font-medium">
+                    <div class="bg-gray-700 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-2 border border-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span id="timer">00:00</span>
+                    </div>
+                    <div class="bg-gray-700 text-green-300 px-3 py-1 rounded-full border border-gray-600">
+                        Bodovi: <span id="score">0</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                <div id="progress-bar" class="bg-indigo-500 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+            <div class="text-right text-xs text-gray-400 mt-1">
+                <span id="progress-text">0/0</span>
+            </div>
+        </div>
+    </header>
 
-  <script>
-    async function loadFlashcards(isFull = false) {
-      try {
-        const response = await fetch('./quiz.json');
-        let flashcardsData = await response.json();
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
         
-        if (isFull === 'review') {
-             showReviewMode(flashcardsData);
-             return;
-        }
+        <!-- Loading State -->
+        <div id="loading" class="text-center py-12">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500 mx-auto mb-4"></div>
+            <p class="text-gray-400">Učitavanje pitanja...</p>
+        </div>
 
-        // Shuffle questions
-        flashcardsData = flashcardsData.sort(() => Math.random() - 0.5);
-        if (!isFull) {
-            flashcardsData = flashcardsData.slice(0, 20);
-        }
-        startQuiz(flashcardsData);
-      } catch (error) {
-        console.error('Error loading flashcards:', error);
-      }
-    }
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="w-full max-w-2xl hidden">
+            <!-- Question Card -->
+            <div class="bg-gray-800 rounded-xl shadow-xl border border-gray-700 overflow-hidden mb-6">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-xl md:text-2xl font-bold text-white mb-6 leading-tight" id="question-text">
+                        Pitanje...
+                    </h2>
 
-    function showStartScreen() {
-        const flashcardsContainer = document.getElementById('flashcards');
-        flashcardsContainer.innerHTML = `
-            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 text-center max-w-md mx-auto">
-                <h2 class="text-2xl font-bold mb-6 dark:text-white">Dobrodošli u Kviz!</h2>
-                <div class="space-y-4">
-                    <button onclick="loadFlashcards(false)" class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-200">
-                        Pokreni brzi kviz (20 pitanja)
-                    </button>
-                    <button onclick="loadFlashcards(true)" class="w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition duration-200">
-                        Pokreni puni kviz (Sva pitanja)
-                    </button>
-                    <button onclick="loadFlashcards('review')" class="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition duration-200">
-                        Pregledaj sva pitanja i odgovore
+                    <!-- Options Grid -->
+                    <div id="options-container" class="grid grid-cols-1 gap-3">
+                        <!-- Options injected by JS -->
+                    </div>
+                </div>
+                
+                <!-- Feedback Footer (Hidden initially) -->
+                <div id="feedback-area" class="hidden bg-gray-900/50 px-6 py-4 border-t border-gray-700 flex justify-between items-center animate-fade-in">
+                    <span id="feedback-message" class="font-medium"></span>
+                    <button id="next-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-gray-900">
+                        Dalje
                     </button>
                 </div>
             </div>
-        `;
-    }
+        </div>
 
-    function showReviewMode(flashcards) {
-         const flashcardsContainer = document.getElementById('flashcards');
-         const progressContainer = document.getElementById('progress');
-         progressContainer.textContent = ''; // Clear progress text
-
-         let htmlContent = '<div class="space-y-6">';
-
-         flashcards.forEach((card, index) => {
-             htmlContent += `
-                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Pitanje ${index + 1}</p>
-                    <h3 class="text-lg dark:text-white font-semibold mb-4">${escapeHtml(card.question)}</h3>
-                    ${card.image ? `<img src="${card.image}" alt="Question Image" class="w-full object-cover rounded-md mb-4 max-h-64">` : ''}
-             `;
-             
-             if (card.answers && card.answers.length > 0) {
-                 htmlContent += '<ul class="space-y-2">';
-                 card.answers.forEach((answer, ansIndex) => {
-                     const isCorrect = ansIndex == card.correct;
-                     const bgClass = isCorrect ? 'bg-green-100 dark:bg-green-900 border-green-500' : 'bg-gray-50 dark:bg-gray-700 border-transparent';
-                     const textClass = isCorrect ? 'text-green-800 dark:text-green-100' : 'text-gray-800 dark:text-gray-200';
-                     const borderClass = isCorrect ? 'border-2' : 'border';
-                     
-                     htmlContent += `
-                        <li class="px-4 py-2 rounded-md ${bgClass} ${textClass} ${borderClass}">
-                            ${escapeHtml(answer)} ${isCorrect ? '✓' : ''}
-                        </li>
-                     `;
-                 });
-                 htmlContent += '</ul>';
-             } else {
-                 htmlContent += `
-                    <div class="p-3 bg-green-50 dark:bg-green-900 rounded-md border border-green-200 dark:border-green-700">
-                        <span class="font-semibold text-green-800 dark:text-green-100">Točan odgovor:</span> 
-                        <span class="text-green-900 dark:text-green-200">${escapeHtml(card.correct)}</span>
+        <!-- Completion Screen -->
+        <div id="completion-message" class="hidden w-full max-w-3xl">
+            <div class="bg-gray-800 rounded-xl shadow-xl border border-gray-700 p-8 text-center mb-8">
+                <div class="w-20 h-20 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 ring-2 ring-green-900/50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <h2 class="text-3xl font-bold text-white mb-2">Čestitamo!</h2>
+                <p class="text-gray-400 mb-8">Završili ste kviz IGIP.1.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600">
+                        <div class="text-sm text-gray-400 mb-1">Ukupno Bodova</div>
+                        <div class="text-2xl font-bold text-indigo-400" id="final-score">0</div>
                     </div>
-                 `;
-             }
+                    <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600">
+                        <div class="text-sm text-gray-400 mb-1">Točnih Odgovora</div>
+                        <div class="text-2xl font-bold text-green-400" id="final-correct">0/0</div>
+                    </div>
+                    <div class="bg-gray-700/50 p-4 rounded-lg border border-gray-600">
+                        <div class="text-sm text-gray-400 mb-1">Vrijeme rješavanja</div>
+                        <div class="text-2xl font-bold text-blue-400" id="final-time">00:00</div>
+                    </div>
+                </div>
 
-             htmlContent += '</div>';
-         });
-
-         htmlContent += `
-            <div class="text-center mt-8 mb-8">
-                <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-200">
-                    Natrag na početak
-                </button>
+                <a href="index.html" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg">
+                    Pokreni ponovno
+                </a>
             </div>
-         </div>`;
 
-         flashcardsContainer.innerHTML = htmlContent;
-    }
-
-
-    function escapeHtml(text) {
-      if (!text) return text;
-      return text
-        .toString()
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    let currentIndex = 0;
-    let score = 0;
-
-    function startQuiz(flashcards) {
-      // Load score from cookies
-      const savedScore = getCookie('score');
-      score = savedScore ? parseInt(savedScore, 10) : 0;
-
-      showCard(flashcards[currentIndex], flashcards);
-    }
-
-    function showCard(card, flashcards) {
-        const flashcardsContainer = document.getElementById('flashcards');
-        const progressContainer = document.getElementById('progress');
-        const timeContainer = document.getElementById('time');
-        flashcardsContainer.innerHTML = ''; // Očisti prethodni sadržaj
-
-        // Ažuriranje napretka
-        progressContainer.textContent = `Pitanje ${currentIndex + 1} od ${flashcards.length} | ${score} / ${currentIndex}`;
-        
-        // Nasumično miješanje odgovora
-        const shuffledAnswers = card.answers.map((answer, index) => ({
-            text: answer,
-            isCorrect: index == card.correct
-        })).sort(() => Math.random() - 0.5);
-
-        const flashcard = document.createElement('div');
-        flashcard.className = 'bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4';
-
-        flashcard.innerHTML = `
-            <h3 class="text-lg dark:text-white font-semibold">${escapeHtml(card.question)}</h3>
-            ${card.image ? `<img src="${card.image}" alt="Question Image" class="w-full object-cover rounded-md mb-4">` : ''}
-            <ul class="mt-2">
-            ${shuffledAnswers.map((answer, i) => `
-                <li class="mt-1">
-                <button 
-                    class="w-full text-left dark:text-white px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring"
-                    data-correct="${answer.isCorrect}"
-                >
-                    ${escapeHtml(answer.text)}
-                </button>
-                </li>`).join('')}
-            </ul>
-            <div class="flex justify-between mt-4">
-            <button id="finish-btn" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md transition duration-200">Završi kviz</button>
-            <button id="next-btn" class="hidden px-4 py-2 bg-blue-600 text-white rounded-md">Nastavi</button>
+            <div class="flex items-center gap-2 mb-4 px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                <h3 class="text-lg font-bold text-gray-300">Pregled rezultata</h3>
             </div>
             
-        `;
+            <div id="results-list" class="space-y-4">
+                <!-- Results items injected here -->
+            </div>
+            
+            <div class="mt-8 text-center pb-8">
+                <a href="../../index.html" class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">Povratak na početnu stranicu</a>
+            </div>
+        </div>
 
-        flashcardsContainer.appendChild(flashcard);
+    </main>
 
-        // Dodavanje događaja za gumbove
-        const buttons = flashcard.querySelectorAll('button[data-correct]');
-        buttons.forEach((btn) => {
-            btn.addEventListener('click', (e) => handleAnswer(e, flashcards, card));
-        });
+    <script>
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timerInterval;
+        let secondsElapsed = 0;
+        let userAnswers = [];
 
+        const loadingEl = document.getElementById('loading');
+        const quizContainer = document.getElementById('quiz-container');
+        const questionTextEl = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const scoreEl = document.getElementById('score');
+        const completionMessageEl = document.getElementById('completion-message');
+        const finalScoreEl = document.getElementById('final-score');
+        const finalCorrectEl = document.getElementById('final-correct');
+        const timerEl = document.getElementById('timer');
         const nextBtn = document.getElementById('next-btn');
-        nextBtn.addEventListener('click', () => {
-            currentIndex++;
-            if (currentIndex < flashcards.length) {
-            showCard(flashcards[currentIndex], flashcards);
-            } else {
-            showCompletionMessage(flashcards);
-            }
-        });
+        const feedbackArea = document.getElementById('feedback-area');
+        const feedbackMessage = document.getElementById('feedback-message');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const finalTimeEl = document.getElementById('final-time');
+        const resultsListEl = document.getElementById('results-list');
 
-        const finishBtn = document.getElementById('finish-btn');
-        finishBtn.addEventListener('click', () => confirmFinish(flashcards));
+        function formatTime(totalSeconds) {
+            const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+            const s = (totalSeconds % 60).toString().padStart(2, '0');
+            return `${m}:${s}`;
         }
 
-        function handleAnswer(event, flashcards, card) {
-            const button = event.target;
-            const isCorrect = button.getAttribute('data-correct') === 'true';
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                timerEl.textContent = formatTime(secondsElapsed);
+            }, 1000);
+        }
 
-            // Prikaži točan odgovor s rubom
-            const buttons = document.querySelectorAll('button[data-correct]');
-            buttons.forEach((btn) => {
-                if (btn.getAttribute('data-correct') === 'true') {
-                btn.classList.add('border-2', 'border-green-500');
-                }
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function updateProgress() {
+            const current = currentQuestionIndex + 1;
+            const total = questions.length;
+            const percentage = (currentQuestionIndex / total) * 100;
+            
+            progressBar.style.width = `${percentage}%`;
+            progressText.textContent = `${currentQuestionIndex}/${total}`;
+        }
+
+        fetch('quiz.json')
+            .then(response => response.json())
+            .then(data => {
+                questions = shuffleArray(data);
+                loadingEl.classList.add('hidden');
+                quizContainer.classList.remove('hidden');
+                startTimer();
+                updateProgress();
+                showQuestion();
+            })
+            .catch(error => {
+                console.error('Error loading quiz:', error);
+                loadingEl.innerHTML = '<p class="text-red-400">Greška pri učitavanju pitanja.</p>';
             });
 
-            // Oboji odabrani odgovor
-            button.classList.add(isCorrect ? 'bg-green-10' : 'bg-red-100');
-            button.classList.add(isCorrect ? 'text-green-700' : 'text-red-700');
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
 
-            // Ako je odgovor točan, automatski prelazak na sljedeće pitanje
+        function showQuestion() {
+            if (currentQuestionIndex >= questions.length) {
+                return showCompletionMessage();
+            }
+
+            const currentCard = questions[currentQuestionIndex];
+            
+            // Clean state
+            questionTextEl.textContent = currentCard.question;
+            optionsContainer.innerHTML = '';
+            feedbackArea.classList.add('hidden');
+            
+            // Determine correct text
+            const correctIndex = parseInt(currentCard.correct);
+            const correctAnswerText = currentCard.answers[correctIndex];
+
+            // Create options copy to shuffle
+            const allOptions = [...currentCard.answers];
+            const shuffledOptions = shuffleArray(allOptions);
+
+            shuffledOptions.forEach(option => {
+                const button = document.createElement('button');
+                // Dark mode styles for button
+                button.className = 'w-full text-left p-4 rounded-lg border border-gray-600 bg-gray-700 hover:bg-gray-600 hover:border-indigo-400 transition-all duration-200 font-medium text-gray-200 shadow-sm';
+                button.textContent = option;
+                button.onclick = () => handleAnswer(button, option, correctAnswerText, currentCard.question);
+                optionsContainer.appendChild(button);
+            });
+            
+            updateProgress();
+        }
+
+        function handleAnswer(selectedButton, selectedOption, correctAnswerText, questionText) {
+            const buttons = optionsContainer.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('cursor-default');
+                btn.classList.remove('hover:bg-gray-600', 'hover:border-indigo-400');
+            });
+
+            const isCorrect = selectedOption === correctAnswerText;
+
+            userAnswers.push({
+                question: questionText,
+                userAnswer: selectedOption,
+                correctAnswer: correctAnswerText,
+                isCorrect: isCorrect
+            });
+
             if (isCorrect) {
                 score++;
-                setTimeout(() => {
-                currentIndex++;
-                if (currentIndex < flashcards.length) {
-                    showCard(flashcards[currentIndex], flashcards);
-                } else {
-                    showCompletionMessage(flashcards);
-                }
-                }, 1500);
+                scoreEl.textContent = score;
+                selectedButton.className = 'w-full text-left p-4 rounded-lg border-2 border-green-500 bg-green-900/40 text-green-100 font-bold shadow-md';
+                
+                feedbackMessage.textContent = "Točan odgovor!";
+                feedbackMessage.className = "font-bold text-green-400";
             } else {
-                // Prikaži gumb "Nastavi"
-                const nextBtn = document.getElementById('next-btn');
-                nextBtn.classList.remove('hidden');
+                selectedButton.className = 'w-full text-left p-4 rounded-lg border-2 border-red-500 bg-red-900/40 text-red-100 font-medium shadow-md';
+                
+                buttons.forEach(btn => {
+                    if (btn.textContent === correctAnswerText) {
+                        btn.className = 'w-full text-left p-4 rounded-lg border-2 border-green-500 bg-green-900/40 text-green-100 font-bold shadow-md';
+                    }
+                });
+
+                feedbackMessage.textContent = "Netočno. Točan odgovor je označen.";
+                feedbackMessage.className = "font-bold text-red-400";
             }
-}
 
-    function showCompletionMessage(flashcards) {
-        const flashcardsContainer = document.getElementById('flashcards');
-        const totalQuestions = flashcards.length; // Ensure the total is derived from the actual array
-        const percentage = ((score / totalQuestions) * 100).toFixed(2); // Calculate the percentage
-
-        flashcardsContainer.innerHTML = `
-            <div class="text-center">
-            <h2 class="text-2xl font-bold, dark:text-white">Kraj Kviza!</h2>
-            <p class="mt-4 dark:text-white">Vaš rezultat: ${score} / ${totalQuestions}</p>
-            <p class="mt-2 dark:text-white">Postotak: ${percentage}%</p>
-            <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md" onclick="restartQuiz()">Ponovno pokreni</button>
-            </div>
-        `;
+            feedbackArea.classList.remove('hidden');
+            
+            nextBtn.onclick = () => {
+                currentQuestionIndex++;
+                showQuestion();
+            };
         }
 
-    function confirmFinish(flashcards) {
-        const totalQuestions = flashcards.length;
-        const answeredQuestions = currentIndex;
-        const unansweredQuestions = totalQuestions - answeredQuestions;
+        function showCompletionMessage() {
+            stopTimer();
+            quizContainer.classList.add('hidden');
+            completionMessageEl.classList.remove('hidden');
+            
+            finalScoreEl.textContent = score;
+            finalCorrectEl.textContent = `${score}/${questions.length}`;
+            finalTimeEl.textContent = formatTime(secondsElapsed);
 
-        if (confirm(`Sigurno želite završiti kviz?\n\nOdgovorili ste na ${answeredQuestions} od ${totalQuestions} pitanja.\n${unansweredQuestions} pitanja će biti označena kao netočna.`)) {
-            showCompletionMessage(flashcards);
+            resultsListEl.innerHTML = '';
+            
+            userAnswers.forEach((item, index) => {
+                const reportCard = document.createElement('div');
+                // Status styles
+                const isCorrect = item.isCorrect;
+                const borderClass = isCorrect ? 'border-green-800' : 'border-red-800';
+                const bgClass = isCorrect ? 'bg-green-900/10' : 'bg-red-900/10';
+                
+                reportCard.className = `bg-gray-800 border rounded-lg p-4 shadow-sm flex flex-col gap-2 ${borderClass} ${bgClass}`;
+                
+                const statusBadge = isCorrect 
+                    ? '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900/60 text-green-300 border border-green-700">Točno</span>'
+                    : '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-900/60 text-red-300 border border-red-700">Netočno</span>';
+
+                reportCard.innerHTML = `
+                    <div class="flex justify-between items-start mb-1">
+                        <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Pitanje ${index + 1}</span>
+                        ${statusBadge}
+                    </div>
+                    <h4 class="font-semibold text-gray-100 text-lg mb-2">${item.question}</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="p-3 bg-gray-700/50 rounded border border-gray-600">
+                            <span class="block text-xs text-gray-400 mb-1">Vaš odgovor:</span>
+                            <span class="font-medium ${isCorrect ? 'text-green-400' : 'text-red-400'}">${item.userAnswer}</span>
+                        </div>
+                        ${!isCorrect ? `
+                        <div class="p-3 bg-gray-700/50 rounded border border-gray-600">
+                            <span class="block text-xs text-gray-400 mb-1">Točan odgovor:</span>
+                            <span class="font-medium text-green-400">${item.correctAnswer}</span>
+                        </div>` : ''}
+                    </div>
+                `;
+                resultsListEl.appendChild(reportCard);
+            });
         }
-    }
-
-    function restartQuiz() {
-      // Reset cookies and reload the page
-      setCookie('score', 0, 1);
-      location.reload();
-    }
-
-    // Cookie utilities
-    function setCookie(name, value, days) {
-      const d = new Date();
-      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + d.toUTCString();
-      document.cookie = `${name}=${value};${expires};path=/`;
-    }
-
-    function getCookie(name) {
-      const decodedCookie = decodeURIComponent(document.cookie);
-      const cookies = decodedCookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-        const c = cookies[i].trim();
-        if (c.indexOf(name + "=") === 0) {
-          return c.substring(name.length + 1);
-        }
-      }
-      return "";
-    }
-
-      // Initialize app
-    showStartScreen();
-  </script>
+    </script>
 </body>
 </html>
