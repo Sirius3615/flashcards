@@ -13,7 +13,7 @@
                 extend: {
                     colors: {
                         gray: {
-                            850: '#1f2937', 
+                            850: '#1a1f2e',
                         }
                     }
                 }
@@ -23,26 +23,32 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #111827; }
-        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        .card-glow:hover { box-shadow: 0 0 30px rgba(99,102,241,.12); }
+        .fade-in { animation: fadeIn .3s ease; }
+        @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+        .glass { background: rgba(30,41,59,.6); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col transition-colors duration-300">
+<body class="bg-slate-950 text-gray-100 min-h-screen flex flex-col transition-colors duration-300">
 
     <!-- Navbar -->
-    <header class="bg-gray-800 shadow-lg border-b border-gray-700 sticky top-0 z-50">
+    <header class="glass border-b border-white/5 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center cursor-pointer" onclick="showHome()">
-                    <svg class="h-8 w-8 text-indigo-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center mr-3 shadow-lg shadow-indigo-500/20">
+                        <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
                     <span class="font-bold text-xl tracking-tight text-white">Quiz</span>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button onclick="showHome()" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Početna</button>
-                    <a href="https://ivanb.eu/" target="_blank" class="text-gray-400 hover:text-indigo-400 text-sm">By Ivan.B</a>
+                    <button onclick="showHome()" class="text-slate-400 hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-white/5">Početna</button>
+                    <a href="https://ivanb.eu/" target="_blank" class="text-slate-500 hover:text-indigo-400 text-sm transition-colors">By Ivan.B</a>
                 </div>
             </div>
         </div>
@@ -52,35 +58,44 @@
     <main class="flex-grow container mx-auto px-4 py-8">
 
         <!-- DOWNLOAD PROGRESS OVERLAY -->
-        <div id="global-loading" class="hidden fixed inset-0 bg-gray-900/90 z-[60] flex items-center justify-center flex-col">
-            <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-indigo-500 mb-4"></div>
-            <h3 class="text-xl font-semibold text-white">Učitavanje kviza...</h3>
+        <div id="global-loading" class="hidden fixed inset-0 bg-slate-950/90 backdrop-blur-sm z-[60] flex items-center justify-center flex-col">
+            <div class="animate-spin rounded-full h-14 w-14 border-t-2 border-b-2 border-indigo-500 mb-4"></div>
+            <h3 class="text-lg font-semibold text-white">Učitavanje kviza...</h3>
         </div>
 
         <!-- VIEW: HOME -->
-        <div id="home-view" class="space-y-8 animate-fade-in">
-            
-      
+        <div id="home-view" class="space-y-8 fade-in">
 
             <!-- Quiz Grid -->
             <section>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
 
                     <!-- PZI 2.dio -->
-                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
-                        <div class="mb-4">
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                        <div class="mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20">
+                                <span class="text-white font-bold text-sm">PZI</span>
+                            </div>
                             <h3 class="text-xl font-bold text-white mb-1">PZI 2.dio</h3>
-                            <p class="text-gray-400 text-sm">Programiranje Za Internet - Drugi kolokvij</p>
+                            <p class="text-slate-400 text-sm">Programiranje Za Internet - Drugi kolokvij</p>
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
-                            <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random20', 'PZI 2.dio')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
-                                <span class="font-bold">20</span> Random Pitanja
-                            </button>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random10', 'PZI 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">10</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random20', 'PZI 2.dio')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">20</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random30', 'PZI 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">30</span> Pitanja
+                                </button>
+                            </div>
                             <div class="grid grid-cols-2 gap-2">
-                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'all', 'PZI 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'all', 'PZI 2.dio')" class="bg-white/5 hover:bg-white/10 text-white py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Sva pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'review', 'PZI 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'review', 'PZI 2.dio')" class="bg-white/5 hover:bg-white/10 text-emerald-400 py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Pregled
                                 </button>
                             </div>
@@ -88,20 +103,31 @@
                     </div>
 
                     <!-- DIGEL 1.dio -->
-                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
-                        <div class="mb-4">
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                        <div class="mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-3 shadow-lg shadow-violet-500/20">
+                                <span class="text-white font-bold text-xs">DIG</span>
+                            </div>
                             <h3 class="text-xl font-bold text-white mb-1">DIGEL 1.dio</h3>
-                            <p class="text-gray-400 text-sm">Digitalna Elektronika - Prvi kolokvij</p>
+                            <p class="text-slate-400 text-sm">Digitalna Elektronika - Prvi kolokvij</p>
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
-                            <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random20', 'DIGEL 1.dio')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
-                                <span class="font-bold">20</span> Random Pitanja
-                            </button>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random10', 'DIGEL 1.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">10</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random20', 'DIGEL 1.dio')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">20</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random30', 'DIGEL 1.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">30</span> Pitanja
+                                </button>
+                            </div>
                             <div class="grid grid-cols-2 gap-2">
-                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'all', 'DIGEL 1.dio')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'all', 'DIGEL 1.dio')" class="bg-white/5 hover:bg-white/10 text-white py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Sva pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'review', 'DIGEL 1.dio')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'review', 'DIGEL 1.dio')" class="bg-white/5 hover:bg-white/10 text-emerald-400 py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Pregled
                                 </button>
                             </div>
@@ -109,20 +135,31 @@
                     </div>
 
                     <!-- DIGEL 2.dio -->
-                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
-                        <div class="mb-4">
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                        <div class="mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-3 shadow-lg shadow-violet-500/20">
+                                <span class="text-white font-bold text-xs">DIG</span>
+                            </div>
                             <h3 class="text-xl font-bold text-white mb-1">DIGEL 2.dio</h3>
-                            <p class="text-gray-400 text-sm">Digitalna Elektronika - Drugi kolokvij</p>
+                            <p class="text-slate-400 text-sm">Digitalna Elektronika - Drugi kolokvij</p>
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
-                            <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random20', 'DIGEL 2.dio')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
-                                <span class="font-bold">20</span> Random Pitanja
-                            </button>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random10', 'DIGEL 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">10</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random20', 'DIGEL 2.dio')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">20</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random30', 'DIGEL 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">30</span> Pitanja
+                                </button>
+                            </div>
                             <div class="grid grid-cols-2 gap-2">
-                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'all', 'DIGEL 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'all', 'DIGEL 2.dio')" class="bg-white/5 hover:bg-white/10 text-white py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Sva pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'review', 'DIGEL 2.dio')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'review', 'DIGEL 2.dio')" class="bg-white/5 hover:bg-white/10 text-emerald-400 py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Pregled
                                 </button>
                             </div>
@@ -130,20 +167,31 @@
                     </div>
 
                     <!-- IGIP 1 -->
-                    <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
-                        <div class="mb-4">
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                        <div class="mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-3 shadow-lg shadow-amber-500/20">
+                                <span class="text-white font-bold text-xs">IGP</span>
+                            </div>
                             <h3 class="text-xl font-bold text-white mb-1">IGIP 1</h3>
-                            <p class="text-gray-400 text-sm">Inženjerska grafika i projektiranje</p>
+                            <p class="text-slate-400 text-sm">Inženjerska grafika i projektiranje</p>
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
-                            <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random20', 'IGIP 1')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
-                                <span class="font-bold">20</span> Random Pitanja
-                            </button>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random10', 'IGIP 1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">10</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random20', 'IGIP 1')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">20</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random30', 'IGIP 1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">30</span> Pitanja
+                                </button>
+                            </div>
                             <div class="grid grid-cols-2 gap-2">
-                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'all', 'IGIP 1')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'all', 'IGIP 1')" class="bg-white/5 hover:bg-white/10 text-white py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Sva pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'review', 'IGIP 1')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'review', 'IGIP 1')" class="bg-white/5 hover:bg-white/10 text-emerald-400 py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Pregled
                                 </button>
                             </div>
@@ -151,20 +199,31 @@
                     </div>
 
                      <!-- KOM. VJ. KOL 1 -->
-                     <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500/50 transition-all shadow-lg flex flex-col">
-                        <div class="mb-4">
+                     <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                        <div class="mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-3 shadow-lg shadow-emerald-500/20">
+                                <span class="text-white font-bold text-xs">KV</span>
+                            </div>
                             <h3 class="text-xl font-bold text-white mb-1">Kom.Vj.1</h3>
-                            <p class="text-gray-400 text-sm">Komunikacijske Vještine - Prvi kolokvij</p>
+                            <p class="text-slate-400 text-sm">Komunikacijske Vještine - Prvi kolokvij</p>
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
-                            <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random20', 'Kom.Vj.1')" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2">
-                                <span class="font-bold">20</span> Random Pitanja
-                            </button>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random10', 'Kom.Vj.1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">10</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random20', 'Kom.Vj.1')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">20</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random30', 'Kom.Vj.1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">30</span> Pitanja
+                                </button>
+                            </div>
                             <div class="grid grid-cols-2 gap-2">
-                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'all', 'Kom.Vj.1')" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'all', 'Kom.Vj.1')" class="bg-white/5 hover:bg-white/10 text-white py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Sva pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'review', 'Kom.Vj.1')" class="bg-gray-700 hover:bg-gray-600 text-green-400 py-2 px-4 rounded-lg font-medium transition-colors text-sm">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'review', 'Kom.Vj.1')" class="bg-white/5 hover:bg-white/10 text-emerald-400 py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
                                     Pregled
                                 </button>
                             </div>
@@ -176,29 +235,29 @@
         </div>
 
         <!-- VIEW: ACTIVE QUIZ -->
-        <div id="quiz-view" class="hidden w-full max-w-3xl mx-auto">
+        <div id="quiz-view" class="hidden w-full max-w-3xl mx-auto fade-in">
              <!-- Top Bar inside Quiz -->
-            <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg mb-6 shadow-md border border-gray-700">
+            <div class="flex items-center justify-between glass p-4 rounded-2xl mb-6 shadow-lg border border-white/5">
                 <div class="flex flex-col">
-                    <span class="text-xs text-gray-400 uppercase tracking-wider text-indigo-400" id="quiz-title-display">KVIZ</span>
+                    <span class="text-xs uppercase tracking-wider text-indigo-400 font-semibold" id="quiz-title-display">KVIZ</span>
                     <div class="flex items-end gap-1">
                         <span id="q-current" class="text-xl font-bold text-white">1</span>
-                        <span class="text-gray-500 mb-1">/</span>
-                        <span id="q-total" class="text-gray-500 mb-1">20</span>
+                        <span class="text-slate-500 mb-1">/</span>
+                        <span id="q-total" class="text-slate-500 mb-1">20</span>
                     </div>
                 </div>
                 
                 <div class="flex items-center gap-4">
                     <div class="text-center">
-                        <span class="text-xs text-gray-400 uppercase tracking-wider block">Bodovi</span>
-                        <span id="q-score" class="font-mono text-xl font-bold text-green-400">0</span>
+                        <span class="text-xs text-slate-400 uppercase tracking-wider block">Bodovi</span>
+                        <span id="q-score" class="font-mono text-xl font-bold text-emerald-400">0</span>
                     </div>
-                    <div class="text-center pl-4 border-l border-gray-700">
-                         <span class="text-xs text-gray-400 uppercase tracking-wider block">Vrijeme</span>
+                    <div class="text-center pl-4 border-l border-white/10">
+                         <span class="text-xs text-slate-400 uppercase tracking-wider block">Vrijeme</span>
                         <span id="q-timer" class="font-mono text-xl text-indigo-300">00:00</span>
                     </div>
-                    <div class="pl-4 border-l border-gray-700 flex items-center">
-                        <button onclick="if(confirm('Jeste li sigurni da želite završiti kviz?')) endQuiz()" class="text-red-400 hover:text-white hover:bg-red-600 px-3 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all border border-red-500/30 bg-red-500/10">
+                    <div class="pl-4 border-l border-white/10 flex items-center">
+                        <button onclick="if(confirm('Jeste li sigurni da želite završiti kviz?')) endQuiz()" class="text-red-400 hover:text-white hover:bg-red-600 px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all border border-red-500/20 bg-red-500/10">
                             Završi
                         </button>
                     </div>
@@ -206,7 +265,7 @@
             </div>
 
             <!-- Question Card -->
-            <div id="q-card" class="bg-gray-800 rounded-xl shadow-2xl border border-gray-700 overflow-hidden mb-6">
+            <div id="q-card" class="bg-slate-900/80 rounded-2xl shadow-2xl border border-white/5 overflow-hidden mb-6">
                 <div class="p-6 md:p-8">
                     <h2 class="text-xl md:text-2xl font-bold text-white mb-8 leading-tight" id="q-text">
                         ...
@@ -219,28 +278,28 @@
                 </div>
                 
                 <!-- Feedback -->
-                <div id="q-feedback" class="hidden bg-gray-900/80 px-6 py-4 border-t border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <div id="q-feedback" class="hidden glass px-6 py-4 border-t border-white/5 flex justify-between items-center">
                     <span id="q-feedback-text" class="font-medium"></span>
-                    <button id="q-next-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-lg">
+                    <button id="q-next-btn" class="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white px-6 py-2 rounded-xl font-medium transition-all shadow-lg shadow-indigo-500/20">
                         Dalje
                     </button>
                 </div>
             </div>
 
              <!-- Results (Hidden initially) -->
-            <div id="q-completion" class="hidden bg-gray-800 rounded-xl shadow-2xl border border-gray-700 p-8 text-center">
+            <div id="q-completion" class="hidden bg-slate-900/80 rounded-2xl shadow-2xl border border-white/5 p-8 text-center">
                  <div class="w-20 h-20 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 ring-2 ring-green-900/50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <h2 class="text-3xl font-bold text-white mb-2">Kviz završen!</h2>
                 <div class="grid grid-cols-2 gap-4 max-w-md mx-auto my-8">
-                    <div class="bg-gray-700/50 p-4 rounded-lg">
-                        <div class="text-sm text-gray-400">Rezultat</div>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                        <div class="text-sm text-slate-400">Rezultat</div>
                         <div class="text-2xl font-bold text-white"><span id="end-score">0</span> / <span id="end-total">0</span></div>
                     </div>
 
-                    <div class="bg-gray-700/50 p-4 rounded-lg">
-                         <div class="text-sm text-gray-400">Postotak</div>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                         <div class="text-sm text-slate-400">Postotak</div>
                         <div class="text-2xl font-bold text-indigo-400" id="end-percent">0%</div>
                     </div>
                 </div>
@@ -249,7 +308,7 @@
                     <!-- Review items injected here -->
                 </div>
 
-                <button onclick="showHome()" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                <button onclick="showHome()" class="bg-white/5 hover:bg-white/10 text-white px-8 py-3 rounded-xl font-medium transition-all border border-white/5">
                     Povratak na izbornik
                 </button>
             </div>
@@ -257,14 +316,14 @@
         </div>
 
         <!-- VIEW: STUDY MODE -->
-        <div id="study-view" class="hidden w-full max-w-4xl mx-auto">
+        <div id="study-view" class="hidden w-full max-w-4xl mx-auto fade-in">
              <div class="flex justify-between items-center mb-6">
                 <div>
                     <h2 class="text-2xl font-bold text-white" id="study-title">Pregled</h2>
-                    <p class="text-gray-400 text-sm">Pregledajte sva pitanja i točne odgovore</p>
+                    <p class="text-slate-400 text-sm">Pregledajte sva pitanja i točne odgovore</p>
                 </div>
                 
-                <div class="bg-gray-800 px-4 py-2 rounded-full text-sm text-gray-400">
+                <div class="glass px-4 py-2 rounded-full text-sm text-slate-400 border border-white/5">
                     Ukupno: <span id="study-count" class="text-white font-bold">0</span>
                 </div>
             </div>
@@ -272,8 +331,8 @@
             <!-- Search -->
             <div class="relative mb-8">
                 <input type="text" id="study-search" placeholder="Pretraži pitanja..." 
-                    class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg pl-12 pr-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all">
-                <svg class="absolute left-4 top-3.5 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    class="w-full bg-slate-900/80 border border-white/5 text-white rounded-xl pl-12 pr-4 py-3 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all">
+                <svg class="absolute left-4 top-3.5 h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
             </div>
@@ -331,8 +390,12 @@
                 startReviewMode(data, title);
             } else {
                 let pool = shuffleArray([...data]);
-                if (mode === 'random20') {
+                if (mode === 'random10') {
+                    pool = pool.slice(0, 10);
+                } else if (mode === 'random20') {
                     pool = pool.slice(0, 20);
+                } else if (mode === 'random30') {
+                    pool = pool.slice(0, 30);
                 }
                 startQuizMode(pool, title);
             }
@@ -401,9 +464,16 @@
             const correctText = q.answers[correctIndex];
             const shuffledOptions = shuffleArray([...q.answers]);
 
+            // Use 2-column grid for 5+ options
+            if (shuffledOptions.length > 4) {
+                optsEl.className = "grid grid-cols-1 sm:grid-cols-2 gap-3";
+            } else {
+                optsEl.className = "grid grid-cols-1 gap-3";
+            }
+
             shuffledOptions.forEach(opt => {
                 const btn = document.createElement('button');
-                btn.className = "w-full text-left p-4 rounded-lg border border-gray-600 bg-gray-700 hover:bg-gray-600 hover:border-indigo-400 transition-all font-medium text-gray-200 shadow-sm";
+                btn.className = "w-full text-left p-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-indigo-400/50 transition-all font-medium text-slate-200 shadow-sm";
                 btn.textContent = opt;
                 btn.onclick = () => handleAnswer(btn, opt, correctText);
                 optsEl.appendChild(btn);
@@ -426,19 +496,19 @@
                 b.disabled = true;
                 b.classList.add('cursor-default', 'opacity-80');
                 if (b.textContent === correct) {
-                    b.classList.remove('border-gray-600', 'bg-gray-700');
-                    b.classList.add('bg-green-900/40', 'border-green-500', 'text-green-100', 'border-2');
+                    b.classList.remove('border-white/10', 'bg-white/5');
+                    b.classList.add('bg-emerald-900/40', 'border-emerald-500', 'text-emerald-100', 'border-2', 'opacity-100');
                 }
             });
 
             if (isCorrect) {
                 score++;
-                btn.classList.remove('border-gray-600', 'bg-gray-700');
-                btn.classList.add('bg-green-900/40', 'border-green-500', 'text-green-100', 'border-2');
+                btn.classList.remove('border-white/10', 'bg-white/5');
+                btn.classList.add('bg-emerald-900/40', 'border-emerald-500', 'text-emerald-100', 'border-2', 'opacity-100');
                 showFeedback(true);
             } else {
-                btn.classList.remove('border-gray-600', 'bg-gray-700');
-                btn.classList.add('bg-red-900/40', 'border-red-500', 'text-red-100', 'border-2');
+                btn.classList.remove('border-white/10', 'bg-white/5');
+                btn.classList.add('bg-red-900/40', 'border-red-500', 'text-red-100', 'border-2', 'opacity-100');
                 showFeedback(false);
             }
 
@@ -453,7 +523,7 @@
             fb.classList.remove('hidden');
             if(isCorrect) {
                 txt.textContent = "Točan odgovor!";
-                txt.className = "font-bold text-green-400";
+                txt.className = "font-bold text-emerald-400";
             } else {
                 txt.textContent = "Netočno!";
                 txt.className = "font-bold text-red-400";
@@ -482,34 +552,34 @@
             
             if (userAnswers.length > 0) {
                  const titleEl = document.createElement('h3');
-                 titleEl.className = "text-xl font-bold text-white mb-4 text-center mt-8 border-t border-gray-700 pt-8";
+                 titleEl.className = "text-xl font-bold text-white mb-4 text-center mt-8 border-t border-white/5 pt-8";
                  titleEl.textContent = "Pregled odgovora";
                  reviewContainer.appendChild(titleEl);
             }
 
             userAnswers.forEach((ans, idx) => {
                 const card = document.createElement('div');
-                card.className = `p-4 rounded-lg border ${ans.isCorrect ? 'border-green-800 bg-green-900/10' : 'border-red-800 bg-red-900/10'}`;
+                card.className = `p-4 rounded-xl border ${ans.isCorrect ? 'border-emerald-800/50 bg-emerald-900/10' : 'border-red-800/50 bg-red-900/10'}`;
                 
                 card.innerHTML = `
                     <div class="flex justify-between items-start mb-2">
-                        <span class="text-xs font-mono text-gray-400">Pitanje ${idx + 1}</span>
+                        <span class="text-xs font-mono text-slate-400">Pitanje ${idx + 1}</span>
                          ${ans.isCorrect 
-                            ? '<span class="px-2 py-0.5 rounded text-xs font-bold bg-green-900/50 text-green-400 border border-green-700">TOČNO</span>'
-                            : '<span class="px-2 py-0.5 rounded text-xs font-bold bg-red-900/50 text-red-400 border border-red-700">NETOČNO</span>'
+                            ? '<span class="px-2 py-0.5 rounded-lg text-xs font-bold bg-emerald-900/50 text-emerald-400 border border-emerald-700/50">TOČNO</span>'
+                            : '<span class="px-2 py-0.5 rounded-lg text-xs font-bold bg-red-900/50 text-red-400 border border-red-700/50">NETOČNO</span>'
                          }
                     </div>
                     <p class="text-white font-medium mb-3">${ans.question}</p>
                     
                     <div class="grid grid-cols-1 gap-2 text-sm">
                         <div class="flex flex-col">
-                            <span class="text-xs text-gray-500 mb-1">Vaš odgovor:</span>
-                            <span class="${ans.isCorrect ? 'text-green-400' : 'text-red-400'} font-medium">${ans.selected}</span>
+                            <span class="text-xs text-slate-500 mb-1">Vaš odgovor:</span>
+                            <span class="${ans.isCorrect ? 'text-emerald-400' : 'text-red-400'} font-medium">${ans.selected}</span>
                         </div>
                         ${!ans.isCorrect ? `
-                            <div class="flex flex-col mt-1 p-2 bg-gray-900/30 rounded border border-gray-700/50">
-                                <span class="text-xs text-gray-500 mb-1">Točan odgovor:</span>
-                                <span class="text-green-400 font-medium">${ans.correct}</span>
+                            <div class="flex flex-col mt-1 p-2 bg-slate-900/30 rounded-lg border border-white/5">
+                                <span class="text-xs text-slate-500 mb-1">Točan odgovor:</span>
+                                <span class="text-emerald-400 font-medium">${ans.correct}</span>
                             </div>
                         ` : ''}
                     </div>
@@ -559,12 +629,12 @@
                 const correctAns = q.answers[correctIdx];
 
                 const card = document.createElement('div');
-                card.className = "bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors";
+                card.className = "bg-slate-900/80 p-6 rounded-2xl border border-white/5 hover:border-white/10 transition-colors";
                 
                 card.innerHTML = `
                     <div class="text-white font-medium text-lg mb-3">${q.question}</div>
-                    <div class="bg-green-900/20 border border-green-900/50 p-3 rounded text-green-400 text-sm font-medium flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    <div class="bg-emerald-900/20 border border-emerald-900/40 p-3 rounded-xl text-emerald-400 text-sm font-medium flex items-center gap-2">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                         ${correctAns}
                     </div>
                 `;
@@ -572,7 +642,7 @@
             });
             
             if(list.length === 0) {
-                 container.innerHTML = '<div class="text-center text-gray-500 py-8">Nema rezultata za pretragu.</div>';
+                 container.innerHTML = '<div class="text-center text-slate-500 py-8">Nema rezultata za pretragu.</div>';
             } else {
                 container.appendChild(frag);
             }

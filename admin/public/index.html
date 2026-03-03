@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn .25s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    </style>
+</head>
+<body class="dark bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="showQuizList()">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                </div>
+                <span class="text-lg font-bold text-white">Quiz Admin</span>
+            </div>
+            <div id="breadcrumb" class="text-sm text-slate-400"></div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto w-full px-6 py-8">
+        <!-- Quiz List View -->
+        <div id="view-list" class="fade-in">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-3xl font-bold text-white">Your Quizzes</h1>
+                    <p class="text-slate-400 mt-1">Manage questions and create new quiz categories</p>
+                </div>
+                <button onclick="showCreateQuiz()" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-indigo-500/20 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                    New Quiz
+                </button>
+            </div>
+            <div id="quiz-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Injected -->
+            </div>
+        </div>
+
+        <!-- Quiz Editor View -->
+        <div id="view-editor" class="hidden fade-in">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                    <button onclick="showQuizList()" class="text-slate-400 hover:text-white transition p-2 -ml-2 rounded-lg hover:bg-slate-800">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div>
+                        <h1 class="text-2xl font-bold text-white" id="editor-title">Quiz</h1>
+                        <p class="text-sm text-slate-400"><span id="editor-count">0</span> questions</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="addQuestion()" class="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white px-4 py-2 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-green-500/20 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        Add Question
+                    </button>
+                    <button onclick="saveQuiz()" id="save-btn" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white px-5 py-2 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-indigo-500/20 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        Save All
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="relative mb-6">
+                <svg class="absolute left-4 top-3 w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <input type="text" id="editor-search" placeholder="Search questions..." class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl pl-12 pr-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-sm" oninput="filterQuestions()">
+            </div>
+
+            <div id="questions-list" class="space-y-4">
+                <!-- Injected -->
+            </div>
+        </div>
+
+        <!-- Create Quiz Modal -->
+        <div id="modal-create" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 w-full max-w-md shadow-2xl fade-in">
+                <h2 class="text-xl font-bold text-white mb-4">Create New Quiz</h2>
+                <label class="block text-sm text-slate-400 mb-1">Quiz ID (folder name, lowercase, no spaces)</label>
+                <input type="text" id="new-quiz-id" placeholder="e.g. math1" class="w-full bg-slate-800 border border-slate-600 text-white rounded-lg px-4 py-2.5 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none text-sm" pattern="[a-z0-9_-]+">
+                <div class="flex justify-end gap-3">
+                    <button onclick="hideCreateQuiz()" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 transition">Cancel</button>
+                    <button onclick="createQuiz()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">Create</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast -->
+        <div id="toast" class="hidden fixed bottom-6 right-6 z-50 px-5 py-3 rounded-xl shadow-2xl text-sm font-medium transition-all"></div>
+    </main>
+
+    <script>
+        let currentQuizId = null;
+        let currentQuestions = [];
+
+        // ===== API =====
+        async function api(url, opts = {}) {
+            const res = await fetch(url, {
+                headers: { 'Content-Type': 'application/json' },
+                ...opts,
+                body: opts.body ? JSON.stringify(opts.body) : undefined
+            });
+            return res.json();
+        }
+
+        // ===== TOAST =====
+        function toast(msg, type = 'success') {
+            const el = document.getElementById('toast');
+            el.textContent = msg;
+            el.className = `fixed bottom-6 right-6 z-50 px-5 py-3 rounded-xl shadow-2xl text-sm font-medium fade-in ${
+                type === 'success' ? 'bg-emerald-600 text-white' :
+                type === 'error' ? 'bg-red-600 text-white' : 'bg-slate-700 text-white'
+            }`;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 2500);
+        }
+
+        // ===== QUIZ LIST =====
+        async function showQuizList() {
+            document.getElementById('view-list').classList.remove('hidden');
+            document.getElementById('view-editor').classList.add('hidden');
+            document.getElementById('breadcrumb').textContent = '';
+            const data = await api('/api/quizzes');
+            renderQuizGrid(data);
+        }
+
+        function renderQuizGrid(quizzes) {
+            const grid = document.getElementById('quiz-grid');
+            grid.innerHTML = quizzes.map(q => `
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-indigo-500/40 transition-all cursor-pointer group" onclick="openQuiz('${q.id}')">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition">${q.id}</h3>
+                        <button onclick="event.stopPropagation(); deleteQuiz('${q.id}')" class="text-slate-600 hover:text-red-400 transition p-1 rounded" title="Delete quiz">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-slate-400">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>${q.questionCount} questions</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function deleteQuiz(id) {
+            if (!confirm(`Delete quiz "${id}" and all its questions? This cannot be undone.`)) return;
+            const res = await api(`/api/quizzes/${id}`, { method: 'DELETE' });
+            if (res.success) {
+                toast('Quiz deleted');
+                showQuizList();
+            } else {
+                toast(res.error, 'error');
+            }
+        }
+
+        // ===== CREATE QUIZ =====
+        function showCreateQuiz() { document.getElementById('modal-create').classList.remove('hidden'); }
+        function hideCreateQuiz() { document.getElementById('modal-create').classList.add('hidden'); }
+
+        async function createQuiz() {
+            const id = document.getElementById('new-quiz-id').value.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+            if (!id) return toast('Enter a valid quiz ID', 'error');
+            const res = await api('/api/quizzes', { method: 'POST', body: { id } });
+            if (res.success) {
+                toast('Quiz created!');
+                hideCreateQuiz();
+                document.getElementById('new-quiz-id').value = '';
+                openQuiz(id);
+            } else {
+                toast(res.error, 'error');
+            }
+        }
+
+        // ===== QUIZ EDITOR =====
+        async function openQuiz(id) {
+            currentQuizId = id;
+            const data = await api(`/api/quizzes/${id}`);
+            currentQuestions = data.questions || [];
+
+            document.getElementById('view-list').classList.add('hidden');
+            document.getElementById('view-editor').classList.remove('hidden');
+            document.getElementById('editor-title').textContent = id;
+            document.getElementById('breadcrumb').textContent = `/ ${id}`;
+            document.getElementById('editor-search').value = '';
+
+            renderQuestions();
+        }
+
+        function renderQuestions(filter = '') {
+            const container = document.getElementById('questions-list');
+            document.getElementById('editor-count').textContent = currentQuestions.length;
+            const lf = filter.toLowerCase();
+
+            let html = '';
+            currentQuestions.forEach((q, idx) => {
+                if (lf && !q.question.toLowerCase().includes(lf) && !q.answers.some(a => a.toLowerCase().includes(lf))) return;
+
+                const correctIdx = parseInt(q.correct);
+                html += `
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 fade-in" data-idx="${idx}">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <span class="text-xs font-mono text-slate-500 bg-slate-800 px-2 py-1 rounded mt-0.5">#${idx + 1}</span>
+                        <div class="flex gap-2">
+                            <button onclick="editQuestion(${idx})" class="text-slate-500 hover:text-indigo-400 transition p-1.5 rounded-lg hover:bg-slate-800" title="Edit">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                            </button>
+                            <button onclick="duplicateQuestion(${idx})" class="text-slate-500 hover:text-emerald-400 transition p-1.5 rounded-lg hover:bg-slate-800" title="Duplicate">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            </button>
+                            <button onclick="deleteQuestion(${idx})" class="text-slate-500 hover:text-red-400 transition p-1.5 rounded-lg hover:bg-slate-800" title="Delete">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-white font-medium mb-3">${escapeHtml(q.question)}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        ${q.answers.map((a, ai) => `
+                            <div class="flex items-center gap-2 text-sm px-3 py-2 rounded-lg ${ai === correctIdx ? 'bg-emerald-900/30 border border-emerald-700/50 text-emerald-300' : 'bg-slate-800 border border-slate-700 text-slate-300'}">
+                                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${ai === correctIdx ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-400'}">${String.fromCharCode(65 + ai)}</span>
+                                ${escapeHtml(a)}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>`;
+            });
+
+            if (!html) html = '<div class="text-center text-slate-500 py-12">No questions found. Add one to get started!</div>';
+            container.innerHTML = html;
+        }
+
+        function filterQuestions() {
+            renderQuestions(document.getElementById('editor-search').value);
+        }
+
+        // ===== QUESTION CRUD =====
+        function addQuestion() {
+            openQuestionModal(-1, { question: '', answers: ['', '', '', ''], correct: '0' });
+        }
+
+        function editQuestion(idx) {
+            openQuestionModal(idx, JSON.parse(JSON.stringify(currentQuestions[idx])));
+        }
+
+        function duplicateQuestion(idx) {
+            const copy = JSON.parse(JSON.stringify(currentQuestions[idx]));
+            currentQuestions.splice(idx + 1, 0, copy);
+            renderQuestions();
+            toast('Question duplicated');
+        }
+
+        function deleteQuestion(idx) {
+            if (!confirm(`Delete question #${idx + 1}?`)) return;
+            currentQuestions.splice(idx, 1);
+            renderQuestions();
+            toast('Question removed (save to apply)');
+        }
+
+        // ===== QUESTION MODAL =====
+        function openQuestionModal(idx, data) {
+            // Remove existing modal
+            const old = document.getElementById('modal-question');
+            if (old) old.remove();
+
+            const isNew = idx === -1;
+            const answers = data.answers || ['', '', '', ''];
+            const correctIdx = parseInt(data.correct) || 0;
+
+            const modal = document.createElement('div');
+            modal.id = 'modal-question';
+            modal.className = 'fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-start justify-center p-4 pt-16 overflow-y-auto';
+            modal.innerHTML = `
+                <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 w-full max-w-2xl shadow-2xl fade-in mb-8">
+                    <h2 class="text-xl font-bold text-white mb-5">${isNew ? 'Add New Question' : 'Edit Question #' + (idx + 1)}</h2>
+
+                    <label class="block text-sm text-slate-400 mb-1">Question</label>
+                    <textarea id="mq-question" rows="3" class="w-full bg-slate-800 border border-slate-600 text-white rounded-lg px-4 py-2.5 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none text-sm resize-y">${escapeHtml(data.question)}</textarea>
+
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="text-sm text-slate-400">Answer Options (click radio to mark correct)</label>
+                        <button onclick="addAnswerField()" class="text-xs text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            Add Option
+                        </button>
+                    </div>
+                    <div id="mq-answers" class="space-y-2 mb-5">
+                        ${answers.map((a, i) => answerFieldHtml(i, a, i === correctIdx)).join('')}
+                    </div>
+
+                    <div class="flex justify-end gap-3">
+                        <button onclick="document.getElementById('modal-question').remove()" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 transition">Cancel</button>
+                        <button onclick="saveQuestion(${idx})" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">${isNew ? 'Add' : 'Update'}</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function answerFieldHtml(index, value, isCorrect) {
+            return `
+                <div class="flex items-center gap-2">
+                    <input type="radio" name="mq-correct" value="${index}" ${isCorrect ? 'checked' : ''} class="accent-emerald-500 w-4 h-4 flex-shrink-0">
+                    <input type="text" value="${escapeHtml(value)}" class="mq-answer flex-grow bg-slate-800 border border-slate-600 text-white rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 outline-none text-sm" placeholder="Answer ${String.fromCharCode(65 + index)}">
+                    <button onclick="removeAnswerField(this)" class="text-slate-600 hover:text-red-400 p-1 transition flex-shrink-0" title="Remove">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>`;
+        }
+
+        function addAnswerField() {
+            const container = document.getElementById('mq-answers');
+            const count = container.children.length;
+            if (count >= 8) return toast('Maximum 8 options', 'error');
+            container.insertAdjacentHTML('beforeend', answerFieldHtml(count, '', false));
+            reindexRadios();
+        }
+
+        function removeAnswerField(btn) {
+            const container = document.getElementById('mq-answers');
+            if (container.children.length <= 2) return toast('Minimum 2 options', 'error');
+            btn.closest('div').remove();
+            reindexRadios();
+        }
+
+        function reindexRadios() {
+            document.querySelectorAll('#mq-answers > div').forEach((row, i) => {
+                const radio = row.querySelector('input[type=radio]');
+                radio.value = i;
+            });
+        }
+
+        function saveQuestion(idx) {
+            const question = document.getElementById('mq-question').value.trim();
+            if (!question) return toast('Question text is required', 'error');
+
+            const answerInputs = document.querySelectorAll('.mq-answer');
+            const answers = Array.from(answerInputs).map(a => a.value.trim());
+            if (answers.some(a => !a)) return toast('All answer fields must be filled', 'error');
+
+            const correctRadio = document.querySelector('input[name=mq-correct]:checked');
+            if (!correctRadio) return toast('Select a correct answer', 'error');
+            const correct = correctRadio.value;
+
+            const obj = { question, answers, correct };
+
+            if (idx === -1) {
+                currentQuestions.push(obj);
+            } else {
+                currentQuestions[idx] = obj;
+            }
+
+            document.getElementById('modal-question').remove();
+            renderQuestions();
+            toast(idx === -1 ? 'Question added (save to persist)' : 'Question updated (save to persist)');
+        }
+
+        // ===== SAVE =====
+        async function saveQuiz() {
+            const btn = document.getElementById('save-btn');
+            btn.textContent = 'Saving...';
+            btn.disabled = true;
+            const res = await api(`/api/quizzes/${currentQuizId}`, {
+                method: 'PUT',
+                body: { questions: currentQuestions }
+            });
+            btn.innerHTML = '<svg class="w-4 h-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Save All';
+            btn.disabled = false;
+            if (res.success) {
+                toast(`Saved ${res.questionCount} questions!`);
+            } else {
+                toast(res.error, 'error');
+            }
+        }
+
+        // ===== UTILS =====
+        function escapeHtml(str) {
+            const d = document.createElement('div');
+            d.textContent = str || '';
+            return d.innerHTML;
+        }
+
+        // Init
+        showQuizList();
+    </script>
+</body>
+</html>
