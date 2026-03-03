@@ -95,6 +95,8 @@
                 <h2 class="text-xl font-bold text-white mb-4">Create New Quiz</h2>
                 <label class="block text-sm text-slate-400 mb-1">Quiz ID (folder name, lowercase, no spaces)</label>
                 <input type="text" id="new-quiz-id" placeholder="e.g. math1" class="w-full bg-slate-800 border border-slate-600 text-white rounded-lg px-4 py-2.5 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none text-sm" pattern="[a-z0-9_-]+">
+                <label class="block text-sm text-slate-400 mb-1">Display Name</label>
+                <input type="text" id="new-quiz-title" placeholder="e.g. Math 1" class="w-full bg-slate-800 border border-slate-600 text-white rounded-lg px-4 py-2.5 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none text-sm">
                 <div class="flex justify-end gap-3">
                     <button onclick="hideCreateQuiz()" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 transition">Cancel</button>
                     <button onclick="createQuiz()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">Create</button>
@@ -177,11 +179,13 @@
         async function createQuiz() {
             const id = document.getElementById('new-quiz-id').value.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
             if (!id) return toast('Enter a valid quiz ID', 'error');
-            const res = await api('/api/quizzes', { method: 'POST', body: { id } });
+            const title = document.getElementById('new-quiz-title').value.trim() || id;
+            const res = await api('/api/quizzes', { method: 'POST', body: { id, title } });
             if (res.success) {
                 toast('Quiz created!');
                 hideCreateQuiz();
                 document.getElementById('new-quiz-id').value = '';
+                document.getElementById('new-quiz-title').value = '';
                 openQuiz(id);
             } else {
                 toast(res.error, 'error');
