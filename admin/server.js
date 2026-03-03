@@ -32,7 +32,7 @@ function generateQuizIndexHtml(title) {
 
 // Generate a card HTML block for the main index.html
 function generateCardHtml(quizId, title) {
-    var abbrev = title.substring(0, 3).toUpperCase();
+    const abbrev = title.substring(0, Math.min(3, title.length)).toUpperCase();
     return '\n                    <!-- quiz-card:' + quizId + ' -->\n' +
         '                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">\n' +
         '                        <div class="mb-5">\n' +
@@ -68,34 +68,34 @@ function generateCardHtml(quizId, title) {
 
 // Add a quiz card to the main index.html
 function addCardToMainIndex(quizId, title) {
-    var html = fs.readFileSync(MAIN_INDEX, 'utf-8');
-    var marker = '<!-- QUIZ-CARDS-END -->';
-    var idx = html.indexOf(marker);
+    const html = fs.readFileSync(MAIN_INDEX, 'utf-8');
+    const marker = '<!-- QUIZ-CARDS-END -->';
+    const idx = html.indexOf(marker);
     if (idx === -1) return;
-    var cardHtml = generateCardHtml(quizId, title);
-    var updated = html.slice(0, idx) + cardHtml + '\n                    ' + html.slice(idx);
+    const cardHtml = generateCardHtml(quizId, title);
+    const updated = html.slice(0, idx) + cardHtml + '\n                    ' + html.slice(idx);
     fs.writeFileSync(MAIN_INDEX, updated, 'utf-8');
 }
 
 // Remove a quiz card from the main index.html
 function removeCardFromMainIndex(quizId) {
-    var html = fs.readFileSync(MAIN_INDEX, 'utf-8');
-    var startMarker = '<!-- quiz-card:' + quizId + ' -->';
-    var endMarker = '<!-- /quiz-card:' + quizId + ' -->';
-    var startIdx = html.indexOf(startMarker);
-    var endIdx = html.indexOf(endMarker);
+    const html = fs.readFileSync(MAIN_INDEX, 'utf-8');
+    const startMarker = '<!-- quiz-card:' + quizId + ' -->';
+    const endMarker = '<!-- /quiz-card:' + quizId + ' -->';
+    const startIdx = html.indexOf(startMarker);
+    const endIdx = html.indexOf(endMarker);
     if (startIdx === -1 || endIdx === -1) return;
-    var removeStart = startIdx;
-    var removeEnd = endIdx + endMarker.length;
+    let removeStart = startIdx;
+    let removeEnd = endIdx + endMarker.length;
     // Trim leading whitespace/newlines
-    while (removeStart > 0 && (html[removeStart - 1] === ' ' || html[removeStart - 1] === '\n' || html[removeStart - 1] === '\r')) {
+    while (removeStart > 0 && /[\s\n\r]/.test(html[removeStart - 1])) {
         removeStart--;
     }
     // Trim trailing newline
-    while (removeEnd < html.length && (html[removeEnd] === '\n' || html[removeEnd] === '\r')) {
+    while (removeEnd < html.length && /[\n\r]/.test(html[removeEnd])) {
         removeEnd++;
     }
-    var updated = html.slice(0, removeStart) + '\n' + html.slice(removeEnd);
+    const updated = html.slice(0, removeStart) + '\n' + html.slice(removeEnd);
     fs.writeFileSync(MAIN_INDEX, updated, 'utf-8');
 }
 
