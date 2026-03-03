@@ -26,7 +26,7 @@
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
-        .card-glow:hover { box-shadow: 0 0 30px rgba(99,102,241,.12); }
+        .card-glow:hover { box-shadow: 0 0 20px rgba(99,102,241,.06); }
         .fade-in { animation: fadeIn .3s ease; }
         @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
         .glass { background: rgba(30,41,59,.6); backdrop-filter: blur(12px); }
@@ -39,7 +39,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center cursor-pointer" onclick="showHome()">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center mr-3 shadow-lg shadow-indigo-500/20">
+                    <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center mr-3">
                         <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                         </svg>
@@ -69,11 +69,12 @@
             <!-- Quiz Grid -->
             <section>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <!-- QUIZ-CARDS-START -->
 
-                    <!-- PZI 2.dio -->
-                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                    <!-- quiz-card:pzi2dio -->
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">
                         <div class="mb-5">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-3 shadow-lg shadow-blue-500/20">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/80 flex items-center justify-center mb-3">
                                 <span class="text-white font-bold text-sm">PZI</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-1">PZI 2.dio</h3>
@@ -81,13 +82,13 @@
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random10', 'PZI 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random10', 'PZI 2.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">10</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random20', 'PZI 2.dio')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random20', 'PZI 2.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">20</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random30', 'PZI 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/pzi2dio/quiz.json', 'random30', 'PZI 2.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">30</span> Pitanja
                                 </button>
                             </div>
@@ -102,10 +103,12 @@
                         </div>
                     </div>
 
-                    <!-- DIGEL 1.dio -->
-                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                    <!-- /quiz-card:pzi2dio -->
+
+                    <!-- quiz-card:digel1dio -->
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">
                         <div class="mb-5">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-3 shadow-lg shadow-violet-500/20">
+                            <div class="w-10 h-10 rounded-xl bg-violet-600/80 flex items-center justify-center mb-3">
                                 <span class="text-white font-bold text-xs">DIG</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-1">DIGEL 1.dio</h3>
@@ -113,13 +116,13 @@
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random10', 'DIGEL 1.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random10', 'DIGEL 1.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">10</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random20', 'DIGEL 1.dio')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random20', 'DIGEL 1.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">20</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random30', 'DIGEL 1.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/digel1dio/quiz.json', 'random30', 'DIGEL 1.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">30</span> Pitanja
                                 </button>
                             </div>
@@ -134,10 +137,12 @@
                         </div>
                     </div>
 
-                    <!-- DIGEL 2.dio -->
-                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                    <!-- /quiz-card:digel1dio -->
+
+                    <!-- quiz-card:digel2dio -->
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">
                         <div class="mb-5">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-3 shadow-lg shadow-violet-500/20">
+                            <div class="w-10 h-10 rounded-xl bg-violet-600/80 flex items-center justify-center mb-3">
                                 <span class="text-white font-bold text-xs">DIG</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-1">DIGEL 2.dio</h3>
@@ -145,13 +150,13 @@
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random10', 'DIGEL 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random10', 'DIGEL 2.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">10</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random20', 'DIGEL 2.dio')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random20', 'DIGEL 2.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">20</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random30', 'DIGEL 2.dio')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/digel2dio/quiz.json', 'random30', 'DIGEL 2.dio')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">30</span> Pitanja
                                 </button>
                             </div>
@@ -166,10 +171,12 @@
                         </div>
                     </div>
 
-                    <!-- IGIP 1 -->
-                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                    <!-- /quiz-card:digel2dio -->
+
+                    <!-- quiz-card:igip1 -->
+                    <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">
                         <div class="mb-5">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-3 shadow-lg shadow-amber-500/20">
+                            <div class="w-10 h-10 rounded-xl bg-amber-600/80 flex items-center justify-center mb-3">
                                 <span class="text-white font-bold text-xs">IGP</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-1">IGIP 1</h3>
@@ -177,13 +184,13 @@
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random10', 'IGIP 1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random10', 'IGIP 1')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">10</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random20', 'IGIP 1')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random20', 'IGIP 1')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">20</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random30', 'IGIP 1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/igip1/quiz.json', 'random30', 'IGIP 1')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">30</span> Pitanja
                                 </button>
                             </div>
@@ -198,10 +205,12 @@
                         </div>
                     </div>
 
-                     <!-- KOM. VJ. KOL 1 -->
-                     <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-indigo-500/30 transition-all shadow-lg card-glow flex flex-col">
+                    <!-- /quiz-card:igip1 -->
+
+                    <!-- quiz-card:komvj1 -->
+                     <div class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">
                         <div class="mb-5">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-3 shadow-lg shadow-emerald-500/20">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600/80 flex items-center justify-center mb-3">
                                 <span class="text-white font-bold text-xs">KV</span>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-1">Kom.Vj.1</h3>
@@ -209,13 +218,13 @@
                         </div>
                         <div class="mt-auto grid grid-cols-1 gap-2">
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random10', 'Kom.Vj.1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random10', 'Kom.Vj.1')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">10</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random20', 'Kom.Vj.1')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random20', 'Kom.Vj.1')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">20</span> Pitanja
                                 </button>
-                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random30', 'Kom.Vj.1')" class="bg-indigo-600/80 hover:bg-indigo-500 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                <button onclick="launchQuiz('quiz/komvj1/quiz.json', 'random30', 'Kom.Vj.1')" class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
                                     <span class="font-bold">30</span> Pitanja
                                 </button>
                             </div>
@@ -229,7 +238,8 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- /quiz-card:komvj1 -->
+                    <!-- QUIZ-CARDS-END -->
                 </div>
             </section>
         </div>
@@ -237,7 +247,7 @@
         <!-- VIEW: ACTIVE QUIZ -->
         <div id="quiz-view" class="hidden w-full max-w-3xl mx-auto fade-in">
              <!-- Top Bar inside Quiz -->
-            <div class="flex items-center justify-between glass p-4 rounded-2xl mb-6 shadow-lg border border-white/5">
+            <div class="flex items-center justify-between glass p-4 rounded-2xl mb-6 shadow border border-white/5">
                 <div class="flex flex-col">
                     <span class="text-xs uppercase tracking-wider text-indigo-400 font-semibold" id="quiz-title-display">KVIZ</span>
                     <div class="flex items-end gap-1">
@@ -265,7 +275,7 @@
             </div>
 
             <!-- Question Card -->
-            <div id="q-card" class="bg-slate-900/80 rounded-2xl shadow-2xl border border-white/5 overflow-hidden mb-6">
+            <div id="q-card" class="bg-slate-900/80 rounded-2xl shadow-lg border border-white/5 overflow-hidden mb-6">
                 <div class="p-6 md:p-8">
                     <h2 class="text-xl md:text-2xl font-bold text-white mb-8 leading-tight" id="q-text">
                         ...
@@ -280,14 +290,14 @@
                 <!-- Feedback -->
                 <div id="q-feedback" class="hidden glass px-6 py-4 border-t border-white/5 flex justify-between items-center">
                     <span id="q-feedback-text" class="font-medium"></span>
-                    <button id="q-next-btn" class="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white px-6 py-2 rounded-xl font-medium transition-all shadow-lg shadow-indigo-500/20">
+                    <button id="q-next-btn" class="bg-indigo-700 hover:bg-indigo-600 text-white px-6 py-2 rounded-xl font-medium transition-all">
                         Dalje
                     </button>
                 </div>
             </div>
 
              <!-- Results (Hidden initially) -->
-            <div id="q-completion" class="hidden bg-slate-900/80 rounded-2xl shadow-2xl border border-white/5 p-8 text-center">
+            <div id="q-completion" class="hidden bg-slate-900/80 rounded-2xl shadow-lg border border-white/5 p-8 text-center">
                  <div class="w-20 h-20 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 ring-2 ring-green-900/50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                 </div>
