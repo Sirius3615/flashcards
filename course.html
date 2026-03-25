@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="hr" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skripta - Digitalna Elektronika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#151e2e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        indigo: {
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-y: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Glass rendering */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Animations */
+        .slide-up {
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Typography overrides */
+        .prose p {
+            margin-bottom: 1.25em;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .prose ul,
+        .prose ol {
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            list-style-type: disc;
+            color: #cbd5e1;
+        }
+
+        .prose li {
+            margin-bottom: 0.5em;
+            line-height: 1.6;
+        }
+
+        /* Module accordion styles */
+        .module-header {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .module-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .module-header.active {
+            background-color: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .module-header.active .module-icon {
+            transform: rotate(90deg);
+        }
+
+        /* Nav Item Styles */
+        .lesson-nav-item {
+            transition: all 0.2s ease;
+        }
+
+        .lesson-nav-item.active {
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, transparent 100%);
+            border-left: 3px solid #6366f1;
+            color: white;
+            padding-left: 13px;
+            /* 16px - 3px border */
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200 h-screen flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <header class="glass-panel border-b border-white/5 z-50 flex-none h-16">
+        <div class="h-full max-w-[1600px] mx-auto px-4 md:px-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html"
+                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors group">
+                    <svg class="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg tracking-tight text-white leading-none mb-1" id="course-title">
+                            Učitavanje...</h1>
+                        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-500 leading-none">Skripta &
+                            Predavanja</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 hidden md:flex">
+                <button onclick="toggleSidebar()"
+                    class="md:hidden w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors text-slate-400 hover:text-white">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="flex-grow flex overflow-hidden relative" id="layout-container">
+
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar"
+            class="w-80 flex-none h-full glass-panel border-r border-white/5 overflow-y-auto flex flex-col absolute md:relative z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+            <div class="p-6 pb-2">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Sadržaj kolegija</h2>
+            </div>
+            <div id="nav-content" class="flex-grow px-4 pb-8 space-y-2">
+                <!-- Modules injected here -->
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow h-full bg-slate-950 overflow-y-auto relative" id="main-scroll-area">
+
+            <!-- Welcome View (Shown initially) -->
+            <div id="welcome-view" class="max-w-4xl mx-auto px-6 py-20 md:py-32 fade-in">
+                <div class="text-center">
+                    <div
+                        class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-3xl mx-auto flex items-center justify-center mb-8 shadow-2xl shadow-indigo-500/30">
+                        <svg class="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-display" id="welcome-title">Digitalna
+                        Elektronika</h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed" id="welcome-desc">Učitavanje
+                        opisa predmeta...</p>
+
+                    <button onclick="startCourse()"
+                        class="mt-12 group bg-white text-slate-900 hover:bg-indigo-50 px-8 py-4 rounded-full font-bold transition-all shadow-xl hover:shadow-indigo-500/20 flex items-center gap-3 mx-auto">
+                        Kreni s učenjem
+                        <svg class="w-5 h-5 text-slate-900 group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lesson View (Shown when lesson selected) -->
+            <div id="lesson-view" class="hidden relative max-w-[1200px] mx-auto">
+                <div class="px-6 py-12 md:px-12 md:py-20 lg:grid lg:grid-cols-12 lg:gap-12 items-start">
+
+                    <!-- Content Column -->
+                    <div class="lg:col-span-12 xl:col-span-8 w-full slide-up max-w-3xl mx-auto xl:mx-0">
+                        <!-- Breadcrumbs -->
+                        <div class="flex items-center gap-2 text-sm text-slate-500 font-medium mb-6">
+                            <span id="bc-module" class="uppercase tracking-wider">Modul</span>
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                            <span class="text-indigo-400 truncate max-w-[200px]" id="bc-lesson">Lekcija</span>
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 font-display leading-tight"
+                            id="lesson-title">Naslov lekcije</h2>
+
+                        <!-- Dynamic Rich Text -->
+                        <div class="prose prose-invert prose-lg max-w-none text-slate-300 font-sans"
+                            id="lesson-content">
+                            <!-- Parsed content injected here -->
+                        </div>
+
+                        <!-- Navigation Footer -->
+                        <div class="mt-16 pt-8 border-t border-white/10 flex items-center justify-between">
+                            <button id="btn-prev" onclick="navigateLesson(-1)"
+                                class="flex items-center gap-2 hover:bg-white/5 px-4 py-3 border border-white/5 rounded-2xl transition-colors text-slate-300 hover:text-white">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                                <div class="text-left hidden sm:block">
+                                    <div class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Prethodno
+                                    </div>
+                                    <div class="text-sm font-medium">Lekcija</div>
+                                </div>
+                            </button>
+
+                            <button id="btn-next" onclick="navigateLesson(1)"
+                                class="flex items-center gap-2 hover:bg-white/5 px-4 py-3 border border-white/5 rounded-2xl transition-colors text-slate-300 hover:text-white">
+                                <div class="text-right hidden sm:block">
+                                    <div class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Sljedeće
+                                    </div>
+                                    <div class="text-sm font-medium">Lekcija</div>
+                                </div>
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Images Column (Sticky on large screens) -->
+                    <div class="lg:col-span-12 xl:col-span-4 mt-12 xl:mt-0 xl:sticky xl:top-20 space-y-6 slide-up"
+                        id="lesson-images" style="animation-delay: 0.1s;">
+                        <!-- Images injected here -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Mobile Sidebar Overlay -->
+        <div id="sidebar-overlay" onclick="toggleSidebar()"
+            class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-30 hidden md:hidden"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen"
+        class="fixed inset-0 bg-slate-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
+        <div
+            class="w-16 h-16 border-4 border-slate-800 border-t-indigo-500 rounded-full animate-spin mb-6 shadow-lg shadow-indigo-500/20">
+        </div>
+        <div class="text-white font-display font-medium text-lg tracking-wide">Inicijalizacija skripte...</div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox-modal" onclick="closeLightbox()"
+        class="fixed inset-0 bg-slate-950/90 backdrop-blur-xl z-[200] hidden flex flex-col items-center justify-center p-4 md:p-12 transition-opacity duration-300 opacity-0 cursor-zoom-out">
+        <div
+            class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer transition-colors backdrop-blur-md border border-white/20">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[85vh] rounded-2xl shadow-2xl border border-white/10"
+            onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        // Data State
+        let courseData = null;
+        let flattenedLessons = [];
+        let currentLessonIndex = -1;
+
+        // Initialize application
+        async function initApp() {
+            try {
+                const response = await fetch('course/course-1/course_database.json');
+                courseData = await response.json();
+
+                document.getElementById('course-title').textContent = courseData.title;
+                document.getElementById('welcome-title').textContent = courseData.title;
+                document.getElementById('welcome-desc').textContent = courseData.description;
+
+                buildNavigation();
+
+                // Hide loader
+                setTimeout(() => {
+                    const loader = document.getElementById('loading-screen');
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 500);
+                }, 800);
+            } catch (err) {
+                console.error("Failed to load course data:", err);
+                document.getElementById('loading-screen').innerHTML = `
+                    <div class="text-red-400 text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        <h2 class="text-xl font-bold">Greška pri učitavanju baze predmeta.</h2>
+                        <p class="text-slate-400 mt-2 text-sm">Provjerite postojanje datoteke course_database.json</p>
+                    </div>`;
+            }
+        }
+
+        // Build Sidebar Navigation
+        function buildNavigation() {
+            const nav = document.getElementById('nav-content');
+            nav.innerHTML = '';
+            flattenedLessons = [];
+            let globalIndex = 0;
+
+            courseData.modules.forEach((mod, mIndex) => {
+                const modEl = document.createElement('div');
+                modEl.className = 'mb-1 bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden';
+
+                // Accordion Header
+                const modHeader = document.createElement('div');
+                modHeader.className = 'module-header flex items-center justify-between p-4 hover:bg-white/5 text-slate-300 font-medium select-none';
+                modHeader.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-xs font-bold text-white shadow-inner">${mIndex + 1}</div>
+                        <span class="text-sm tracking-wide truncate pr-2" title="${mod.title}">${mod.title}</span>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-500 module-icon transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                `;
+
+                // Accordion Body
+                const modBody = document.createElement('div');
+                modBody.className = 'module-body bg-slate-900/40';
+
+                const lessonList = document.createElement('div');
+                lessonList.className = 'py-2 px-3 flex flex-col gap-1';
+
+                mod.lessons.forEach((lesson, lIndex) => {
+                    // Create flattened array for Prev/Next navigation
+                    const lData = { ...lesson, moduleTitle: mod.title, mIndex, lIndex, globalIndex };
+                    flattenedLessons.push(lData);
+
+                    const lBtn = document.createElement('button');
+                    lBtn.className = `lesson-nav-item w-full text-left p-3 rounded-xl text-sm text-slate-400 hover:text-indigo-200 hover:bg-indigo-500/10 active:scale-95 flex items-start gap-3`;
+                    lBtn.dataset.index = globalIndex;
+                    lBtn.innerHTML = `
+                        <div class="mt-0.5 w-1.5 h-1.5 rounded-full bg-slate-600 flex-shrink-0 group-hover:bg-indigo-400"></div>
+                        <span class="line-clamp-2 leading-relaxed">${lesson.title}</span>
+                    `;
+
+                    const captureIndex = globalIndex;
+                    lBtn.onclick = () => {
+                        loadLesson(captureIndex);
+                        if (window.innerWidth < 768) toggleSidebar();
+                    };
+
+                    lessonList.appendChild(lBtn);
+                    globalIndex++;
+                });
+
+                modBody.appendChild(lessonList);
+                modEl.appendChild(modHeader);
+                modEl.appendChild(modBody);
+                nav.appendChild(modEl);
+
+                // Toggle Accordion functionality
+                modHeader.onclick = () => {
+                    const isActive = modHeader.classList.contains('active');
+
+                    // Close all
+                    document.querySelectorAll('.module-header').forEach(h => {
+                        h.classList.remove('active');
+                        h.nextElementSibling.style.maxHeight = null;
+                        h.querySelector('.w-7').classList.remove('bg-indigo-500', 'text-white');
+                        h.querySelector('.w-7').classList.add('bg-white/10', 'text-slate-300');
+                    });
+
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        modHeader.classList.add('active');
+                        modBody.style.maxHeight = modBody.scrollHeight + "px";
+                        modHeader.querySelector('.w-7').classList.remove('bg-white/10', 'text-slate-300');
+                        modHeader.querySelector('.w-7').classList.add('bg-indigo-500', 'text-white');
+                    }
+                };
+            });
+
+            // Open first module by default
+            if (nav.firstChild) nav.firstChild.querySelector('.module-header').click();
+        }
+
+        function startCourse() {
+            if (flattenedLessons.length > 0) {
+                loadLesson(0);
+            }
+        }
+
+        // Load specific lesson
+        function loadLesson(index) {
+            if (index < 0 || index >= flattenedLessons.length) return;
+            currentLessonIndex = index;
+
+            const lData = flattenedLessons[index];
+
+            // Switch Views
+            document.getElementById('welcome-view').classList.add('hidden');
+            const lessonView = document.getElementById('lesson-view');
+            lessonView.classList.remove('hidden');
+
+            // Reset Animation by removing and re-adding class
+            const txtCol = lessonView.querySelector('.slide-up:nth-child(1)');
+            const imgCol = document.getElementById('lesson-images');
+            txtCol.classList.remove('slide-up');
+            imgCol.classList.remove('slide-up');
+            void txtCol.offsetWidth; // trigger reflow
+            txtCol.classList.add('slide-up');
+            imgCol.classList.add('slide-up');
+
+            // Scroll to top
+            document.getElementById('main-scroll-area').scrollTop = 0;
+
+            // Update Active UI State
+            document.querySelectorAll('.lesson-nav-item').forEach(el => el.classList.remove('active'));
+            const activeBtn = document.querySelector(`.lesson-nav-item[data-index="${index}"]`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Populate Content
+            document.getElementById('bc-module').textContent = lData.moduleTitle;
+            document.getElementById('bc-lesson').textContent = lData.title;
+            document.getElementById('lesson-title').textContent = lData.title;
+            document.getElementById('lesson-content').innerHTML = lData.content;
+
+            // Render Images (Fix paths to local 'course/course-1/images/')
+            imgCol.innerHTML = '';
+            if (lData.images && lData.images.length > 0) {
+                lData.images.forEach(imgRawPath => {
+                    const filename = imgRawPath.split('/').pop(); // Extracts 'slide_016.png'
+                    const localPath = `course/course-1/images/${filename}`;
+
+                    const imgFrame = document.createElement('div');
+                    imgFrame.className = 'bg-white/5 border border-white/10 rounded-2xl p-2 hidden xl:block shadow-2xl';
+                    imgFrame.innerHTML = `<img src="${localPath}" alt="Slide" class="w-full h-auto rounded-xl shadow-inner border border-white/5 cursor-zoom-in hover:opacity-90 transition-opacity" loading="lazy" onclick="openLightbox('${localPath}')">`;
+                    imgCol.appendChild(imgFrame);
+
+                    // Also append to bottom of text for mobile views
+                    const imgInline = document.createElement('img');
+                    imgInline.src = localPath;
+                    imgInline.className = "xl:hidden w-full max-w-sm rounded-xl border border-white/10 shadow-lg mt-8 mx-auto block cursor-zoom-in hover:opacity-90 transition-opacity";
+                    imgInline.onclick = () => openLightbox(localPath);
+                    document.getElementById('lesson-content').appendChild(imgInline);
+                });
+            }
+
+            updateNavigationButtons();
+
+            // Ensure module is open in sidebar
+            const moduleHeaders = document.querySelectorAll('.module-header');
+            if (moduleHeaders[lData.mIndex]) {
+                const header = moduleHeaders[lData.mIndex];
+                if (!header.classList.contains('active')) {
+                    header.click();
+                }
+            }
+        }
+
+        function navigateLesson(dir) {
+            loadLesson(currentLessonIndex + dir);
+        }
+
+        function updateNavigationButtons() {
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+
+            if (currentLessonIndex <= 0) {
+                btnPrev.style.visibility = 'hidden';
+            } else {
+                btnPrev.style.visibility = 'visible';
+            }
+
+            if (currentLessonIndex >= flattenedLessons.length - 1) {
+                btnNext.style.visibility = 'hidden';
+            } else {
+                btnNext.style.visibility = 'visible';
+            }
+        }
+
+        // Mobile Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+
+            if (sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        // Lightbox Functions
+        function openLightbox(src) {
+            const modal = document.getElementById('lightbox-modal');
+            document.getElementById('lightbox-img').src = src;
+            modal.classList.remove('hidden');
+            // Trigger reflow for fade in
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+
+</html>
