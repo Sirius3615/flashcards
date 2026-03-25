@@ -156,7 +156,7 @@
         "correct": "2"
     },
     {
-        "question": "Binarni broj 100110101 u oktalnom brojevnom sustavu je:",
+        "question": "Binarni broj 100110101 u dekadskom brojevnom sustavu je:",
         "answers": [
             "315",
             "135",
@@ -344,7 +344,7 @@
             "1 i R",
             "0 i R"
         ],
-        "correct": "2"
+        "correct": "3"
     },
     {
         "question": "Pad napona između kolektora i emitera bipolarnog tranzistora u zasićenju u negativnoj logici odgovara logičkoj jedinici.",
@@ -420,8 +420,7 @@
             "Logička 0: 0-0.8V; Logička 1: 2.4-5V",
             "Logička 0: 0.8-2.4V; Logička 1: 3.5-5V",
             "Logička 0: 0.3-0.8V; Logička 1: 3.5-5V",
-            "Logička 0: 2.4-5V; Logička 1: 0-0.8V",
-            "Logička 0: 0-0.8V; Logička 1: 2.4-5V"
+            "Logička 0: 2.4-5V; Logička 1: 0-0.8V"
         ],
         "correct": "0"
     },
@@ -458,22 +457,23 @@
     {
         "question": "Broj redaka u multipleksersko-demultiplekserskoj strukturi ovisi o:",
         "answers": [
-            "Broju multipleksera",
-            "Broju adresnih ulaza multipleksera",
+            "Broju demultipleksera",
             "Broju adresnih ulaza demultipleksera",
+            "Broju adresnih ulaza multipleksera",
             "Broju multipleksera"
         ],
-        "correct": "2"
+        "correct": "1"
     },
     {
         "question": "Osnovni nedostatak korištenja ROM strukture pri realizaciji Booleovih funkcija je:",
         "answers": [
-            "Visoka potrošnja energije",
-            "Manjak izlaznih mikro ćelija",
-            "Nemogućnost minimizacije",
-            "Povećano vrijeme pristupa"
+            "velika potrošnja energije",
+            "nemogućnost minimizacije minterma u PDNO",
+            "spora brzina rada",
+            "ograničeni broj ulaza",
+            "visoka cijena proizvodnje"
         ],
-        "correct": "2"
+        "correct": "1"
     },
     {
         "question": "Kako tretiramo redundantna preslikavanja prilikom minimizacije PDNO nepopuno specificirane funkcije Quine-McCluskey algoritmom?",
@@ -558,107 +558,12 @@
         "correct": "1"
     },
     {
-        "question": "8421 BCD kod je:",
-        "answers": [
-            "Ništa od navedenog",
-            "Težinski",
-            "Komplementaran",
-            "Komplementaran i težinski"
-        ],
-        "correct": "1"
-    },
-    {
-        "question": "Postupak \"utiskivanja\" informacija u električni signal nazivamo:",
-        "answers": [
-            "Perturbacija",
-            "Modulacija",
-            "Kodiranje",
-            "Digitalizacija"
-        ],
-        "correct": "1"
-    },
-    {
-        "question": "Pad napona između kolektora i emitera bipolarnog tranzistora u zasićenju u negativnoj logici odgovara logičkoj jedinici.",
-        "answers": [
-            "Točno",
-            "Netočno"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "Smanjimo li bazu brojevnog sustava, za zapis iste vrijednosti trebat će nam:",
-        "answers": [
-            "Više znamenki",
-            "Jednak broj znamenki",
-            "Manje znamenki"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "Ako je gornja granična frekvencija komunikacijskog kanala 10 kHz, koliko signalnih elemenata možemo prenijeti u jedinici vremena?",
-        "answers": [
-            "najmanje 20.000 signalnih elemenata",
-            "najmanje 10.000 signalnih elemenata",
-            "najviše 20.000 signalnih elemenata",
-            "najviše 10.000 signalnih elemenata"
-        ],
-        "correct": "2"
-    },
-    {
-        "question": "Da bismo ostvarili jednak informacijski volumen u slučaju serijskog prijenosa podataka, brzina prijenosa u odnosu na prijenos putem pet istovrsnih paralelnih kanala treba biti:",
-        "answers": [
-            "Jednaka",
-            "Pet puta veća",
-            "Pet puta manja"
-        ],
-        "correct": "1"
-    },
-    {
-        "question": "Kodne riječi 10101 i 10010 imaju kodnu udaljenost (distancu) jednaku:",
-        "answers": [
-            "d=2",
-            "d=3",
-            "d=0",
-            "d=1"
-        ],
-        "correct": "1"
-    },
-    {
-        "question": "Jedinica za kapacitet digitalnog sustava je:",
-        "answers": [
-            "Signalni element po sekundi (se/s)",
-            "Bit po sekundi (b/s)",
-            "Bit po signalnom elementu (b/se)"
-        ],
-        "correct": "1"
-    },
-    {
         "question": "Analogni sustavi informacijski volumen prvenstveno ostvaruju kroz:",
         "answers": [
             "Dinamiku",
             "Vrijeme",
             "Broj znamenaka",
             "Prostor"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "Operator konjunkcije je analogan kojoj operaciji nad skupovima?",
-        "answers": [
-            "inverz skupa",
-            "zrcaljenje skupa",
-            "presjek skupova",
-            "unija skupova",
-            "negacija skupa"
-        ],
-        "correct": "2"
-    },
-    {
-        "question": "Dinamika digitalnog sustava određena je omjerom:",
-        "answers": [
-            "Raspona i najmanje različite veličine signala",
-            "Širine frekvencijskog pojasa i kapaciteta sustava",
-            "Informacijskog volumena i kapaciteta sustava"
         ],
         "correct": "0"
     },
@@ -674,17 +579,7 @@
         "correct": "0"
     },
     {
-        "question": "Inverz ima značenje:",
-        "answers": [
-            "negativnog broja",
-            "neutralnog elementa",
-            "prvog komplementa",
-            "pozitivnog broja"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "Zapis binarnog broja 11101111 u oktalnom brojevnom sustavu glasi:",
+        "question": "Zapis binarnog broja 11101111 u dekadskom brojevnom sustavu glasi:",
         "answers": [
             "239",
             "465",
@@ -724,7 +619,7 @@
         "correct": "2"
     },
     {
-        "question": "Disjunkcija minterima različitih redaka tablice istine je:",
+        "question": "Konjunkcija minterma različitih redaka tablice istine je:",
         "answers": [
             "1",
             "ovisno o vrijednostima funkcije za te retke tablice istine",
@@ -739,10 +634,10 @@
         "answers": [
             "1",
             "0",
-            "d. R",
+            "1 i R",
             "0 i R"
         ],
-        "correct": "3"
+        "correct": "2"
     },
     {
         "question": "Koja funkcija je prikazana Veitchevim dijagramom?",
@@ -756,16 +651,6 @@
         "correct": "3"
     },
     {
-        "question": "Osnovni nedostatak korištenja ROM strukture pri realizaciji Booleovih funkcija je:",
-        "answers": [
-            "Velika potrošnja energije",
-            "Manja izlazna mikro ćelija",
-            "Nemogućnost minimizacije",
-            "Povećano vrijeme pristupa"
-        ],
-        "correct": "2"
-    },
-    {
         "question": "Kako tretiramo redundantna preslikavanja prilikom minimizacije PDNO nepotpuno specificirane funkcije Quine-McCluskey algoritmom?",
         "answers": [
             "Ne uzimamo ih u obzir jer QMC algoritam provodi samo osnovni postupak minimizacije",
@@ -776,75 +661,9 @@
         "correct": "2"
     },
     {
-        "question": "Konjukcija, disjunkcija i negacija su temeljni operatori koje algebre:",
-        "answers": [
-            "algebre sudova",
-            "Booleove algebre",
-            "algebre logike",
-            "funkcijske algebre"
-        ],
-        "correct": "2"
-    },
-    {
-        "question": "Broj redaka u multipleksersko-demultiplekserskoj strukturi ovisi o:",
-        "answers": [
-            "Broju demultipleksera",
-            "Broju adresnih ulaza demultipleksera",
-            "Broju adresnih ulaza multipleksera",
-            "Broju multipleksera"
-        ],
-        "correct": "1"
-    },
-    {
-        "question": "Teoretski svi kodovi mogu biti beskonačni. Međutim u praksi, zbog ograničenih resursa, svi kodovi su konačni. Pa tako ako govorimo o digitalnim sustavima, njihova konačnost je posljedica:",
-        "answers": [
-            "konačnosti brzine rada sustava",
-            "konačnog broja simbola",
-            "konačnosti algoritma kodiranja",
-            "konačne duljine kodne riječi"
-        ],
-        "correct": "3"
-    },
-    {
-        "question": "Brojevi su kodirani vodeći računa o predznaku (signed integers). Na brojevima izvodimo određene aritmetičke operacije. Imajući na umu V bit, pretek u kodnoj riječi kontroliramo na:",
-        "answers": [
-            "predzadnjem najznačajnijem bitu",
-            "median bitu",
-            "najmanje značajnom bitu",
-            "predzadnjem najmanje značajnom bitu",
-            "najznačajnijem bitu"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "Kašnjenje TTL logičkih sklopova se generalno kreće između 2 i 10 ns a ovisi o:",
-        "answers": [],
-        "correct": "RC članovima"
-    },
-    {
-        "question": "Kada demultiplekser koristimo za realizaciju BF, što njegovi pojedinačni informacijski izlazi realiziraju?",
-        "answers": [],
-        "correct": "minterme"
-    },
-    {
-        "question": "8421 BCD kod je:",
-        "answers": [
-            "Komplementaran i težinski",
-            "Težinski",
-            "Ništa od navedenog",
-            "Komplementaran"
-        ],
-        "correct": "1"
-    },
-    {
         "question": "Osnovna karakteristika Grayevog koda je:",
         "answers": [],
         "correct": "susjednost kodnih riječi"
-    },
-    {
-        "question": "Kod minimizacije, kao kriterij koristimo minimalan...",
-        "answers": [],
-        "correct": "broj logičkih vrata"
     },
     {
         "question": "Ukoliko imamo kod koji može otkriti pogreške na dva bita kodne riječi, kolika mora biti minimalna kodna udaljenost između ispravnih kodnih riječi?",
@@ -878,11 +697,6 @@
         "correct": "proširenja postojećim članom"
     },
     {
-        "question": "Minimizacija može narušiti koje svojstvo normalnih algebarskih oblika?",
-        "answers": [],
-        "correct": "jednolikost kašnjenja"
-    },
-    {
         "question": "Normalni algebarski oblici garantiraju:",
         "answers": [
             "mogućnost ispisivanja neposredno iz tablice istine",
@@ -901,22 +715,6 @@
             "Logička 0 je neutralni element za disjunkciju.",
             "Logička 0 je neutralni element i za konjunkciju i za disjunkciju.",
             "Ništa od navedenog."
-        ],
-        "correct": "1"
-    },
-    {
-        "question": "Koliko je moguće definirati različitih Booleovih funkcija dviju varijabli?",
-        "answers": [],
-        "correct": "16"
-    },
-    {
-        "question": "Osnovni nedostatak korištenja ROM strukture pri realizaciji Booleovih funkcija je:",
-        "answers": [
-            "velika potrošnja energije",
-            "nemogućnost minimizacije minterma u PDNO",
-            "spora brzina rada",
-            "ograničeni broj ulaza",
-            "visoka cijena proizvodnje"
         ],
         "correct": "1"
     },
@@ -967,11 +765,6 @@
         "question": "Formula za kašnjenje potpunog sumatora pri čemu Td označava jedinično kašnjenje, a n broj bitova je: (bez razmaka, koristi zagrade)",
         "answers": [],
         "correct": "(4+2n)Td"
-    },
-    {
-        "question": "Kapacitet digitalnog sustava izražava:",
-        "answers": [],
-        "correct": "brzinu priijenosa, obrade i pristupa podacima"
     },
     {
         "question": "Nepoželjno (štetno) zadržavanje informacije u vremenu nazivamo:",
@@ -1079,16 +872,6 @@
         "question": "Slika prikazuje koju funkciju u relejnoj tehnici?",
         "answers": [],
         "correct": "ekskluzivno ili, konjunkcija, disjunkcija"
-    },
-    {
-        "question": "Dekadski broj 87 zapisan u heksadecimalnom brojevnom sustavu je:",
-        "answers": [],
-        "correct": "57"
-    },
-    {
-        "question": "Izraz za prvi komplement znamenke glasi:",
-        "answers": [],
-        "correct": "s-1-ak"
     },
     {
         "question": "Što definira navedena (ne)jednakost: N ≥ N', n ≥ log2(N')?",
@@ -1989,7 +1772,7 @@
         "correct": "2"
     },
     {
-        "question": "U kojem brojevnom sustavu je izraz 123 + 45 = 201 točan?",
+        "question": "U kojem brojevnom sustavu je izraz 123 + 56 = 201 točan?",
         "answers": [
             "Dekadski (10)",
             "Oktalni (8)",
@@ -2140,7 +1923,7 @@
     },
     {
         "question": "Što predstavlja ova tablica?",
-        "image":"images/harvard-metoda.png",
+        "image": "images/harvard-metoda.png",
         "answers": [],
         "correct": "Harvardsku metodu"
     },
@@ -2154,5 +1937,4 @@
         "answers": [],
         "correct": "EPROM"
     }
-
 ]
