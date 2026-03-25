@@ -1,0 +1,1767 @@
+[
+  {
+    "id": "q_1_1",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. A",
+    "question_number": 1,
+    "text": "Korištenjem T bistabila i NILI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | \\bar{Q}^n\n0 | 1 | \\bar{Q}^n\n1 | 0 | 1\n1 | 1 | Q^n",
+    "source_image": "page_1.png"
+  },
+  {
+    "id": "q_1_2",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. A",
+    "question_number": 2,
+    "text": "Ispisati potpuno stablo za Mealy-ev automat koji među sekvencama od 3 bita jedinicom detektira 110.",
+    "source_image": "page_1.png"
+  },
+  {
+    "id": "q_1_3",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. A",
+    "question_number": 3,
+    "text": "Metodom primitivne tablice minimizirati automat zadan tablicom, te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n (x=0)\n1 | 2 | 3 | 0\n2 | 4 | 5 | 0\n3 | 6 | 7 | 0\n4 | 4 | 5 | 1\n5 | 6 | 7 | 0\n6 | 4 | 5 | 0\n7 | 6 | 7 | 0",
+    "source_image": "page_1.png"
+  },
+  {
+    "id": "q_1_4",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. A",
+    "question_number": 4,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_1.png"
+  },
+  {
+    "id": "q_2_1",
+    "exam": "Zadaća: 20.04.1996.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "table": "x_1 \\ x_2, x_3\n2 | 3 | 5 | \n1 | 4 |   | 0",
+    "has_diagram": true,
+    "source_image": "page_2.png"
+  },
+  {
+    "id": "q_2_2",
+    "exam": "Zadaća: 20.04.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i T bistabila realizirati minimalni opći bistabil zadan tablicom:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 0\n0 | 1 | 0 | 1\n0 | 1 | 1 | Q^n\n1 | 0 | 0 | 1\n1 | 0 | 1 | 1\n1 | 1 | 0 | 0\n1 | 1 | 1 | Q^n",
+    "source_image": "page_2.png"
+  },
+  {
+    "id": "q_2_3",
+    "exam": "Zadaća: 20.04.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Moore-ov automat koji na izlazu daje i_1 ako je među sekvencama po četiri bita prepoznata 1001, i_2 ako je prepoznata 1010, te i_0 u svima ostalim slučajevima.",
+    "source_image": "page_2.png"
+  },
+  {
+    "id": "q_3_1",
+    "exam": "Zadaća: 29.05.1996.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji među kompleksijama 8421 BCD koda otkriva one za koje vrijedi 2 < N <= 11, te u tom slučaju na izlazu daje 0, a 1 u svim ostalim slučajevima.",
+    "source_image": "page_3.png"
+  },
+  {
+    "id": "q_3_2",
+    "exam": "Zadaća: 29.05.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i RS bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | Q^n\n0 | 1 | Q^n\n1 | 0 | Q^n\n1 | 1 | 0",
+    "source_image": "page_3.png"
+  },
+  {
+    "id": "q_3_3",
+    "exam": "Zadaća: 29.05.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza, te MDD realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako je posljednjih pet bita beskonačne sekvence bilo 11011.",
+    "source_image": "page_3.png"
+  },
+  {
+    "id": "q_4_1",
+    "exam": "Zadaća: 14.06.1996.",
+    "question_number": 1,
+    "text": "Korištenjem multipleksera m=2 realizirati minimalni sklop koji među kodnim riječima 2421 BCD koda jedinicom izdvaja znamenke djeljive sa 3 ili sa 5 bez ostatka, uključivo i 0.",
+    "source_image": "page_4.png"
+  },
+  {
+    "id": "q_4_2",
+    "exam": "Zadaća: 14.06.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i T bistabila realizirati minimalni bistabil:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 0\n0 | 1 | 1\n1 | 0 | 1\n1 | 1 | Q^n",
+    "source_image": "page_4.png"
+  },
+  {
+    "id": "q_4_3",
+    "exam": "Zadaća: 14.06.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza, te NI vrata i JK bistabila realizirati minimalni Mealy-ev automat koji daje 1 ako su četiri posljednja bita beskonačne sekvence bila 1101, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_4.png"
+  },
+  {
+    "id": "q_5_1",
+    "exam": "Zadaća: 28.06.1996.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji vrši prekodiranje zadano Veitchevim dijagramom:",
+    "table": "x_1 \\ x_2, x_3\n4 | 3 | 2 | 1\n5 |   |   | 0",
+    "has_diagram": true,
+    "source_image": "page_5.png"
+  },
+  {
+    "id": "q_5_2",
+    "exam": "Zadaća: 28.06.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i JK bistabila realizirati minimalni bistabil zadan tablicom:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 0\n0 | 1 | 0\n1 | 0 | 1\n1 | 1 | R",
+    "source_image": "page_5.png"
+  },
+  {
+    "id": "q_5_3",
+    "exam": "Zadaća: 28.06.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza, te MDD strukture realizirati minimalni Moore-ov automat koji daje 1 ako su četiri posljednja bita beskonačne sekvence bila 1110, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_5.png"
+  },
+  {
+    "id": "q_6_1",
+    "exam": "Zadaća: 06.09.1996.",
+    "question_number": 1,
+    "text": "Korištenjem multipleksera m=2 realizirati minimalni sklop koji vrši prekodiranje zadano Veitchevim dijagramom:",
+    "table": "x_1 \\ x_2, x_3\n2 | 1 | 1 | 0\n  | 3 |   | 0",
+    "source_image": "page_6.png",
+    "has_diagram": true
+  },
+  {
+    "id": "q_6_2",
+    "exam": "Zadaća: 06.09.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i T bistabila realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 0\n0 | 1 | 0 | 1\n0 | 1 | 1 | 1\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | Q^n\n1 | 1 | 0 | Q^n\n1 | 1 | 1 | Q^n",
+    "source_image": "page_6.png"
+  },
+  {
+    "id": "q_6_3",
+    "exam": "Zadaća: 06.09.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza, te NI vrata i D bistabila realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednja četiri bita beskonačne sekvence bila 1101, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_6.png"
+  },
+  {
+    "id": "q_7_1",
+    "exam": "Zadaća: 20.09.1996.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji vrši prekodiranje zadano Veitchevim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_7.png"
+  },
+  {
+    "id": "q_7_2",
+    "exam": "Zadaća: 20.09.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i RS bistabila realizirati minimalni opći bistabil:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | Q^n\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | 0\n0 | 1 | 1 | 1\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | Q^n\n1 | 1 | 0 | 1\n1 | 1 | 1 | 0",
+    "source_image": "page_7.png"
+  },
+  {
+    "id": "q_7_3",
+    "exam": "Zadaća: 20.09.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Mealy-ev automat koji na izlazu daje i_1 ako među sekvencama po četiri bita prepozna 1001, i_2 ako prepozna 1010, te i_0 u svim ostalim slučajevima.",
+    "source_image": "page_7.png"
+  },
+  {
+    "id": "q_8_1",
+    "exam": "Zadaća: 06.11.1996.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji među kompleksijama 2421 BCD koda bira one s vrijednošću 0, 1, 2, 7 i 8, te u tom slučaju na izlazu daje 1.",
+    "source_image": "page_8.png"
+  },
+  {
+    "id": "q_8_2",
+    "exam": "Zadaća: 06.11.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i JK bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | 1\n0 | 1 | 1 | Q^n\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | 1\n1 | 1 | 0 | 1\n1 | 1 | 1 | 0",
+    "source_image": "page_8.png"
+  },
+  {
+    "id": "q_8_3",
+    "exam": "Zadaća: 06.11.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Moore-ov automat koji među sekvencama po tri bita traži 001 i 010, te daje 1, a 0 u svim ostalim slučajevima.",
+    "source_image": "page_8.png"
+  },
+  {
+    "id": "q_9_1",
+    "exam": "Zadaća: 06.12.1996.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni adresni sklop koji u adresnom području širine 16 bita logičkom nulom aktivira dva memorijska elementa kapaciteta po 8KW od adrese 8000 i dva po 4 KW od adrese E000.",
+    "source_image": "page_9.png"
+  },
+  {
+    "id": "q_9_2",
+    "exam": "Zadaća: 06.12.1996.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i T bistabila realizirati minimalni bistabil ABCQ koji prelazi u 1 kada vrijedi A xor B xor C xor Q = 0, a u 0 u svim ostalim slučajevima.",
+    "source_image": "page_9.png"
+  },
+  {
+    "id": "q_9_3",
+    "exam": "Zadaća: 06.12.1996.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD, realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su četiri posljednja bita beskonačne sekvence bila 0110.",
+    "source_image": "page_9.png"
+  },
+  {
+    "id": "q_10_1",
+    "exam": "Test: 10.01.1997.",
+    "question_number": 1,
+    "text": "Upisati u Veitchev dijagram funkciju f(x_1, x_2, x_3, x_4) koja na izlazu daje '1' ako je na ulazu kompleksija koja zadovoljava uvjet x_1 \\bar{x}_2 = 1 V x_4 = 1",
+    "source_image": "page_10.png"
+  },
+  {
+    "id": "q_10_2",
+    "exam": "Test: 10.01.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | f\n0 | 0 | 0 | 1\n0 | 0 | 1 | 1\n0 | 1 | 0 | 0\n0 | 1 | 1 | 0\n1 | 0 | 0 | 1\n1 | 0 | 1 | R\n1 | 1 | 0 | 1\n1 | 1 | 1 | 0",
+    "source_image": "page_10.png"
+  },
+  {
+    "id": "q_10_3",
+    "exam": "Test: 10.01.1997.",
+    "question_number": 3,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju zadanu preko PKNO:\nf(x_1, x_2, x_3) = &(1, 2, 3, 7)",
+    "source_image": "page_10.png"
+  },
+  {
+    "id": "q_10_4",
+    "exam": "Test: 10.01.1997.",
+    "question_number": 4,
+    "text": "Korištenjem multipleksera m=1 realizirati funkciju zadanu Veitchevim dijagramom",
+    "has_diagram": true,
+    "source_image": "page_10.png"
+  },
+  {
+    "id": "q_11_1",
+    "exam": "Test: 01.02.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata i JK bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 1\n0 | 1 | Q^n\n1 | 0 | Q^n\n1 | 1 | 1",
+    "source_image": "page_11.png"
+  },
+  {
+    "id": "q_11_2",
+    "exam": "Test: 01.02.1997.",
+    "question_number": 2,
+    "text": "Korištenjem MDD realizirati automat zadan grafom:",
+    "source_image": "page_11.png",
+    "has_diagram": true
+  },
+  {
+    "id": "q_11_3",
+    "exam": "Test: 01.02.1997.",
+    "question_number": 3,
+    "text": "Zadati potpunim stablom i nacrtati graf minimalnog automata koji među sekvencama po tri bita traži sekvencu 101/1 i tada daje 1, a 0 u svim ostalim slučajevima.",
+    "source_image": "page_11.png"
+  },
+  {
+    "id": "q_11_4",
+    "exam": "Test: 01.02.1997.",
+    "question_number": 4,
+    "text": "Napisati regularni izraz za automat koji na izlazu daje 1 ako su posljednja četiri bita beskonačne sekvence bila 1011.",
+    "source_image": "page_11.png"
+  },
+  {
+    "id": "q_12_1",
+    "exam": "Zadaća: 07.02.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji vrši prekodiranje zadano Veitchevim dijagramom.",
+    "source_image": "page_12.png",
+    "has_diagram": true
+  },
+  {
+    "id": "q_12_2",
+    "exam": "Zadaća: 07.02.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i T bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | 1\n0 | 1 | 1 | Q\n1 | 0 | 0 | Q\n1 | 0 | 1 | 0\n1 | 1 | 0 | 1\n1 | 1 | 1 | Q",
+    "source_image": "page_12.png"
+  },
+  {
+    "id": "q_12_3",
+    "exam": "Zadaća: 07.02.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako je posljednjih 5 bita beskonačne sekvence bilo 11001, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_12.png"
+  },
+  {
+    "id": "q_13_1",
+    "exam": "Zadaća: 21.02.1997.",
+    "question_number": 1,
+    "text": "Korištenjem multipleksera m=1 realizirati minimalni sklop koji među kodnim riječima od po 4 bita jedinicom na izlazu identificira one neparne, koje imaju paran broj jedinica.",
+    "source_image": "page_13.png"
+  },
+  {
+    "id": "q_13_2",
+    "exam": "Zadaća: 21.02.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i RS bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | Q^n\n0 | 1 | Q^n\n1 | 0 | 0\n1 | 1 | 0",
+    "source_image": "page_13.png"
+  },
+  {
+    "id": "q_13_3",
+    "exam": "Zadaća: 21.02.1997.",
+    "question_number": 3,
+    "text": "Zadati regularne izraze, te korištenjem NI vrata i JK bistabila realizirati minimalni Moore-ov automat koji među sekvencama od po 2 simbola (u_0, u_1, u_2) jedinicom na izlazu identificira sekvence u_0u_1 i u_0u_2.",
+    "source_image": "page_13.png"
+  },
+  {
+    "id": "q_14_1",
+    "exam": "Zadaća: 25.04.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "source_image": "page_14.png",
+    "has_diagram": true
+  },
+  {
+    "id": "q_14_2",
+    "exam": "Zadaća: 25.04.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i JK bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | 1\n0 | 1 | 1 | Q\n1 | 0 | 0 | Q\n1 | 0 | 1 | 0\n1 | 1 | 0 | 1\n1 | 1 | 1 | Q",
+    "source_image": "page_14.png"
+  },
+  {
+    "id": "q_14_3",
+    "exam": "Zadaća: 25.04.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Moore-ov automat koji među sekvencama po 3 bita traži sekvencu 110 te u tom slučaju na izlazu daje 1, a 0 u svim ostalim slučajevima.",
+    "source_image": "page_14.png"
+  },
+  {
+    "id": "q_15_1",
+    "exam": "Zadaća: 14.05.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji među kodnim riječima dužine 5 bita jedinicom dojavljuje one s 2 ili 3 bita u jedinici.",
+    "source_image": "page_15.png"
+  },
+  {
+    "id": "q_15_2",
+    "exam": "Zadaća: 14.05.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i RS bistabila realizirati minimalni bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | Q\n0 | 1 | 0 | Q\n0 | 1 | 1 | Q\n1 | 0 | 0 | 1\n1 | 0 | 1 | Q\n1 | 1 | 0 | Q\n1 | 1 | 1 | Q",
+    "source_image": "page_15.png"
+  },
+  {
+    "id": "q_15_3",
+    "exam": "Zadaća: 14.05.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako je posljednjih 4 bita beskonačne sekvence bilo 1011.",
+    "source_image": "page_15.png"
+  },
+  {
+    "id": "q_16_1",
+    "exam": "Zadaća: 20.06.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni adresni sklop koji u adresnom području 0000-FFFF selektira nulom na izlazu 2 memorijska elementa kapaciteta po 8K, s početkom od C000 hex.",
+    "source_image": "page_16.png"
+  },
+  {
+    "id": "q_16_2",
+    "exam": "Zadaća: 20.06.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i JK bistabila realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 0\n0 | 1 | 0 | 0\n0 | 1 | 1 | Q^n\n1 | 0 | 0 | 1\n1 | 0 | 1 | 1\n1 | 1 | 0 | 1\n1 | 1 | 1 | Q^n",
+    "source_image": "page_16.png"
+  },
+  {
+    "id": "q_16_3",
+    "exam": "Zadaća: 20.06.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako je posljednjih 5 bita beskonačne sekvence bilo 01011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_16.png"
+  },
+  {
+    "id": "q_17_1",
+    "exam": "Zadaća: 05.07.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "source_image": "page_17.png",
+    "has_diagram": true
+  },
+  {
+    "id": "q_17_2",
+    "exam": "Zadaća: 05.07.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata i RS bistabila realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | Q\n0 | 0 | 1 | Q\n0 | 1 | 0 | Q\n0 | 1 | 1 | 0\n1 | 0 | 0 | Q\n1 | 0 | 1 | 0\n1 | 1 | 0 | 0\n1 | 1 | 1 | 1",
+    "source_image": "page_17.png"
+  },
+  {
+    "id": "q_17_3",
+    "exam": "Zadaća: 05.07.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako je posljednjih 4 bita beskonačne sekvence bilo 0101.",
+    "source_image": "page_17.png"
+  },
+  {
+    "id": "q_18_1",
+    "exam": "Zadaća: 05.09.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji na izlazu daje binarnu 1 ako među BCD znamenkama naiđe na onu djeljivu s 3, te binarnu 2 ako naiđe na onu djeljivu s 4, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_18.png"
+  },
+  {
+    "id": "q_18_2",
+    "exam": "Zadaća: 05.09.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i RS bistabila realizirati opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | Q\n0 | 1 | 0 | Q\n0 | 1 | 1 | Q\n1 | 0 | 0 | 1\n1 | 0 | 1 | 1\n1 | 1 | 0 | 1\n1 | 1 | 1 | Q",
+    "source_image": "page_18.png"
+  },
+  {
+    "id": "q_18_3",
+    "exam": "Zadaća: 05.09.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Moore-ov automat koji među sekvencama po 4 bita jedinicom na izlazu prepozna sekvence 0000 i 0001.",
+    "source_image": "page_18.png"
+  },
+  {
+    "id": "q_19_1",
+    "exam": "Zadaća: 19.09.1997.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "source_image": "page_19.png",
+    "has_diagram": true
+  },
+  {
+    "id": "q_19_2",
+    "exam": "Zadaća: 19.09.1997.",
+    "question_number": 2,
+    "text": "Korištenjem NI vrata i T bistabila realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | 0\n0 | 1 | 0 | 0\n0 | 1 | 1 | 0\n1 | 0 | 0 | Q\n1 | 0 | 1 | 0\n1 | 1 | 0 | 0\n1 | 1 | 1 | 0",
+    "source_image": "page_19.png"
+  },
+  {
+    "id": "q_19_3",
+    "exam": "Zadaća: 19.09.1997.",
+    "question_number": 3,
+    "text": "Korištenjem regularnih izraza te MDD realizirati minimalni Mealy automat koji među sekvencama po 3 simbola u_0, u_1 i u_2 traži sekvencu u_2u_2u_2 i u tom slučaju na izlazu daje 1, a 0 u svim ostalim slučajevima.",
+    "source_image": "page_19.png"
+  },
+  {
+    "id": "q_20_1",
+    "exam": "Pismeni ispit 5. travnja 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:\nx1x201312x421310x3",
+    "has_diagram": true,
+    "source_image": "page_20.png"
+  },
+  {
+    "id": "q_20_2",
+    "exam": "Pismeni ispit 5. travnja 2003.",
+    "question_number": 2,
+    "text": "Korištenjem multipleksera sa m=2 adresnih ulaza realizirati minimalni sklop zadan tablicom istine:\nx1x2x3x4y0000000011001010011101001010100110001110100001001110100101101100111010111011111",
+    "source_image": "page_20.png"
+  },
+  {
+    "id": "q_20_3a",
+    "exam": "Pismeni ispit 5. travnja 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI, te JK bistabila i NI vrata realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednja 4 bita beskonačne sekvence 1001, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_20.png"
+  },
+  {
+    "id": "q_20_3b",
+    "exam": "Pismeni ispit 5. travnja 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_20.png"
+  },
+  {
+    "id": "q_21_1",
+    "exam": "Pismeni ispit 17. svibnja 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna kompleksija 2421 BCD koda djeljiva s 3, 2 ako je kompleksija djeljiva s 4, 3 ako je kompleksija djeljiva s 5, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_21.png"
+  },
+  {
+    "id": "q_21_2",
+    "exam": "Pismeni ispit 17. svibnja 2003.",
+    "question_number": 2,
+    "text": "Korištenjem JK bistabila i NI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | 1\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 0\n1 | 0 | 0 | 0\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 1\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_21.png"
+  },
+  {
+    "id": "q_21_3a",
+    "exam": "Pismeni ispit 17. svibnja 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 10011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_21.png"
+  },
+  {
+    "id": "q_21_3b",
+    "exam": "Pismeni ispit 17. svibnja 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_21.png"
+  },
+  {
+    "id": "q_22_1",
+    "exam": "Pismeni ispit 21. lipnja 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_22.png"
+  },
+  {
+    "id": "q_22_2",
+    "exam": "Pismeni ispit 21. lipnja 2003.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NILI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | \\overline{Q}^n\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | 1\n0 | 1 | 1 | 0\n1 | 0 | 0 | 0\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 1\n1 | 1 | 1 | Q^n",
+    "source_image": "page_22.png"
+  },
+  {
+    "id": "q_22_3a",
+    "exam": "Pismeni ispit 21. lipnja 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 01001, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_22.png"
+  },
+  {
+    "id": "q_22_3b",
+    "exam": "Pismeni ispit 21. lipnja 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_22.png"
+  },
+  {
+    "id": "q_23_1",
+    "exam": "Pismeni ispit 29. kolovoza 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna znamenka 2421 BCD koda koja je djeljiva s 5, 2 na izlazu ako je znamenka djeljiva s 3, te 0 u svim ostalim slučajevima",
+    "source_image": "page_23.png"
+  },
+  {
+    "id": "q_23_2",
+    "exam": "Pismeni ispit 29. kolovoza 2003.",
+    "question_number": 2,
+    "text": "2. (uključivo 0).\nKorištenjem JK bistabila i NILI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | \\overline{Q}^n\n0 | 0 | 1 | \\overline{Q}^n\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 0\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | 1\n1 | 1 | 0 | Q^n\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_23.png"
+  },
+  {
+    "id": "q_23_3",
+    "exam": "Pismeni ispit 29. kolovoza 2003.",
+    "question_number": 3,
+    "text": "Zadatak 3 (automat zadan grafom)",
+    "has_diagram": true,
+    "source_image": "page_23.png"
+  },
+  {
+    "id": "q_24_1",
+    "exam": "Pismeni ispit 12. rujna 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_24.png"
+  },
+  {
+    "id": "q_24_2",
+    "exam": "Pismeni ispit 12. rujna 2003.",
+    "question_number": 2,
+    "text": "Korištenjem multipleksera s m=2 adresna ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x1 | x2 | x3 | x4 | y\n0 | 0 | 0 | 0 | 0\n0 | 0 | 0 | 1 | 1\n0 | 0 | 1 | 0 | 1\n0 | 0 | 1 | 1 | 0\n0 | 1 | 0 | 0 | 0\n0 | 1 | 0 | 1 | 0\n0 | 1 | 1 | 0 | 0\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 1\n1 | 0 | 0 | 1 | 1\n1 | 0 | 1 | 0 | 0\n1 | 0 | 1 | 1 | 0\n1 | 1 | 0 | 0 | 1\n1 | 1 | 0 | 1 | 1\n1 | 1 | 1 | 0 | 0\n1 | 1 | 1 | 1 | 0",
+    "source_image": "page_24.png"
+  },
+  {
+    "id": "q_24_3a",
+    "exam": "Pismeni ispit 12. rujna 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza , te JK bistabila i NI vrata, metodom izjednačavanja, realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 11011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_24.png"
+  },
+  {
+    "id": "q_24_3b",
+    "exam": "Pismeni ispit 12. rujna 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata, metodom izjednačavanja, realizirati automat zadan grafom: EMBED CDraw5",
+    "has_diagram": false,
+    "source_image": "page_24.png"
+  },
+  {
+    "id": "q_25_1",
+    "exam": "Pismeni ispit – dekanski rok 25. rujna 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna neparna kompleksija 2421 BCD koda za koju vrijedi 2 < a < 8, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_25.png"
+  },
+  {
+    "id": "q_25_2",
+    "exam": "Pismeni ispit – dekanski rok 25. rujna 2003.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "source_image": "page_25.png"
+  },
+  {
+    "id": "q_25_3",
+    "exam": "Pismeni ispit – dekanski rok 25. rujna 2003.",
+    "question_number": 3,
+    "text": "ABCQn+1000Qn 00100101011 EMBED Equation.3  1000101Qn110 EMBED Equation.3  1111",
+    "source_image": "page_25.png"
+  },
+  {
+    "id": "q_25_4a",
+    "exam": "Pismeni ispit – dekanski rok 25. rujna 2003.",
+    "question_number": 4,
+    "text": "a) Korištenjem regularnih izraza i 4. MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednja 4 bitova beskonačne sekvence 1011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_25.png"
+  },
+  {
+    "id": "q_25_4b",
+    "exam": "Pismeni ispit – dekanski rok 25. rujna 2003.",
+    "question_number": 5,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_25.png"
+  },
+  {
+    "id": "q_26_1",
+    "exam": "Pismeni ispit 11. studenog 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_26.png"
+  },
+  {
+    "id": "q_26_2",
+    "exam": "Pismeni ispit 11. studenog 2003.",
+    "question_number": 2,
+    "text": "Korištenjem demultipleksera sa m=2 adresnih ulaza realizirati minimalni sklop zadan tablicom istine:",
+    "table": "x1 | x2 | x3 | x4 | y\n0 | 0 | 0 | 0 | 1\n0 | 0 | 0 | 1 | 0\n0 | 0 | 1 | 0 | 1\n0 | 0 | 1 | 1 | 1\n0 | 1 | 0 | 0 | R\n0 | 1 | 0 | 1 | 1\n0 | 1 | 1 | 0 | 1\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 1\n1 | 0 | 0 | 1 | R\n1 | 0 | 1 | 0 | 0\n1 | 0 | 1 | 1 | 0\n1 | 1 | 0 | 0 | 1\n1 | 1 | 0 | 1 | R\n1 | 1 | 1 | 0 | 0\n1 | 1 | 1 | 1 | R",
+    "source_image": "page_26.png"
+  },
+  {
+    "id": "q_27_3a",
+    "exam": "Pismeni ispit 11. studenog 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza, te JK bistabila i NI vrata realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako među sekvencama od po 3 bita detektira 000.",
+    "source_image": "page_27.png"
+  },
+  {
+    "id": "q_27_3b",
+    "exam": "Pismeni ispit 11. studenog 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_27.png"
+  },
+  {
+    "id": "q_28_1",
+    "exam": "Pismeni ispit 6. prosinca 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna kompleksija 2421 BCD koda djeljiva s 5, 2 ako je kompleksija djeljiva s 4, 3 ako je kompleksija djeljiva s 3, te 0 u svim ostalim slučajevima (uključeno i 0).",
+    "source_image": "page_28.png"
+  },
+  {
+    "id": "q_28_2",
+    "exam": "Pismeni ispit 6. prosinca 2003.",
+    "question_number": 2,
+    "text": "Korištenjem T bistabila i NILI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | 1\n0 | 1 | 0 | 1\n0 | 1 | 1 | 1\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | 1\n1 | 1 | 0 | Q^n\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_28.png"
+  },
+  {
+    "id": "q_28_3a",
+    "exam": "Pismeni ispit 6. prosinca 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 10011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_28.png"
+  },
+  {
+    "id": "q_28_3b",
+    "exam": "Pismeni ispit 6. prosinca 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_28.png"
+  },
+  {
+    "id": "q_29_1",
+    "exam": "Mreže računala i terminala 20. veljače 2004.",
+    "question_number": 1,
+    "text": "Signalni kodovi - što su linijski kodovi, njihov razvoj, koji se najčešće upotrebljavaju, nacrtati vremenski dijagram",
+    "source_image": "page_29.png"
+  },
+  {
+    "id": "q_29_2",
+    "exam": "Mreže računala i terminala 20. veljače 2004.",
+    "question_number": 2,
+    "text": "Bitovno orijentirani protokoli - objasniti okvir 2.1 razine, transparentnost, vrste okvira po razini 2,2 (c polje), komentirati razlike među varijantama",
+    "source_image": "page_29.png"
+  },
+  {
+    "id": "q_29_3",
+    "exam": "Mreže računala i terminala 20. veljače 2004.",
+    "question_number": 3,
+    "text": "IP protokol Interneta - zaglavlje Ipv4, opis polja, komentirati adresiranje (klase, mrežne maske)",
+    "source_image": "page_29.png"
+  },
+  {
+    "id": "q_29_4",
+    "exam": "Mreže računala i terminala 20. veljače 2004.",
+    "question_number": 4,
+    "text": "TCP protokol - opisati protokol (bez zaglavlja), mehanizam oporakva od pogreške",
+    "source_image": "page_29.png"
+  },
+  {
+    "id": "q_30_1",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna kompleksija 2421 BCD koda za koju vrijedi 3 <= a <= 5, 2 na izlazu ako vrijedi 8 <= a <= 9, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_30.png"
+  },
+  {
+    "id": "q_30_2",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2003.",
+    "question_number": 2,
+    "text": "Korištenjem T bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | Q^n\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 1\n1 | 0 | 0 | 0\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_30.png"
+  },
+  {
+    "id": "q_30_3a",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2003.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako je posljednjih 5 bitova beskonačne sekvence 10100, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_30.png"
+  },
+  {
+    "id": "q_30_3b",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2003.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_30.png"
+  },
+  {
+    "id": "q_31_1",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna parna kompleksija 8421 BCD koda veća od 3 ili neparna manja od 4, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_31.png"
+  },
+  {
+    "id": "q_31_2",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2004.",
+    "question_number": 2,
+    "text": "Korištenjem T bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | Q^n\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 1\n1 | 0 | 0 | 0\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_31.png"
+  },
+  {
+    "id": "q_31_3a",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako je posljednjih 5 bitova beskonačne sekvence 10100, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_31.png"
+  },
+  {
+    "id": "q_31_3b",
+    "exam": "Pismeni ispit – dekanski rok 3. travnja 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_31.png"
+  },
+  {
+    "id": "q_32_1",
+    "exam": "Pismeni ispit 24. lipnja 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_32.png"
+  },
+  {
+    "id": "q_32_2",
+    "exam": "Pismeni ispit 24. lipnja 2004.",
+    "question_number": 2,
+    "text": "Korištenjem demultipleksera sa m=2 adresna ulaza, realiziratii minimalni sklop koji će na izlazu dati 1 za znamenke za koje vrijedi 3 <= a <= 5 , 2 za znamenke 6 <= a <= 9, 3 za znamenke 11 <= a <= 13, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_32.png"
+  },
+  {
+    "id": "q_32_3a",
+    "exam": "Pismeni ispit 24. lipnja 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza, te JK bistabila i NI vrata realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako među sekvencama od 4 bita detektira 0110.",
+    "source_image": "page_32.png"
+  },
+  {
+    "id": "q_32_3b",
+    "exam": "Pismeni ispit 24. lipnja 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_32.png"
+  },
+  {
+    "id": "q_33_1",
+    "exam": "Pismeni ispit 9. srpnja 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_33.png"
+  },
+  {
+    "id": "q_33_2",
+    "exam": "Pismeni ispit 9. srpnja 2004.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NILI vrata realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | 1\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 0\n1 | 0 | 0 | 1\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | \\overline{Q}^n\n1 | 1 | 1 | 0",
+    "source_image": "page_33.png"
+  },
+  {
+    "id": "q_33_3a",
+    "exam": "Pismeni ispit 9. srpnja 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su poslijednjih 5 bitova beskonačne sekvence 10110, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_33.png"
+  },
+  {
+    "id": "q_33_3b",
+    "exam": "Pismeni ispit 9. srpnja 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_33.png"
+  },
+  {
+    "id": "q_35_1",
+    "exam": "Pismeni ispit 3. rujna 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_35.png"
+  },
+  {
+    "id": "q_35_2",
+    "exam": "Pismeni ispit 3. rujna 2004.",
+    "question_number": 2,
+    "text": "Korištenjem JK bistabila i NI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | \\overline{Q}^n\n0 | 1 | 0 | 0\n0 | 1 | 1 | \\overline{Q}^n\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | 1\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_35.png"
+  },
+  {
+    "id": "q_35_3a",
+    "exam": "Pismeni ispit 3. rujna 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI i MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednja 4 bita beskonačne sekvence 1000, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_35.png"
+  },
+  {
+    "id": "q_35_3b",
+    "exam": "Pismeni ispit 3. rujna 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_35.png"
+  },
+  {
+    "id": "q_36_1",
+    "exam": "Pismeni ispit 17. rujna 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_36.png"
+  },
+  {
+    "id": "q_36_2",
+    "exam": "Pismeni ispit 17. rujna 2004.",
+    "question_number": 2,
+    "text": "Korištenjem T bistabila i NILI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | Q^n\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | 0\n0 | 1 | 1 | 1\n1 | 0 | 0 | Q^n\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_36.png"
+  },
+  {
+    "id": "q_36_3a",
+    "exam": "Pismeni ispit 17. rujna 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 01110, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_36.png"
+  },
+  {
+    "id": "q_36_3b",
+    "exam": "Pismeni ispit 17. rujna 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_36.png"
+  },
+  {
+    "id": "q_37_1",
+    "exam": "Pismeni ispit - dekanski rok 30. rujna 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NLI vrata realizirati minimalni sklop koji među kompleksijama 2421 BCD koda jedinicom (1) na izlazu detektira znamenke 1, 2 i 3, dvojkom (2) znamenke 5 i 6, tricom (3) znamenke 8 i 9, te daje 0 u ostalim slučajevima.",
+    "source_image": "page_37.png"
+  },
+  {
+    "id": "q_37_2",
+    "exam": "Pismeni ispit - dekanski rok 30. rujna 2004.",
+    "question_number": 2,
+    "text": "Korištenjem multipleksera s m=2 adresna ulaza realizirati funkciju zadanu PDNO: f(x_1, x_2, x_3, x_4) = V(1, 6, 7, 9, 12, 13, 15)",
+    "source_image": "page_37.png"
+  },
+  {
+    "id": "q_37_3a",
+    "exam": "Pismeni ispit - dekanski rok 30. rujna 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI, te JK bistabila i NI vrata realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednja 4 bita beskonačne sekvence 1010, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_37.png"
+  },
+  {
+    "id": "q_37_3b",
+    "exam": "Pismeni ispit - dekanski rok 30. rujna 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_37.png"
+  },
+  {
+    "id": "q_38_1",
+    "exam": "Pismeni ispit 6. studenog 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji realizira prekodiranje zadano Veitch-evim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_38.png"
+  },
+  {
+    "id": "q_38_2",
+    "exam": "Pismeni ispit 6. studenog 2004.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NILI vrata realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 0\n1 | 0 | 0 | \\overline{Q}^n\n1 | 0 | 1 | 1\n1 | 1 | 0 | \\overline{Q}^n\n1 | 1 | 1 | Q^n",
+    "source_image": "page_38.png"
+  },
+  {
+    "id": "q_38_3a",
+    "exam": "Pismeni ispit 6. studenog 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI, te MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako među sekvencama od 4 bita detektira 0001.",
+    "source_image": "page_38.png"
+  },
+  {
+    "id": "q_38_3b",
+    "exam": "Pismeni ispit 6. studenog 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_38.png"
+  },
+  {
+    "id": "q_39_1",
+    "exam": "Pismeni ispit 4. prosinca 2004.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna kompleksija 2421 BCD djeljiva s 3, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_39.png"
+  },
+  {
+    "id": "q_39_2",
+    "exam": "Pismeni ispit 4. prosinca 2004.",
+    "question_number": 2,
+    "text": "Korištenjem JK bistabila i NILI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | \\overline{Q}\n0 | 0 | 1 | Q\n0 | 1 | 0 | Q\n0 | 1 | 1 | Q\n1 | 0 | 0 | \\overline{Q}\n1 | 0 | 1 | 0\n1 | 1 | 0 | 1\n1 | 1 | 1 | Q",
+    "source_image": "page_39.png"
+  },
+  {
+    "id": "q_39_3a",
+    "exam": "Pismeni ispit 4. prosinca 2004.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI i MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 01011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_39.png"
+  },
+  {
+    "id": "q_39_3b",
+    "exam": "Pismeni ispit 4. prosinca 2004.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_39.png"
+  },
+  {
+    "id": "q_40_1",
+    "exam": "Pismeni ispit 2. veljače 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji realizira prekodiranje zadano Veitch-evim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_40.png"
+  },
+  {
+    "id": "q_40_2",
+    "exam": "Pismeni ispit 2. veljače 2005.",
+    "question_number": 2,
+    "text": "Korištenjem demultipleksera s m=2 adresna ulaza realizirati funkciju koja će na izlazu dati 1 ako je na ulazu prisutna ispravna kompleksija 8421 BCD koda za koju vrijedi 2 <= a <= 6.",
+    "source_image": "page_40.png"
+  },
+  {
+    "id": "q_40_3a",
+    "exam": "Pismeni ispit 2. veljače 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI, te JK bistabila i NILI vrata realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 01100.",
+    "source_image": "page_40.png"
+  },
+  {
+    "id": "q_40_3b",
+    "exam": "Pismeni ispit 2. veljače 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NILI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_40.png"
+  },
+  {
+    "id": "q_41_1",
+    "exam": "Pismeni ispit 18. veljače 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji realizira prekodiranje zadano Veitch-evim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_41.png"
+  },
+  {
+    "id": "q_41_2",
+    "exam": "Pismeni ispit 18. veljače 2005.",
+    "question_number": 2,
+    "text": "Korištenjem JK bistabila i NI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | Q\n0 | 1 | 1 | Q\n1 | 0 | 0 | 1\n1 | 0 | 1 | Q^n\n1 | 1 | 0 | Q\n1 | 1 | 1 | Q^n",
+    "source_image": "page_41.png"
+  },
+  {
+    "id": "q_41_3a",
+    "exam": "Pismeni ispit 18. veljače 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI, te MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako među sekvencama od 5 bita detektira 10001.",
+    "source_image": "page_41.png"
+  },
+  {
+    "id": "q_41_3b",
+    "exam": "Pismeni ispit 18. veljače 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_41.png"
+  },
+  {
+    "id": "q_42_1",
+    "exam": "Pismeni ispit 2. travnja 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_42.png"
+  },
+  {
+    "id": "q_42_2",
+    "exam": "Pismeni ispit 2. travnja 2005.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NILI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | 0\n0 | 1 | 1 | 1\n1 | 0 | 0 | \\overline{Q}^n\n1 | 0 | 1 | 0\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_42.png"
+  },
+  {
+    "id": "q_42_3a",
+    "exam": "Pismeni ispit 2. travnja 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 01001, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_42.png"
+  },
+  {
+    "id": "q_42_3b",
+    "exam": "Pismeni ispit 2. travnja 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_42.png"
+  },
+  {
+    "id": "q_43_1",
+    "exam": "Pismeni ispit 21. svibnja 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_43.png"
+  },
+  {
+    "id": "q_43_2",
+    "exam": "Pismeni ispit 21. svibnja 2005.",
+    "question_number": 2,
+    "text": "Korištenjem T bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | Q^n\n0 | 0 | 1 | Q^n\n0 | 1 | 0 | 1\n0 | 1 | 1 | 1\n1 | 0 | 0 | 0\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_43.png"
+  },
+  {
+    "id": "q_43_3a",
+    "exam": "Pismeni ispit 21. svibnja 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 01010, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_43.png"
+  },
+  {
+    "id": "q_43_3b",
+    "exam": "Pismeni ispit 21. svibnja 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_43.png"
+  },
+  {
+    "id": "q_44_1",
+    "exam": "Pismeni ispit 24. lipnja 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_44.png"
+  },
+  {
+    "id": "q_44_2",
+    "exam": "Pismeni ispit 24. lipnja 2005.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | Q^n\n1 | 0 | 0 | 1\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 1\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_44.png"
+  },
+  {
+    "id": "q_44_3a",
+    "exam": "Pismeni ispit 24. lipnja 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI i MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako su posljednja 4 bita beskonačne sekvence 1101, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_44.png"
+  },
+  {
+    "id": "q_44_3b",
+    "exam": "Pismeni ispit 24. lipnja 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_44.png"
+  },
+  {
+    "id": "q_45_1",
+    "exam": "Pismeni ispit 8. srpnja 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_45.png"
+  },
+  {
+    "id": "q_45_2",
+    "exam": "Pismeni ispit 8. srpnja 2005.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | Q^n\n1 | 0 | 0 | 1\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 1\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_45.png"
+  },
+  {
+    "id": "q_45_3a",
+    "exam": "Pismeni ispit 8. srpnja 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza, te JK bistabila i NI vrata realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako među sekvencama od 4 bita detektira 0111.",
+    "source_image": "page_45.png"
+  },
+  {
+    "id": "q_45_3b",
+    "exam": "Pismeni ispit 8. srpnja 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_45.png"
+  },
+  {
+    "id": "q_46_1",
+    "exam": "Pismeni ispit 2. rujna 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_46.png"
+  },
+  {
+    "id": "q_46_2",
+    "exam": "Pismeni ispit 2. rujna 2005.",
+    "question_number": 2,
+    "text": "Korištenjem multipleksera sa m=2 adresnih vrata realizirati minimalni sklop koji će među ispravnim kompleksijama 8421 BCD koda jedinicom na izlazu detektirati one za koje vrijedi 1 <= a <= 5.",
+    "source_image": "page_46.png"
+  },
+  {
+    "id": "q_46_3a",
+    "exam": "Pismeni ispit 2. rujna 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem RI, te JK bistabila i NI vrata realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednja 4 bita beskonačne sekvence 1001, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_46.png"
+  },
+  {
+    "id": "q_46_3b",
+    "exam": "Pismeni ispit 2. rujna 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_46.png"
+  },
+  {
+    "id": "q_47_1",
+    "exam": "Pismeni ispit - dekanski rok 28. rujna 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_47.png"
+  },
+  {
+    "id": "q_47_2",
+    "exam": "Pismeni ispit - dekanski rok 28. rujna 2005.",
+    "question_number": 2,
+    "text": "Korištenjem JK bistabila i NILI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 1\n0 | 0 | 1 | 1\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 0\n1 | 0 | 0 | 0\n1 | 0 | 1 | \\overline{Q}^n\n1 | 1 | 0 | 1\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_47.png"
+  },
+  {
+    "id": "q_47_3a",
+    "exam": "Pismeni ispit - dekanski rok 28. rujna 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Mealy-ev automat koji na izlazu daje 1 ako su posljednja 4 bita beskonačne sekvence 1011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_47.png"
+  },
+  {
+    "id": "q_47_3b",
+    "exam": "Pismeni ispit - dekanski rok 28. rujna 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_47.png"
+  },
+  {
+    "id": "q_48_1",
+    "exam": "Pismeni ispit 10. prosinca 2005.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji će na izlazu dati 1 ako je na ulazu prisutna ispravna parna kompleksija 8421 BCD koda manja od 3 ili neparna veća od 4, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_48.png"
+  },
+  {
+    "id": "q_48_2",
+    "exam": "Pismeni ispit 10. prosinca 2005.",
+    "question_number": 2,
+    "text": "Korištenjem RS bistabila i NI vrata, metodom rekonstrukcije, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | C | Q^{n+1}\n0 | 0 | 0 | 0\n0 | 0 | 1 | \\overline{Q}^n\n0 | 1 | 0 | Q^n\n0 | 1 | 1 | 1\n1 | 0 | 0 | 0\n1 | 0 | 1 | Q^n\n1 | 1 | 0 | 0\n1 | 1 | 1 | \\overline{Q}^n",
+    "source_image": "page_48.png"
+  },
+  {
+    "id": "q_48_3a",
+    "exam": "Pismeni ispit 10. prosinca 2005.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza i MDD strukture realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako je posljednjih 5 bitova beskonačne sekvence 10100, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_48.png"
+  },
+  {
+    "id": "q_48_3b",
+    "exam": "Pismeni ispit 10. prosinca 2005.",
+    "question_number": 4,
+    "text": "b) Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_48.png"
+  },
+  {
+    "id": "q_49_1",
+    "exam": "Pismeni ispit 3. veljače 2006.",
+    "question_number": 1,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitch-evim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_49.png"
+  },
+  {
+    "id": "q_49_2",
+    "exam": "Pismeni ispit 3. veljače 2006.",
+    "question_number": 2,
+    "text": "Korištenjem multipleksera sa m=2 adresnih vrata realizirati minimalni sklop koji će među ispravnim kompleksijama 8421 BCD koda jedinicom na izlazu detektirati neparne za koje vrijedi a < 4 i parne za koje vrijedi a > 3.",
+    "source_image": "page_49.png"
+  },
+  {
+    "id": "q_49_3a",
+    "exam": "Pismeni ispit 3. veljače 2006.",
+    "question_number": 3,
+    "text": "a) Korištenjem regularnih izraza, te JK bistabila i NI vrata realizirati minimalni Moore-ov automat koji na izlazu daje 1 ako među sekvencama od 3 bita detektira 111.",
+    "source_image": "page_49.png"
+  },
+  {
+    "id": "q_49_3b",
+    "exam": "Pismeni ispit 3. veljače 2006.",
+    "question_number": 4,
+    "text": "b) Korištenjem JK bistabila i NI vrata realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_49.png"
+  },
+  {
+    "id": "q_50_1",
+    "exam": "TEST 1 - ZADACI 1. prosinca 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom.",
+    "has_diagram": true,
+    "source_image": "page_50.png"
+  },
+  {
+    "id": "q_50_2",
+    "exam": "TEST 1 - ZADACI 1. prosinca 2003.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju zadanu PDNO: f(x_1, x_2, x_3) = V(0, 2, 4)",
+    "source_image": "page_50.png"
+  },
+  {
+    "id": "q_50_3",
+    "exam": "TEST 1 - ZADACI 1. prosinca 2003.",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=1 adresnih ulaza realizirati funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | y\n0 | 0 | 0 | 1\n0 | 0 | 1 | 1\n0 | 1 | 0 | 0\n0 | 1 | 1 | 0\n1 | 0 | 0 | 0\n1 | 0 | 1 | 0\n1 | 1 | 0 | 0\n1 | 1 | 1 | 1",
+    "source_image": "page_50.png"
+  },
+  {
+    "id": "q_50_4",
+    "exam": "TEST 1 - ZADACI 1. prosinca 2003.",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji među kompleksijama 2421 BCD koda jedinicom detektira 4 i 5.",
+    "source_image": "page_50.png"
+  },
+  {
+    "id": "q_51_1",
+    "exam": "TEST 1 - ZADACI 1. prosinca 2003.",
+    "question_number": 5,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji među kompleksijama 2421 BCD koda jedinicom detektira 4 i 5.",
+    "source_image": "page_51.png"
+  },
+  {
+    "id": "q_52_1",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003.",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_52.png"
+  },
+  {
+    "id": "q_52_2",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003.",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju koja na izlazu daje 1 ako je na ulazu prisutna kompleksija od 3 bita djeljiva s 2 i/ili 3 (0 isključena).",
+    "source_image": "page_52.png"
+  },
+  {
+    "id": "q_52_3",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003.",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=1 adresnih ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | y\n0 | 0 | 1\n0 | 1 | 0\n1 | 0 | 0\n1 | 1 | 1",
+    "source_image": "page_52.png"
+  },
+  {
+    "id": "q_52_4",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003.",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati funkciju zadanu PDNO: f(x_1, x_2, x_3, x_4) = V(0, 1, 4, 6, 7, 8, 9, 12, 14, 15)",
+    "source_image": "page_52.png"
+  },
+  {
+    "id": "q_54_1",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003. (DTE)",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop za funkciju koja na izlazu daje 1 ako je na ulazu prisutna kompleksija od 3 bita djeljiva s 2 i/ili 5 (0 isključena).",
+    "source_image": "page_54.png"
+  },
+  {
+    "id": "q_54_2",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003. (DTE)",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_54.png"
+  },
+  {
+    "id": "q_54_3",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003. (DTE)",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=2 adresnih ulaza realizirati funkciju zadanu PDNO: f(x_1, x_2, x_3) = V(0, 1, 5, 6)",
+    "source_image": "page_54.png"
+  },
+  {
+    "id": "q_54_4",
+    "exam": "TEST 1 - ZADACI 14. svibnja 2003. (DTE)",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=1 adresnih ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | y\n0 | 0 | 0 | 0\n0 | 0 | 1 | 1\n0 | 1 | 0 | 1\n0 | 1 | 1 | 1\n1 | 0 | 0 | 0\n1 | 0 | 1 | 1\n1 | 1 | 0 | 0\n1 | 1 | 1 | 1",
+    "source_image": "page_54.png"
+  },
+  {
+    "id": "q_56_1",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. A",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop zadan tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | x_4 | y\n0 | 0 | 0 | 0 | 1\n0 | 0 | 0 | 1 | 1\n0 | 0 | 1 | 0 | 0\n0 | 0 | 1 | 1 | 0\n0 | 1 | 0 | 0 | 1\n0 | 1 | 0 | 1 | 1\n0 | 1 | 1 | 0 | 1\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 0\n1 | 0 | 0 | 1 | 0\n1 | 0 | 1 | 0 | 0\n1 | 0 | 1 | 1 | 0\n1 | 1 | 0 | 0 | 1\n1 | 1 | 0 | 1 | 1\n1 | 1 | 1 | 0 | 1\n1 | 1 | 1 | 1 | 0",
+    "source_image": "page_56.png"
+  },
+  {
+    "id": "q_56_2",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. A",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju zadanu PDNO: f(x_1, x_2, x_3) = V(1, 3, 4, 5)",
+    "source_image": "page_56.png"
+  },
+  {
+    "id": "q_56_3",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. A",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji među kompleksijama od 3 bita jedinicom detektira one veće i jednake 5.",
+    "source_image": "page_56.png"
+  },
+  {
+    "id": "q_56_4",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. A",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_56.png"
+  },
+  {
+    "id": "q_57_1",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. A",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_57.png"
+  },
+  {
+    "id": "q_57_2",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. A",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | x_4 | y\n0 | 0 | 0 | 0 | 1\n0 | 0 | 0 | 1 | 1\n0 | 0 | 1 | 0 | 1\n0 | 0 | 1 | 1 | 1\n0 | 1 | 0 | 0 | 1\n0 | 1 | 0 | 1 | 1\n0 | 1 | 1 | 0 | 1\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 1\n1 | 0 | 0 | 1 | 1\n1 | 0 | 1 | 0 | 0\n1 | 0 | 1 | 1 | 0\n1 | 1 | 0 | 0 | 0\n1 | 1 | 0 | 1 | 0\n1 | 1 | 1 | 0 | 0\n1 | 1 | 1 | 1 | 0",
+    "source_image": "page_57.png"
+  },
+  {
+    "id": "q_57_3",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. A",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=2 adresnih ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:\nf(x_1, x_2, x_3, x_4) = V(0, 4, 8, 10, 12, 13, 14, 15)",
+    "source_image": "page_57.png"
+  },
+  {
+    "id": "q_57_4",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. A",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji među kompleksijama 2421 BCD koda jedinicom detektira 4, 6, 7, 8 i 9:",
+    "source_image": "page_57.png"
+  },
+  {
+    "id": "q_58_1",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. A",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji među kompleksijama od 4 bita jedinicom detektira a > 9.",
+    "source_image": "page_58.png"
+  },
+  {
+    "id": "q_58_2",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. A",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_58.png"
+  },
+  {
+    "id": "q_58_3",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. A",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=1 adresnih ulaza realizirati minimalni sklop za funkciju zadanu PDNO: f(x_1, x_2, x_3) = V(0, 2, 3, 4)",
+    "source_image": "page_58.png"
+  },
+  {
+    "id": "q_58_4",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. A",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | x_4 | y\n0 | 0 | 0 | 0 | 0\n0 | 0 | 0 | 1 | 1\n0 | 0 | 1 | 0 | 0\n0 | 0 | 1 | 1 | 1\n0 | 1 | 0 | 0 | 1\n0 | 1 | 0 | 1 | R\n0 | 1 | 1 | 0 | R\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 0\n1 | 0 | 0 | 1 | R\n1 | 0 | 1 | 0 | 1\n1 | 0 | 1 | 1 | 1\n1 | 1 | 0 | 0 | 1\n1 | 1 | 0 | 1 | R\n1 | 1 | 1 | 0 | R\n1 | 1 | 1 | 1 | 0",
+    "source_image": "page_58.png"
+  },
+  {
+    "id": "q_59_1",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. B",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop zadan tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | x_4 | y\n0 | 0 | 0 | 0 | 1\n0 | 0 | 0 | 1 | 0\n0 | 0 | 1 | 0 | 1\n0 | 0 | 1 | 1 | 0\n0 | 1 | 0 | 0 | 1\n0 | 1 | 0 | 1 | 0\n0 | 1 | 1 | 0 | 1\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 1\n1 | 0 | 0 | 1 | 1\n1 | 0 | 1 | 0 | 0\n1 | 0 | 1 | 1 | 1\n1 | 1 | 0 | 0 | 1\n1 | 1 | 0 | 1 | 1\n1 | 1 | 1 | 0 | 0\n1 | 1 | 1 | 1 | 1",
+    "source_image": "page_59.png"
+  },
+  {
+    "id": "q_59_2",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. B",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju zadanu PDNO: f(x_1, x_2, x_3) = V(1, 2, 3, 4, 6)",
+    "source_image": "page_59.png"
+  },
+  {
+    "id": "q_59_3",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. B",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji među kompleksijama od 3 bita jedinicom detektira one veće i jednake 2, te manje i jednake 4.",
+    "source_image": "page_59.png"
+  },
+  {
+    "id": "q_59_4",
+    "exam": "TEST 1 - ZADACI 26. svibnja 2004. B",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_59.png"
+  },
+  {
+    "id": "q_60_1",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. B",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_60.png"
+  },
+  {
+    "id": "q_60_2",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. B",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | x_4 | y\n0 | 0 | 0 | 0 | 1\n0 | 0 | 0 | 1 | 1\n0 | 0 | 1 | 0 | 1\n0 | 0 | 1 | 1 | 1\n0 | 1 | 0 | 0 | 1\n0 | 1 | 0 | 1 | 0\n0 | 1 | 1 | 0 | 0\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 0\n1 | 0 | 0 | 1 | 0\n1 | 0 | 1 | 0 | 0\n1 | 0 | 1 | 1 | 0\n1 | 1 | 0 | 0 | 1\n1 | 1 | 0 | 1 | 0\n1 | 1 | 1 | 0 | 1\n1 | 1 | 1 | 1 | 0",
+    "source_image": "page_60.png"
+  },
+  {
+    "id": "q_60_3",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. B",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=2 adresnih ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:\nf(x_1, x_2, x_3, x_4) = V(4, 5, 6, 7, 9, 11, 14, 15)",
+    "source_image": "page_60.png"
+  },
+  {
+    "id": "q_60_4",
+    "exam": "TEST 1 - ZADACI 10. svibnja 2004. B",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop koji među kompleksijama 8421 BCD koda jedinicom detektira 2, 3, 6, i 7:",
+    "source_image": "page_60.png"
+  },
+  {
+    "id": "q_61_1",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. B",
+    "question_number": 1,
+    "text": "Korištenjem NI vrata realizirati minimalni sklop koji među znamenkama 2421 BCD koda jedinicom detektira parne manje od 3 (uključujući 0) i neparne veće od 6",
+    "source_image": "page_61.png"
+  },
+  {
+    "id": "q_61_2",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. B",
+    "question_number": 2,
+    "text": "Korištenjem NILI vrata realizirati minimalni sklop za koji obavlja prekodiranje zadano Veitchevim dijagramom:",
+    "has_diagram": true,
+    "source_image": "page_61.png"
+  },
+  {
+    "id": "q_61_3",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. B",
+    "question_number": 3,
+    "text": "Korištenjem multipleksera s m=1 adresnih ulaza realizirati minimalni sklop za funkciju zadanu PDNO: f(x_1, x_2, x_3) = V(1, 4, 6)",
+    "source_image": "page_61.png"
+  },
+  {
+    "id": "q_61_4",
+    "exam": "TEST 1 - ZADACI 22. studenog 2004. B",
+    "question_number": 4,
+    "text": "Korištenjem demultipleksera s m=2 adresnih ulaza realizirati minimalni sklop za funkciju zadanu tablicom istine:",
+    "table": "x_1 | x_2 | x_3 | x_4 | y\n0 | 0 | 0 | 0 | 1\n0 | 0 | 0 | 1 | 1\n0 | 0 | 1 | 0 | R\n0 | 0 | 1 | 1 | 0\n0 | 1 | 0 | 0 | 1\n0 | 1 | 0 | 1 | R\n0 | 1 | 1 | 0 | R\n0 | 1 | 1 | 1 | 0\n1 | 0 | 0 | 0 | 0\n1 | 0 | 0 | 1 | R\n1 | 0 | 1 | 0 | 1\n1 | 0 | 1 | 1 | R\n1 | 1 | 0 | 0 | R\n1 | 1 | 0 | 1 | 0\n1 | 1 | 1 | 0 | 1\n1 | 1 | 1 | 1 | 1",
+    "source_image": "page_61.png"
+  },
+  {
+    "id": "q_62_1",
+    "exam": "TEST 2 - ZADACI 4. lipnja 2003.",
+    "question_number": 1,
+    "text": "Korištenjem JK bistabila i NI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 1\n0 | 1 | \\overline{Q}^n\n1 | 0 | Q^n\n1 | 1 | \\overline{Q}^n",
+    "source_image": "page_62.png"
+  },
+  {
+    "id": "q_62_2",
+    "exam": "TEST 2 - ZADACI 4. lipnja 2003.",
+    "question_number": 2,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_62.png"
+  },
+  {
+    "id": "q_62_3",
+    "exam": "TEST 2 - ZADACI 4. lipnja 2003.",
+    "question_number": 3,
+    "text": "Minimizirati automat zadan tablicom (provjeriti!), te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n (x=0) | i^n (x=1)\n1 | 2 | 3 | 0 | 0\n2 | 4 | 5 | 0 | 0\n3 | 6 | 7 | 0 | 0\n4 | 4 | 5 | 0 | 0\n5 | 6 | 7 | 0 | 0\n6 | 4 | 5 | 1 | 0\n7 | 6 | 7 | 0 | 0",
+    "source_image": "page_62.png"
+  },
+  {
+    "id": "q_62_4",
+    "exam": "TEST 2 - ZADACI 4. lipnja 2003.",
+    "question_number": 4,
+    "text": "Napisati regularni izraz za automat koji na izlazu daje 1 ako su posljednjih 5 bitova beskonačne sekvence 011000, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_62.png"
+  },
+  {
+    "id": "q_63_1",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. A",
+    "question_number": 1,
+    "text": "Korištenjem JK bistabila i NI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 0\n0 | 1 | 0\n1 | 0 | 1\n1 | 1 | Q^n",
+    "source_image": "page_63.png"
+  },
+  {
+    "id": "q_63_2",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. A",
+    "question_number": 2,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_63.png"
+  },
+  {
+    "id": "q_63_3",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. A",
+    "question_number": 3,
+    "text": "Minimizirati automat zadan tablicom, provjeriti minimalnost, te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n (x=0) | i^n (x=1)\n1 | 2 | 3 | 0 | 0\n2 | 4 | 5 | 0 | 0\n3 | 6 | 7 | 0 | 0\n4 | 4 | 5 | 0 | 0\n5 | 6 | 7 | 1 | 0\n6 | 4 | 5 | 0 | 0\n7 | 6 | 7 | 0 | 0",
+    "source_image": "page_63.png"
+  },
+  {
+    "id": "q_63_4",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. A",
+    "question_number": 4,
+    "text": "Napisati regularni izraz za automat koji na izlazu daje 1 ako su posljednja 6 bitova beskonačne sekvence 100110, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_63.png"
+  },
+  {
+    "id": "q_64_1",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. A",
+    "question_number": 1,
+    "text": "Korištenjem JK bistabila i NILI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | \\overline{Q}\n0 | 1 | Q\n1 | 0 | \\overline{Q}\n1 | 1 | Q",
+    "source_image": "page_64.png"
+  },
+  {
+    "id": "q_64_2",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. A",
+    "question_number": 2,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_64.png"
+  },
+  {
+    "id": "q_64_3",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. A",
+    "question_number": 3,
+    "text": "Minimizirati automat zadan tablicom, provjeriti minimalnost, te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n (x=0) | i^n (x=1)\n1 | 2 | 3 | 0 | 0\n2 | 4 | 5 | 0 | 0\n3 | 6 | 7 | 0 | 0\n4 | 4 | 5 | 0 | 0\n5 | 6 | 7 | 1 | 0\n6 | 4 | 5 | 0 | 0\n7 | 6 | 7 | 0 | 0",
+    "source_image": "page_64.png"
+  },
+  {
+    "id": "q_64_4",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. A",
+    "question_number": 4,
+    "text": "Napisati regularni izraz za automat koji na izlazu daje 1 ako su posljednjih 6 bitova beskonačne sekvence 110010, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_64.png"
+  },
+  {
+    "id": "q_65_1",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. B",
+    "question_number": 1,
+    "text": "Korištenjem D bistabila i NILI vrata, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 1\n0 | 1 | Q^n\n1 | 0 | 0\n1 | 1 | 0",
+    "source_image": "page_65.png"
+  },
+  {
+    "id": "q_65_2",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. B",
+    "question_number": 2,
+    "text": "Ispisati potpuno stablo za Moore-ov automat koji Među sekvencama od 2 bita jedinicom detektira 11.",
+    "source_image": "page_65.png"
+  },
+  {
+    "id": "q_65_3",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. B",
+    "question_number": 3,
+    "text": "Metodom primitivne tablice minimizirati automat zadan tablicom, te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n (x=0) | i^n (x=1)\n1 | 2 | 3 | 0 | 0\n2 | 4 | 5 | 0 | 0\n3 | 6 | 7 | 0 | 0\n4 | 4 | 5 | 1 | 0\n5 | 6 | 7 | 0 | 0\n6 | 4 | 5 | 0 | 0\n7 | 6 | 7 | 0 | 0",
+    "source_image": "page_65.png"
+  },
+  {
+    "id": "q_65_4",
+    "exam": "TEST 2 - ZADACI 14. lipnja 2004. B",
+    "question_number": 4,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_65.png"
+  },
+  {
+    "id": "q_66_1",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. B",
+    "question_number": 1,
+    "text": "Korištenjem D bistabila i NILI vrata, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | 0\n0 | 1 | 1\n1 | 0 | Q^n\n1 | 1 | 1",
+    "source_image": "page_66.png"
+  },
+  {
+    "id": "q_66_2",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. B",
+    "question_number": 2,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_66.png"
+  },
+  {
+    "id": "q_66_3",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. B",
+    "question_number": 3,
+    "text": "Minimizirati automat zadan tablicom, provjeriti minimalnost, te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n (x=0) | i^n (x=1)\n1 | 2 | 3 | 0 | 1\n2 | 4 | 5 | 0 | 0\n3 | 6 | 7 | 0 | 0\n4 | 4 | 5 | 0 | 0\n5 | 6 | 7 | 0 | 0\n6 | 4 | 5 | 0 | 1\n7 | 6 | 7 | 0 | 0",
+    "source_image": "page_66.png"
+  },
+  {
+    "id": "q_66_4",
+    "exam": "TEST 2 - ZADACI 7. lipnja 2004. B",
+    "question_number": 4,
+    "text": "Napisati regularni izraz za automat koji na izlazu daje 1 ako su posljednja 6 bitova beskonačne sekvence 100110, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_66.png"
+  },
+  {
+    "id": "q_67_1",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. B",
+    "question_number": 1,
+    "text": "Korištenjem T bistabila i NILI vrata, metodom izjednačavanja, realizirati minimalni opći bistabil zadan tablicom prijelaza:",
+    "table": "A | B | Q^{n+1}\n0 | 0 | \\overline{Q}\n0 | 1 | 1\n1 | 0 | Q\n1 | 1 | Q",
+    "source_image": "page_67.png"
+  },
+  {
+    "id": "q_67_2",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. B",
+    "question_number": 2,
+    "text": "Korištenjem MDD strukture realizirati automat zadan grafom:",
+    "has_diagram": true,
+    "source_image": "page_67.png"
+  },
+  {
+    "id": "q_67_3",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. B",
+    "question_number": 3,
+    "text": "Minimizirati automat zadan tablicom, provjeriti minimalnost, te ispisati tablicu i graf minimalnog automata.",
+    "table": "s^n | s^{n+1} (x=0) | s^{n+1} (x=1) | i^n\n1 | 2 | 3 | 0\n2 | 4 | 5 | 0\n3 | 6 | 7 | 0\n4 | 8 | 9 | 0\n5 | 10 | 11 | 0\n6 | 12 | 13 | 0\n7 | 14 | 15 | 0\n8 | 8 | 9 | 0\n9 | 10 | 11 | 0\n10 | 12 | 13 | 0\n11 | 14 | 15 | 1\n12 | 8 | 9 | 0\n13 | 10 | 11 | 0\n14 | 12 | 13 | 0\n15 | 14 | 15 | 0",
+    "source_image": "page_67.png"
+  },
+  {
+    "id": "q_67_4",
+    "exam": "TEST 2 - ZADACI 24. siječnja 2005. B",
+    "question_number": 4,
+    "text": "Napisati regularni izraz za automat koji na izlazu daje 1 ako je posljednjih 5 bitova beskonačne sekvence 10011, te 0 u svim ostalim slučajevima.",
+    "source_image": "page_67.png"
+  }
+]
