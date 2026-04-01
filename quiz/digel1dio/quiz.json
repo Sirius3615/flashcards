@@ -740,7 +740,7 @@
         "correct": "3000"
     },
     {
-        "question": "Da bismo dokazali potpunost skupa, njime moramo moći izraziti:",
+        "question": "Da bismo dokazali potpotpunost skupa, njime moramo moći izraziti:",
         "answers": [
             "samo konjunkciju i disjunkciju",
             "konjunkciju, disjunkciju i negaciju",
@@ -1464,7 +1464,7 @@
         "correct": "2"
     },
     {
-        "question": "Što je _vrijeme zadržavanja_ (hold time) kod bistabila?",
+        "question": "Što je _vrijeme zadržavanja_ (hold time) kod bistabila?",
         "answers": [
             "Maksimalno vrijeme trajanja taktnog impulsa",
             "Minimalno vrijeme prije aktivnog ruba takta kada podaci moraju biti stabilni",
@@ -1555,7 +1555,7 @@
         "correct": "C"
     },
     {
-        "question": "Što je _race condition_ (stanje utrke) u digitalnoj logici?",
+        "question": "Što je _race condition_ (stanje utrke) u digitalnoj logici?",
         "answers": [
             "Stanje kada se svi ulazi promijene istovremeno",
             "Poremećaj u napajanju koji uzrokuje kvar logičkog sklopa",
@@ -1581,7 +1581,7 @@
         "correct": "NI ili NILI"
     },
     {
-        "question": "Što je _jedinična udaljenost_ (unit distance) kod kodova?",
+        "question": "Što je _jedinična udaljenost_ (unit distance) kod kodova?",
         "answers": [
             "Udaljenost između dvije kodne riječi izražena u bitovima",
             "Svojstvo kodova gdje se sve kodne riječi razlikuju po najmanje jednom bitu",
