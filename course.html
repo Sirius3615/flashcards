@@ -10,6 +10,33 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <script>
+        function queueMathTypeset(elements, attempts = 0) {
+            if (window.renderMathInElement) {
+                elements.forEach(function (el) {
+                    if (el) {
+                        try {
+                            window.renderMathInElement(el, {
+                                delimiters: [
+                                    { left: '$$', right: '$$', display: true },
+                                    { left: '$', right: '$', display: false },
+                                    { left: '\\(', right: '\\)', display: false },
+                                    { left: '\\[', right: '\\]', display: true }
+                                ],
+                                throwOnError: false
+                            });
+                        } catch(e) {}
+                    }
+                });
+                return;
+            }
+
+            if (attempts < 120) {
+                setTimeout(function () {
+                    queueMathTypeset(elements, attempts + 1);
+                }, 50);
+            }
+        }
+
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -159,6 +186,9 @@
             /* 16px - 3px border */
         }
     </style>
+    <link rel="stylesheet" href="quiz/assets/katex/katex.min.css">
+    <script defer src="quiz/assets/katex/katex.min.js"></script>
+    <script defer src="quiz/assets/katex/contrib/auto-render.min.js"></script>
 </head>
 
 <body class="bg-slate-950 text-slate-200 h-screen flex flex-col overflow-hidden">
@@ -484,6 +514,8 @@
             void txtCol.offsetWidth; // trigger reflow
             txtCol.classList.add('slide-up');
             imgCol.classList.add('slide-up');
+            queueMathTypeset([txtCol, imgCol]);
+            queueMathTypeset([txtCol, imgCol]);
 
             // Scroll to top
             document.getElementById('main-scroll-area').scrollTop = 0;

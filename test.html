@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head>
+<link rel="stylesheet" href="./quiz/assets/katex/katex.min.css">
+<script defer src="./quiz/assets/katex/katex.min.js"></script>
+<script defer src="./quiz/assets/katex/contrib/auto-render.min.js"></script>
+<script defer>
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        renderMathInElement(document.body, {
+            delimiters: [{ left: '$', right: '$', display: false }],
+            throwOnError: false
+        });
+        require('fs').writeFileSync('out.html', document.body.innerHTML);
+    }, 100);
+});
+</script>
+</head><body>
+    <div id="test">Some text with $-ld 6$ here.</div>
+</body></html>

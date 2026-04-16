@@ -34,6 +34,9 @@
         body { font-family: 'Inter', sans-serif; }
         .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
     </style>
+    <link rel="stylesheet" href="../assets/katex/katex.min.css">
+    <script defer src="../assets/katex/katex.min.js"></script>
+    <script defer src="../assets/katex/contrib/auto-render.min.js"></script>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
 
@@ -218,6 +221,29 @@
             return array;
         }
 
+        function queueMathTypeset(elements, attempts = 0) {
+            if (window.renderMathInElement) {
+                elements.forEach(function (el) {
+                    window.renderMathInElement(el, {
+                        delimiters: [
+                            { left: '$$', right: '$$', display: true },
+                            { left: '$', right: '$', display: false },
+                            { left: '\\(', right: '\\)', display: false },
+                            { left: '\\[', right: '\\]', display: true }
+                        ],
+                        throwOnError: false
+                    });
+                });
+                return;
+            }
+
+            if (attempts < 120) {
+                setTimeout(function () {
+                    queueMathTypeset(elements, attempts + 1);
+                }, 50);
+            }
+        }
+
         function showQuestion() {
             if (currentQuestionIndex >= questions.length) {
                 return showCompletionMessage();
@@ -226,7 +252,7 @@
             const currentCard = questions[currentQuestionIndex];
             
             // Clean state
-            questionTextEl.textContent = currentCard.question;
+            questionTextEl.innerHTML = currentCard.question;
             optionsContainer.innerHTML = '';
             feedbackArea.classList.add('hidden');
             
@@ -242,12 +268,14 @@
                 const button = document.createElement('button');
                 // Dark mode styles for button
                 button.className = 'w-full text-left p-4 rounded-lg border border-gray-600 bg-gray-700 hover:bg-gray-600 hover:border-indigo-400 transition-all duration-200 font-medium text-gray-200 shadow-sm';
-                button.textContent = option;
+                button.dataset.rawOption = option;
+                button.innerHTML = option;
                 button.onclick = () => handleAnswer(button, option, correctAnswerText, currentCard.question);
                 optionsContainer.appendChild(button);
             });
             
             updateProgress();
+            queueMathTypeset([questionTextEl, optionsContainer]);
         }
 
         function handleAnswer(selectedButton, selectedOption, correctAnswerText, questionText) {
@@ -278,7 +306,7 @@
                 selectedButton.className = 'w-full text-left p-4 rounded-lg border-2 border-red-500 bg-red-900/40 text-red-100 font-medium shadow-md';
                 
                 buttons.forEach(btn => {
-                    if (btn.textContent === correctAnswerText) {
+                    if (btn.dataset.rawOption === correctAnswerText) {
                         btn.className = 'w-full text-left p-4 rounded-lg border-2 border-green-500 bg-green-900/40 text-green-100 font-bold shadow-md';
                     }
                 });
@@ -324,7 +352,7 @@
                         <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Pitanje ${index + 1}</span>
                         ${statusBadge}
                     </div>
-                    <h4 class="font-semibold text-gray-100 text-lg mb-2">${item.question}</h4>
+                    <h4 class="font-semibold text-gray-100 text-lg mb-2">${item.question.replace(/</g, "&lt;")}</h4>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="p-3 bg-gray-700/50 rounded border border-gray-600">
@@ -340,6 +368,8 @@
                 `;
                 resultsListEl.appendChild(reportCard);
             });
+
+            queueMathTypeset([resultsListEl]);
         }
     </script>
 </body>

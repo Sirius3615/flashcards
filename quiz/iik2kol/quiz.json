@@ -1,0 +1,342 @@
+[
+    {
+        "question": "Savršena zaštićenost poruke X čiji je kriptogram Y definirana je izrazom:",
+        "answers": [
+            "$Y=F_k(X)$",
+            "$Y=X+K \\pmod F$",
+            "$X=f_k(Y)$",
+            "$H(X|Y)=H(X)$"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Entropija kontinuiranog izvora je:",
+        "answers": [
+            "$H=-\\sum p(x_i) \\text{ld } p(x)$",
+            "$H(x)=-\\int p(x) \\text{ld } p(x)dx$ uz $\\int p(x)dx=1$",
+            "Najveća uz ravnomjernu gustoću vjerojatnosti",
+            "Neovisna o području kontinuirane varijable x"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Binarna vrijednost 10011111 heksadecimalno je:",
+        "answers": [
+            "5F",
+            "1F",
+            "9F",
+            "916"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "ASCII kod simbola '@' je 1000000, što binarno odgovara opciji:",
+        "answers": [
+            "1000000",
+            "1110001",
+            "10010000",
+            "10001000"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Grayev kod broja 7 uz $m=4$ je:",
+        "answers": [
+            "0100",
+            "0101",
+            "1010",
+            "1101"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Aritmetičko kodiranje je kodiranje:",
+        "answers": [
+            "Neovisno o vjerojatnostima simbola",
+            "Po blokovima maksimalne dužine",
+            "Temeljeno na vrijednostima simbola",
+            "Određeno zbrojem vjerojatnosti svih simbola"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Kod temeljen na kodiranju duljine niza (RLC) je:",
+        "answers": [
+            "Primjeren izvorima s memorijom",
+            "Optimalan za neovisne simbole",
+            "Primjenjiv samo za binarne izvore",
+            "Ovisan o abecedi izvora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kodiranje faksmil poruka (Grupa G3) se temelji na:",
+        "answers": [
+            "Modificiranom Huffmanovom kodu (MHC)",
+            "Aritmetičkom kodu",
+            "Shannon-Fanovu kodu",
+            "LZW kodu"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Supstitucijsko kodiranje je definirano izrazom $Y=X+1 \\pmod{27}$. Ako je kriptogram JOGPSNDJKB, poruka je:",
+        "answers": [
+            "FAKULTET",
+            "STUDIRANJE",
+            "KOMUNIKACIJA",
+            "INFORMACIJA"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Savršena zaštićenost poruke X čiji je kriptogram Y definirana je izrazom:",
+        "answers": [
+            "$Y=F_k(X)$",
+            "$Y=X+K \\pmod F$",
+            "$X=f_k(Y)$",
+            "$H(X|Y)=H(X)$"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Entropija kontinuiranog izvora je:",
+        "answers": [
+            "$H=-\\sum p(x_i) \\text{ld } p(x)$",
+            "$H(x)=-\\int p(x) \\text{ld } p(x)dx$ uz $\\int p(x)dx=1$",
+            "Najveća uz ravnomjernu gustoću vjerojatnosti",
+            "Neovisna o području kontinuirane varijable x"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Binarna vrijednost 10011111 heksadecimalno je:",
+        "answers": [
+            "5F",
+            "1F",
+            "9F",
+            "916"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "ASCII kod simbola '@' je 1000000, što binarno odgovara opciji:",
+        "answers": [
+            "1000000",
+            "1110001",
+            "10010000",
+            "10001000"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Grayev kod broja 7 uz $m=4$ je:",
+        "answers": [
+            "0100",
+            "0101",
+            "1010",
+            "1101"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Aritmetičko kodiranje je kodiranje:",
+        "answers": [
+            "Neovisno o vjerojatnostima simbola",
+            "Po blokovima maksimalne dužine",
+            "Temeljeno na vrijednostima simbola",
+            "Određeno zbrojem vjerojatnosti svih simbola"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Kod temeljen na kodiranju duljine niza (RLC) je:",
+        "answers": [
+            "Primjeren izvorima s memorijom",
+            "Optimalan za neovisne simbole",
+            "Primjenjiv samo za binarne izvore",
+            "Ovisan o abecedi izvora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kodiranje faksmil poruka (Grupa G3) se temelji na:",
+        "answers": [
+            "Modificiranom Huffmanovom kodu (MHC)",
+            "Aritmetičkom kodu",
+            "Shannon-Fanovu kodu",
+            "LZW kodu"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Supstitucijsko kodiranje je definirano izrazom $Y=X+1 \\pmod{27}$. Ako je kriptogram JOGPSNDJKB, poruka je:",
+        "answers": [
+            "FAKULTET",
+            "STUDIRANJE",
+            "KOMUNIKACIJA",
+            "INFORMACIJA"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Izraz za inverznu Fourierovu transformaciju kontinuiranog signala je:",
+        "answers": [
+            "$x(t)=\\int_{-\\infty}^{\\infty}X(f)e^{j2\\pi ft}df$",
+            "$X(f)=\\int_{-\\infty}^{\\infty}x(t)e^{j2\\pi ft}dt$",
+            "$x(t)=\\int_{-\\infty}^{\\infty}X(f)e^{-j2\\pi ft}df$",
+            "$X(f)=\\int_{-\\infty}^{\\infty}x(t)e^{-j2\\pi ft}dt$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Izraz za Fourierovu transformaciju kontinuiranog signala je:",
+        "answers": [
+            "$x(t)=\\int_{-\\infty}^{\\infty}X(f)e^{j2\\pi ft}df$",
+            "$X(f)=\\int_{-\\infty}^{\\infty}x(t)e^{-j2\\pi ft}dt$",
+            "$x(t)=\\int_{-\\infty}^{\\infty}X(f)e^{-j2\\pi ft}df$",
+            "$X(f)=\\int_{-\\infty}^{\\infty}x(t)e^{j2\\pi ft}dt$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Ako je $X(f) = X_r(f) + jX_i(f)$ Fourierova transformacija realnog signala $x(t)$, vrijedi sljedeće:",
+        "answers": [
+            "$X(f) = X(-f)$",
+            "$X(f) = -X(-f)$",
+            "$|X(f)| = |X(-f)|$",
+            "$|X(f)| = |X_r(f)| = |X_i(f)|$"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Neka je $X(f) = X_r(f) + jX_i(f)$ Fourierova transformacija signala $x(t)$. Ako je $x(t)$ realan simetričan (paran) signal, vrijedi sljedeće:",
+        "answers": [
+            "$X_i(f) = X_r(f)$",
+            "$|X_i(f)| = |X_r(f)|$",
+            "$X_r(f) = 0$",
+            "$X_i(f) = 0$"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Ako je $X(f)$ Fourierova transformacija signala $x(t)$, transformacija deriviranog signala $x'(t)$ je:",
+        "answers": [
+            "$\\mathcal{F}\\{x'(t)\\} = |j2\\pi f|X(f)$",
+            "$\\mathcal{F}\\{x'(t)\\} = (j2\\pi f)X(f)$",
+            "$\\mathcal{F}\\{x'(t)\\} = |X(f)|^2$",
+            "$\\mathcal{F}\\{x'(t)\\} = (j2\\pi f)^2 X(f)$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Fourierova transformacija kompleksne eksponencijale $x(t) = e^{\\pm j2\\pi f_0 t}$ je:",
+        "answers": [
+            "$\\delta(t \\mp f_0)$",
+            "$\\delta(f \\mp f_0)$",
+            "$\\frac{1}{2}[\\delta(f+f_0) + \\delta(f-f_0)]$",
+            "$1$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Ako je $R_x(\\tau)$ autokorelacija funkcije $x(t)$, za $R_x(\\tau)$ vrijedi sljedeće:",
+        "answers": [
+            "$R_x(0) = 1$",
+            "$R_x(\\tau) = R_x(-\\tau)$",
+            "$R_x(\\tau) = -R_x(\\tau)$",
+            "$R_x(\\tau) = -R_x(-\\tau)$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Definicija korelacije diskretnih signala $x[n]$ i $y[n]$ je:",
+        "answers": [
+            "$R_{xy}[m] = \\sum_{n=-\\infty}^{\\infty} x[n]y[n+m]$",
+            "$R_{xy}[m] = \\sum_{n=-\\infty}^{\\infty} x[n]y[m-n]$",
+            "$R_{xy}[m] = \\sum_{n=-\\infty}^{\\infty} x[n]x[n-m]$",
+            "$R_{xy}[n] = \\sum_{n=-\\infty}^{\\infty} x[n]y[m-n]$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Signal ravnomjerne raspodjele amplitude je ravnomjerno kvantiziran na $M=16$ razina. Signal-šum omjer (SQNR) kvantizacije iznosi:",
+        "answers": [
+            "$\\approx 24 \\text{ dB}$",
+            "$= 24 \\text{ dB}$",
+            "$\\approx 16 \\text{ dB}$",
+            "$= 16 \\text{ dB}$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Na ulaz A/D pretvarača dovodi se signal $x(t) = 5\\cos(4\\pi t + \\pi/3) + \\sin(4\\pi t)$. Potrebno je odabrati najmanju frekvenciju uzorkovanja $f_s$ od ponuđenih, a da ne dođe do gubitka informacije:",
+        "answers": [
+            "$f_s = 5 \\text{ Hz}$",
+            "$f_s = 4 \\text{ Hz}$",
+            "$f_s = 3 \\text{ Hz}$",
+            "$f_s = 2 \\text{ Hz}$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Diskretni signal snage je:",
+        "answers": [
+            "$x(t) = \\sin(2\\pi ft)$",
+            "$x(t) = \\Pi(t/5)\\sin(2\\pi ft)$",
+            "$x[n] = n^2, 0 \\le n \\le 5$",
+            "$x[n] = \\sin[n]$"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Izraz za diskretnu Fourierovu transformaciju (DFT) signala je:",
+        "answers": [
+            "$X[m] = \\sum_{n=0}^{N-1} x[n]e^{-j2\\pi nm/N}$",
+            "$X[m] = \\sum_{n=0}^{N-1} x[n]e^{j2\\pi nm/N}$",
+            "$x[n] = \\frac{1}{N}\\sum_{m=0}^{N-1} X[m]e^{j2\\pi nm/N}$",
+            "$x[n] = \\sum_{m=0}^{N-1} X[m]e^{-j2\\pi nm/N}$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Fourierova transformacija signala $x(t) = \\cos(2\\pi f_0 t)$ je:",
+        "answers": [
+            "$\\delta(f+f_0)$",
+            "$\\delta(f-f_0)$",
+            "$\\frac{1}{2}[\\delta(f+f_0) + \\delta(f-f_0)]$",
+            "$\\delta(f+f_0) + \\delta(f-f_0)$"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Definicija konvolucije diskretnih signala $x[n]$ i $y[n]$ je:",
+        "answers": [
+            "$z[m] = \\sum_{n=-\\infty}^{\\infty} x[n]x[n+m]$",
+            "$z[m] = \\sum_{n=-\\infty}^{\\infty} x[n]y[m-n]$",
+            "$z(\\tau) = \\int_{-\\infty}^{\\infty} x(t)y(t+\\tau)dt$",
+            "$z(\\tau) = \\int_{-\\infty}^{\\infty} x(t)y(t+\\tau)d\\tau$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Ako je $X(f)$ Fourierova transformacija realnog signala $x(t)$, transformacija sažetog/rastegnutog signala $x(at)$ je:",
+        "answers": [
+            "$X(f/a)$",
+            "$aX(f/a)$",
+            "$\\frac{f}{a}X(f/a)$",
+            "$\\frac{1}{|a|}X(f/a)$"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Ako je $R_{xy}(\\tau)$ korelacija funkcije $x(t)$ i $y(t)$, i ako je $R_{xy}(5) = -5$ vrijedi:",
+        "answers": [
+            "$R_{yx}(-5) = -1/5$",
+            "$R_{yx}(-5) = 5$",
+            "$R_{yx}(-5) = 1/5$",
+            "$R_{yx}(-5) = -5$"
+        ],
+        "correct": "3"
+    }
+]

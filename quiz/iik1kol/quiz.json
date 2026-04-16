@@ -1,0 +1,432 @@
+[
+    {
+        "question": "Srednji sadržaj informacije izvora 512 jednakovjerojatnih simbola iznosi:",
+        "answers": [
+            "512 bita / simbolu",
+            "16 bita po simbolu",
+            "9 bita po simbolu",
+            "ovisi o vrijednostima simbola"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Entropija bacanja savršene kocke iznosi:",
+        "answers": [
+            "6 bita",
+            "Ld 6 bita",
+            "$2^6$ bita",
+            "$-ld 6$ bita"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Uzajamni sadržaj informacije je najveći ako su varijable X i Y:",
+        "answers": [
+            "potpuno ovisne",
+            "potpuno neovisne",
+            "$H(x,y)=H(x)+H(Y|x)$",
+            "$H(x,y)=H(x)+H(y)$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Izvor generira $N=12$ jednakovjerojatnih simbola. Simboli su kodirani sa 4 bita / simbolu pa je učinkovitost koda:",
+        "answers": [
+            "1.0",
+            "Ld 4",
+            "Ld 12 / 4",
+            "Ld 12"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Sintaktički sadržaj informacije ovisi o:",
+        "answers": [
+            "Broju simbola koje izvor generira",
+            "Vjerojatnostima simbola",
+            "Abecedi izvora",
+            "Koristi koju poruka donosi odredišta"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Entropija binarnog izvora iznosi:",
+        "answers": [
+            "2 bita",
+            "2 bita/simbolu",
+            "1 bit/simbolu",
+            "Ovisi o vjerojatnostima simbola"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Maksimalna entropija izvora se dobije uz:",
+        "answers": [
+            "Jednakovjerojatne simbole",
+            "Beskonačan broj simbola",
+            "Različitu vjerojatnost simbola",
+            "Jednaku neodređenost simbola"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kapacitet izvora je dan izrazom:",
+        "answers": [
+            "$C=-\\sum p(x)\\text{ld } p(x)$ bita/simbolu",
+            "$C=-\\text{ld } p(x_i)$ bita/simbolu",
+            "$C=-\\text{ld } f$ bita/simbolu",
+            "$C=\\max I(X)=\\max H(X)=\\text{ld } N$ bita/simbolu"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Vlastiti sadržaj informacije ovisi o:",
+        "answers": [
+            "Entropiji izvora vrijednosti $x_i$",
+            "Broju simbola koje generira izvor",
+            "Vrijednosti $x_i$",
+            "Vjerojatnosti simbola"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Kapacitet binarnog izvora iznosi:",
+        "answers": [
+            "2 bita",
+            "2 bita/simbolu",
+            "1 bit/simbolu",
+            "Ovisi o vjerojatnosti jednog simbola"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Minimalna entropija izvora koji generira N simbola se dobiva:",
+        "answers": [
+            "Uz jednakovjerojatne simbole",
+            "Kad je vjerojatnost jednog simbola jednaka 1",
+            "Uz različitu vjerojatnost svih simbola",
+            "Uz jednaku neodređenost simbola"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Tablični kodovi imaju svojstvo:",
+        "answers": [
+            "Ovisnosti pripadnih elemenata kodne riječi",
+            "Optimalnosti",
+            "Ravnomjernosti",
+            "Neovisnosti elemenata kodne riječi"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Netrenutačno neraspoznatljiv kod je:",
+        "answers": [
+            "Ireverzibilan kod",
+            "Reverzibilan kod",
+            "Ravnomjeran kod",
+            "Nedekodljiv kod"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Matrica kanala sa šumom ima sve elemente jednake. Izgubljeni sadržaj informacije je:",
+        "answers": [
+            "$H(X)$",
+            "0",
+            "$H(X)+H(Y|X)$",
+            "$H(X)-H(Y|X)$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Srednji sadržaj informacije izvora 256 jednakovjerojatnih simbola iznosi:",
+        "answers": [
+            "8 bita/simbolu",
+            "\\log 256 bita/simbolu",
+            "256 bita/simbolu",
+            "Ovisi o vjerojatnostima simbola"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Uzajamni sadržaj informacije $I(X;Y)$ je:",
+        "answers": [
+            "Jednak združenoj entropiji $H(X;Y)$",
+            "Jednak $H(X)+H(Y)+H(X,Y)$",
+            "Najviše jednak $H(X)$",
+            "Jednak $H(X)+H(Y)-H(Y,X)$"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Uzajamni sadržaj informacije je nula ako vrijedi:",
+        "answers": [
+            "X i Y su potpuno ovisni",
+            "X i Y su potpuno neovisni",
+            "$H(x,y)=H(x)+H(X|Y)$",
+            "$H(x,y)=H(x)+H(y)$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Entropija izvora s memorijom je:",
+        "answers": [
+            "Tim veća što je veća memorija",
+            "Veća od $H(X)$",
+            "Određena izrazom $H_\\infty(X)=\\lim_{n \\to \\infty} H(X_n|X_{n-1}, X_{n-2}...)$",
+            "Neovisna o združenoj vjerojatnosti"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Srednji sadržaj informacije jednakovjerojatnih simbola je jednak:",
+        "answers": [
+            "Kapacitetu izvora",
+            "Entropiji izvora",
+            "Abecedi izvora",
+            "Srednjoj vrijednosti izvora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Srednji sadržaj informacije $I(X)$ je dan izrazom:",
+        "answers": [
+            "$I(X)=\\sum p(x) \\text{ld } p(x)$ bita/simbolu",
+            "$I(X)=-\\text{ld } p(x_i)$ bita/simbolu",
+            "$I(X)=\\text{ld } N$ bita/simbolu",
+            "$I(X)=-\\sum p(x_i) \\text{ld } p(x_i)$ bita/simbolu"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Entropija združenih izvora X i Y ovisi o:",
+        "answers": [
+            "Entropiji obaju izvora i o njihovoj uvjetnoj entropiji",
+            "Entropiji obaju izvora",
+            "Kapacitetu obaju izvora",
+            "Uzajamnoj informaciji"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Sadržaj informacije simbola je:",
+        "answers": [
+            "Manji što je manja vjerojatnost",
+            "Veći što je manja vjerojatnost",
+            "Ne ovisi o vjerojatnosti",
+            "Jednak vjerojatnosti"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Entropija izvora informacije ovisi o:",
+        "answers": [
+            "Broju simbola koje izvor generira",
+            "Vjerojatnostima simbola",
+            "Abecedi izvora",
+            "Abecedi izvora i vjerojatnostima simbola"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Izraz za združenu entropiju je:",
+        "answers": [
+            "$H(X,Y)=\\sum\\sum p(X) \\text{ld } p(x,y)$",
+            "$H(X,Y)=H(X)+H(X|Y)$",
+            "$H(X,Y)=H(X)+H(Y|X)$",
+            "$H(X,Y)=-\\sum p(x_i,y_j) \\text{ld } p(y_j|x_i)$"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Izvor s memorijom je kodiran Huffmanovim postupkom. Rezultat koda je:",
+        "answers": [
+            "S memorijom",
+            "Neoptimalan",
+            "Optimalan",
+            "Netrenutačan"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Dužina kodnih riječi optimalnog koda ovisi o:",
+        "answers": [
+            "Vjerojatnostima kodiranog simbola",
+            "Broju simbola izvora",
+            "Vrijednosti simbola",
+            "Kapacitetu izvora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Binarni izvor generira neovisne simbole s vjerojatnostima $p(x_1)=0.001$ i $p(x_2)=0.999$. Optimalan kod je:",
+        "answers": [
+            "$x_1 \\rightarrow 000, x_2 \\rightarrow 1$",
+            "$x_1 \\rightarrow 0, x_2 \\rightarrow 111$",
+            "$x_1 \\rightarrow 0, x_2 \\rightarrow 1$",
+            "$x_1 \\rightarrow 000, x_2 \\rightarrow 111$"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Srednji sadržaj informacije LOTO broja (1 do 39):",
+        "answers": [
+            "39 bita/simbolu",
+            "Ld 39 bita/simbolu",
+            "Beskonačan",
+            "Ovisi o vrijednostima simbola"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Združena entropija $H(X,Y)$ je maksimalna ako:",
+        "answers": [
+            "X i Y su potpuno ovisni",
+            "X i Y su potpuno neovisni",
+            "$Y=X$",
+            "$P(x,y)=p(x)p(y|x)$"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Izvor generira $N=32$ jednakovjerojatna simbola. Simboli su kodirani sa po 6 bitova pa je učinkovitost koda:",
+        "answers": [
+            "1.0",
+            "Ld 6",
+            "5/6",
+            "3/6"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Jedna od uloga kodera informacije je:",
+        "answers": [
+            "Povećati kapacitet izvora",
+            "Smanjiti broj poruka",
+            "Smanjiti sadržaj informacije izvora",
+            "Smanjiti potreban kapacitet memorije ili kanala"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Reverzibilan kod podrazumijeva:",
+        "answers": [
+            "Kod bez gubitka informacije",
+            "Ravnomjeran kod",
+            "Optimalan kod",
+            "Kod bez sažimanja"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Prema modelu komunikacije među ljudima, količina informacije koja se dobije kodiranjem govornog signala je približno:",
+        "answers": [
+            "10 kbit/s",
+            "100 kbit/s",
+            "500 kbit/s",
+            "100 Mbit/s"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Redoslijed slojeva u višeslojnom modelu komunikacije među ljudima je:",
+        "answers": [
+            "misija, memorija, kognicija, emocija i kodiranje",
+            "misija, kognicija, memorija, emocija i kodiranje",
+            "misija, emocija, memorija, kognicija i kodiranje",
+            "misija, memorija, emocija, kognicija i kodiranje"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "U modelu komunikacijskog sustava, koder izvora:",
+        "answers": [
+            "ispravlja greške u prijemniku",
+            "otklanja redundanciju izvora informacije (sažima podatke)",
+            "unosi redundanciju u svrhu otklanjanja grešaka",
+            "generira signal koji odgovara digitalnim podacima koje odašilje predajnik"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "U posudi su tri zelene, dvije plave i jedna crvena kuglica. Vlastiti sadržaj informacije zelene kuglice pri slučajnom odabiru je:",
+        "answers": [
+            "$I(Z) = \\text{ld}(2)$",
+            "$I(Z) = \\text{ld}(6)$",
+            "$I(Z) = \\text{ld}(3)$",
+            "$I(Z) = \\text{ld}(1)$"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Neka je izvor X novčić, a izvor Y kockica. Uzajamni sadržaj informacije združenih izvora X i Y je:",
+        "answers": [
+            "0 bit/simbolu",
+            "1 bit/simbolu",
+            "2 bit/simbolu",
+            "6 bit/simbolu"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Izraz za preostali srednji sadržaj informacije (uvjetnu entropiju $H(X|Y)$) je:",
+        "answers": [
+            "$H(X|Y) = H(X) - H(X,Y)$",
+            "$H(X|Y) = H(X) - H(Y)$",
+            "$H(X|Y) = H(X) + H(Y) - H(X,Y)$",
+            "$H(X|Y) = H(X) - I(X;Y)$"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Izvor generira simbole iz alfabeta $\\mathbb{A} = \\{x_1, \\dots, x_M\\}$ s vjerojatnostima $\\mathbb{P} = \\{p(x_1), \\dots, p(x_M)\\}$ koje su međusobno različite. Kapacitet izvora je:",
+        "answers": [
+            "$C = -\\sum_{i} p(x_i)\\text{ld}[p(x_i)] \\text{ bit/simbolu}$",
+            "$C = -\\sum_{i} \\text{ld}[p(x_i)] \\text{ bit/simbolu}$",
+            "$C = \\text{ld}(M)$",
+            "$C = -\\text{ld}(M)$"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Analogno-digitalna pretvorba signala je sastavni dio:",
+        "answers": [
+            "kodera izvora",
+            "kodera kanala",
+            "linijskog kodera",
+            "modulatora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Oblik i struktura priključnica su definirani na:",
+        "answers": [
+            "sloju veze",
+            "sloju mreže",
+            "transportnom sloju",
+            "fizičkom sloju"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Komutiranje i definiranje prijenosnih puteva se obavlja na:",
+        "answers": [
+            "transportnom sloju",
+            "fizičkom sloju",
+            "sloju veze",
+            "sloju mreže"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Vlastiti sadržaj informacije simbola $x_i$ kojega generira izvor alfabeta $\\mathbb{A} = \\{x_1, \\dots, x_M\\}$ s vjerojatnostima $\\mathbb{P} = \\{p(x_1), \\dots, p(x_M)\\}$ je definiran izrazom:",
+        "answers": [
+            "$I(x_i) = -\\text{ld}[p(x_i)]$",
+            "$I(x_i) = -\\text{ld}[M]$",
+            "$I(x_i) = \\text{ld}[M]$",
+            "$I(x_i) = \\text{ld}[p(x_i)]$"
+        ],
+        "correct": "0"
+    }
+]
