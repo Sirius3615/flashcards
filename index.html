@@ -139,6 +139,25 @@
         <!-- VIEW: HOME -->
         <div id="home-view" class="space-y-8 fade-in">
 
+            <!-- STATS CONTAINER -->
+            <section id="stats-section">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-white flex items-center gap-2 shadow-sm">
+                        <svg class="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                        Moja Statistika
+                    </h2>
+                    <button onclick="if(confirm('Jeste li sigurni da želite obrisati svu lokalnu statistiku?')) { localStorage.removeItem('quiz_stats_v1'); renderStats(); }" class="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-red-400 transition-colors border border-transparent hover:border-red-500/30 hover:bg-red-500/10 px-3 py-1.5 rounded-lg flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                        Resetiraj
+                    </button>
+                </div>
+                <div id="stats-container" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
             <!-- Quiz Grid -->
             <section>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -616,6 +635,7 @@
         // View Management
         function showHome() {
             stopTimer();
+            renderStats();
             document.getElementById('home-view').classList.remove('hidden');
             document.getElementById('quiz-view').classList.add('hidden');
             document.getElementById('study-view').classList.add('hidden');
@@ -759,9 +779,35 @@
             queueMathTypeset([document.getElementById("q-text"), document.getElementById("q-options")]);
         }
 
+        function isAnswerCorrect(userAnswer, correctAnswer) {
+            const normalize = str => String(str).trim().toLowerCase();
+            const cleanUser = normalize(userAnswer);
+            const cleanCorrect = normalize(correctAnswer);
+
+            if (cleanUser === cleanCorrect) return true;
+
+            // Handle correct answers with parentheses like "ILI (OR)" or "NAND (NI)"
+            const parentheticalMatch = cleanCorrect.match(/^([^\(]+)\s*\(([^\)]+)\)$/);
+            if (parentheticalMatch) {
+               const part1 = normalize(parentheticalMatch[1]);
+               const part2 = normalize(parentheticalMatch[2]);
+               if (cleanUser === part1 || cleanUser === part2) return true;
+            }
+
+            // Handle slash or comma separated alternatives like "ILI / OR" or "1, 01"
+            const alternatives = cleanCorrect.split(/[\/,]+/).map(normalize);
+            if (alternatives.includes(cleanUser)) return true;
+
+            // If user's answer is inside the correct answer alternatives
+            const splitCorrectOptions = cleanCorrect.split(/[\/,()]+/).map(normalize).filter(Boolean);
+            if (splitCorrectOptions.includes(cleanUser)) return true;
+
+            return false;
+        }
+
         function handleAnswer(el, selected, correct, isMultipleChoice = true) {
             const optsEl = document.getElementById('q-options');
-            const isCorrect = String(selected).trim().toLowerCase() === String(correct).trim().toLowerCase();
+            const isCorrect = isAnswerCorrect(selected, correct);
 
             userAnswers.push({
                 question: currentQuestions[currentQuestionIndex].question,
@@ -846,6 +892,9 @@
 
             const percent = Math.round((score / currentQuestions.length) * 100);
             document.getElementById('end-percent').textContent = percent + "%";
+
+            // Update stats
+            updateStatsOnCompletion(score, currentQuestions.length, secondsElapsed);
 
             // Generate Review
             const reviewContainer = document.getElementById('q-results-review');
@@ -960,6 +1009,83 @@
             }
             return array;
         }
+
+        // --- Local Statistics Tracking ---
+        const STATS_KEY = 'quiz_stats_v1';
+
+        function loadStats() {
+            const defaultStats = { quizzesCompleted: 0, questionsAnswered: 0, correctAnswers: 0, totalSeconds: 0 };
+            try {
+                const stats = localStorage.getItem(STATS_KEY);
+                return stats ? JSON.parse(stats) : defaultStats;
+            } catch (e) {
+                console.warn("Could not parse stats", e);
+                return defaultStats;
+            }
+        }
+
+        function saveStats(stats) {
+            localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+        }
+
+        function updateStatsOnCompletion(score, totalQs, timeInSeconds) {
+            const stats = loadStats();
+            stats.quizzesCompleted += 1;
+            stats.questionsAnswered += totalQs;
+            stats.correctAnswers += score;
+            stats.totalSeconds += timeInSeconds;
+            saveStats(stats);
+        }
+
+        function renderStats() {
+            const stats = loadStats();
+            const container = document.getElementById('stats-container');
+            if(!container) return;
+
+            const accuracy = stats.questionsAnswered > 0 
+                ? Math.round((stats.correctAnswers / stats.questionsAnswered) * 100) 
+                : 0;
+
+            const formatTime = (totalSec) => {
+                const h = Math.floor(totalSec / 3600);
+                const m = Math.floor((totalSec % 3600) / 60);
+                const s = totalSec % 60;
+                if(h > 0) return `${h}h ${m}m`;
+                if(m > 0) return `${m}m ${s}s`;
+                return `${s}s`;
+            };
+
+            container.innerHTML = `
+                <div class="glass p-5 rounded-[1.25rem] border border-white/10 shadow-xl bg-gradient-to-br from-indigo-900/40 to-transparent flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 w-16 h-16 bg-indigo-500/20 blur-xl rounded-full group-hover:bg-indigo-500/30 transition-all"></div>
+                    <span class="text-[0.65rem] md:text-xs text-indigo-300 uppercase tracking-widest mb-1.5 font-semibold">Riješeni kvizovi</span>
+                    <span class="text-3xl md:text-4xl font-black text-white drop-shadow-sm">${stats.quizzesCompleted}</span>
+                </div>
+                <div class="glass p-5 rounded-[1.25rem] border border-white/10 shadow-xl bg-gradient-to-br from-blue-900/40 to-transparent flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div class="absolute -left-4 -bottom-4 w-16 h-16 bg-blue-500/20 blur-xl rounded-full group-hover:bg-blue-500/30 transition-all"></div>
+                    <span class="text-[0.65rem] md:text-xs text-blue-300 uppercase tracking-widest mb-1.5 font-semibold">Pređeno pitanja</span>
+                    <span class="text-3xl md:text-4xl font-black text-blue-100 drop-shadow-sm">${stats.questionsAnswered}</span>
+                </div>
+                <div class="glass p-5 rounded-[1.25rem] border border-white/10 shadow-[0_0_15px_rgba(16,185,129,0.1)] bg-gradient-to-br from-emerald-900/40 to-transparent flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-emerald-500/10 blur-xl rounded-full group-hover:bg-emerald-500/20 transition-all"></div>
+                    <span class="text-[0.65rem] md:text-xs text-emerald-400/80 uppercase tracking-widest mb-1.5 font-semibold text-center">Točnost odg.</span>
+                    <div class="flex items-baseline gap-1 relative z-10">
+                        <span class="text-3xl md:text-4xl font-black text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.3)]">${accuracy}</span>
+                        <span class="text-lg font-bold text-emerald-500/60">%</span>
+                    </div>
+                </div>
+                <div class="glass p-5 rounded-[1.25rem] border border-white/10 shadow-xl bg-gradient-to-br from-amber-900/40 to-transparent flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div class="absolute -left-2 -top-2 w-16 h-16 bg-amber-500/10 blur-xl rounded-full group-hover:bg-amber-500/20 transition-all"></div>
+                    <span class="text-[0.65rem] md:text-xs text-amber-300/80 uppercase tracking-widest mb-1.5 font-semibold text-center">Uloženo vrijeme</span>
+                    <span class="text-xl md:text-2xl font-bold text-amber-100 drop-shadow-sm tracking-tight">${formatTime(stats.totalSeconds)}</span>
+                </div>
+            `;
+        }
+
+        // Initialize Stats on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderStats();
+        });
 
     </script>
 </body>
