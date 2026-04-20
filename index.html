@@ -22,7 +22,7 @@
                                 ],
                                 throwOnError: false
                             });
-                        } catch(e) {}
+                        } catch (e) { }
                     }
                 });
                 return;
@@ -144,12 +144,18 @@
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-xl font-bold text-white flex items-center gap-2 shadow-sm">
                         <svg class="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                         </svg>
                         Moja Statistika
                     </h2>
-                    <button onclick="if(confirm('Jeste li sigurni da želite obrisati svu lokalnu statistiku?')) { localStorage.removeItem('quiz_stats_v1'); renderStats(); }" class="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-red-400 transition-colors border border-transparent hover:border-red-500/30 hover:bg-red-500/10 px-3 py-1.5 rounded-lg flex items-center gap-1">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                    <button
+                        onclick="if(confirm('Jeste li sigurni da želite obrisati svu lokalnu statistiku?')) { localStorage.removeItem('quiz_stats_v1'); renderStats(); }"
+                        class="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-red-400 transition-colors border border-transparent hover:border-red-500/30 hover:bg-red-500/10 px-3 py-1.5 rounded-lg flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
                         Resetiraj
                     </button>
                 </div>
@@ -297,7 +303,8 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-1">DIGEL Arhiva</h3>
-                            <p class="text-slate-400 text-sm">Baza svih izvučenih “zadataka“ s ispita i kolokvija iz orginalnih pdf ispita.</p>
+                            <p class="text-slate-400 text-sm">Baza svih izvučenih “zadataka“ s ispita i kolokvija iz
+                                orginalnih pdf ispita.</p>
                         </div>
                         <div class="mt-auto relative z-10">
                             <button onclick="window.location.href='digel_ispiti.html'"
@@ -468,6 +475,46 @@
                         </div>
                     </div>
                     <!-- /quiz-card:iik2kol -->
+
+                    <!-- quiz-card:emit1 -->
+                    <div
+                        class="bg-slate-900/80 rounded-2xl p-6 border border-white/5 hover:border-slate-600 transition-all shadow card-glow flex flex-col">
+                        <div class="mb-5">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600/80 flex items-center justify-center mb-3">
+                                <span class="text-white font-bold text-xs">EMI</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-1">EMIT 1. kol</h3>
+                            <p class="text-slate-400 text-sm">Žuta pitanja i par dodatnih činjenica</p>
+                        </div>
+                        <div class="mt-auto grid grid-cols-1 gap-2">
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="launchQuiz('quiz/emit1/quiz.json', 'random10', 'EMIT 1. kol (zuta)')"
+                                    class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">10</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/emit1/quiz.json', 'random20', 'EMIT 1. kol (zuta)')"
+                                    class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">20</span> Pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/emit1/quiz.json', 'random30', 'EMIT 1. kol (zuta)')"
+                                    class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-3 rounded-xl font-medium transition-all text-sm flex items-center justify-center gap-1">
+                                    <span class="font-bold">30</span> Pitanja
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="launchQuiz('quiz/emit1/quiz.json', 'all', 'EMIT 1. kol (zuta)')"
+                                    class="bg-white/5 hover:bg-white/10 text-white py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
+                                    Sva pitanja
+                                </button>
+                                <button onclick="launchQuiz('quiz/emit1/quiz.json', 'review', 'EMIT 1. kol (zuta)')"
+                                    class="bg-white/5 hover:bg-white/10 text-emerald-400 py-2 px-4 rounded-xl font-medium transition-all text-sm border border-white/5">
+                                    Pregled
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /quiz-card:emit1 -->
+
                     <!-- QUIZ-CARDS-END -->
                 </div>
             </section>
@@ -789,9 +836,9 @@
             // Handle correct answers with parentheses like "ILI (OR)" or "NAND (NI)"
             const parentheticalMatch = cleanCorrect.match(/^([^\(]+)\s*\(([^\)]+)\)$/);
             if (parentheticalMatch) {
-               const part1 = normalize(parentheticalMatch[1]);
-               const part2 = normalize(parentheticalMatch[2]);
-               if (cleanUser === part1 || cleanUser === part2) return true;
+                const part1 = normalize(parentheticalMatch[1]);
+                const part2 = normalize(parentheticalMatch[2]);
+                if (cleanUser === part1 || cleanUser === part2) return true;
             }
 
             // Handle slash or comma separated alternatives like "ILI / OR" or "1, 01"
@@ -1040,18 +1087,18 @@
         function renderStats() {
             const stats = loadStats();
             const container = document.getElementById('stats-container');
-            if(!container) return;
+            if (!container) return;
 
-            const accuracy = stats.questionsAnswered > 0 
-                ? Math.round((stats.correctAnswers / stats.questionsAnswered) * 100) 
+            const accuracy = stats.questionsAnswered > 0
+                ? Math.round((stats.correctAnswers / stats.questionsAnswered) * 100)
                 : 0;
 
             const formatTime = (totalSec) => {
                 const h = Math.floor(totalSec / 3600);
                 const m = Math.floor((totalSec % 3600) / 60);
                 const s = totalSec % 60;
-                if(h > 0) return `${h}h ${m}m`;
-                if(m > 0) return `${m}m ${s}s`;
+                if (h > 0) return `${h}h ${m}m`;
+                if (m > 0) return `${m}m ${s}s`;
                 return `${s}s`;
             };
 

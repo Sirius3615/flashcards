@@ -1,0 +1,362 @@
+[
+    {
+        "question": "Kolika je električna vodljivost bakra (etalon za vodljivost)?",
+        "answers": [
+            "36 · 10^6 S/m",
+            "58 · 10^6 S/m",
+            "18.18 · 10^6 S/m",
+            "30-31 · 10^6 S/m"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što sprječava daljnju dubinsku koroziju aluminija pri dodiru sa zrakom?",
+        "answers": [
+            "Visoko talište na 660°C",
+            "Iznimno tanak i kompaktan oksidni sloj debljine 0.02 µm",
+            "Premaz od legure cinka i silicija",
+            "Visoka mehanička čvrstoća čistog aluminija"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji se metali nalaze u Aldrey slitini uz aluminij?",
+        "answers": [
+            "Bakar i cink",
+            "Srebro, zlato i platina",
+            "Silicij, magnezij i željezo",
+            "Volfram i molibden"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Na kojoj temperaturi se tali volfram (W)?",
+        "answers": [
+            "660°C",
+            "2470°C",
+            "2630°C",
+            "3380°C"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koje se svojstvo tantala (Ta) iskorištava u elektronskim cijevima?",
+        "answers": [
+            "Usisavanje plinova i održavanje visoke razine vakuuma",
+            "Stvaranje iznimno tvrdih karbida pri visokim temperaturama",
+            "Vodljivost bolja od bakra na visokim temperaturama",
+            "Otpornost na upijanje plinova i oksidaciju"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je preduvjet za točno mjerenje temperature termočlankom u pogledu mjernog instrumenta?",
+        "answers": [
+            "Mora imati što manji unutarnji otpor",
+            "Mora imati što veći unutarnji otpor",
+            "Mora biti spojen paralelno na izvor napajanja",
+            "Mora se nalaziti na temperaturi višoj od one koja se mjeri"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što je Meissnerov efekt kod supravodiča?",
+        "answers": [
+            "Skokoviti pad električnog otpora na vrijednost blizu nule",
+            "Mogućnost nesmetanog kruženja struje unutar petlje",
+            "Totalno izbacivanje vanjskog magnetskog polja iz materijala",
+            "Gubitak supravodljivosti uslijed pada temperature"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što se događa sa supravodičima tipa II u magnetskom polju jakosti između Hk1 i Hk2?",
+        "answers": [
+            "Gube svaku sposobnost vođenja struje",
+            "Zadržavaju potpuni Meissnerov efekt bez obzira na polje",
+            "Vraćaju se u klasično omičko stanje",
+            "Prelaze u mješovito stanje u kojem magnetsko polje pomalo prodire u materijal"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Zbog čega se nečistoće potiskuju prema gore tijekom postupka usmjerenog stvrdnjavanja poluvodiča?",
+        "answers": [
+            "Fizikalno preferiraju ostati u rastaljenom stanju pa ih kristalizirajuća faza gura van",
+            "Imaju manju gustoću od silicija pa plutaju na površini",
+            "Isparavaju pod utjecajem argona pa se kondenziraju na vrhu",
+            "Visokofrekventni namotaji ih magnetski privlače prema gore"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je glavni cilj vertikalnog izvlačenja (Czochralski proces) kod poluvodiča?",
+        "answers": [
+            "Uklanjanje nečistoća horizontalnim prolaskom taljevine",
+            "Stvaranje savršenog jedinstvenog kristala (monokristala) oko klice",
+            "Rezanje i bacanje otpadnog vrha valjka",
+            "Dostizanje tališta materijala u vakuumu"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što se događa s materijalom pri prelaženju na jako vanjsko polje prema Weissovim domenama?",
+        "answers": [
+            "Zatvara se magnetski tok unutar materijala",
+            "Blokiraju se Blochove pregrade",
+            "Dolazi do direktne rotacije čitavih magnetskih momenata domene u pravac vanjskog polja",
+            "Materijal gubi svoja magnetska svojstva"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Zašto se silicij dodaje željezu kod materijala za elektroenergetiku (Fe-Si)?",
+        "answers": [
+            "Smanjuje krhkost limova i olakšava mehaničku obradu",
+            "Povećava električni otpor čime minimizira gubitke na vrtložne struje",
+            "Povećava početnu indukciju zasićenja za 50%",
+            "Sprječava atmosfersku koroziju željeznih jezgri"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Što se događa pri umetanju dielektrika u kondenzator (otvoren krug, faza II)?",
+        "answers": [
+            "Napon i jakost električnog polja unutar kondenzatora se povećavaju",
+            "Napon pada, dok jakost električnog polja raste",
+            "Dolazi do naglog pada napona unutar kondenzatora te pada jakosti polja",
+            "Napon i polje ostaju isti, ali raste struja"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što u kompleksnoj relativnoj dielektričnosti definira imaginarni dio (ε_r'')?",
+        "answers": [
+            "Radni gubitak materijala koji se pretvara u toplinu",
+            "Struju pomaka u idealnom kondenzatoru",
+            "Energiju koja se čuva u kondenzatoru",
+            "Kapacitet praznog kondenzatora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koji je veliki nedostatak zraka kao izolatora pri jakom naprezanju (korona)?",
+        "answers": [
+            "Drastično mu pada relativna permeabilnost",
+            "Stvara agresivnu dušičnu kiselinu procesom ionizacije koja razara čvrste izolatore",
+            "Prelazi u plazmu i postaje supravodljiv",
+            "Uzrokuje kondenzaciju vode na elektrodama"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Na kojem se principu temelji rad termobimetala (termoprekidača)?",
+        "answers": [
+            "Na naglom padu električnog otpora pri temperaturi preko 100°C",
+            "Na taljenju metala unutar staklenog kućišta pri kratkom spoju",
+            "Na savijanju dviju spojenih slitina različitih svojstava uslijed grijanja",
+            "Na usisavanju kisika koje izaziva prekid kontakta"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Kolika je gustoća aluminija i zašto se on često koristi kao zamjena za bakar u energetici?",
+        "answers": [
+            "8900 kg/m³; zbog bolje antikorozivne zaštite",
+            "2700 kg/m³; zbog upola manje mase i niže cijene",
+            "660 kg/m³; jer stvara deblji oksidni sloj koji bolje provodi struju",
+            "2700 kg/m³; zbog višeg tališta od bakra"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Za što se u elektrotehnici primarno rabi molibden (Mo) zbog svoje postojanosti i visokog tališta?",
+        "answers": [
+            "Kao osnovni materijal za izradu elektrolitskih kondenzatora",
+            "Za izradu rotora u visokofrekventnim asinkronim motorima",
+            "Kao potporni materijal za držače žarnih niti i katode rendgenskih cijevi",
+            "Kao aktivni sloj u termobimetalima"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji su najveći problemi kod električnih kontakata pri povišenim strujama i kako se rješavaju?",
+        "answers": [
+            "Brza oksidacija i pucanje; rješava se premazom od cinka",
+            "Erozija materijala i zavarivanje; rješava se presvlačenjem rodijem, platinom ili volframom",
+            "Pad vodljivosti zbog niskih temperatura; rješava se ugradnjom dodatnih grijača",
+            "Mehaničko trošenje uslijed trenja; rješava se upotrebom grafitnih maziva"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koji parametar kod supravodiča tipa I označava točnu granicu do koje je Meissnerov efekt potpun?",
+        "answers": [
+            "Donja granica kritičnog polja (H_k1)",
+            "Gornja barijera kritičnog polja (H_k2)",
+            "Kritična temperatura okoliša (T_c)",
+            "Kritično polje (H_kT)"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Po čemu se proces zonskog čišćenja poluvodiča razlikuje od usmjerenog stvrdnjavanja?",
+        "answers": [
+            "Rastaljena VF zona putuje vertikalno prema dolje umjesto prema gore",
+            "Rastaljena zona putuje horizontalno brzinom od 15-30 m/sat, potiskujući nečistoće na površinu",
+            "Proces se obavezno izvodi pod visokim tlakom umjesto u vakuumu",
+            "Za čišćenje se koriste isključivo kemijska otapala umjesto topline"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Kakvo je stanje Weissovih domena u feromagnetskom materijalu kada ne postoji vanjsko magnetsko polje?",
+        "answers": [
+            "Svi magnetski momenti su strogo paralelni i usmjereni prema sjeveru",
+            "Domene uopće ne postoje u materijalu sve dok se ne priključi napon",
+            "Magnetski momenti su kaotični, poništavaju se, a tok je zatvoren unutar materijala",
+            "Domene se spajaju u jedan veliki monokristal sa snažnim magnetskim poljem"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji je glavni razlog zašto se elementarno željezo nikad ne rabi samo (bez dodataka) u strojevima s izmjeničnom strujom?",
+        "answers": [
+            "Ima očajno nizak specifični električni otpor što stvara goleme gubitke na vrtložne struje",
+            "Njegova krivulja histereze je preširoka pa ga je nemoguće magnetizirati",
+            "Pretvrdo je za formiranje u tanke trafo-limove",
+            "Uzrokuje brzo trošenje izolacijskih materijala zbog visoke radne temperature"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Koja je specifičnost tvrdomagnetskih materijala koja ih čini idealnim za izradu trajnih magneta?",
+        "answers": [
+            "Imaju iznimno usku krivulju histereze i visoku vodljivost",
+            "Njihova se histereza potpuno poništava čim nestane struje napajanja",
+            "Posjeduju jako široku krivulju histereze zbog čega savršeno čuvaju polje i teško se razmagnetiziraju",
+            "Sastoje se isključivo od ne-feromagnetskih materijala poput aluminija"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koja vrsta polariziranja izolatora ne stvara radne gubitke u materijalu, a obavlja se brzim pomakom naboja iz težišta?",
+        "answers": [
+            "Elektronsko polariziranje",
+            "Atomsko polariziranje",
+            "Orijentacijsko polariziranje",
+            "Prostorno polariziranje"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što matematički i fizikalno predstavlja tangens kuta dielektričnih gubitaka (tg δ)?",
+        "answers": [
+            "Vrijeme potrebno da izolator izgubi svoja dielektrična svojstva na zraku",
+            "Omjer kapaciteta praznog kondenzatora i kondenzatora s dielektrikom",
+            "Umnožak kompleksne relativne dielektričnosti i napona izmjeničnog izvora",
+            "Omjer struje toplinskih gubitaka i kapacitivne struje u kondenzatoru"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koji se element legira s bakrom kako bi se dobila mjed, s ciljem poboljšanja mehaničkih svojstava?",
+        "answers": [
+            "Kadmij",
+            "Silicij",
+            "Cink",
+            "Magnezij"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Koji materijali su najpogodniji za izradu otpornika jer se odlikuju minimalnim promjenama otpora pri promjeni temperature?",
+        "answers": [
+            "Legure krom-nikal",
+            "Manganin i konstantan",
+            "Srebro i zlato",
+            "Volfram i molibden"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Zašto silicij (Si) dominira nad germanijem (Ge) kao poluvodički materijal?",
+        "answers": [
+            "Jer se brže hladi i formira savršenije kristalne rešetke",
+            "Jer ima značajno veću električnu vodljivost na sobnoj temperaturi",
+            "Jer je jeftiniji i lakše se prerađuje iz boksita",
+            "Jer trpi duplo veće radne temperature (do 200°C) i vrlo je inertan na kiseline"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Za što se češće koristi niobij (Nb) u tehnici?",
+        "answers": [
+            "Kao konstrukcijski materijal u nuklearnoj i specijalnoj tehnici",
+            "Za usisavanje plinova i održavanje vakuuma u elektronskim cijevima",
+            "Kao glavni materijal za kontakte sklopnika",
+            "Za proizvodnju najkvalitetnijih transformatorskih limova"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Što predstavlja omjer U_o / U = R_s / (R_s + R_t + R_1) u kontekstu termočlanka?",
+        "answers": [
+            "Odnos između temperature hladnog i toplog kraja",
+            "Omjer napona na instrumentu i pravog termonapona",
+            "Magnetsku indukciju materijala ovisno o unutarnjem otporu",
+            "Stupanj iskorištenja termoelektričnog efekta"
+        ],
+        "correct": "1"
+    },
+    {
+        "question": "Koja je glavna prednost slitine željeza i nikla (Fe-Ni) kao mekomagnetskog materijala?",
+        "answers": [
+            "To je najmekši feromagnetski materijal sa savršeno uskom petljom histereze i izvrsnim otporom",
+            "Ima iznimno visoko talište i otpornost na oksidaciju pri 1000°C",
+            "Posjeduje najširu petlju histereze, što ga čini idealnim za trajne magnete",
+            "Potpuno eliminira potrebu za izoliranjem limova u transformatorima"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Na što je postupak horizontalnog vučenja poluvodiča izrazito osjetljiv?",
+        "answers": [
+            "Na utjecaj zemljinog magnetskog polja",
+            "Na prisutnost plina dušika",
+            "Na vibracije",
+            "Na visoku vlažnost zraka"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Što se događa s pokrenutom električnom strujom unutar zatvorene petlje materijala u supravodljivom stanju?",
+        "answers": [
+            "Može dugotrajno kružiti bez primjetnog gubitka u vremenu iako nije spojen izvor",
+            "Gasi se odmah nakon uklanjanja vanjskog naponskog izvora",
+            "Pretvara se u toplinu uslijed Jouleovih gubitaka",
+            "Generira snažno naizmjenično magnetsko polje i rasipa energiju"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Gdje se iznimno korisno primjenjuju praškaste jezgre i feriti?",
+        "answers": [
+            "U visokonaponskim dalekovodima kao izolatori",
+            "Kao zamjena za bimetale u termoprekidačima",
+            "U uvjetima ekstremno niskih temperatura blizu apsolutne nule",
+            "Na visokim frekvencijama gdje je ključan visoki otpor"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Koje vrste polariziranja u izolacijskim materijalima stvaraju osjetne gubitke energije?",
+        "answers": [
+            "Elektronsko polariziranje",
+            "Samo atomsko polariziranje (širenje iona)",
+            "Orijentacijsko i prostorno polariziranje",
+            "Niti jedna vrsta polarizacije ne stvara energetske gubitke"
+        ],
+        "correct": "2"
+    }
+]
