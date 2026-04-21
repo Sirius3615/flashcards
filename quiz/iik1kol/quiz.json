@@ -428,5 +428,115 @@
             "$I(x_i) = \\text{ld}[p(x_i)]$"
         ],
         "correct": "0"
+    },
+    {
+        "question": "Kapacitet abecede Hrvatskog jezika iznosi :",
+        "answers": [
+            "27 bita/simbolu",
+            "1 bit/simbolu",
+            "2 bita/simbolu",
+            "4.76 bita/simbolu"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Izraz za učinkovitost je definiran izrazom:",
+        "answers": [
+            "E = H / Ld Lambda",
+            "E = suma m_i p(x_i)",
+            "E = H / Ld p(x_i)",
+            "E = H / C_koda"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Srednji sadržaj informacije izvora jednako vjerojatnih 16 simbola iznosi:",
+        "answers": [
+            "4 bita / simbolu",
+            "16 bita / simbolu",
+            "2 bita/simbolu",
+            "Ovisi o vrijednostima simbola"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Savršena zasićenost poruke x čiji je kriptogram Y definirana je izrazom:",
+        "answers": [
+            "Y = F_k(X)",
+            "Y = X + K (mod F)",
+            "X = f_k(Y)",
+            "H(X|Y) = H(Y)"
+        ],
+        "correct": "3"
+    },
+    {
+        "question": "Entropija jezika ovisi o :",
+        "answers": [
+            "Broju simbola u abecedi",
+            "Kapacitetu jezika",
+            "Redundanciji jezika",
+            "Dužini riječi"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Grayev kod broja 7 uz m=4 je:",
+        "answers": [
+            "0100",
+            "0101",
+            "1010",
+            "1101"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kod temeljen na kodiranju duljine naziva (RLC) je:",
+        "answers": [
+            "Primjeren izvorima s memorijom",
+            "Optimalan za neovisne simbole",
+            "Primjenjiv samo za binarne izvore",
+            "Ovisan o abecedi izvora"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Kodiranje faksmil poruka (Grupa G3) se temelji na :",
+        "answers": [
+            "Modificiranom Huffmanovom kodu (MHC)",
+            "Aritmetičkom kodu",
+            "Shannon-Fanovu kodu",
+            "LZW kodu"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "O čemu je ovisan pragmatički sadržaj informacije?",
+        "answers": [
+            "O prijemniku",
+            "O kapacitetu kanala",
+            "O broju simbola u alfabetu",
+            "O optimalnom kodiranju"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Prema Zipfovom zakonu, vjerojatnost riječi određena je izrazom:",
+        "answers": [
+            "p(x_i) = A / i",
+            "p(x_i) = A * i",
+            "p(x_i) = A + i",
+            "p(x_i) = A^i"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Skrembliranje je jedan od načina prekodiranja koji ima zadatak da:",
+        "answers": [
+            "Sažme abecedu izvora",
+            "Dolazni signal iz izvora napravi slučajnim i neovisnim o statističkim svojstvima izvora",
+            "Poveća kapacitet kanala",
+            "Minimizira kapacitet koda"
+        ],
+        "correct": "1"
     }
 ]
