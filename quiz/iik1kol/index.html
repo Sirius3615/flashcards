@@ -386,7 +386,8 @@
 
             let questionsHtml = '';
             originalQuestions.forEach(function(q, i) {
-                const correctAnswer = q.answers[parseInt(q.correct)];
+                const correctIndex = parseInt(q.correct);
+                const correctAnswer = (Number.isInteger(correctIndex) && correctIndex >= 0 && correctIndex < q.answers.length) ? q.answers[correctIndex] : '';
                 const imgHtml = q.image
                     ? '<img src="' + baseUrl + q.image + '" alt="Slika" style="max-width:100%;max-height:260px;display:block;margin:8px 0;">'
                     : '';
@@ -440,6 +441,10 @@
                 + '</body></html>';
 
             const printWindow = window.open('', '_blank');
+            if (!printWindow) {
+                alert('Popup je blokiran. Dopustite popupove za ovu stranicu da biste izvezli PDF.');
+                return;
+            }
             printWindow.document.write(htmlContent);
             printWindow.document.close();
         }
