@@ -48,6 +48,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                     Natrag
                 </a>
+                <button onclick="exportToPDF()" class="text-gray-400 hover:text-white transition-colors flex items-center gap-1 text-sm font-medium" title="Izvezi sva pitanja kao PDF">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    Izvezi PDF
+                </button>
                 <div class="flex items-center gap-4 text-sm font-medium">
                     <div class="bg-gray-700 text-indigo-300 px-3 py-1 rounded-full flex items-center gap-2 border border-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -154,6 +158,7 @@
         let timerInterval;
         let secondsElapsed = 0;
         let userAnswers = [];
+        let originalQuestions = [];
 
         const loadingEl = document.getElementById('loading');
         const quizContainer = document.getElementById('quiz-container');
@@ -201,6 +206,7 @@
         fetch('quiz.json')
             .then(response => response.json())
             .then(data => {
+                originalQuestions = [...data];
                 questions = shuffleArray(data);
                 loadingEl.classList.add('hidden');
                 quizContainer.classList.remove('hidden');
@@ -370,6 +376,72 @@
             });
 
             queueMathTypeset([resultsListEl]);
+        }
+
+        function exportToPDF() {
+            const baseUrl = window.location.href.replace(/\/[^\/]*$/, '/');
+            const katexCssUrl = baseUrl + '../assets/katex/katex.min.css';
+            const katexJsUrl = baseUrl + '../assets/katex/katex.min.js';
+            const katexAutoUrl = baseUrl + '../assets/katex/contrib/auto-render.min.js';
+
+            let questionsHtml = '';
+            originalQuestions.forEach(function(q, i) {
+                const correctAnswer = q.answers[parseInt(q.correct)];
+                const imgHtml = q.image
+                    ? '<img src="' + baseUrl + q.image + '" alt="Slika" style="max-width:100%;max-height:260px;display:block;margin:8px 0;">'
+                    : '';
+                questionsHtml += '<div class="question">'
+                    + '<div class="qnum">Pitanje ' + (i + 1) + '</div>'
+                    + '<div class="qtext">' + q.question + '</div>'
+                    + imgHtml
+                    + '<div class="answer"><span class="alabel">Odgovor: </span>' + correctAnswer + '</div>'
+                    + '</div>';
+            });
+
+            const htmlContent = '<!DOCTYPE html><html><head>'
+                + '<meta charset="UTF-8">'
+                + '<title>Pitanja - ' + document.title + '</title>'
+                + '<link rel="stylesheet" href="' + katexCssUrl + '">'
+                + '<script defer src="' + katexJsUrl + '"><\/script>'
+                + '<script defer src="' + katexAutoUrl + '"><\/script>'
+                + '<style>'
+                + 'body{font-family:Inter,Arial,sans-serif;margin:24px 32px;color:#111;}'
+                + 'h1{font-size:18px;font-weight:700;margin-bottom:20px;border-bottom:2px solid #4f46e5;padding-bottom:8px;}'
+                + '.question{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #ddd;page-break-inside:avoid;}'
+                + '.qnum{font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}'
+                + '.qtext{font-size:14px;font-weight:600;margin-bottom:6px;}'
+                + '.answer{font-size:13px;color:#1e40af;}'
+                + '.alabel{font-weight:700;}'
+                + '@media print{body{margin:12px 16px;}}'
+                + '</style>'
+                + '</head><body>'
+                + '<h1>' + document.title + '</h1>'
+                + questionsHtml
+                + '<script>'
+                + 'document.addEventListener("DOMContentLoaded",function(){'
+                + '  function tryRender(attempts){'
+                + '    if(window.renderMathInElement){'
+                + '      renderMathInElement(document.body,{delimiters:['
+                + '        {left:"$$",right:"$$",display:true},'
+                + '        {left:"$",right:"$",display:false},'
+                + '        {left:"\\\\(",right:"\\\\)",display:false},'
+                + '        {left:"\\\\[",right:"\\\\]",display:true}'
+                + '      ],throwOnError:false});'
+                + '      setTimeout(function(){window.print();},400);'
+                + '    } else if(attempts<120){'
+                + '      setTimeout(function(){tryRender(attempts+1);},50);'
+                + '    } else {'
+                + '      window.print();'
+                + '    }'
+                + '  }'
+                + '  tryRender(0);'
+                + '});'
+                + '<\/script>'
+                + '</body></html>';
+
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(htmlContent);
+            printWindow.document.close();
         }
     </script>
 </body>
