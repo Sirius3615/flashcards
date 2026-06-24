@@ -58,7 +58,7 @@
         "correct": "mikroprogramirani"
     },
     {
-        "question": "Preklapanje sekvenci dopušteno je kod:",
+        "question": "Preklapanje sekvenci dopušteno je kod automata:",
         "answers": [],
         "correct": "bez strukture"
     },
@@ -222,7 +222,7 @@
         "correct": "nužan uvjet"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 7 stanja, dva različita ulazna i dva različita izlazna simbola. Koliko će struktura imati demuxa, a koliko muxa?",
+        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 7 stanja, dva različita ulazna i dva različita izlazna simbola. Koliko će struktura imati demuxa, a koliko muxa? odgovor: dmux,mux",
         "answers": [],
         "correct": "1,4"
     },
@@ -316,9 +316,9 @@
         "correct": "D"
     },
     {
-        "question": "Koje signale trebamo dovesti na ulaze JK bistabila da bismo nakon jedinice upisali nulu?",
+        "question": "Koje signale trebamo dovesti na ulaze JK bistabila da bismo nakon jedinice upisali nulu? Odgovor: K=x,J=x",
         "answers": [],
-        "correct": "K=1,J=x"
+        "correct": "K=1,J=r"
     },
     {
         "question": "Zbog čega tablica implikanata nema dijagonale?",
@@ -706,7 +706,7 @@
         "correct": "3"
     },
     {
-        "question": "Kada i zašto se koristi neutralni izlazni simbol kod digitalnih automata?",
+        "question": "Kada i zašto se koristi neutralni izlazni simbol kod digitalnih automata? Kada sekvenca",
         "answers": [],
         "correct": "nije završena"
     },
