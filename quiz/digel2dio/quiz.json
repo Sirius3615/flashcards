@@ -497,7 +497,7 @@
     {
         "question": "S obzirom na vrijeme kašnjenja, KLS sklopovi mogu imati ____ i ____ stanja.",
         "answers": [],
-        "correct": "stabilna,nestabilna"
+        "correct": "stabilna i nestabilna"
     },
     {
         "question": "Za koji standardni bistabil vrijedi G1=G2?",
@@ -1075,7 +1075,7 @@
     {
         "question": "KLS sklopovi mogu imati __ i __ stanja.",
         "answers": [],
-        "correct": "stabilna,nestabilna"
+        "correct": "stabilna i nestabilna"
     },
     {
         "question": "Minimalni automat od 9 stanja, 2 ulazna i 2 izlazna simbola imat će koliko demultipleksera i multipleksera?",
@@ -1101,7 +1101,7 @@
     {
         "question": "KLS sklopovi mogu imati __ i __ stanja.",
         "answers": [],
-        "correct": "stabilna,nestabilna"
+        "correct": "stabilna i nestabilna"
     },
     {
         "question": "Koji bistabil prelazi u komplementarno stanje kada je aktivan ulaz uz takt?",
