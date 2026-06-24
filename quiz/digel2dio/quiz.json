@@ -14,27 +14,27 @@
     {
         "question": "Tko je u sustavu s upravljanjem zadužen za kompenziranje smetnji?",
         "answers": [],
-        "correct": "automat"
+        "correct": "regulator"
     },
     {
         "question": "Uzimajući u obzir funkciju prijelaza i izlaza, koji od automata ima veći br. redaka u tablici prijelaza (za isti bistabil)?",
         "answers": [],
-        "correct": "imaju isti broj redaka"
+        "correct": "isti"
     },
     {
         "question": "Promatramo digitalni konačni automat koji na ulazu prima sekvence duljine 6 od 3 jedinstvena ulazna simbola. Koliko će odluka taj automat donijeti u 30 diskretnih trenutaka ako se radi o ulaznoj sekvenci sa str. i o izlaznoj sekvenci bez str.? Prvi ulazni simbol primi se u prvom diskretnom trenutku, a ne u t=0s.",
         "answers": [],
-        "correct": "25,5"
+        "correct": "25.5"
     },
     {
         "question": "Minimizacija automata temelji se na:",
         "answers": [],
-        "correct": "pronalaženju ekvivalentnih stanja"
+        "correct": "ekvivalenciji"
     },
     {
         "question": "Tko upravlja glavom za čitanje i pisanje Turingovog stroja?",
         "answers": [],
-        "correct": "konačni automat"
+        "correct": "automat"
     },
     {
         "question": "Svojstvo digitalnog automata da jednoznačno obavlja svoju zadanu funkciju nazivamo:",
@@ -60,17 +60,17 @@
     {
         "question": "Preklapanje sekvenci dopušteno je kod:",
         "answers": [],
-        "correct": "sekvenci bez strukture"
+        "correct": "bez strukture"
     },
     {
-        "question": "Koji računsku operaciju može izvesti Turingov stroj?",
+        "question": "Koju računsku operaciju može izvesti Turingov stroj?",
         "answers": [],
-        "correct": "množenje"
+        "correct": "sve"
     },
     {
-        "question": "Kod bistabila, trenuci u kojima bistabil okida (neovisno o kojoj vrsti bistabila se radi) se definira kao:",
+        "question": "Kod bistabila, trenuci u kojima bistabil okida se definiraju kao:",
         "answers": [],
-        "correct": "umnožak prirodnog broja i vremena uzorkovanja"
+        "correct": "promjena stanja"
     },
     {
         "question": "Kod RS bistabila mora biti zadovoljen sljedeći uvjet:",
@@ -78,9 +78,9 @@
         "correct": "RS=0"
     },
     {
-        "question": "Koje signale trebamo dovesti na ulaze RS bistabila da bismo zadržali upisanu nulu? (zapis: S=broj R=broj)",
+        "question": "Koje signale trebamo dovesti na ulaze RS bistabila da bismo zadržali upisanu nulu?",
         "answers": [],
-        "correct": "S=0 R=x"
+        "correct": "S=0,R=x"
     },
     {
         "question": "Sposobnost automata da razlučuje sva bitna stanja procesa se naziva:",
@@ -142,7 +142,7 @@
         "answers": [
             "EPROM-om i dekoderima",
             "ROM-om i multiplekserima",
-            "bistabilima i logičkim vratima (neovisno radi li se o Moore ili Mealy automatu)",
+            "bistabilima i logičkim vratima",
             "samo bistabilima",
             "pomoću RAM memorije i mikrokoda"
         ],
@@ -166,12 +166,12 @@
         "correct": "osnovna"
     },
     {
-        "question": "Promatramo Mooreov automat koji je zadan metodom korak po korak. Ako automat ima 25 stanja, uz ulazne sekvence duljine J (i 3 jedinstvena simbola), koliko razina ima njegovo potpuno stablo? (broj)",
+        "question": "Promatramo Mooreov automat koji je zadan metodom korak po korak. Ako automat traži sekvence duljine 5 (uz 3 jedinstvena simbola), koliko razina ima njegovo potpuno stablo?",
         "answers": [],
         "correct": "6"
     },
     {
-        "question": "Ugrađeno znanje automata se očituje u: (jedna riječ)",
+        "question": "Ugrađeno znanje automata se očituje u:",
         "answers": [],
         "correct": "strukturi"
     },
@@ -183,46 +183,46 @@
     {
         "question": "Kako nazivamo skup instrukcija koji postiže rješavanje problema u konačnom ili beskonačnom broju koraka?",
         "answers": [],
-        "correct": "Turingov stroj"
+        "correct": "algoritam"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 16 stanja, tri različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će adresnih ulaza imati muxi tog MDD strukture? (broj)",
+        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 16 stanja, tri različita ulazna i dva različita izlazna simbola. Koliko će adresnih ulaza imati mux u toj MDD strukturi?",
         "answers": [],
         "correct": "4"
     },
     {
-        "question": "Koji oznaku (slovo) upisujemo u tablicu implikanata ako za odgovarajuće parove stanja automat ima identične retke u tablici prijelaza i izlaza?",
+        "question": "Koju oznaku upisujemo u tablicu implikanata ako za odgovarajuće parove stanja automat ima identične retke u tablici prijelaza i izlaza?",
         "answers": [],
         "correct": "V"
     },
     {
-        "question": "Promatramo asinkrono 2-bitno binarno brojilo s vremenom kašnjenja od 10ns. Brojilo je konstruirano od T (ne JK) bistabila. Kolika je maksimalna frekvencija brojila? (broj sa mjernom jedinicom bez razmaka)",
+        "question": "Promatramo asinkrono 2-bitno binarno brojilo s vremenom kašnjenja od 10ns. Brojilo je konstruirano od T (ne JK) bistabila. Kolika je maksimalna frekvencija brojila?",
         "answers": [],
-        "correct": "12.5MHz"
+        "correct": "50MHz"
     },
     {
         "question": "Taktni signal definira koje svojstvo digitalnih automata?",
         "answers": [
+            "sinkronost",
             "konačnost automata",
             "specificiranost",
-            "postojanje KLS strukture unutar automata",
-            "ne želim odgovoriti",
+            "postojanje KLS strukture",
             "da posjeduje memoriju"
         ],
-        "correct": "sinkronost."
+        "correct": "0"
     },
     {
-        "question": "Promatramo Mealyev automat koji je zadan metodom korak po korak. Ako automat ima 15 stanja, uz ulazne sekvence duljine 4 (i 2 jedinstvena simbola), koliko razina ima njegovo potpuno stablo?",
+        "question": "Promatramo Mealyev automat koji je zadan metodom korak po korak. Ako automat traži ulazne sekvence duljine 4, koliko razina ima njegovo potpuno stablo?",
         "answers": [],
         "correct": "4"
     },
     {
         "question": "Koji uvjet kaže da dva stanja automata su ekvivalentna ako su im riječi u tablici izlaza identične?",
         "answers": [],
-        "correct": "ništa od navedenog"
+        "correct": "nužan uvjet"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 7 stanja, dva različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će struktura imati demuxa, a koliko muxa? (broj,broj)",
+        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 7 stanja, dva različita ulazna i dva različita izlazna simbola. Koliko će struktura imati demuxa, a koliko muxa?",
         "answers": [],
         "correct": "1,4"
     },
@@ -232,7 +232,7 @@
         "correct": "logaritamska"
     },
     {
-        "question": "Za koji standardni bistabil vrijedi not(Q1) = Q2? (samo slova naziva bistabila)",
+        "question": "Za koji standardni bistabil vrijedi not(Q1) = Q2?",
         "answers": [],
         "correct": "T"
     },
@@ -269,38 +269,38 @@
             "Ne želim odgovoriti",
             "DKA",
             "NKA",
-            "Imać‡e jednak broj stanja",
-            "Nije moguće napraviti takvu pretvorbu"
+            "Imat će jednak broj stanja",
+            "Nije moguće napraviti pretvorbu"
         ],
         "correct": "1"
     },
     {
         "question": "Događaj koji nastaje kombinacijom elementarnih u obliku sekvence zovemo:",
         "answers": [],
-        "correct": "složen događaj"
+        "correct": "složeni"
     },
     {
-        "question": "Razmišljajući o pravilima za raspoređivanje indeksa kod sekvence bez strukture: koliko pravila se odnosi na interacijske zagrade?",
+        "question": "Koliko pravila za rasprostiranje indeksa ima za sekvence bez strukture?",
         "answers": [],
-        "correct": "4"
+        "correct": "5"
     },
     {
-        "question": "Analiziramo jednostavni dig. sklop (npr. bistabil) koji radi o taktom (Cp) od 10Hz. Ako pretp. događaji trenutno, u kojem trenutku će se pojaviti... prouzrokovan promjenom ulaza u t=3.23s. Bistabil okida na uzlazni brid u t=0s.",
+        "question": "Analiziramo bistabil koji radi s taktom (Cp) od 10Hz. Ako se promjena ulaza dogodi u t=3.23s, u kojem trenutku će se pojaviti na izlazu (okida na uzlazni brid u t=0s)?",
         "answers": [],
-        "correct": "3,3"
+        "correct": "3.3s"
     },
     {
         "question": "Jedina informacija koju sekvencijalni sklop ima o svim proteklim događajima, nalazi se u:",
         "answers": [],
-        "correct": "stanju sekvencijalnog sklopa"
+        "correct": "stanju"
     },
     {
-        "question": "Prema definiciji implikacije među skupovima, skup Sp impliciran je skupom Srt, ako Srt sadrži sva stanja u koja ... stanja iz Sp za promatrani ulaz. Koliko pritom ima skupova 3n?",
+        "question": "Prema definiciji implikacije, skup Sp impliciran je skupom Srt. Koliko pritom takvih skupova ima po paru?",
         "answers": [],
-        "correct": "koliko ima ulaznih simbola (p)"
+        "correct": "p"
     },
     {
-        "question": "Ako je memorija digitalnog automata realizirana JK bistabilima, a automat ima 3 stanja koja su kodirana koncentriranim binarnim kodom, koliko je najmanje upravljačkih signala potrebno generirati u sklopu funkcije prijelaza?",
+        "question": "Ako je memorija automata realizirana JK bistabilima, automat ima 3 stanja, koliko je najmanje upravljačkih signala potrebno?",
         "answers": [
             "2",
             "3",
@@ -308,17 +308,17 @@
             "6",
             "8"
         ],
-        "correct": "3"
+        "correct": "2"
     },
     {
-        "question": "Za koji standardni bistabil vrijedi Q1 = Q2?",
+        "question": "Za koji standardni bistabil vrijedi kanonski zapis G1 = G2?",
         "answers": [],
-        "correct": "T bistabil"
+        "correct": "D"
     },
     {
-        "question": "Koje signale trebamo dovesti na ulaze JK bistabila da bismo nakon jedinice upisali nulu? (K=broj/znak J=broj/znak)",
+        "question": "Koje signale trebamo dovesti na ulaze JK bistabila da bismo nakon jedinice upisali nulu?",
         "answers": [],
-        "correct": "K=1 J=x"
+        "correct": "K=1,J=x"
     },
     {
         "question": "Zbog čega tablica implikanata nema dijagonale?",
@@ -326,30 +326,33 @@
             "Jer bi dijagonala predstavljala redundanciju među mintermima",
             "Jer svaki minterm pokriva točno jedan red tablice",
             "Jer je implikant sam sebi jednak, pa bi veza Si → Si bila trivijalna",
-            "Jer dijagonala prikazuje funkcijsku simetriju, koja ovdje nije dopuštena",
+            "Jer dijagonala prikazuje funkcijsku simetriju",
             "Jer se dijagonala koristi samo kod Karnaughove karte"
         ],
         "correct": "2"
     },
     {
-        "question": "U osnovnoj električnoj shemi bistabila, na ulazu S (komplement) se nalazi RC krug. Čemu on služi?",
+        "question": "U osnovnoj električnoj shemi bistabila, na ulazu se nalazi RC krug. Čemu on služi?",
         "answers": [],
-        "correct": "za derivaciju signala."
+        "correct": "derivacija"
     },
     {
-        "question": "Kod RS bistabila osnovni uvjet za njegov ispravan rad zapisan u algebarskoj formi je:",
+        "question": "Kod RS bistabila osnovni uvjet za ispravan rad zapisan u algebarskoj formi je:",
         "answers": [],
-        "correct": "RS=0."
+        "correct": "RS=0"
     },
     {
-        "question": "Osim RS bistabila, za koji drugi tip standardnog bistabila se može isključivo upotrijebiti metoda rekonstrukcije?",
+        "question": "Osim RS bistabila, za koji drugi tip standardnog bistabila se primjenjuje isključivo metoda rekonstrukcije?",
         "answers": [],
-        "correct": "T."
+        "correct": "T"
     },
     {
         "question": "Kod sekvencijalnih sklopova, promjena stanja i izlaza moguća je u proizvoljnom vremenskom trenutku?",
-        "answers": [],
-        "correct": "Netočno."
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "1"
     },
     {
         "question": "Izbaci uljeza!",
@@ -365,30 +368,30 @@
     {
         "question": "Kako se zove tablični zapis bistabila?",
         "answers": [],
-        "correct": "tablica prijelaza."
+        "correct": "tablica prijelaza"
     },
     {
-        "question": "Kod sinteze općih bistabila, izlaz općeg bistabila je ujedno i.....",
+        "question": "Kod sinteze općih bistabila, izlaz općeg bistabila je ujedno i:",
         "answers": [],
-        "correct": "izlaz standardnog bistabila."
+        "correct": "izlaz standardnog"
     },
     {
         "question": "Kako se naziva poželjno zadržavanje informacija u vremenu?",
         "answers": [],
-        "correct": "pamćenje."
+        "correct": "pamćenje"
     },
     {
-        "question": "Na ulazu u bistabile (na razini električne sheme) pored RC kruga nalazi se i dodatni element za izdvajanje dijela signala. Taj element je:",
+        "question": "Na ulazu u bistabile pored RC kruga nalazi se i dodatni element za izdvajanje dijela signala. Taj element je:",
         "answers": [],
-        "correct": "dioda."
+        "correct": "dioda"
     },
     {
         "question": "JK bistabil može imati i oscilatorno ponašanje. Kada (algebarski zapisano)?",
         "answers": [],
-        "correct": "J=1, K=1."
+        "correct": "J=1,K=1"
     },
     {
-        "question": "Kod pomacnih registara, pomicanje bitova udesno matematički odgovara:",
+        "question": "Kod pomičnih registara, pomicanje bitova udesno matematički odgovara:",
         "answers": [
             "dijeljenju sa 10",
             "množenju sa 10",
@@ -401,7 +404,7 @@
     {
         "question": "Što određuje funkcija prijelaza?",
         "answers": [],
-        "correct": "Sljedeće stanje automata u ovisnosti o sadašnjem stanju i sadašnjem ulazu."
+        "correct": "sljedeće stanje"
     },
     {
         "question": "Konačnost automata se očituje u konačnom broju:",
@@ -415,14 +418,14 @@
         "correct": "1"
     },
     {
-        "question": "Nadopuni riječ koja nedostaje: 'Za JK bistabile kažemo da su potpuno _____'",
+        "question": "Nadopuni riječ koja nedostaje: 'Za JK bistabile kažemo da su potpuno _____'?",
         "answers": [],
-        "correct": "upravljivi s ulaza."
+        "correct": "upravljivi"
     },
     {
         "question": "Koji standardni bistabil za funkcije G1 i G2 (kanonskog zapisa) ima komplementarne funkcije?",
         "answers": [],
-        "correct": "T bistabil."
+        "correct": "T"
     },
     {
         "question": "Bistabili imaju dva stabilna stanja i to:",
@@ -447,40 +450,43 @@
         "correct": "2"
     },
     {
-        "question": "Svi bistabili koji se upotrebljavaju za konstrukciju registara (npr. 8 bitni registri) imaju zajednički taktni signal?",
-        "answers": [],
-        "correct": "Točno."
+        "question": "Svi bistabili koji se upotrebljavaju za konstrukciju registara imaju zajednički taktni signal?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "0"
     },
     {
         "question": "Za digitalni automat kažemo je da je upravljiv kada:",
         "answers": [
             "poznaje svojstva procesa",
-            "taj pojam nije povezan s digitalnim automatima",
+            "taj pojam nije povezan s automatima",
             "raspolaže dovoljnim brojem izlaza",
             "želi kompenzirati utjecaj okoline",
-            "razlučuje sva bitna stanja procesa"
+            "razlučuje sva bitna stanja"
         ],
-        "correct": "Automat je upravljiv ako se za svako stanje u konačnom broju koraka može postići bilo koje drugo stanje."
+        "correct": "2"
     },
     {
-        "question": "Kada kažemo da je automat potpuno specificiran? (odgovor započnite sa \"kada.....\")",
+        "question": "Kada kažemo da je automat potpuno specificiran?",
         "answers": [],
-        "correct": "kada očekuje proizvoljni niz ulaza."
+        "correct": "proizvoljni niz"
     },
     {
-        "question": "Što definira da li će automat biti Mealy ili Moore?",
+        "question": "Što definira hoće li automat biti Mealy ili Moore?",
         "answers": [],
-        "correct": "funkcija izlaza."
+        "correct": "funkcija izlaza"
     },
     {
         "question": "Standardni bistabili koji se mogu upotrijebiti za konstrukciju brojila su:",
         "answers": [],
-        "correct": "T, JK."
+        "correct": "T,JK"
     },
     {
-        "question": "Ako želimo realizirati sklop čiji će izlaz biti kombinacija trenutnog ulaza i znanja iz prošlosti, koristit ćemo:",
+        "question": "Ako želimo realizirati sklop čiji će izlaz ovisiti i o trenutnom ulazu i prošlim događajima, koristit ćemo:",
         "answers": [
-            "ne postoje logički sklopovi koji mogu raditi takve kombinacije",
+            "ne postoje takvi sklopovi",
             "MD strukturu",
             "sekvencijalni sklop",
             "Ne želim odgovoriti",
@@ -489,9 +495,9 @@
         "correct": "2"
     },
     {
-        "question": "S obzirom na vrijeme kašnjenja i njegove posljedice, kombinacijsko logički sklopovi mogu imati ____ (1) ____ i (2) ____ stanja.",
+        "question": "S obzirom na vrijeme kašnjenja, KLS sklopovi mogu imati ____ i ____ stanja.",
         "answers": [],
-        "correct": "stabilna, nestabilna."
+        "correct": "stabilna,nestabilna"
     },
     {
         "question": "Za koji standardni bistabil vrijedi G1=G2?",
@@ -515,57 +521,57 @@
         "correct": "1"
     },
     {
-        "question": "Promatramo asinkrono 8 bitno binarno brojilo s vremenom kašnjenja od 10 ns. Brojilo je konstruirano od T (NE JK) bistabila. Kolika je maksimalna frekvencija brojila?",
+        "question": "Promatramo asinkrono 8 bitno binarno brojilo s vremenom kašnjenja od 10 ns. Brojilo je od T bistabila. Kolika je maksimalna frekvencija brojila?",
         "answers": [],
-        "correct": "12.5MHz."
+        "correct": "12.5MHz"
     },
     {
-        "question": "Promatramo Mealyev automat koji je zadan metodom korak po korak. Ako automat ima tri ulazna simbola i pet izlaznih simbola. Koliko koraka apstraktna sinteza?",
+        "question": "Promatramo Mealyev automat zadan metodom korak po korak. Koliko koraka ima njegova apstraktna sinteza?",
         "answers": [],
-        "correct": "4."
+        "correct": "2"
     },
     {
         "question": "Koji uvjet kaže da dva stanja automata su ekvivalentna ako su im reci u tablici izlaza identični?",
         "answers": [
             "nužan uvjet ekvivalencije",
             "dovoljan uvjet ekvivalencije",
-            "ne može se reći bez dodatnih informacija",
+            "ne može se reći",
             "ništa od navedenog",
             "HM algoritam"
         ],
-        "correct": "3"
+        "correct": "0"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 9 stanja, dva različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će struktura imati demultipleksera i koliko multipleksera?",
+        "question": "Minimalni automat ima 9 stanja, 2 ulazna i 2 izlazna simbola. Koliko će MDD struktura imati demultipleksera i koliko multipleksera?",
         "answers": [],
-        "correct": "(1,4)."
+        "correct": "1,5"
     },
     {
-        "question": "Kod Wilkesova modela (MDD struktura) sadržaj mikrokoda je moguće mijenjati?",
+        "question": "Kod Wilkesova modela sadržaj mikrokoda je moguće mijenjati?",
         "answers": [
             "da, uvijek",
-            "Wilkesov model se ne realizira MDD strukturom",
-            "ovisi o vrsti automata (Mealy ili Moore)",
+            "Wilkesov se ne realizira MDD strukturom",
+            "ovisi o vrsti automata",
             "nikada",
             "ništa od navedenoga",
-            "ovisno o tehnologiji izrade matrice mikrokoda",
+            "ovisno o tehnologiji izrade matrice",
             "ne želim odgovoriti"
         ],
         "correct": "5"
     },
     {
-        "question": "Digitalni automati rade u diskretnom vremenu. To je pak posljedica činjenice ...",
+        "question": "Digitalni automati rade u diskretnom vremenu. To je pak posljedica činjenice:",
         "answers": [
             "konačnosti automata",
-            "o prirodi ulazno/izlaznih podataka",
-            "postojanje KLS strukture unutar automata",
+            "o prirodi podataka",
+            "postojanje KLS strukture",
             "ne želim odgovoriti",
             "da posjeduje memoriju"
         ],
-        "correct": "1"
+        "correct": "4"
     },
     {
-        "question": "Kakva ovisnost između broja koraka i duljine ulaznog niza znakova daje najbolju prognozu vremena izvršenja zadatka digitalnog automata (pod uvjetom da rješenje postoji)?",
+        "question": "Kakva ovisnost daje najbolju prognozu vremena izvršenja zadatka digitalnog automata?",
         "answers": [
             "Linearna",
             "Kvadratna",
@@ -573,7 +579,7 @@
             "Logaritamska",
             "Ovisi o vrsti automata"
         ],
-        "correct": "0"
+        "correct": "3"
     },
     {
         "question": "Koja od navedenih sekvenci nije opisana regularnim izrazom R = A (BB V C)* D?",
@@ -587,7 +593,7 @@
         "correct": "1"
     },
     {
-        "question": "Mjesta koja se u regularnom izrazu nalaze s lijeve strane obične i iteracijske zagrade i s desne strane slova su:",
+        "question": "Mjesta u regularnom izrazu s lijeve strane obične i iteracijske zagrade i s desne strane slova su:",
         "answers": [
             "osnovna",
             "predosnovna",
@@ -598,13 +604,13 @@
         "correct": "0"
     },
     {
-        "question": "Među ostalim, maksimalna frekvencija uzorkovanja kod diskretnih sustava je određena kao:",
+        "question": "Maksimalna frekvencija uzorkovanja kod diskretnih sustava je određena kao:",
         "answers": [
-            "najmanje n puta veća od frekvencije taktnog signala",
-            "ne želim odgovoriti",
-            "najmanje n puta manja od frekvencije taktnog signala",
+            "f=1/Ts",
+            "najmanje n puta veća...",
+            "najmanje n puta manja...",
             "najmanje dva puta veća od frekvencije promjene ulaznog signala",
-            "najmanje dva puta manja od frekvencije ulaznog signala"
+            "najmanje dva puta manja..."
         ],
         "correct": "3"
     },
@@ -614,25 +620,25 @@
             "da li su statičke",
             "da li posjeduje memoriju",
             "da li su isparljive",
-            "ovisno o metodi zadržavanja automata",
-            "ovisno o vrsti automata"
+            "ovisno o metodi",
+            "ovisno o vrsti"
         ],
         "correct": "2"
     },
     {
-        "question": "Ako je memorija digitalnog automata realizirana JK bistabilima, a automat ima 9 stanja koja su kodirana koncentriranim binarnim kodom, koliko je najmanje upravljačkih signala potrebno generirati u sklopu funkcija prijelaza?",
+        "question": "Ako je memorija realizirana JK bistabilima, automat ima 9 stanja, koliko je najmanje upravljačkih signala?",
         "answers": [],
-        "correct": "2."
+        "correct": "8"
     },
     {
-        "question": "Kod Turingova stroja Umar ispravlja automat?",
+        "question": "Čime upravlja digitalni automat u Turingovom stroju?",
         "answers": [
-            "za sklopke",
+            "sklopkama",
             "beskonačnom trakom",
             "glavom za čitanje i pisanje",
             "ničim",
             "cijelim iskazom",
-            "samo glavom za čitanje",
+            "samo glavom",
             "ništa od navedenoga"
         ],
         "correct": "2"
@@ -640,12 +646,15 @@
     {
         "question": "Prilikom opisa primitivne tablice iz regularnog izraza, za stanja automata uzimamo:",
         "answers": [],
-        "correct": "predosnovnim."
+        "correct": "predosnovna"
     },
     {
-        "question": "Minimizacija automata primjenom minimizacije primitivne tablice garantira dobivanje minimalnog automata",
-        "answers": [],
-        "correct": "Točno."
+        "question": "Minimizacija automata primjenom minimizacije primitivne tablice garantira dobivanje minimalnog automata?",
+        "answers": [
+            "Točno",
+            "Netočno"
+        ],
+        "correct": "1"
     },
     {
         "question": "Neželjeno (štetno) zadržavanje informacija u vremenu nazivamo:",
@@ -661,136 +670,118 @@
     {
         "question": "Označi koja tvrdnja NIJE istinita!",
         "answers": [
-            "tablica prijelaza i izlaza Moorovog automata je manja od ekvivalentnog Mealyevog automata",
+            "tablica prijelaza Moorovog automata je manja",
             "Mooreov automat donosi odluku prije Mealyevog automata",
-            "Mealyev automat može biti osjetljiv na smetnje na ulazu",
-            "Mooreov automat kasni za jedan diskretan trenutak za Mealyevog automata",
+            "Mealyev automat osjetljiv na smetnje",
+            "Mooreov automat kasni",
             "Ne želim odgovoriti"
         ],
         "correct": "1"
     },
     {
-        "question": "Događaj koji nije djeljiv, koji se dogodi kao cjelina u jednom diskretnom trenutku nazivamo:",
+        "question": "Događaj koji nije djeljiv i koji se dogodi kao cjelina nazivamo:",
         "answers": [],
-        "correct": "elementaran."
+        "correct": "elementaran"
     },
     {
-        "question": "U kratko objasni zašto se kod metode izjednačavanja, Veitchev dijagram dijeli po varijabli Q?",
+        "question": "Ukratko objasni zašto se kod metode izjednačavanja Veitchev dijagram dijeli po varijabli Q?",
         "answers": [
-            "Kako bi se dobio decimalni oblik funkcije",
-            "Da bi se funkcija mogla lakše implementirati pomoću bistabila",
-            "Kako bi se funkcija rastavila na parcijalne funkcije radi pojednostavljenja izraza",
-            "Kako bi se izbjegla potreba za negacijom varijabli",
-            "Da bi se odredio točan redoslijed stanja u automatu"
+            "Kako bi se dobio decimalni oblik",
+            "Da bi se lakše implementiralo",
+            "Kako bi se funkcija rastavila radi izjednačavanja jednadžbe",
+            "Kako bi se izbjegla negacija",
+            "Da bi se odredio točan redoslijed"
         ],
         "correct": "2"
     },
     {
         "question": "Zbog čega se kod RS bistabila može primijeniti jedino metoda rekonstrukcije za sintezu općih bistabila?",
         "answers": [
-            "Zbog njegove jednostavne asinkrone prirode i direktnih ulaza.",
-            "Zbog toga što je to jedini bistabil bez taktnog signala.",
-            "Zbog toga što se svi ostali bistabili mogu izvesti iz RS bistabila.",
-            "Zbog postojanja zabranjenog stanja koje zahtijeva posebnu obradu.",
-            "Zbog toga što RS bistabil ima dva stabilna stanja, 0 i 1."
+            "Zbog njegove jednostavne asinkrone prirode.",
+            "Zbog toga što je to jedini bistabil bez takta.",
+            "Zbog toga što se svi ostali mogu izvesti.",
+            "Zbog postojanja zabranjenog stanja.",
+            "Zbog toga što RS bistabil ima dva stanja."
         ],
         "correct": "3"
     },
     {
-        "question": "Svojim riječima objasni zašto se koristi neutralni izlazni simbol kod digitalnih automata?",
-        "answers": [
-            "Kako bi se olakšala identifikacija aktivnih izlaza.",
-            "Označava stanje kada automat ne prima nikakav ulazni signal.",
-            "Označava redundantne kodne riječi za koje funkcija nije definirana, čime se omogućuje fleksibilnost pri minimizaciji.",
-            "Označava pogrešku u izlazu automata.",
-            "Omogućava bržu obradu signala."
-        ],
-        "correct": "2"
+        "question": "Kada i zašto se koristi neutralni izlazni simbol kod digitalnih automata?",
+        "answers": [],
+        "correct": "nije završena"
     },
     {
         "question": "Diskretni period kod digitalnih automata ne može biti kraći od:",
-        "answers": [
-            "Suma vremena porasta i pada signala.",
-            "Maksimalnog kašnjenja kroz najdulju putanju kombinacijske logike koja određuje sljedeće stanje.",
-            "Najkraćeg vremena stabilnog stanja.",
-            "Vremena resetiranja automata.",
-            "Perioda oscilacija sustava."
-        ],
-        "correct": "1"
+        "answers": [],
+        "correct": "trajanja nestabilnog"
     },
     {
-        "question": "Kako se naziva operacija L1 = {x | |x| ≥ L2 i x ∈ L2d}?",
-        "answers": [
-            "Skupovna operacija",
-            "Unija",
-            "Presjek",
-            "Razlika",
-            "Filtriranje po uvjetu"
-        ],
-        "correct": "4"
+        "question": "Koja operacija nije primjenjiva na konjunkciju događaja u algebri događaja?",
+        "answers": [],
+        "correct": "komutativnost"
     },
     {
-        "question": "Koje svojstvo vrijedi za **disjunkciju**, ali **ne vrijedi za konjunkciju** u Booleovoj algebri?",
+        "question": "Koje svojstvo vrijedi za disjunkciju, ali ne vrijedi za konjunkciju u Booleovoj algebri?",
         "answers": [
-            "Distributivnost nad drugom operacijom",
-            "Postojanje neutralnog elementa",
+            "Distributivnost",
+            "Postojanje neutralnog",
             "Komutativnost",
             "Idempotentnost",
             "Postojanje inverza"
         ],
-        "correct": "0"
+        "correct": "2"
     },
     {
-        "question": "Ako se asinkrono binarno brojilo sastoji od pet (5) T bistabila, koliko iznosi maksimalan broj ulaznih impulsa koje može prebrojati? Odgovor upisati kao brojčanu vrijednost u dekadskom sustavu.",
+        "question": "Ako se asinkrono brojilo sastoji od 5 T bistabila, koliko iznosi maksimalan broj ulaznih impulsa koje prebroji prije reseta?",
         "answers": [],
         "correct": "31"
     },
     {
-        "question": "Promatramo Mealyev automat koji je zadan metodom korak po korak. Automat ima tri ulazna simbola i pet izlaznih simbola. Koliko koraka ima njegova potpuna specifikacija?",
+        "question": "Promatramo Mealyev automat zadan metodom korak po korak. Koliko koraka ima njegova potpuna specifikacija?",
         "answers": [],
-        "correct": "4"
+        "correct": "2"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 9 stanja, dva različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će adresnih ulaza demultipleksera tvoje MDD strukture?",
+        "question": "Minimalni automat ima 9 stanja, 2 ulazna i 2 izlazna simbola. Koliko će adresnih ulaza imati demultiplekser MDD strukture?",
         "answers": [],
-        "correct": "4"
+        "correct": "5"
     },
     {
         "question": "Koji postupak minimizacije koristi implikacije među skupovima?",
         "answers": [
-            "Metoda minimizacije primitivne tablice",
+            "Metoda primitivne tablice",
             "Paul-Ungerov algoritam",
-            "Quine-McCluskey postupak",
-            "Harvardski postupak",
-            "Hammingov algoritam"
+            "Quine-McCluskey",
+            "Harvardski",
+            "Hammingov"
         ],
         "correct": "1"
     },
     {
-        "question": "Obavimo li pretvorbu nedeterminističnog konačnog automata u njegovu determinističku varijantu, koji automat će imati više stanja?",
+        "question": "Obavimo li pretvorbu nedeterminističnog automata u determinističku varijantu, koji će imati više stanja?",
         "answers": [
-            "ne želim odgovoriti",
+            "ne želim",
             "DKA",
             "NKA",
-            "imat će jednak broj stanja",
-            "nije moguće napraviti takvu pretvorbu"
+            "jednako",
+            "nemoguće"
         ],
         "correct": "1"
     },
     {
-        "question": "Promatramo konačni digitalni automat s tri jedinstvena ulazna simbola. Radi se o Mooreovom automatu koji traži sekvenciju duljine tri. Navedi koliko stanja će imati taj automat ako ga zadamo korak po korak?",
+        "question": "Mooreov automat traži sekvencu duljine tri s tri ulazna simbola. Koliko stanja će imati u potpunom stablu?",
         "answers": [],
-        "correct": "4."
+        "correct": "40"
     },
     {
-        "question": "Konstruirate digitalni automat kojeg je bitna brzina. Kako ćete ga realizirati?",
+        "question": "Konstruirate digitalni automat gdje je bitna brzina. Kako ćete ga realizirati?",
         "answers": [
-            "ne želim odgovoriti",
-            "bistabili i logička vrata (neovisno da li Moore ili Mealy)",
-            "Mealy (neovisno o tehnologiji)",
-            "MDD (neovisno o Mooreu ili Mealyu)",
-            "Moore (neovisno o tehnologiji)",
-            "ništa od ponuđenog"
+            "ne želim",
+            "bistabili i logička vrata",
+            "Mealy",
+            "MDD",
+            "Moore",
+            "ništa"
         ],
         "correct": "1"
     },
@@ -808,10 +799,10 @@
     {
         "question": "Koje signale trebamo dovesti na ulaze RS bistabila da bismo zadržali upisanu nulu?",
         "answers": [
-            "S=0, R=0",
+            "S=0, R=x",
             "S=R, R=1",
             "S=R, R=1",
-            "ne želim odgovoriti",
+            "ne želim",
             "S=1, R=R"
         ],
         "correct": "0"
@@ -822,78 +813,78 @@
         "correct": "memorijom"
     },
     {
-        "question": "S obzirom na vrijeme kašnjenja i njegove posljedice, kombinacijsko logički sklopovi mogu imati __ (1) __ i __ (2) __ stanja. (riječ,riječ)",
+        "question": "S obzirom na vrijeme kašnjenja, kombinacijsko logički sklopovi mogu imati __ i __ stanja.",
         "answers": [],
         "correct": "stabilna,nestabilna"
     },
     {
         "question": "Čemu služi kondenzator na R i S ulazima bistabila realiziranog bipolarnim tranzistorima?",
         "answers": [],
-        "correct": "za derivaciju signala"
+        "correct": "derivacija"
     },
     {
-        "question": "Koliko koraka ima apstraktna sinteza?",
+        "question": "Koliko koraka ima apstraktna sinteza automata?",
         "answers": [],
         "correct": "2"
     },
     {
-        "question": "Kada zadajemo automat jezikom regularnih izraza tada taj isti automat promatramo kao:",
+        "question": "Kada zadajemo automat jezikom regularnih izraza promatramo ga kao:",
         "answers": [
-            "ne želim odgovoriti",
+            "ne želim",
             "transformator sekvence",
-            "pojačivač sekvence",
+            "pojačivač",
             "matematičku gramatiku",
             "potpuno stablo",
-            "prevoditelj sekvence",
+            "prevoditelj",
             "akceptor sekvence"
         ],
         "correct": "6"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 9 stanja, dva različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će adresnih ulaza imati demultiplekser tvoje MDD strukture?",
-        "answers": [],
-        "correct": "4"
-    },
-    {
-        "question": "Sklopovi čija je izlazna vrijednost određena isključivo trenutnom vrijednošću ulaza nazivaju se:",
-        "answers": [],
-        "correct": "kombinacijski sklopovi"
-    },
-    {
-        "question": "Mjesto koje se u regularnom izrazu nalazi s lijeve strane obične i iteracijske zagrade i s desne strane slova su:",
-        "answers": [],
-        "correct": "osnovna"
-    },
-    {
-        "question": "Ukoliko promatramo digitalni automat koji radi kao akceptor sekvence sekvence i detektira sekvence dužine 5 simbola sa 2 različita internih stanja i 3 različita izlazna simbola, odredi koliko je potreban broj D bistabila za kodiranje stanja takvog automata.",
+        "question": "Minimalni automat ima 9 stanja, 2 ulazna i 2 izlazna simbola. Koliko će adresnih ulaza imati demultiplekser?",
         "answers": [],
         "correct": "5"
     },
     {
-        "question": "Koji postupak minimizacije kreće od pretpostavke da su sva stanja za koja je zadovoljen nužan uvjet ekvivalentna?",
-        "answers": [
-            "Hofmann-Mealyjev algoritam",
-            "Paul-Ungerov algoritam",
-            "metoda minimizacije primitivne tablice",
-            "ne želim odgovoriti",
-            "sve od navedenog"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "Ako želimo realizirati logičku strukturu čiji će izlaz biti ovisan i o trenutnom ulazu i prošlim događajima, kakve sklopove ćemo koristiti?",
+        "question": "Sklopovi čija je izlazna vrijednost određena isključivo trenutnom vrijednošću ulaza nazivaju se:",
         "answers": [],
-        "correct": "sekvencijalne"
+        "correct": "kombinacijski"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 16 stanja, tri različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će adresnih ulaza imati multiplekser tvoje MDD strukture?",
+        "question": "Mjesto koje se u regularnom izrazu nalazi s lijeve strane zagrade i s desne strane slova je:",
+        "answers": [],
+        "correct": "osnovna"
+    },
+    {
+        "question": "Ako automat detektira sekvence sa 2 različita interna stanja, koliko je potreban broj D bistabila za kodiranje stanja?",
         "answers": [],
         "correct": "1"
     },
     {
-        "question": "Kako nazivamo inačicu Turingova stroja koja radi istovremeno ili upis ili pomak?",
+        "question": "Koji postupak minimizacije kreće od pretpostavke da su sva stanja ekvivalentna ako ispunjavaju nužan uvjet?",
         "answers": [
-            "Mealyjev automat",
+            "Hofmann-Mealyjev",
+            "Paul-Ungerov",
+            "metoda primitivne tablice",
+            "ne želim",
+            "sve"
+        ],
+        "correct": "0"
+    },
+    {
+        "question": "Ako želimo realizirati strukturu čiji će izlaz biti ovisan o trenutnom ulazu i prošlim događajima, koristit ćemo sklopove:",
+        "answers": [],
+        "correct": "sekvencijalne"
+    },
+    {
+        "question": "Minimalni automat ima 16 stanja i 3 ulazna simbola. Koliko će adresnih ulaza imati multiplekser MDD strukture?",
+        "answers": [],
+        "correct": "4"
+    },
+    {
+        "question": "Kako nazivamo Turingov stroj koji radi istovremeno ili upis ili pomak?",
+        "answers": [
+            "Mealyjev",
             "L automat",
             "N automat",
             "M automat",
@@ -902,10 +893,10 @@
         "correct": "4"
     },
     {
-        "question": "Događaj koji nastaje kombinacijom elementarnih događaja u obliku sekvence nazivamo:",
+        "question": "Događaj koji nastaje kombinacijom elementarnih događaja u sekvencu nazivamo:",
         "answers": [
-            "složeni događaj",
-            "elementarni događaj",
+            "složeni",
+            "elementarni",
             "impuls",
             "prijelaz",
             "stanje"
@@ -913,29 +904,29 @@
         "correct": "0"
     },
     {
-        "question": "Ako se asinkrono binarno brojilo sastoji od šest (6) T bistabila, koliko iznosi maksimalan broj ulaznih impulsa koje može prebrojati? Odgovor upisati kao brojčanu vrijednost u dekadskom sustavu.",
+        "question": "Ako se asinkrono brojilo sastoji od 6 T bistabila, koliko maksimalno impulsa prebroji prije reseta?",
         "answers": [],
         "correct": "63"
     },
     {
-        "question": "Koju skupinu (klasu) jezika prihvaćaju linearno ograničeni (LBA) automati?",
+        "question": "Koju klasu jezika prihvaćaju linearno ograničeni (LBA) automati?",
         "answers": [
-            "ništa od navedenog",
-            "kontekstno neovisne jezike",
-            "sve od navedenog",
-            "kontekstno ovisne jezike",
-            "regularne jezike",
-            "ne želim odgovoriti"
+            "ništa",
+            "kontekstno neovisne",
+            "sve",
+            "kontekstno ovisne",
+            "regularne",
+            "ne želim"
         ],
         "correct": "3"
     },
     {
-        "question": "Jedina informacija koju sekvencijalni sklop ima o svim proteklim događajima nalazi se u:",
+        "question": "Jedina informacija koju sekvencijalni sklop ima o proteklim događajima nalazi se u:",
         "answers": [
-            "Ne želim odgovoriti.",
+            "Ne želim",
             "Izlaznoj sekvenci",
             "Stanju na ulazu",
-            "Kašnjenju informacije",
+            "Kašnjenju",
             "Stanju sekvencijalnog sklopa"
         ],
         "correct": "4"
@@ -943,200 +934,245 @@
     {
         "question": "Sklopovi koji rade u diskretnom vremenu nazivaju se:",
         "answers": [
-            "analogni sklopovi",
-            "kombinacijski sklopovi",
-            "sekvencijalni sklopovi",
-            "memorijski sklopovi",
-            "logički sklopovi"
+            "analogni",
+            "kombinacijski",
+            "sekvencijalni",
+            "memorijski",
+            "logički"
         ],
         "correct": "2"
     },
     {
         "question": "Kod diskretne vremenske osi, promatrani vremenski trenutak se definira kao:",
         "answers": [
-            "umnožak racionalnog broja i vremena uzorkovanja (Td)",
-            "umnožak prirodnog broja i vremena uzorkovanja (Td)",
-            "umnožak realnog broja i vremena uzorkovanja (Td)",
-            "umnožak cijelog broja i vremena uzorkovanja (Td)",
-            "Ne želim odgovoriti."
+            "umnožak racionalnog",
+            "umnožak prirodnog broja i vremena uzorkovanja",
+            "umnožak realnog",
+            "umnožak cijelog",
+            "Ne želim"
         ],
         "correct": "1"
     },
     {
-        "question": "Promatramo registar sastavljen od D bistabila. Što se događa sa sklopom kada je taktni ulaz (Cp) jednak nuli?",
+        "question": "Što se događa s registrom sastavljenim od D bistabila kada je taktni ulaz nula?",
         "answers": [],
-        "correct": "Sklop pamti dosegnutu vrijednost."
+        "correct": "pamti"
     },
     {
-        "question": "Promatramo asinkrono 5-bitno binarno brojilo s vremenom kašnjenja od 5ns po bistabilu. Brojilo je konstruirano od JK bistabila. Kolika je maksimalna frekvencija rada brojila u MHz?",
+        "question": "Asinkrono 5-bitno brojilo od JK bistabila s kašnjenjem 5ns. Kolika je maksimalna frekvencija rada?",
         "answers": [],
-        "correct": "40 MHz"
+        "correct": "40MHz"
     },
     {
-        "question": "Može li se RS bistabil koristiti kao osnovni element za izgradnju sinkronog binarnog ili dekadskog brojila?",
+        "question": "Može li se RS bistabil koristiti za sinkrono binarno brojilo?",
         "answers": [
             "Može, bezuvjetno",
             "Ne može",
-            "Ovisno da li se radi o sinkronom ili asinkronom brojilu",
+            "Ovisno",
             "Može uz dodatno sklopovlje",
-            "Ne želim odgovoriti"
+            "Ne želim"
         ],
         "correct": "3"
     },
     {
         "question": "U sklopu Turingovog stroja, što upravlja automatom?",
         "answers": [],
-        "correct": "glava za čitanje i pisanje"
+        "correct": "glava čitanje/pisanje"
     },
     {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 16 stanja, tri različita ulaza i dva različita izlazna simbola. Koliko će adresnih ulaza imati multiplekser (MUX) tvoje MDD strukture?",
+        "question": "Minimalni automat ima 16 stanja i 3 ulazna simbola. Koliko adresnih ulaza ima MUX u MDD strukturi?",
         "answers": [],
-        "correct": "1"
+        "correct": "4"
     },
     {
         "question": "Koja je osnovna razlika u spajanju taktnog ulaza (Cp) između sinkronih i asinkronih brojila?",
         "answers": [],
-        "correct": "Kod sinkronih brojila, Cp svakog bistabila spojen je na istu točku (isti ulazni takt), dok je kod asinkronih Cp (taktni ulaz) jednog bistabila spojen na izlaz prethodnog bistabila."
+        "correct": "taktni signal"
     },
     {
-        "question": "Koje svojstvo algebre logike kaže da je varijabla u disjunkciji ili konjunkciji sama sa sobom jednaka toj istoj varijabli?",
+        "question": "Svojstvo logike da je varijabla u disjunkciji/konjunkciji sa sobom jednaka toj varijabli:",
         "answers": [],
         "correct": "idempotentnost"
     },
     {
-        "question": "Prilikom zbrajanja brojeva u drugom komplementu, što označava postavljanje V bita (overflow) u statusnoj riječi procesora?",
+        "question": "Postavljanje V bita (overflow) označava:",
         "answers": [],
-        "correct": "Da je došlo do prekoračenja, odnosno da rezultat operacije izlazi izvan dozvoljenog opsega prikazivih brojeva."
+        "correct": "prekoračenje"
     },
     {
         "question": "Koju strategiju kodiranja stanja koristimo kod metode izjednačavanja?",
         "answers": [],
-        "correct": "susjednosti"
+        "correct": "susjednost"
     },
     {
         "question": "Zašto JK bistabil nazivamo \"potpuno upravljivim s ulaza\"?",
         "answers": [
-            "Jer se uvijek može postaviti u željeno stanje, neovisno o trenutnom stanju.",
-            "Jer ima dva kontrolna ulaza (J i K).",
-            "Jer može raditi i kao D i kao T bistabil.",
-            "Jer ima najbrže vrijeme odziva.",
+            "Jer se uvijek može postaviti u željeno stanje.",
+            "Jer ima dva kontrolna ulaza.",
+            "Jer može raditi kao D i T.",
+            "Jer ima najbrže vrijeme.",
             "Jer nema zabranjenih stanja."
         ],
         "correct": "0"
     },
     {
-        "question": "Koja je osnovna svrha pomičnih registara (shift registers)?",
+        "question": "Koja je osnovna svrha pomičnih registara?",
         "answers": [
-            "Isključivo pamćenje podataka.",
-            "Generiranje niza kodnih riječi.",
-            "Pretvorba podataka između serijskog i paralelnog oblika.",
-            "Zbrajanje binarnih brojeva.",
-            "Usporedba dviju kodnih riječi."
+            "Isključivo pamćenje",
+            "Generiranje niza",
+            "Pretvorba serijsko-paralelno",
+            "Zbrajanje",
+            "Usporedba"
         ],
         "correct": "2"
     },
     {
-        "question": "Ako se asinkrono brojilo sastoji od četiri (4) JK bistabila, koliki je maksimalan broj jedinstvenih stanja koje može prebrojati? Odgovor upišite kao brojčanu vrijednost.",
+        "question": "Koliki je maksimalan broj jedinstvenih stanja koje može prebrojati brojilo od 4 JK bistabila?",
         "answers": [],
-        "correct": "15"
+        "correct": "16"
     },
     {
-        "question": "Koji tip registra omogućava pomicanje bitova u lijevo, što je ekvivalentno množenju s 2?",
+        "question": "Koji registar omogućava pomicanje bitova u lijevo (množenje s 2)?",
         "answers": [],
-        "correct": "Pomični registar (Shift register)"
+        "correct": "pomični"
     },
     {
-        "question": "U kontekstu formalnih jezika, što predstavlja operacija iteracije (Kleene star) nad skupom simbola L?",
+        "question": "Što predstavlja operacija iteracije (Kleene star)?",
         "answers": [
-            "Skup svih mogućih nizova (sekvenci) konačne duljine sastavljenih od simbola iz L, uključujući i prazan niz.",
-            "Skup svih simbola u L.",
-            "Skup svih nizova duljine N iz skupa L.",
-            "Isključivo prazan niz.",
-            "Skup svih nizova beskonačne duljine."
+            "Skup svih mogućih nizova uključujući prazan.",
+            "Skup svih simbola",
+            "Skup svih nizova duljine N",
+            "Isključivo prazan niz",
+            "Skup beskonačne duljine"
         ],
         "correct": "0"
     },
     {
-        "question": "Ukoliko je memorija digitalnog automata realizirana D bistabilima, a automat ima 9 stanja koja su kodirana koncentriranim binarnim kodom, koliko je najmanje upravljačkih signala potrebno generirati u sklopu funkcije prijelaza?",
+        "question": "Automat ima 9 stanja i D bistabile. Koliko najmanje upravljačkih signala treba generirati?",
         "answers": [],
         "correct": "4"
     },
     {
-        "question": "U kojem režimu rada demultiplekser ostvaruje funkciju u kojoj vrijednost s jednog informacijskog ulaza prosljeđuje na jedan od 2^m izlaza, ovisno o adresi?",
+        "question": "U kojem režimu demultiplekser prosljeđuje vrijednost na jedan izlaz?",
         "answers": [],
-        "correct": "U režimu razvođenja signala (deselektor)."
+        "correct": "deselektor"
     },
     {
-        "question": "Kod sekvencijalnih sklopova, promjena stanja i izlaza moguća je u proizvoljnom vremenskom trenutku? (N/T)",
+        "question": "Promjena stanja moguća je u proizvoljnom trenutku? (T/N)",
         "answers": [],
         "correct": "N"
     },
     {
-        "question": "JK bistabil može imati i oscilatorno ponašanje. Kada (algebarski zapisano, J=?, K=?)?",
+        "question": "Oscilatorno ponašanje JK bistabila nastupa kada je:",
         "answers": [],
-        "correct": "J=1, K=1"
+        "correct": "J=1,K=1"
     },
     {
-        "question": "Nadopuni riječ koja nedostaje: 'Za JK bistabile kažemo da su potpuno -----'",
+        "question": "JK bistabili su potpuno ____ s ulaza.",
         "answers": [],
-        "correct": "upravljivi s ulaza."
+        "correct": "upravljivi"
     },
     {
-        "question": "S obzirom na vrijeme kašnjenja i njegove posljedice, kombinacijsko logički sklopovi mogu imati __ (1) __ i (2) ____ stanja. (riječ,riječ)",
-        "answers": [],
-        "correct": "stabilna,nestabilna."
-    },
-    {
-        "question": "Vršimo strukturnu sintezu automata primjenom MDD strukture. Minimalni automat ima 9 stanja, dva različita ulazna i dva različita izlazna (akceptorski i neutralni/negativni) simbola. Koliko će struktura imati demultipleksera ikoliko multipleksera? (broj,broj)",
-        "answers": [],
-        "correct": "1,4."
-    },
-    {
-        "question": "Minimizacija automata primjenom minimizacije primitivne tablice garantira dobivanje minimalnog automata (T/N)",
-        "answers": [],
-        "correct": "T."
-    },
-    {
-        "question": "Koje svojstvo vrijedi za disjunkciju, ali ne vrijedi za konjunkciju u Booleovoj algebri?",
-        "answers": [
-            "Distributivnost nad drugom operacijom",
-            "Postojanje neutralnog elementa",
-            "Komutativnost",
-            "Idempotentnost",
-            "Postojanje inverza"
-        ],
-        "correct": "0"
-    },
-    {
-        "question": "S obzirom na vrijeme kašnjenja i njegove posljedice, kombinacijsko logički sklopovi mogu imati (1) i (2) stanja. (riječ,riječ)",
+        "question": "KLS sklopovi mogu imati __ i __ stanja.",
         "answers": [],
         "correct": "stabilna,nestabilna"
     },
     {
-        "question": "Koji standardni bistabil mijenja svoje stanje (prelazi u komplementarno) svaki put kada je ulazni signal aktivan (logička 1) i dođe taktni impuls?",
+        "question": "Minimalni automat od 9 stanja, 2 ulazna i 2 izlazna simbola imat će koliko demultipleksera i multipleksera?",
         "answers": [],
-        "correct": "T"
+        "correct": "1,5"
     },
     {
-        "question": "Zašto kod metode minimizacije automata pomoću tablice implikanata dijagonala ostaje prazna?",
+        "question": "Minimizacija primitivne tablice garantira minimalni automat (T/N)?",
+        "answers": [],
+        "correct": "N"
+    },
+    {
+        "question": "Koje svojstvo vrijedi za disjunkciju, ali ne i za konjunkciju?",
         "answers": [
-            "Jer se dijagonala koristi samo kod Karnaughove karte.",
-            "Jer bi predstavljala redundanciju među mintermima.",
-            "Jer je implikant sam sebi jednak, pa bi veza Si → Si bila trivijalna i ne nosi novu informaciju.",
-            "Jer dijagonala prikazuje funkcijsku simetriju, koja ovdje nije relevantna.",
-            "Jer svaki minterm pokriva točno jedan red tablice."
+            "Distributivnost",
+            "Postojanje neutralnog",
+            "Komutativnost",
+            "Idempotentnost",
+            "Postojanje inverza"
         ],
         "correct": "2"
     },
     {
-        "question": "Promatrajmo jednostavni digitalni sklop (npr. bistabil) koji radi s taktom (Cp) od 50 Hz. Ako pretpostavimo da se promjena na izlazu, prouzrokovana promjenom ulaza u trenutku t=3.23s, dogodi na sljedećem uzlaznom bridu taktnog signala, u kojem će se vremenskom trenutku ta promjena dogoditi?",
+        "question": "KLS sklopovi mogu imati __ i __ stanja.",
+        "answers": [],
+        "correct": "stabilna,nestabilna"
+    },
+    {
+        "question": "Koji bistabil prelazi u komplementarno stanje kada je aktivan ulaz uz takt?",
+        "answers": [],
+        "correct": "T"
+    },
+    {
+        "question": "Zašto kod tablice implikanata dijagonala ostaje prazna?",
+        "answers": [
+            "Samo Karnaugh",
+            "Redundancija",
+            "Implikant sam sebi jednak",
+            "Funkcijska simetrija",
+            "Svaki minterm pokriva"
+        ],
+        "correct": "2"
+    },
+    {
+        "question": "Ako sklop radi s taktom 50 Hz, ulaz promijenjen u 3.23s pojavit će se u:",
         "answers": [
             "3.23 s",
             "3.24 s",
             "3.25 s",
             "3.22 s",
-            "Nije moguće odrediti."
+            "Nemoguće"
         ],
         "correct": "1"
+    },
+    {
+        "question": "Zašto se kod realizacije općih bistabila pomoću NI/NILI vrata zaokružuju praznine?",
+        "answers": [],
+        "correct": "MDNO"
+    },
+    {
+        "question": "Ako je gornja granična frekvencija sustava 2 kHz, koliko najviše signala prenosimo u sekundi?",
+        "answers": [],
+        "correct": "4000"
+    },
+    {
+        "question": "Zašto se u praksi ne koristi negacija kao operator algebre događaja?",
+        "answers": [],
+        "correct": "beskonačnost"
+    },
+    {
+        "question": "Čemu odgovara završno osnovno mjesto u regularnom izrazu?",
+        "answers": [],
+        "correct": "akceptorskom stanju"
+    },
+    {
+        "question": "Što vrijedi za strukturu i funkciju kod dva ekvivalentna automata?",
+        "answers": [],
+        "correct": "ista funkcija"
+    },
+    {
+        "question": "Što u algebri događaja označavaju disjunkcija, iteracija i pripajanje?",
+        "answers": [],
+        "correct": "operacije"
+    },
+    {
+        "question": "Koje signale dovodimo na JK bistabil za upis 0 nakon stanja 1?",
+        "answers": [],
+        "correct": "K=1,J=x"
+    },
+    {
+        "question": "Koje signale dovodimo na JK bistabil za zadržavanje stanja 1?",
+        "answers": [],
+        "correct": "K=0,J=x"
+    },
+    {
+        "question": "Koje signale dovodimo na JK bistabil za upis 1 nakon stanja 0?",
+        "answers": [],
+        "correct": "K=x,J=1"
     }
 ]
